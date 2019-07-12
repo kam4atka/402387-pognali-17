@@ -51,19 +51,21 @@
     <main class="page-main">
       <section class="page-block intro">
         <h1 class="intro__title">В путешествие с крутыми попутчиками!</h1>
-        <ul class="intro-nav__list">
-          <li class="intro-nav__item">
-            <a class="intro-nav__link contact-list__link--phone" href="tel:88005558628">8 800 555-86-28</a>
-          </li>
-          <li class="intro-nav__item">
-            <a class="intro-nav__link contact-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </li>
-        </ul>
-        <ul class="intro-nav__list">
-          <li class="intor-nav__item">
-            <a class="intro-nav__link button button--ellipse" href="#">Авторизация</a>
-          </li>
-        </ul>
+        <div class="intro-nav">
+          <ul class="intro-nav__list">
+            <li class="intro-nav__item">
+              <a class="intro-nav__link contact-list__link--phone" href="tel:88005558628">8 800 555-86-28</a>
+            </li>
+            <li class="intro-nav__item">
+              <a class="intro-nav__link contact-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+          <ul class="intro-nav__list">
+            <li class="intro-nav__item">
+              <a class="intro-nav__link button button--ellipse" href="#">Авторизация</a>
+            </li>
+          </ul>
+        </div>
         <p class="intro__quote">«Лучшее приложение, что я видел в жизни!»</p>
         <p class="intro__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
       </section>
@@ -115,7 +117,7 @@
       <section class="page-block page-block--bottom companion">
         <h2 class="companion__title">Попутчики</h2>
         <p class="companion__desc">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <p class="companion__desc--bold">Теперь можно легко найти единомышленников!</p>
+        <p class="companion__desc companion__desc--bold">Теперь можно легко найти единомышленников!</p>
         <div class="companion-list">
           <div class="companion-list__item companion-item">
             <img class="companion-item__photo" src="https://placehold.it/270x270" alt="Фотография попутчика">
@@ -125,33 +127,33 @@
               <li class="companion-item__country-item companion-item__country-item--tha">Тайланд</li>
               <li class="companion-item__country-item companion-item__country-item--syc">Сейшелы</li>
             </ul>
-            <p class="comapnions-item__name">Таня Фирсова</p>
-            <p class="companions-item__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <ul class="companions-item__transport-list">
-              <li class="companions-item__transport-item companions-item__transport-item--active">Авиаперелет</li>
-              <li class="companions-item__transport-item">Автобус</li>
-              <li class="companions-item__transport-item">Велосипед</li>
-              <li class="companions-item__transport-item">Пешком</li>
+            <p class="companion-item__name">Таня Фирсова</p>
+            <p class="companion-item__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <ul class="companion-item__transport-list">
+              <li class="companion-item__transport-item companion-item__transport-item--active">Авиаперелет</li>
+              <li class="companion-item__transport-item">Автобус</li>
+              <li class="companion-item__transport-item">Велосипед</li>
+              <li class="companion-item__transport-item">Пешком</li>
             </ul>
           </div>
-          <div class="companions-list__item companions-item">
-            <img class="companions-item__photo" src="https://placehold.it/270x270" alt="Фотография попутчика">
-            <div class="companions-item__level">80 level</div>
-            <ul class="companions-item__country-list">
-              <li class="companions-item__country-item companions-item__country-item--bel">Бельгия</li>
-              <li class="companions-item__country-item companions-item__country-item--cze">Чехия</li>
+          <div class="companion-list__item companion-item">
+            <img class="companion-item__photo" src="https://placehold.it/270x270" alt="Фотография попутчика">
+            <div class="companion-item__level">80 level</div>
+            <ul class="companion-item__country-list">
+              <li class="companion-item__country-item companion-item__country-item--bel">Бельгия</li>
+              <li class="companion-item__country-item companion-item__country-item--cze">Чехия</li>
             </ul>
-            <p class="comapnions-item__name">Петя Демин</p>
-            <p class="companions-item__tags">#бургер #бар #футбол #концерт #крафт</p>
-            <ul class="companions-item__transport-list">
-              <li class="companions-item__transport-item companions-item__transport-item--active">Авиаперелет</li>
-              <li class="companions-item__transport-item companions-item__transport-item--active">Автобус</li>
-              <li class="companions-item__transport-item">Велосипед</li>
-              <li class="companions-item__transport-item companions-item__transport-item--active">Пешком</li>
+            <p class="companion-item__name">Петя Демин</p>
+            <p class="companion-item__tags">#бургер #бар #футбол #концерт #крафт</p>
+            <ul class="companion-item__transport-list">
+              <li class="companion-item__transport-item companion-item__transport-item--active">Авиаперелет</li>
+              <li class="companion-item__transport-item companion-item__transport-item--active">Автобус</li>
+              <li class="companion-item__transport-item">Велосипед</li>
+              <li class="companion-item__transport-item companion-item__transport-item--active">Пешком</li>
             </ul>
           </div>
         </div>
-        <a class="companions__link button button--square" href="catalog.html">Показать всех</a>
+        <a class="companion__link button button--square" href="catalog.html">Показать всех</a>
       </section>
       <section class="page-block page-block--bottom price">
         <h2 class="price__title visually-hidden">Тарифы и услуги</h2>
@@ -201,20 +203,22 @@
     </main>
     <footer class="page-footer page-block page-block--top">
       <p class="footer-logo">Погнали?</p>
-      <ul class="footer-contact__list">
-        <li class="footer-contact__item">
-          <a class="footer-contact-link social-list__link--facebook" href="#">facebook</a>
-        </li>
-        <li class="footer-contact__item">
-          <a class="footer-contact-link social-list__link--vkontakte" href="#">vkontakte</a>
-        </li>
-        <li class="footer-contact__item">
-          <a class="footer-contact-link social-list__link--instagram" href="#">instagram</a>
-        </li>
-      </ul>
+      <div class="footer-contact">
+        <ul class="footer-contact__list">
+          <li class="footer-contact__item">
+            <a class="footer-contact-link social-list__link--facebook" href="#">facebook</a>
+          </li>
+          <li class="footer-contact__item">
+            <a class="footer-contact-link social-list__link--vkontakte" href="#">vkontakte</a>
+          </li>
+          <li class="footer-contact__item">
+            <a class="footer-contact-link social-list__link--instagram" href="#">instagram</a>
+          </li>
+        </ul>
+      </div>
       <div class="footer-copyright">
         <p class="footer-copyright__text">Разработано</p>
-        <img class="footer-copiright__logo" src="https://placehold.it/27x34" alt="Логотип разработчика"></img>
+        <img class="footer-copyright__logo" src="https://placehold.it/27x34" alt="Логотип разработчика">
       </div>
     </footer>
   </body>
