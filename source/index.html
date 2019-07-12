@@ -5,8 +5,217 @@
     <title>HTML Academy: Погнали</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+    <header class="page-header">
+      <a class="page-header__logo">Погнали?</a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">О сервисе</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Направления</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Попутчики</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__link" href="#">Авторизация</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list contact-list">
+            <li class="contact-list__item">
+              <a class="contact-list__link contact-list__link--phone" href="tel:88005558628">8 800 555-86-28</a>
+            </li>
+            <li class="contact-list__item">
+              <a class="contact-list__link contact-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list social-list">
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--facebook" href="#">facebook</a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--vkontakte" href="#">vkontakte</a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--instagram" href="#">instagram</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="page-block intro">
+        <h1 class="intro__title">В путешествие с крутыми попутчиками!</h1>
+        <ul class="intro-nav__list">
+          <li class="intro-nav__item">
+            <a class="intro-nav__link contact-list__link--phone" href="tel:88005558628">8 800 555-86-28</a>
+          </li>
+          <li class="intro-nav__item">
+            <a class="intro-nav__link contact-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
+        <ul class="intro-nav__list">
+          <li class="intor-nav__item">
+            <a class="intro-nav__link button button--ellipse" href="#">Авторизация</a>
+          </li>
+        </ul>
+        <p class="intro__quote">«Лучшее приложение, что я видел в жизни!»</p>
+        <p class="intro__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
+      </section>
+      <section class="page-block guide">
+        <h2 class="guide__title visuall-hidden">Этапы</h2>
+        <ol class="guide-list">
+          <li class="guide-list__item">Выберите направление</li>
+          <li class="guide-list__item">Изучите идеи путешественников</li>
+          <li class="guide-list__item">Находите тех, кто похож на вас</li>
+          <li class="guide-list__item">Путешествуйте вместе!</li>
+        </ol>
+      </section>
+      <section class="page-block page-block--bottom about">
+        <h2 class="about__title">О сервисе</h2>
+        <p class="about__desc">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+        <p class="about__desc about__desc--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+      </section>
+      <section class="page-block page-block--bottom country">
+        <h2 class="country__title">Направления</h2>
+        <p class="country__desc">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        <div class="country-list">
+          <div class="country-list__item country-item">
+            <img class="country-item__photo" src="https://placehold.it/270x110" alt="Фотография Тайланда">
+            <div class="country-item__desc">
+              <p class="country-item__title country-item__title--tha">Тайланд</p>
+              <p class="country-item__motto">Джугли зовут!</p>
+              <p class="country-item__count">18321</p>
+            </div>
+          </div>
+          <div class="country-list__item country-item">
+            <img class="country-item__photo" src="https://placehold.it/270x110" alt="Фотография Франции">
+            <div class="country-item__desc">
+              <p class="country-item__title country-item__title--fra">Франция</p>
+              <p class="country-item__motto">Трэ бьен, манифик!</p>
+              <p class="country-item__count">12518</p>
+            </div>
+          </div>
+          <div class="country-list__item country-item">
+            <img class="country-item__photo" src="https://placehold.it/270x110" alt="Фотография Чехии">
+            <div class="country-item__desc">
+              <p class="country-item__title country-item__title--cze">Чехия</p>
+              <p class="country-item__motto">Закоулки старой Европы</p>
+              <p class="country-item__count">5326</p>
+            </div>
+          </div>
+        </div>
+        <a class="country__link button button--square" href="form.html">Показать все</a>
+      </section>
+      <section class="page-block page-block--bottom companion">
+        <h2 class="companion__title">Попутчики</h2>
+        <p class="companion__desc">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+        <p class="companion__desc--bold">Теперь можно легко найти единомышленников!</p>
+        <div class="companion-list">
+          <div class="companion-list__item companion-item">
+            <img class="companion-item__photo" src="https://placehold.it/270x270" alt="Фотография попутчика">
+            <div class="companion-item__level">99 level</div>
+            <ul class="companion-item__country-list">
+              <li class="companion-item__country-item companion-item__country-item--lka">Шри ланка</li>
+              <li class="companion-item__country-item companion-item__country-item--tha">Тайланд</li>
+              <li class="companion-item__country-item companion-item__country-item--syc">Сейшелы</li>
+            </ul>
+            <p class="comapnions-item__name">Таня Фирсова</p>
+            <p class="companions-item__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <ul class="companions-item__transport-list">
+              <li class="companions-item__transport-item companions-item__transport-item--active">Авиаперелет</li>
+              <li class="companions-item__transport-item">Автобус</li>
+              <li class="companions-item__transport-item">Велосипед</li>
+              <li class="companions-item__transport-item">Пешком</li>
+            </ul>
+          </div>
+          <div class="companions-list__item companions-item">
+            <img class="companions-item__photo" src="https://placehold.it/270x270" alt="Фотография попутчика">
+            <div class="companions-item__level">80 level</div>
+            <ul class="companions-item__country-list">
+              <li class="companions-item__country-item companions-item__country-item--bel">Бельгия</li>
+              <li class="companions-item__country-item companions-item__country-item--cze">Чехия</li>
+            </ul>
+            <p class="comapnions-item__name">Петя Демин</p>
+            <p class="companions-item__tags">#бургер #бар #футбол #концерт #крафт</p>
+            <ul class="companions-item__transport-list">
+              <li class="companions-item__transport-item companions-item__transport-item--active">Авиаперелет</li>
+              <li class="companions-item__transport-item companions-item__transport-item--active">Автобус</li>
+              <li class="companions-item__transport-item">Велосипед</li>
+              <li class="companions-item__transport-item companions-item__transport-item--active">Пешком</li>
+            </ul>
+          </div>
+        </div>
+        <a class="companions__link button button--square" href="catalog.html">Показать всех</a>
+      </section>
+      <section class="page-block page-block--bottom price">
+        <h2 class="price__title visually-hidden">Тарифы и услуги</h2>
+        <p class="price__desc">Добавтьте свой профиль</p>
+        <!-- Вариант разметки услуг списком
+          <ol class="price-list">
+            <li class="price-list__item">Базовое размещение <br> Бесплатно</li>
+            <li class="price-list__item">Вывод на первых позициях <br> 99 руб./мес</li>
+            <li class="price-list__item">Кастомный цвет карточки <br> 59 руб./мес</li>
+          </ol>
+        -->
+        <table class="price-list">
+          <caption class="visually-hidden">Услуги</caption>
+          <tr>
+            <th>Базовое размещение</th>
+            <th>Вывод на первых позициях</th>
+            <th>Кастомный цвет карточки</th>
+          </tr>
+          <tr>
+            <td>Бесплатно</td>
+            <td>99 руб./мес</td>
+            <td>59 руб./мес</td>
+          </tr>
+        </table>
+        <a class="price__link" href="#">Показать тарифы для бизнеса</a>
+        <div class="modal visually-hidden tariff">
+          <h3 class="tariff__title">Бизнес-тарифы</h3>
+          <!-- Возможно проще сделать с помощью списка? -->
+          <table class="tariff-list">
+            <caption class="visually-hidden">Тарифы</caption>
+            <tr>
+              <th>Реклама у блоггера</th>
+              <th>Накрутка подписчиков</th>
+              <th>Лайки от ботов</th>
+              <th>Ваш продакт-плейсмент</th>
+            </tr>
+            <tr>
+              <td>300 000 руб./пост</td>
+              <td>от 1 руб./шт.</td>
+              <td>от 20 коп./лайк</td>
+              <td>Индивидуально</td>
+            </tr>
+          </table>
+          <button class="price__close">Закрыть окно</button>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer page-block page-block--top">
+      <p class="footer-logo">Погнали?</p>
+      <ul class="footer-contact__list">
+        <li class="footer-contact__item">
+          <a class="footer-contact-link social-list__link--facebook" href="#">facebook</a>
+        </li>
+        <li class="footer-contact__item">
+          <a class="footer-contact-link social-list__link--vkontakte" href="#">vkontakte</a>
+        </li>
+        <li class="footer-contact__item">
+          <a class="footer-contact-link social-list__link--instagram" href="#">instagram</a>
+        </li>
+      </ul>
+      <div class="footer-copyright">
+        <p class="footer-copyright__text">Разработано</p>
+        <img class="footer-copiright__logo" src="https://placehold.it/27x34" alt="Логотип разработчика"></img>
+      </div>
+    </footer>
   </body>
 </html>
