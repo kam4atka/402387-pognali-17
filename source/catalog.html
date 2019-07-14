@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">Погнали?</a>
+      <a class="page-header__logo" href="index.html">Погнали?</a>
       <nav class="main-nav">
         <button class="main-nav__toggle">Открыть меню</button>
         <div class="main-nav__wrapper">
@@ -52,8 +52,8 @@
       <h1 class="page-side__title">Попутчики</h1>
       <section class="travelmates">
         <h2 class="travelmates__title visually-hidden">Список попутчиков:</h2>
-        <div class="travelmates-list">
-          <div class="travelmates-list__item travelmate">
+        <ul class="travelmates-list">
+          <li class="travelmates-list__item travelmate">
             <a href="#">
               <img class="travelmate__photo" src="https://placehold.it/70x70" alt="Фотография попутчика">
             </a>
@@ -63,9 +63,18 @@
             <div class="travelmate__country nations">
               <p class="nations__title">хочет посетить:</p>
               <ul class="nations-list">
-                <li class="nations-list__item icon icon--lka">Шри Ланка</li>
-                <li class="nations-list__item icon icon--tha">Тайланд</li>
-                <li class="nations-list__item icon icon--syc">Сейшелы</li>
+                <li class="nations-list__item">
+                  <img class="nations-list__item-flag nations-list__item-flag--lka" src="https://placehold.it/26x18" alt="Шри Ланка">
+                  <span class="nations-list__item-name">Шри Ланка</span>
+                </li>
+                <li class="nations-list__item">
+                  <img class="nations-list__item-flag nations-list__item-flag--tha" src="https://placehold.it/26x18" alt="Тайланд">
+                  <span class="nations-list__item-name">Тайланд</span>
+                </li>
+                <li class="nations-list__item">
+                  <img class="nations-list__item-flag nations-list__item-flag--syc" src="https://placehold.it/26x18" alt="Сейшелы">
+                  <span class="nations-list__item-name">Сейшелы</span>
+                </li>
               </ul>
             </div>
             <div class="travelmate-transport method">
@@ -82,8 +91,8 @@
               <span class="travelmate-level__value">99 level</span>
             </div>
             <a class="travelmate__link" href="#">Позвать!</a>
-          </div>
-          <div class="travelmates-list__item travelmate">
+          </li>
+          <li class="travelmates-list__item travelmate">
             <a href="#">
               <img class="travelmate__photo" src="https://placehold.it/70x70" alt="Фотография попутчика">
             </a>
@@ -93,8 +102,14 @@
             <div class="travelmate-country nations">
               <p class="nations__title">хочет посетить:</p>
               <ul class="nations-list">
-                <li class="nations-list__item icon icon--bel">Бельгия</li>
-                <li class="nations-list__item icon icon--cze">Чехия</li>
+                <li class="nations-list__item">
+                  <img class="nations-list__item-flag nations-list__item-flag--bel" src="https://placehold.it/26x18" alt="Бельгия">
+                  <span class="nations-list__item-name">Бельгия</span>
+                </li>
+                <li class="nations-list__item">
+                  <img class="nations-list__item-flag nations-list__item-flag--cze" src="https://placehold.it/26x18" alt="Чехия">
+                  <span class="nations-list__item-name">Чехия</span>
+                </li>
               </ul>
             </div>
             <div class="travelmate-transport method">
@@ -111,8 +126,8 @@
               <span class="travelmate-level__value">80 level</span>
             </div>
             <a class="travelmate__link" href="#">Позвать!</a>
-          </div>
-          <div class="travelmates-list__item travelmate">
+          </li>
+          <li class="travelmates-list__item travelmate">
             <a href="">
               <img class="travelmate__photo" src="https://placehold.it/70x70" alt="Фотография попутчика">
             </a>
@@ -122,9 +137,18 @@
             <div class="travelmate-country nations">
               <p class="nations__title">хочет посетить:</p>
               <ul class="nations-list">
-                <li class="nations-list__item icon icon--usa">США</li>
-                <li class="nations-list__item icon icon--aus">Австралия</li>
-                <li class="nations-list__item icon icon--dom">Доминикана</li>
+                <li class="nations-list__item">
+                  <img class="nations-list__item-flag nations-list__item-flag--usa" src="https://placehold.it/26x18" alt="США">
+                  <span class="nations-list__item-name">США</span>
+                </li>
+                <li class="nations-list__item">
+                  <img class="nations-list__item-flag nations-list__item-flag--aus" src="https://placehold.it/26x18" alt="Австралия">
+                  <span class="nations-list__item-name">Австралия</span>
+                </li>
+                <li class="nations-list__item">
+                  <img class="nations-list__item-flag nations-list__item-flag--dom" src="https://placehold.it/26x18" alt="Доминикана">
+                  <span class="nations-list__item-name">Доминикана</span>
+                </li>
               </ul>
             </div>
             <div class="travelmate-transport method">
@@ -141,8 +165,8 @@
               <span class="travelmate-level__value">25 level</span>
             </div>
             <a class="travelmate__link" href="#">Позвать!</a>
-          </div>
-          <div class="travelmates-list__item travelmate">
+          </li>
+          <li class="travelmates-list__item travelmate">
             <a href="#">
               <img class="travelmate__photo" src="https://placehold.it/70x70" alt="Фотография попутчика">
             </a>
@@ -152,8 +176,14 @@
             <div class="travelmate-country nations">
               <p class="nations__title">хочет посетить:</p>
               <ul class="nations-list">
-                <li class="nations-list__item icon icon--gbr">Великбритания</li>
-                <li class="nations-list__item icon icon--deu">Германия</li>
+                <li class="nations-list__item">
+                  <img class="nations-list__item-flag nations-list__item-flag--gdr" src="https://placehold.it/26x18" alt="Великбритания">
+                  <span class="nations-list__item-name">Великбритания</span>
+                </li>
+                <li class="nations-list__item">
+                  <img class="nations-list__item-flag nations-list__item-flag--deu" src="https://placehold.it/26x18" alt="Германия">
+                  <span class="nations-list__item-name">Германия</span>
+                </li>
               </ul>
             </div>
             <div class="travelmate-transport method">
@@ -170,9 +200,9 @@
               <span class="travelmate-level__value">50 level</span>
             </div>
             <a class="travelmate__link" href="#">Позвать!</a>
-          </div>
-          <a class="travelmates-list__link" href="#">Показать еще</a>
-        </div>
+          </li>
+        </ul>
+        <a class="travelmates__link" href="#">Показать еще</a>
         <div class="pages">
           <a class="pages__prev button button--prev" href="#">Предыдущая страница</a>
           <a class="pages__next button button--next" href="#">Следующая страница</a>
@@ -196,7 +226,9 @@
       </div>
       <div class="footer-copyright">
         <p class="footer-copyright__text">Разработано</p>
-        <img class="footer-copyright__logo" src="https://placehold.it/27x34" alt="Логотип разработчика">
+        <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <img class="footer-copyright__logo" src="https://placehold.it/27x34" alt="Логотип разработчика">
+        </a>
       </div>
     </footer>
   </body>

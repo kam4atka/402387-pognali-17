@@ -59,8 +59,6 @@
             <li class="intro-nav__item">
               <a class="intro-nav__link intro-nav__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
-          </ul>
-          <ul class="intro-nav__list">
             <li class="intro-nav__item">
               <a class="intro-nav__link button button--ellipse" href="#">Авторизация</a>
             </li>
@@ -70,7 +68,7 @@
         <p class="intro__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
       </section>
       <section class="page-block guide">
-        <h2 class="guide__title visuall-hidden">Этапы</h2>
+        <h2 class="guide__title visually-hidden">Этапы</h2>
         <ol class="guide-list">
           <li class="guide-list__item">Выберите направление</li>
           <li class="guide-list__item">Изучите идеи путешественников</li>
@@ -78,10 +76,12 @@
           <li class="guide-list__item">Путешествуйте вместе!</li>
         </ol>
       </section>
-      <section class="page-block page-block--bottom about">
-        <h2 class="about__title">О сервисе</h2>
-        <p class="about__desc">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-        <p class="about__desc about__desc--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+      <section class="page-block page-block--bottom block about">
+        <div class="block-pre">
+          <h2 class="block-pre__title about__title">О сервисе</h2>
+          <p class="block-pre__desc about__desc">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+          <p class="block-pre__desc about__desc about__desc--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+        </div>
       </section>
       <section class="page-block page-block--bottom country">
         <h2 class="country__title">Направления</h2>
@@ -114,10 +114,12 @@
         </div>
         <a class="country__link button button--square" href="form.html">Показать все</a>
       </section>
-      <section class="page-block page-block--bottom companion">
-        <h2 class="companion__title">Попутчики</h2>
-        <p class="companion__desc">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <p class="companion__desc companion__desc--bold">Теперь можно легко найти единомышленников!</p>
+      <section class="page-block page-block--bottom block companion">
+        <div class="block-pre">
+          <h2 class="block-pre__title companion__title">Попутчики</h2>
+          <p class="block-pre__desc companion__desc">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <p class="block-pre__desc companion__desc companion__desc--bold">Теперь можно легко найти единомышленников!</p>
+        </div>
         <div class="companion-list">
           <div class="companion-list__item companion-item">
             <img class="companion-item__photo" src="https://placehold.it/270x270" alt="Фотография попутчика">
@@ -158,13 +160,6 @@
       <section class="page-block page-block--bottom price">
         <h2 class="price__title visually-hidden">Тарифы и услуги</h2>
         <p class="price__desc">Добавтьте свой профиль</p>
-        <!-- Вариант разметки услуг списком
-          <ol class="price-list">
-            <li class="price-list__item">Базовое размещение <br> Бесплатно</li>
-            <li class="price-list__item">Вывод на первых позициях <br> 99 руб./мес</li>
-            <li class="price-list__item">Кастомный цвет карточки <br> 59 руб./мес</li>
-          </ol>
-        -->
         <table class="price-list">
           <caption class="visually-hidden">Услуги</caption>
           <tr>
@@ -181,7 +176,6 @@
         <a class="price__link" href="#">Показать тарифы для бизнеса</a>
         <div class="modal visually-hidden tariff">
           <h3 class="tariff__title">Бизнес-тарифы</h3>
-          <!-- Возможно проще сделать с помощью списка? -->
           <table class="tariff-list">
             <caption class="visually-hidden">Тарифы</caption>
             <tr>
@@ -218,7 +212,9 @@
       </div>
       <div class="footer-copyright">
         <p class="footer-copyright__text">Разработано</p>
-        <img class="footer-copyright__logo" src="https://placehold.it/27x34" alt="Логотип разработчика">
+        <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <img class="footer-copyright__logo" src="https://placehold.it/27x34" alt="Логотип разработчика">
+        </a>
       </div>
     </footer>
   </body>
