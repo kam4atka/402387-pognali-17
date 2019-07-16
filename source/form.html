@@ -118,8 +118,83 @@
 
                 <input class="todoadd-form__input" type="checkbox" name="child" id="todoadd-child" checked>
                 <label class="todoadd-form__label" for="todoadd-child">Можно с детьми</label>
-                <!-- Календарь -->
+
               </fieldset>
+
+              <div class="todoadd-calendar calendar">
+                <h4 class="calendar__title visually-hidden">Календарь выбора дат плана</h4>
+                <table class="calendar-table">
+                  <caption class="calendar-table__title">Март 2019</caption>
+                  <thead class="calendar-week">
+                    <tr class="calendar-week__row">
+                      <td class="calendar-week__cell">П</td>
+                      <td class="calendar-week__cell">В</td>
+                      <td class="calendar-week__cell">С</td>
+                      <td class="calendar-week__cell">Ч</td>
+                      <td class="calendar-week__cell">П</td>
+                      <td class="calendar-week__cell">С</td>
+                      <td class="calendar-week__cell">В</td>
+                    </tr>
+                  </thead>
+                  <tbody class="calendar-day">
+                    <tr class="calendar-day__row">
+                      <td class="calendar-day__cell calendar-day__cell--inactive">24</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">25</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">26</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">27</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">28</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">1</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">2</td>
+                    </tr>
+                    <tr class="calendar-day__row">
+                      <td class="calendar-day__cell calendar-day__cell--inactive">3</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">4</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">5</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">6</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">7</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">8</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">9</td>
+                    </tr>
+                    <tr class="calendar-day__row">
+                      <td class="calendar-day__cell calendar-day__cell--inactive">10</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">11</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">12</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">13</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">14</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">15</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">16</td>
+                    </tr>
+                    <tr class="calendar-day__row">
+                      <td class="calendar-day__cell calendar-day__cell--inactive">17</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">18</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">19</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">20</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">21</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">22</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">23</td>
+                    </tr>
+                    <tr class="calendar-day__row">
+                      <td class="calendar-day__cell calendar-day__cell--inactive">24</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">25</td>
+                      <td class="calendar-day__cell calendar-day__cell--inactive">26</td>
+                      <td class="calendar-day__cell calendar-day__cell--selected">27</td>
+                      <td class="calendar-day__cell calendar-day__cell--selected">28</td>
+                      <td class="calendar-day__cell calendar-day__cell--selected">29</td>
+                      <td class="calendar-day__cell">30</td>
+                    </tr>
+                    <tr class="calendar-day__row">
+                      <td class="calendar-day__cell">31</td>
+                      <td class="calendar-day__cell">1</td>
+                      <td class="calendar-day__cell">2</td>
+                      <td class="calendar-day__cell">3</td>
+                      <td class="calendar-day__cell">4</td>
+                      <td class="calendar-day__cell">5</td>
+                      <td class="calendar-day__cell">6</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
               <a class="todoadd-item__link button button--ellipse" href="#">Следующий шаг</a>
             </div>
 
@@ -131,6 +206,7 @@
                   <select name="todoadd-contry" id="country-bih">
                     <option value="null">Выберите страну</option>
                     <option value="bih" selected>Босния и герцеговина</option>
+                    <option value="chs">Чехословакия</option>
                   </select>
                   <div class="todoadd-form__select-flag">
                     <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
@@ -140,6 +216,7 @@
                 <div class="todoadd-form__select-item">
                   <select name="todoadd-contry" id="country-chs">
                     <option value="null">Выберите страну</option>
+                    <option value="bih">Босния и герцеговина</option>
                     <option value="chs" selected>Чехословакия</option>
                   </select>
                   <div class="todoadd-form__select-flag">
@@ -149,14 +226,19 @@
                 </div>
                 <div class="todoadd-form__select-item">
                   <select name="todo-country" id="contry-empty">
-                    <option value="null">Выберите страну</option>
+                    <option value="null" selected>Выберите страну</option>
+                    <option value="bih">Босния и герцеговина</option>
+                    <option value="chs">Чехословакия</option>
                   </select>
                   <div class="todoadd-form__select-flag visually-hidden">
                     <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
                   </div>
                   <button class="todoadd-form__select-remove" type="button">Удалить</button>
                 </div>
+                <button class="todoadd-item__add button button--square" type="button">Добавить страну</button>
+
               </fieldset>
+
               <a class="todoadd-item__link todoadd-item__link--next button button--ellipse" href="#">Следующий шаг</a>
               <a class="todoadd-item__link todoadd-item__link--prev" href="#">На шаг назад</a>
             </div>
@@ -180,7 +262,6 @@
                   <textarea name="leisure" id="leisure-chs" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
                 </div>
               </fieldset>
-              <button class="todoadd-item__add button button--square" type="button">Добавить страну</button>
               <button class="todoadd-item__send button button--ellipse" type="submit">Отправить</button>
               <a class="todoadd-item__link todoadd-item__link--prev" href="#">На шаг назад</a>
             </div>
@@ -213,5 +294,140 @@
         </a>
       </div>
     </footer>
+
+    <div class="todo-modal contryadd visually-hidden">
+      <form class="countryadd-list" action="https://echo.htmlacademy.ru" method="post">
+        <div class="countryadd-block">
+          <fieldset class="countryadd-alphabet aphabet">
+            <legend class="countryadd-alphabet__title visually-hidden">Выбрать страну по первой букве</legend>
+            <div class="aphabet-wrapper">
+              <label class="countryadd-alphabet__label" for="alphabet-a">А
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-a" value="a">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-b">Б
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-b" value="b">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-v">В
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-v" value="v">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-g">Г
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-g" value="g">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-d">Д
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-d" value="d">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-e">Е
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-e" value="e">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-ye">Ё
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-ye" value="ye">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-zh">Ж
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-zh" value="zh">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-z">З
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-z" value="z">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-i">И
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-i" value="i">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-j">Й
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-j" value="j">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-k">К
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-k" value="k">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-l">Л
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-l" value="l">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-m">М
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-m" value="m">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-n">Н
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-n" value="n">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-o">О
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-o" value="o">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-p">П
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-p" value="p">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-r">Р
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-r" value="r">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-s">С
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-s" value="s">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-t">Т
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-t" value="t">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-y">У
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-y" value="y">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-f">Ф
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-f" value="f">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-h">Х
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-h" value="h">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-ts">Ц
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-ts" value="ts">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-ch">Ч
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-ch" value="ch">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-sh">Ш
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-sh" value="sh">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-shch">Щ
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-shch" value="shch">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-ie">Э
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-ie" value="ie">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-yu">Ю
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-yu" value="yu">
+              </label>
+              <label class="countryadd-alphabet__label" for="alphabet-ya">Я
+                <input class="countryadd-alphabet__input visually-hidden" type="radio" name="alphabet" id="alphabet-ya" value="ya">
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="countryadd-country">
+            <legend class="countryadd-country__title visually-hidden">Страны</legend>
+            <div class="countryadd-parameters">
+              <label class="countryadd-country__label" for="country-afg">Афганистан
+                <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-afg" value="afg">
+              </label>
+              <label class="countryadd-country__label" for="country-alb">Албания
+                <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-alb" value="alb">
+              </label>
+              <label class="countryadd-country__label" for="country-alg">Алгерия
+                <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-alg" value="alg">
+              </label>
+              <label class="countryadd-country__label" for="country-and">Андорра
+                <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-and" value="and">
+              </label>
+              <label class="countryadd-country__label" for="country-arg">Аргентина
+                <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-arg" value="arg">
+              </label>
+              <label class="countryadd-country__label" for="country-arm">Армения
+                <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-arm" value="arm">
+              </label>
+              <label class="countryadd-country__label" for="country-aus">Австралия
+                <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-aus" value="aus">
+              </label>
+              <label class="countryadd-country__label" for="country-aut">Австрия
+                <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-aut" value="aut">
+              </label>
+              <label class="countryadd-country__label" for="country-aze">Азербайджанм
+                <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-aze" value="aze">
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+
   </body>
 </html>
