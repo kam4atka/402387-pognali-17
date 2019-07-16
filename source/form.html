@@ -48,8 +48,148 @@
         </div>
       </nav>
     </header>
-    <main class="page-side directions">
-      <h1 class="page-side__title directions__title">Направления</h1>
+
+    <main class="page-side">
+
+      <section class="user">
+        <h1 class="page-side__title user__title">Направления</h1>
+        <section class="user-info">
+          <h2 class="user-info__title visually-hidden">Информация о пользователе</h2>
+          <div class="user-level">
+            <span class="user-level__value">80</span>
+            <span class="user-level__title">level</span>
+          </div>
+          <img class="user-info__photo" src="https://placehold.it/100x100" alt="Фотография пользователя">
+          <a class="user-info__photo-button" href="#">Сменить фото</a>
+          <div class="user-tags">
+            <h3 class="user-tags__title">Тэги</h3>
+            <p class="user-tags__list">#бургер #бар #футбол #концерт #крафт</p>
+          </div>
+          <div class="user-transport">
+            <h3 class="user-transport__title">Транспорт</h3>
+            <ul class="user-transport__list">
+              <li class="user-transport__item user-transport__item--active">Авиаперелет</li>
+              <li class="user-transport__item user-transport__item--active">Автобус</li>
+              <li class="user-transport__item">Велосипед</li>
+              <li class="user-transport__item user-transport__item--active">Пешком</li>
+            </ul>
+          </div>
+        </section>
+        <section class="page-block page-block--top todo">
+          <h2 class="todo__title">Мои планы:</h2>
+          <ul class="todo-list">
+            <li class="todo-item">
+              <p class="todo-item__name">Франция, Италия</p>
+              <p class="todo-item__count">3 попутчика</p>
+              <p class="todo-item__date">26 мар — 29 мар</p>
+              <a class="todo-item__edit" href="#">Изменить</a>
+            </li>
+            <li class="todo-item">
+              <p class="todo-item__name">Тайланд, Индонезия</p>
+              <p class="todo-item__count">1 попутчик</p>
+              <p class="todo-item__date">1 июл — 15 июл</p>
+              <a class="todo-item__edit" href="#">Изменить</a>
+            </li>
+          </ul>
+        </section>
+        <section class="page-block page-block--top todoadd">
+          <h2 class="todoadd__title">Добавить план:</h2>
+
+          <form class="todoadd-form" action="https://echo.htmlacademy.ru" method="post">
+
+            <div class="todoadd-item">
+              <h3 class="todoadd-item__title">Шаг 1. Даты пребывания</h3>
+              <p class="todoadd-item__desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              <fieldset>
+
+                <label class="todoadd-form__label" for="todoadd-companion">Ищу попутчиков:<span>Чел.</span></label>
+                <div class="todoadd-form__input-wrapper">
+                  <button class="button button--minus" type="button">Уменьшить</button>
+                  <input class="todoadd-form__input" type="text" name="companion" id="todoadd-companion" value="2">
+                  <button class="button button--plus" type="button">Увеличить</button>
+                </div>
+
+                <label class="todoadd-form__label" for="todoadd-duration">Длительность:<span>Дн.</span></label>
+                <div class="todoadd-form__input-wrapper">
+                  <button class="button button--minus" type="button">Уменьшить</button>
+                  <input class="todoadd-form__input" type="text" name="duration" id="todoadd-duration" value="2">
+                  <button class="button button--plus" type="button">Увеличить</button>
+                </div>
+
+                <input class="todoadd-form__input" type="checkbox" name="child" id="todoadd-child" checked>
+                <label class="todoadd-form__label" for="todoadd-child">Можно с детьми</label>
+                <!-- Календарь -->
+              </fieldset>
+              <a class="todoadd-item__link button button--ellipse" href="#">Следующий шаг</a>
+            </div>
+
+            <div class="todoadd-item">
+              <h3 class="todoadd-item__title">Шаг 2. Маршрут</h3>
+              <p class="todoadd-item__desc">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+              <fieldset class='todoadd-form__select'>
+                <div class="todoadd-form__select-item">
+                  <select name="todoadd-contry" id="country-bih">
+                    <option value="null">Выберите страну</option>
+                    <option value="bih" selected>Босния и герцеговина</option>
+                  </select>
+                  <div class="todoadd-form__select-flag">
+                    <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+                  </div>
+                  <button class="todoadd-form__select-remove" type="button">Удалить</button>
+                </div>
+                <div class="todoadd-form__select-item">
+                  <select name="todoadd-contry" id="country-chs">
+                    <option value="null">Выберите страну</option>
+                    <option value="chs" selected>Чехословакия</option>
+                  </select>
+                  <div class="todoadd-form__select-flag">
+                    <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+                  </div>
+                  <button class="todoadd-form__select-remove" type="button">Удалить</button>
+                </div>
+                <div class="todoadd-form__select-item">
+                  <select name="todo-country" id="contry-empty">
+                    <option value="null">Выберите страну</option>
+                  </select>
+                  <div class="todoadd-form__select-flag visually-hidden">
+                    <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+                  </div>
+                  <button class="todoadd-form__select-remove" type="button">Удалить</button>
+                </div>
+              </fieldset>
+              <a class="todoadd-item__link todoadd-item__link--next button button--ellipse" href="#">Следующий шаг</a>
+              <a class="todoadd-item__link todoadd-item__link--prev" href="#">На шаг назад</a>
+            </div>
+
+            <div class="todoadd-item">
+              <h3 class="todoadd-item__title">Шаг 3. Развлечения</h3>
+              <p class="todoadd-item__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <fieldset class="todoadd-form__leisure">
+                <div class="todoadd-form__leisure-item leisure-item">
+                  <div class="leisure-item__head">
+                    <label class="leisure-item__country" for="leisure-bih">Босния и герцеговина</label>
+                    <img class="leisure-item__flag" src="http://placehold.it/35x24" alt="Флаг страны">
+                  </div>
+                  <textarea name="leisure" id="leisure-bih" cols="30" rows="10"></textarea>
+                </div>
+                <div class="todoadd-form__leisure-item leisure-item">
+                  <div class="leisure-item__head">
+                    <label class="leisure-item__country" for="leisure-chs">Чехословакия</label>
+                    <img class="leisure-item__flag" src="http://placehold.it/35x24" alt="Флаг страны">
+                  </div>
+                  <textarea name="leisure" id="leisure-chs" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
+                </div>
+              </fieldset>
+              <button class="todoadd-item__add button button--square" type="button">Добавить страну</button>
+              <button class="todoadd-item__send button button--ellipse" type="submit">Отправить</button>
+              <a class="todoadd-item__link todoadd-item__link--prev" href="#">На шаг назад</a>
+            </div>
+
+          </form>
+        </section>
+
+      </section>
+
     </main>
     <footer class="page-footer page-block page-block--top">
       <p class="footer-logo">Погнали?</p>
