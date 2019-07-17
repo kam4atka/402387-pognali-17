@@ -49,8 +49,217 @@
       </nav>
     </header>
     <main class="page-side">
-      <h1 class="page-side__title">Попутчики</h1>
       <section class="travelmates">
+        <h1 class="page-side__title">Попутчики</h1>
+        <section class="travelmates-filter filter">
+          <h2 class="filter__title">Фильтрация по странам</h2>
+          <button class="filter__toggle">Открыть</button>
+          <div class="filter-wrapper visually-hidden">
+            <form class="filter-list" action="https://echo.htmlacademy.ru" method="post">
+              <div class="filter-block">
+                <fieldset class="filter-continent">
+                  <legend class="filter-continent__title visually-hidden">Континенты</legend>
+                    <div class="filter-parameters">
+                      <input class="filter-continent__input visually-hidden" type="radio" name="continent" id="continent--europe" value="europe" checked>
+                      <label class="filter-continent__label" for="continent--europe">Европа</label>
+                      <input class="filter-continent__input visually-hidden" type="radio" name="continent" id="continent--asia" value="asia">
+                      <label class="filter-continent__label" for="continent--asia">Азия</label>
+                      <input class="filter-continent__input visually-hidden" type="radio" name="continent" id="continent--usa" value="ameriсa">
+                      <label class="filter-continent__label" for="continent--usa">Америка</label>
+                      <input class="filter-continent__input visually-hidden" type="radio" name="continent" id="continent--islands" value="islands">
+                      <label class="filter-continent__label" for="continent--islands">Острова</label>
+                    </div>
+                </fieldset>
+                <fieldset class="filter-alphabet aphabet">
+                  <legend class="filter-alphabet__title visually-hidden">Выбрать страну по первой букве</legend>
+                  <select class="filter-alphabet aphabet-select" name="todo-select" id="contry-select">
+                    <option class="aphabet-select__item" value="alphabet-a" selected>А</option>
+                    <option class="aphabet-select__item" value="alphabet-b">Б</option>
+                    <option class="aphabet-select__item" value="alphabet-v">В</option>
+                    <option class="aphabet-select__item" value="alphabet-g">Г</option>
+                    <option class="aphabet-select__item" value="alphabet-d">Д</option>
+                    <option class="aphabet-select__item" value="alphabet-e">Е</option>
+                    <option class="aphabet-select__item" value="alphabet-ye">Ё</option>
+                    <option class="aphabet-select__item" value="alphabet-zh">Ж</option>
+                    <option class="aphabet-select__item" value="alphabet-z">З</option>
+                    <option class="aphabet-select__item" value="alphabet-i">И</option>
+                    <option class="aphabet-select__item" value="alphabet-j">Й</option>
+                    <option class="aphabet-select__item" value="alphabet-k">К</option>
+                    <option class="aphabet-select__item" value="alphabet-1">Л</option>
+                    <option class="aphabet-select__item" value="alphabet-m">М</option>
+                    <option class="aphabet-select__item" value="alphabet-n">Н</option>
+                    <option class="aphabet-select__item" value="alphabet-o">О</option>
+                    <option class="aphabet-select__item" value="alphabet-p">П</option>
+                    <option class="aphabet-select__item" value="alphabet-r">Р</option>
+                    <option class="aphabet-select__item" value="alphabet-s">С</option>
+                    <option class="aphabet-select__item" value="alphabet-t">Т</option>
+                    <option class="aphabet-select__item" value="alphabet-y">У</option>
+                    <option class="aphabet-select__item" value="alphabet-f">Ф</option>
+                    <option class="aphabet-select__item" value="alphabet-h">Х</option>
+                    <option class="aphabet-select__item" value="alphabet-ts">Ц</option>
+                    <option class="aphabet-select__item" value="alphabet-ch">Ч</option>
+                    <option class="aphabet-select__item" value="alphabet-sh">Ш</option>
+                    <option class="aphabet-select__item" value="alphabet-shch">Щ</option>
+                    <option class="aphabet-select__item" value="alphabet-ie">Э</option>
+                    <option class="aphabet-select__item" value="alphabet-yu">Ю</option>
+                    <option class="aphabet-select__item" value="alphabet-ya">Я</option>
+                  </select>
+                  <ul class="aphabet-views">
+                    <li class="aphabet-views__item">А</li>
+                    <li class="aphabet-views__item">Б</li>
+                    <li class="aphabet-views__item">В</li>
+                    <li class="aphabet-views__item">Г</li>
+                    <li class="aphabet-views__item">Д</li>
+                    <li class="aphabet-views__item">Е</li>
+                    <li class="aphabet-views__item">Ё</li>
+                    <li class="aphabet-views__item">Ж</li>
+                    <li class="aphabet-views__item">З</li>
+                    <li class="aphabet-views__item">И</li>
+                    <li class="aphabet-views__item">Й</li>
+                    <li class="aphabet-views__item">К</li>
+                    <li class="aphabet-views__item">Л</li>
+                    <li class="aphabet-views__item">М</li>
+                    <li class="aphabet-views__item">Н</li>
+                    <li class="aphabet-views__item">О</li>
+                    <li class="aphabet-views__item">П</li>
+                    <li class="aphabet-views__item">Р</li>
+                    <li class="aphabet-views__item">С</li>
+                    <li class="aphabet-views__item">Т</li>
+                    <li class="aphabet-views__item">У</li>
+                    <li class="aphabet-views__item">Ф</li>
+                    <li class="aphabet-views__item">Х</li>
+                    <li class="aphabet-views__item">Ц</li>
+                    <li class="aphabet-views__item">Ч</li>
+                    <li class="aphabet-views__item">Ш</li>
+                    <li class="aphabet-views__item">Щ</li>
+                    <li class="aphabet-views__item">Э</li>
+                    <li class="aphabet-views__item">Ю</li>
+                    <li class="aphabet-views__item">Я</li>
+                  </ul>
+                </fieldset>
+                <fieldset class="filter-country">
+                  <legend class="filter-country__title visually-hidden">Страны</legend>
+                    <div class="filter-parameters">
+                      <label class="filter-country__label" for="country-afg">Афганистан
+                        <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-afg" value="afg">
+                      </label>
+                      <label class="filter-country__label" for="country-alb">Албания
+                        <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-alb" value="alb">
+                      </label>
+                      <label class="filter-country__label" for="country-alg">Алгерия
+                        <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-alg" value="alg">
+                      </label>
+                      <label class="filter-country__label" for="country-and">Андорра
+                        <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-and" value="and">
+                      </label>
+                      <label class="filter-country__label" for="country-arg">Аргентина
+                        <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-arg" value="arg">
+                      </label>
+                      <label class="filter-country__label" for="country-arm">Армения
+                        <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-arm" value="arm">
+                      </label>
+                      <label class="filter-country__label" for="country-aus">Австралия
+                        <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-aus" value="aus">
+                      </label>
+                      <label class="filter-country__label" for="country-aut">Австрия
+                        <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-aut" value="aut">
+                      </label>
+                      <label class="filter-country__label" for="country-aze">Азербайджанм
+                        <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-aze" value="aze">
+                      </label>
+                    </div>
+                </fieldset>
+              </div>
+            </form>
+            <button class="button button--ellipse">Свернуть</button>
+          </div>
+        </section>
+        <section class="travelmates-sort sort">
+          <h2 class="sort__title">Подберите идеального попутчика</h2>
+          <div class="sort-wrapper">
+            <form class="sort-list" action="https://echo.htmlacademy.ru" method="post">
+              <div class="sort-block">
+                <fieldset class="sort-item">
+                  <legend class="sort-item__title">Хобби</legend>
+                  <button class="sort-item__toggle">Открыть</button>
+                  <div class="sort-parameters">
+                    <!-- Пункты сортировки для примера (не определены в шаблоне) -->
+                    <input class="visually-hidden" type="checkbox" name="sport" id="hobby-sport" checked>
+                    <label class="sort-item__label" for="hobby-sport">Спорт</label>
+                    <input class="visually-hidden" type="checkbox" name="dance" id="hobby-dance">
+                    <label class="sort-item__label" for="hobby-dance">Танцы</label>
+                    <input class="visually-hidden" type="checkbox" name="diy" id="hobby-diy">
+                    <label class="sort-item__label" for="hobby-diy">"Сделай сам"</label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="sort-block">
+                <fieldset class="sort-item">
+                  <legend class="sort-item__title">Музыка</legend>
+                  <button class="sort-item__toggle">Закрыть</button>
+                  <div class="sort-parameters">
+                    <input class="visually-hidden" type="checkbox" name="heavymetal" id="music-heavymetal" checked>
+                    <label class="sort-item__label" for="music-heavymetal">Тяжелый рок</label>
+                    <input class="visually-hidden" type="checkbox" name="rusrap" id="music-rusrap">
+                    <label class="sort-item__label" for="music-rusrap">Русский рэп</label>
+                    <input class="visually-hidden" type="checkbox" name="eurodance" id="music-eurodance">
+                    <label class="sort-item__label" for="music-eurodance">Евроденс</label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="sort-block">
+                <fieldset class="sort-item">
+                  <legend class="sort-item__title">Еда</legend>
+                  <button class="sort-item__toggle">Открыть</button>
+                  <div class="sort-parameters">
+                    <!-- Пункты сортировки для примера (не определены в шаблоне) -->
+                    <input class="visually-hidden" type="checkbox" name="fastfood" id="food-fastfood" checked>
+                    <label class="sort-item__label" for="food-fastfood">Фастфуд</label>
+                    <input class="visually-hidden" type="checkbox" name="korean" id="food-korean">
+                    <label class="sort-item__label" for="food-korean">Корейская кухня</label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="sort-block">
+                <fieldset class="sort-item">
+                  <legend class="sort-item__title">Транспорт</legend>
+                  <button class="sort-item__toggle">Закрыть</button>
+                  <div class="sort-parameters">
+                    <input class="visually-hidden" type="checkbox" name="avia" id="transport-avia" checked>
+                    <label class="sort-item__label" for="transport-avia">Самолет</label>
+                    <input class="visually-hidden" type="checkbox" name="bus" id="transport-bus">
+                    <label class="sort-item__label" for="transport-bus">Автобус</label>
+                    <input class="visually-hidden" type="checkbox" name="bike" id="transport-bike" checked>
+                    <label class="sort-item__label" for="transport-bike">Велосипед</label>
+                    <input class="visually-hidden" type="checkbox" name="walk" id="transport-walk" checked>
+                    <label class="sort-item__label" for="transport-walk">Пешком</label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="sort-block">
+                <fieldset class="sort-item">
+                  <legend class="sort-item__title">Левел</legend>
+                  <button class="sort-item__toggle">Закрыть</button>
+                  <div class="sort-parameters">
+                    <div class="sort-level">
+                      <label class="sort-level__label" for="level-min">
+                        <input class="sort-level__input" type="text" name="level-min" id="level-min" value="30">
+                      </label>
+                      <label class="sort-level__label" for="level-max">
+                        <input class="sort-level__input" type="text" name="level-max" id="level-max" value="100">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="sort-line">
+                    <span class="sort-line__roller sort-line__roller--min"></span>
+                    <span class="sort-line__roller sort-line__roller--max"></span>
+                  </div>
+                </fieldset>
+              </div>
+              <button class="sort__send" type="submit">Показать</button>
+            </form>
+          </div>
+        </section>
         <h2 class="travelmates__title visually-hidden">Список попутчиков:</h2>
         <ul class="travelmates-list">
           <li class="travelmates-list__item travelmate">
