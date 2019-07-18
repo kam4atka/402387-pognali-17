@@ -1,0 +1,36 @@
+.intro {
+  background-color: #161c36;
+  .intro__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    color: #ffffff;
+  }
+}
+.intro-nav {
+  .intro-nav__list {
+    list-style: none;
+
+  }
+  .intro-nav__item {
+    background-color: #ffd74b;
+  }
+  .intro-nav__link {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #161c35;
+    text-decoration: none;
+  }
+}
+
+.intro-about {
+  background-color: #161c35;
+  .intro-about__quote {
+    color: #ffffff;
+  }
+  .intro-about__author {
+    color: #ffffff;
+    font-weight: 700;
+  }
+}

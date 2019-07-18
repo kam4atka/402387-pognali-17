@@ -1,0 +1,31 @@
+.guide {
+  background-color: #192144;
+  .guide__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #ff8d30;
+  }
+}
+
+.guide-list {
+  list-style: none;
+  .guide-list__item {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #161c35;
+  }
+  .guide-list__item--one {
+    background-color: #ff8d30;
+  }
+  .guide-list__item--two {
+    background-color: #ffa530;
+  }
+  .guide-list__item--three {
+    background-color: #ffbd30;
+  }
+  .guide-list__item--four {
+    background-color: #ffd74b;
+  }
+}
