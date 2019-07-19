@@ -14,10 +14,6 @@
     list-style: none;
   }
 
-  .intro-nav__item {
-    background-color: #ffd74b;
-  }
-
   .intro-nav__link {
     font-size: 17px;
     font-weight: 700;
@@ -31,11 +27,12 @@
   background-color: #161c35;
 
   .intro-about__quote {
+    font-weight: 300;
     color: #ffffff;
   }
 
   .intro-about__author {
-    color: #ffffff;
     font-weight: 700;
+    color: #ffffff;
   }
 }

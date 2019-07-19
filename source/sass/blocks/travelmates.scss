@@ -1,0 +1,36 @@
+.travelmates {
+  .travelmates__title {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22.49px;
+    color: #1d2e5b;
+  }
+
+  .travelmates__link {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #1d2e5b;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.travelmates-title {
+  background-color: #161c35;
+
+  .travelmates-title__text {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #ffffff;
+  }
+}
+
+.travelmates-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

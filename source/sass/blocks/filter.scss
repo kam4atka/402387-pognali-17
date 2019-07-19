@@ -1,0 +1,38 @@
+.filter {
+  background-color: #e2e5f2;
+
+  .filter__title {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #192144;
+    text-transform: uppercase;
+  }
+}
+
+.filter-continent {
+  border: none;
+
+  .filter-continent__label {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #192144;
+    text-transform: uppercase;
+    opacity: 0.3;
+  }
+
+  .filter-continent__input:checked + .filter-continent__label {
+    opacity: 1;
+  }
+}
+
+.filter-country {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #444444;
+  border: none;
+}

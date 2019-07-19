@@ -1,0 +1,23 @@
+.method {
+  .method__title {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #444444;
+  }
+}
+
+.method-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .method-list__item {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #444444;
+  }
+}

@@ -1,0 +1,41 @@
+.travelmate {
+  .travelmate__photo-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  .travelmate__name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1d2e5b;
+    text-decoration: none;
+  }
+
+  .travelmate__count {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    color: #161c35;
+    text-transform: uppercase;
+  }
+
+  .travelmate__tags {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #444444;
+  }
+
+  .travelmate__link {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #161c35;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}

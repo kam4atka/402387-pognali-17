@@ -1,0 +1,23 @@
+.alphabet {
+  border: none;
+}
+
+.alphabet-views {
+  list-style: none;
+
+  .alphabet-views__item {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #1d2e5b;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    border: 1px solid #cbced9;
+    background-color: #ffffff;
+  }
+
+  .alphabet-views__item--active {
+    color: #ffffff;
+    background-color: #1d2e5b;
+  }
+}
