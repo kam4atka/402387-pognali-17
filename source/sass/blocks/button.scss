@@ -1,31 +1,31 @@
 .button {
   border: none;
-}
 
-.button--yellow {
-  background-color: $btn-yellow;
-}
+  &--yellow {
+    background-color: $btn-yellow;
+  }
 
-.button--yellow-dark {
-  background-color: $btn-yellow-dark;
-}
+  &--yellow-dark {
+    background-color: $btn-yellow-dark;
+  }
 
-.button--orange {
-  background-color: $btn-orange;
-}
+  &--orange {
+    background-color: $btn-orange;
+  }
 
-.button--white {
-  background-color: $btn-white;
-}
+  &--white {
+    background-color: $btn-white;
+  }
 
-.button--ellipse {
-  border-radius: 20px;
-}
+  &--ellipse {
+    border-radius: 20px;
+  }
 
-.button--square {
-  border-radius: 10px;
-}
+  &--square {
+    border-radius: 10px;
+  }
 
-.button--round {
-  border-radius: 50%;
+  &--round {
+    border-radius: 50%;
+  }
 }

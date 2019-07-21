@@ -1,17 +1,12 @@
-.level {
-  .level__title {
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 18px;
-    color: #444444;
-  }
+.level__title {
+  font-size: 15px;
+  line-height: 18px;
+  color: #444444;
+}
 
-  .level__value {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 18px;
-    color: #1d2e5b;
-  }
+.level__value {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #1d2e5b;
 }
