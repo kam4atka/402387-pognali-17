@@ -1,0 +1,18 @@
+.filter-continent {
+  border: none;
+}
+
+.filter-continent__label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #192144;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+.filter-continent__input {
+  &:checked + .filter-continent__label {
+    opacity: 1;
+  }
+}

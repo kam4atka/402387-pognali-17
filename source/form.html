@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Направления</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">Погнали?</a>
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" alt="На главную страницу">
+      </a>
       <nav class="main-nav">
         <button class="main-nav__toggle">Открыть меню</button>
         <div class="main-nav__wrapper">
@@ -50,7 +53,9 @@
     </header>
     <main class="page-side">
       <section class="user">
-        <h1 class="page-side__title user__title">Направления</h1>
+        <div class="user-title">
+          <h1 class="page-side__title user-title__text">Направления</h1>
+        </div>
         <section class="user-info">
           <h2 class="user-info__title visually-hidden">Информация о пользователе</h2>
           <div class="user-level">
@@ -353,7 +358,7 @@
       </section>
     </main>
     <footer class="page-footer page-block page-block--top">
-      <p class="footer-logo">Погнали?</p>
+      <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип сайта">
       <div class="footer-contact">
         <ul class="footer-contact__list">
           <li class="footer-contact__item">

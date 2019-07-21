@@ -1,0 +1,43 @@
+.companion-item {
+  background-color: #ffffff;
+}
+
+.companion-item__level {
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.companion-item__level-value {
+  font-weight: 700;
+}
+
+.companion-item__level-title {
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+}
+
+.companion-item__country-list,
+.companion-item__transport-list {
+  list-style: none;
+}
+
+.companion-item__country-item,
+.companion-item__transport-item {
+  color: #192144;
+  text-decoration: none;
+}
+
+.companion-item__name {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #1d2e5b;
+}
+
+.companion-item__tags {
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+}

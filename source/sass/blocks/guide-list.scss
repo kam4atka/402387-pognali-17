@@ -1,0 +1,26 @@
+.guide-list {
+  list-style: none;
+}
+
+.guide-list__item {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #161c35;
+
+  &--one {
+    background-color: #ff8d30;
+  }
+
+  &--two {
+    background-color: #ffa530;
+  }
+
+  &--three {
+    background-color: #ffbd30;
+  }
+
+  &--four {
+    background-color: #ffd74b;
+  }
+}

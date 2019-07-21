@@ -1,0 +1,29 @@
+.companion {
+  background-color: #192144;
+}
+
+.companion__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #ff8d30;
+}
+
+.companion__desc {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #ffffff;
+
+  &--bold {
+    font-weight: 700;
+  }
+}
+
+.companion__link {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #1d2e5b;
+  text-decoration: none;
+}
