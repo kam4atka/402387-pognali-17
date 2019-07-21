@@ -1,0 +1,22 @@
+.countryadd-alphabet {
+  border: none;
+}
+
+.countryadd-alphabet__header {
+  background-color: #1d2e5b;
+}
+
+.countryadd-alphabet__header-title,
+.countryadd-alphabet__header-close {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+.countryadd-alphabet__header-close {
+  background-color: transparent;
+  border: none;
+}
