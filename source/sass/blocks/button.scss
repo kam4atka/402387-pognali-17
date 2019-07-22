@@ -17,6 +17,19 @@
     background-color: $btn-white;
   }
 
+  &--blue-light {
+    background-color: $btn-blue-light;
+  }
+
+  &--transparent {
+    background-color: $btn-trasparent;
+  }
+
+  &--border {
+    border-style: solid;
+    border-color: #192144;
+  }
+
   &--ellipse {
     border-radius: 20px;
   }
