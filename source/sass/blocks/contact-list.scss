@@ -10,3 +10,9 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
+@media (min-width: $desktop-width) {
+  .contact-list {
+    display: none;
+  }
+}

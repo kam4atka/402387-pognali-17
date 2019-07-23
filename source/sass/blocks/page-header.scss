@@ -1,4 +1,21 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
   color: #ffffff;
   background-color: #161c36;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    justify-content: flex-start;
+  }
 }

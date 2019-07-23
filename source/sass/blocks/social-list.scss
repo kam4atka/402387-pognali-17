@@ -1,8 +1,15 @@
 .social-list {
+  margin-bottom: 15px;
   list-style: none;
 }
 
 .social-list__link {
   color: #192144;
   text-decoration: none;
+}
+
+@media (min-width: $desktop-width) {
+  .social-list {
+    display: none;
+  }
 }

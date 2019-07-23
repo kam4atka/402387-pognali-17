@@ -1,4 +1,5 @@
 .user-list {
+  margin-bottom: 50px;
   list-style: none;
 }
 
@@ -9,4 +10,10 @@
   color: #161c35;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+@media (min-width: $desktop-width) {
+  .user-list {
+    display: none;
+  }
 }

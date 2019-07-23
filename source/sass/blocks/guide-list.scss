@@ -1,4 +1,6 @@
 .guide-list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
 }
 
@@ -22,5 +24,16 @@
 
   &--four {
     background-color: #ffd74b;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .guide-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .guide-list__item {
+    width: 50%;
   }
 }
