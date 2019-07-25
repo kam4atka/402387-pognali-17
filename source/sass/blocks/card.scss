@@ -1,0 +1,105 @@
+.card {
+  background-color: #ffffff;
+}
+
+.card__photo-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.card__name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #1d2e5b;
+  text-decoration: none;
+}
+
+.card__count {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #161c35;
+  text-transform: uppercase;
+}
+
+.card__tags {
+  font-size: 15px;
+  line-height: 18px;
+  color: #444444;
+}
+
+.card__title {
+  font-size: 15px;
+  line-height: 18px;
+  color: #444444;
+}
+
+.card__level {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #1d2e5b;
+}
+
+.card__list {
+  list-style: none;
+}
+
+.card__item {
+  font-size: 15px;
+  line-height: 18px;
+
+  &--nations {
+    font-weight: 500;
+    color: #1d2e5b;
+    text-transform: uppercase;
+  }
+
+  &--method {
+    font-weight: 300;
+    color: #444444;
+  }
+}
+
+.card__link {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #161c35;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .card__photo-image {
+    width: 190px;
+    height: 190px;
+    border-radius: 15px;
+  }
+
+  .card__name {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .card__tags {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .card__level {
+    line-height: 24px;
+  }
+
+  .card__item {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .card__link {
+    font-size: 20px;
+  }
+}

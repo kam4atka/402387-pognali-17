@@ -3,6 +3,10 @@
   list-style: none;
 }
 
+.site-list__item {
+  text-align: center;
+}
+
 .site-list__link {
   font-size: 30px;
   font-weight: 500;
@@ -12,10 +16,32 @@
   text-decoration: none;
 }
 
+@media (min-width: $tablet-width) {
+  .site-list {
+    margin-bottom: 170px;
+  }
+
+  .site-list__item {
+    margin-left: 60px;
+    text-align: left;
+  }
+
+  .site-list__link {
+    font-size: 60px;
+    line-height: 71.01px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .site-list {
     display: flex;
     flex-direction: row;
     margin-bottom: 0;
+  }
+
+  .site-list__link {
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
   }
 }

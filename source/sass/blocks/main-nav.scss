@@ -16,20 +16,30 @@
 }
 
 .main-nav__wrapper {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: none;
   width: 100%;
   padding-top: 75px;
   background-color: #ffffff;
+  z-index: 2;
 }
 
 .main-nav__list {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  width: 270px;
 }
 
 @media (min-width: $tablet-width) {
   .main-nav {
     align-items: center;
     order: 1;
+  }
+
+  .main-nav__list {
+    width: 688px;
   }
 }
 
@@ -45,7 +55,10 @@
   }
 
   .main-nav__wrapper {
+    position: static;
+    display: block;
     width: auto;
     padding-top: 0;
+    background-color: transparent;
   }
 }

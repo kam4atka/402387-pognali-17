@@ -1,12 +1,11 @@
 .tariff {
-  background-color: #ffffff;
-}
-
-.tariff__title {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #ff8d30;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 270px;
+  padding: 30px 25px 0 25px;
+  box-sizing: border-box;
+  transform: translateX(-50%);
 }
 
 .tariff__close {
@@ -15,4 +14,20 @@
   line-height: 24px;
   color: #1d2e5b;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .tariff {
+    top: 620px;
+    width: 688px;
+    padding: 50px 90px 0 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tariff {
+    top: 110px;
+    width: 750px;
+    padding: 50px 60px 0 60px;
+  }
 }

@@ -12,7 +12,11 @@
   text-decoration: none;
 }
 
-@media (min-width: $desktop-width) {
+.user-list__item {
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
   .user-list {
     display: none;
   }

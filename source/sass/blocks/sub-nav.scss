@@ -1,3 +1,8 @@
+.sub-nav {
+  position: absolute;
+  top: 430px;
+}
+
 .sub-nav__list {
   display: flex;
   flex-direction: row;
@@ -15,6 +20,11 @@
 }
 
 @media (min-width: $tablet-width) {
+  .sub-nav {
+    position: static;
+    width: auto;
+  }
+
   .sub-nav__item:not(:last-child) {
     display: none;
   }

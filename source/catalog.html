@@ -2,438 +2,505 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Попутчики</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" alt="На главную страницу">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">О сервисе</a>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" alt="Вы на главной странице">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">О сервисе</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Направления</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">Попутчики</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list user-list">
+              <li class="user-list__item">
+                <a class="user-list__link" href="#">Авторизация</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list contact-list">
+              <li class="contact-list__item">
+                <a class="contact-list__link contact-list__link--phone" href="tel:88005558628">8 800 555-86-28</a>
+              </li>
+              <li class="contact-list__item">
+                <a class="contact-list__link contact-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list social-list">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--facebook" href="#">facebook</a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--vkontakte" href="#">vkontakte</a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--instagram" href="#">instagram</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="sub-nav">
+          <ul class="sub-nav__list">
+            <li class="sub-nav__item">
+              <a class="sub-nav__link sub-nav__link--phone button button--orange" href="tel:88005558628">phone</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Направления</a>
+            <li class="sub-nav__item">
+              <a class="sub-nav__link sub-nav__link--email button button--yellow-dark" href="mailto:mail@htmlacademy.ru">email</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Попутчики</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__link" href="#">Авторизация</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list contact-list">
-            <li class="contact-list__item">
-              <a class="contact-list__link contact-list__link--phone" href="tel:88005558628">8 800 555-86-28</a>
-            </li>
-            <li class="contact-list__item">
-              <a class="contact-list__link contact-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list social-list">
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--facebook" href="#">facebook</a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--vkontakte" href="#">vkontakte</a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--instagram" href="#">instagram</a>
+            <li class="sub-nav__item">
+              <a class="sub-nav__link sub-nav__link--auth button button--yellow button--ellipse" href="#">Авторизация</a>
             </li>
           </ul>
         </div>
-      </nav>
+      </div>
     </header>
     <main class="page-side">
-      <section class="travelmates">
-        <div class="travelmates-title">
-          <h1 class="page-side__title travelmates-title__text">Попутчики</h1>
+
+      <section class="page-block travelmates">
+        <div class="travelmates__header">
+          <div class="page-block__wrapper">
+            <div class="travelmates__header-wrapper">
+              <h1 class="travelmates__title">Попутчики</h1>
+              <a class="travelmates__link travelmates__link--home" href="index.html">На главную</a>
+            </div>
+          </div>
         </div>
         <section class="travelmates-filter filter">
-          <h2 class="filter__title">Фильтрация по странам</h2>
-          <button class="filter__toggle">Открыть</button>
-          <div class="filter-wrapper visually-hidden">
-            <form class="filter-list" action="https://echo.htmlacademy.ru" method="post">
-              <div class="filter-block">
-                <fieldset class="filter-continent">
-                  <legend class="filter-continent__title visually-hidden">Континенты</legend>
-                    <div class="filter-parameters">
-                      <input class="filter-continent__input visually-hidden" type="radio" name="continent" id="continent--europe" value="europe" checked>
-                      <label class="filter-continent__label" for="continent--europe">Европа</label>
-                      <input class="filter-continent__input visually-hidden" type="radio" name="continent" id="continent--asia" value="asia">
-                      <label class="filter-continent__label" for="continent--asia">Азия</label>
-                      <input class="filter-continent__input visually-hidden" type="radio" name="continent" id="continent--usa" value="ameriсa">
-                      <label class="filter-continent__label" for="continent--usa">Америка</label>
-                      <input class="filter-continent__input visually-hidden" type="radio" name="continent" id="continent--islands" value="islands">
-                      <label class="filter-continent__label" for="continent--islands">Острова</label>
+          <div class="page-block__wrapper">
+            <div class="filter__header">
+              <h2 class="filter__title">Фильтрация по странам</h2>
+              <button class="filter__toggle">Открыть</button>
+            </div>
+            <div class="filter-wrapper visually-hidden">
+                <form class="filter-list" action="https://echo.htmlacademy.ru" method="post">
+                  <div class="filter-block">
+                    <fieldset class="filter-continent">
+                      <legend class="filter-continent__title visually-hidden">Континенты</legend>
+                        <div class="filter-parameters">
+                          <input class="filter-continent__input visually-hidden" type="radio" name="continent" id="continent--europe" value="europe" checked>
+                          <label class="filter-continent__label" for="continent--europe">Европа</label>
+                          <input class="filter-continent__input visually-hidden" type="radio" name="continent" id="continent--asia" value="asia">
+                          <label class="filter-continent__label" for="continent--asia">Азия</label>
+                          <input class="filter-continent__input visually-hidden" type="radio" name="continent" id="continent--usa" value="ameriсa">
+                          <label class="filter-continent__label" for="continent--usa">Америка</label>
+                          <input class="filter-continent__input visually-hidden" type="radio" name="continent" id="continent--islands" value="islands">
+                          <label class="filter-continent__label" for="continent--islands">Острова</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="filter-alphabet alphabet">
+                      <legend class="filter-alphabet__title visually-hidden">Выбрать страну по первой букве</legend>
+                      <select class="filter-alphabet alphabet-select" name="todo-select" id="contry-select">
+                        <option class="alphabet-select__item" value="alphabet-a" selected>А</option>
+                        <option class="alphabet-select__item" value="alphabet-b">Б</option>
+                        <option class="alphabet-select__item" value="alphabet-v">В</option>
+                        <option class="alphabet-select__item" value="alphabet-g">Г</option>
+                        <option class="alphabet-select__item" value="alphabet-d">Д</option>
+                        <option class="alphabet-select__item" value="alphabet-e">Е</option>
+                        <option class="alphabet-select__item" value="alphabet-ye">Ё</option>
+                        <option class="alphabet-select__item" value="alphabet-zh">Ж</option>
+                        <option class="alphabet-select__item" value="alphabet-z">З</option>
+                        <option class="alphabet-select__item" value="alphabet-i">И</option>
+                        <option class="alphabet-select__item" value="alphabet-j">Й</option>
+                        <option class="alphabet-select__item" value="alphabet-k">К</option>
+                        <option class="alphabet-select__item" value="alphabet-1">Л</option>
+                        <option class="alphabet-select__item" value="alphabet-m">М</option>
+                        <option class="alphabet-select__item" value="alphabet-n">Н</option>
+                        <option class="alphabet-select__item" value="alphabet-o">О</option>
+                        <option class="alphabet-select__item" value="alphabet-p">П</option>
+                        <option class="alphabet-select__item" value="alphabet-r">Р</option>
+                        <option class="alphabet-select__item" value="alphabet-s">С</option>
+                        <option class="alphabet-select__item" value="alphabet-t">Т</option>
+                        <option class="alphabet-select__item" value="alphabet-y">У</option>
+                        <option class="alphabet-select__item" value="alphabet-f">Ф</option>
+                        <option class="alphabet-select__item" value="alphabet-h">Х</option>
+                        <option class="alphabet-select__item" value="alphabet-ts">Ц</option>
+                        <option class="alphabet-select__item" value="alphabet-ch">Ч</option>
+                        <option class="alphabet-select__item" value="alphabet-sh">Ш</option>
+                        <option class="alphabet-select__item" value="alphabet-shch">Щ</option>
+                        <option class="alphabet-select__item" value="alphabet-ie">Э</option>
+                        <option class="alphabet-select__item" value="alphabet-yu">Ю</option>
+                        <option class="alphabet-select__item" value="alphabet-ya">Я</option>
+                      </select>
+                      <ul class="alphabet-views">
+                        <li class="alphabet-views__item alphabet-views__item--active">А</li>
+                        <li class="alphabet-views__item">Б</li>
+                        <li class="alphabet-views__item">В</li>
+                        <li class="alphabet-views__item">Г</li>
+                        <li class="alphabet-views__item">Д</li>
+                        <li class="alphabet-views__item">Е</li>
+                        <li class="alphabet-views__item">Ё</li>
+                        <li class="alphabet-views__item">Ж</li>
+                        <li class="alphabet-views__item">З</li>
+                        <li class="alphabet-views__item">И</li>
+                        <li class="alphabet-views__item">Й</li>
+                        <li class="alphabet-views__item">К</li>
+                        <li class="alphabet-views__item">Л</li>
+                        <li class="alphabet-views__item">М</li>
+                        <li class="alphabet-views__item">Н</li>
+                        <li class="alphabet-views__item">О</li>
+                        <li class="alphabet-views__item">П</li>
+                        <li class="alphabet-views__item">Р</li>
+                        <li class="alphabet-views__item">С</li>
+                        <li class="alphabet-views__item">Т</li>
+                        <li class="alphabet-views__item">У</li>
+                        <li class="alphabet-views__item">Ф</li>
+                        <li class="alphabet-views__item">Х</li>
+                        <li class="alphabet-views__item">Ц</li>
+                        <li class="alphabet-views__item">Ч</li>
+                        <li class="alphabet-views__item">Ш</li>
+                        <li class="alphabet-views__item">Щ</li>
+                        <li class="alphabet-views__item">Э</li>
+                        <li class="alphabet-views__item">Ю</li>
+                        <li class="alphabet-views__item">Я</li>
+                      </ul>
+                    </fieldset>
+                    <fieldset class="filter-country">
+                      <legend class="filter-country__title visually-hidden">Страны</legend>
+                        <div class="filter-parameters">
+                          <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-afg" value="afg">
+                          <label class="filter-country__label" for="country-afg">Афганистан</label>
+                          <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-alb" value="alb">
+                          <label class="filter-country__label" for="country-alb">Албания</label>
+                          <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-alg" value="alg">
+                          <label class="filter-country__label" for="country-alg">Алгерия</label>
+                          <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-and" value="and">
+                          <label class="filter-country__label" for="country-and">Андорра</label>
+                          <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-arg" value="arg">
+                          <label class="filter-country__label" for="country-arg">Аргентина</label>
+                          <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-arm" value="arm">
+                          <label class="filter-country__label" for="country-arm">Армения</label>
+                          <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-aus" value="aus">
+                          <label class="filter-country__label" for="country-aus">Австралия</label>
+                          <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-aut" value="aut">
+                          <label class="filter-country__label" for="country-aut">Австрия</label>
+                          <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-aze" value="aze">
+                          <label class="filter-country__label" for="country-aze">Азербайджан</label>
+                        </div>
+                    </fieldset>
+                  </div>
+                </form>
+                <button class="filter__close button button--ellipse">Свернуть</button>
+            </div>
+          </div>
+        </section>
+        <div class="page-block__wrapper travelmates__wrapper">
+          <section class="travelmates-sort sort">
+            <h2 class="sort__title">Подберите идеального попутчика</h2>
+            <div class="sort-wrapper">
+              <form class="sort-list" action="https://echo.htmlacademy.ru" method="post">
+                <div class="sort-block">
+                  <fieldset class="sort-item">
+                    <legend class="sort-item__title">Хобби</legend>
+                    <button class="sort-item__toggle">Открыть</button>
+                    <div class="sort-parameters">
+                      <input class="visually-hidden" type="checkbox" name="sport" id="hobby-sport" checked>
+                      <label class="sort-item__label" for="hobby-sport">Спортзал</label>
+                      <input class="visually-hidden" type="checkbox" name="hookah" id="hobby-hookah">
+                      <label class="sort-item__label" for="hobby-hookah">Кальян</label>
+                      <input class="visually-hidden" type="checkbox" name="sofa" id="hobby-sofa">
+                      <label class="sort-item__label" for="hobby-sofa">Диван</label>
                     </div>
-                </fieldset>
-                <fieldset class="filter-alphabet alphabet">
-                  <legend class="filter-alphabet__title visually-hidden">Выбрать страну по первой букве</legend>
-                  <select class="filter-alphabet alphabet-select" name="todo-select" id="contry-select">
-                    <option class="alphabet-select__item" value="alphabet-a" selected>А</option>
-                    <option class="alphabet-select__item" value="alphabet-b">Б</option>
-                    <option class="alphabet-select__item" value="alphabet-v">В</option>
-                    <option class="alphabet-select__item" value="alphabet-g">Г</option>
-                    <option class="alphabet-select__item" value="alphabet-d">Д</option>
-                    <option class="alphabet-select__item" value="alphabet-e">Е</option>
-                    <option class="alphabet-select__item" value="alphabet-ye">Ё</option>
-                    <option class="alphabet-select__item" value="alphabet-zh">Ж</option>
-                    <option class="alphabet-select__item" value="alphabet-z">З</option>
-                    <option class="alphabet-select__item" value="alphabet-i">И</option>
-                    <option class="alphabet-select__item" value="alphabet-j">Й</option>
-                    <option class="alphabet-select__item" value="alphabet-k">К</option>
-                    <option class="alphabet-select__item" value="alphabet-1">Л</option>
-                    <option class="alphabet-select__item" value="alphabet-m">М</option>
-                    <option class="alphabet-select__item" value="alphabet-n">Н</option>
-                    <option class="alphabet-select__item" value="alphabet-o">О</option>
-                    <option class="alphabet-select__item" value="alphabet-p">П</option>
-                    <option class="alphabet-select__item" value="alphabet-r">Р</option>
-                    <option class="alphabet-select__item" value="alphabet-s">С</option>
-                    <option class="alphabet-select__item" value="alphabet-t">Т</option>
-                    <option class="alphabet-select__item" value="alphabet-y">У</option>
-                    <option class="alphabet-select__item" value="alphabet-f">Ф</option>
-                    <option class="alphabet-select__item" value="alphabet-h">Х</option>
-                    <option class="alphabet-select__item" value="alphabet-ts">Ц</option>
-                    <option class="alphabet-select__item" value="alphabet-ch">Ч</option>
-                    <option class="alphabet-select__item" value="alphabet-sh">Ш</option>
-                    <option class="alphabet-select__item" value="alphabet-shch">Щ</option>
-                    <option class="alphabet-select__item" value="alphabet-ie">Э</option>
-                    <option class="alphabet-select__item" value="alphabet-yu">Ю</option>
-                    <option class="alphabet-select__item" value="alphabet-ya">Я</option>
-                  </select>
-                  <ul class="alphabet-views">
-                    <li class="alphabet-views__item alphabet-views__item--active">А</li>
-                    <li class="alphabet-views__item">Б</li>
-                    <li class="alphabet-views__item">В</li>
-                    <li class="alphabet-views__item">Г</li>
-                    <li class="alphabet-views__item">Д</li>
-                    <li class="alphabet-views__item">Е</li>
-                    <li class="alphabet-views__item">Ё</li>
-                    <li class="alphabet-views__item">Ж</li>
-                    <li class="alphabet-views__item">З</li>
-                    <li class="alphabet-views__item">И</li>
-                    <li class="alphabet-views__item">Й</li>
-                    <li class="alphabet-views__item">К</li>
-                    <li class="alphabet-views__item">Л</li>
-                    <li class="alphabet-views__item">М</li>
-                    <li class="alphabet-views__item">Н</li>
-                    <li class="alphabet-views__item">О</li>
-                    <li class="alphabet-views__item">П</li>
-                    <li class="alphabet-views__item">Р</li>
-                    <li class="alphabet-views__item">С</li>
-                    <li class="alphabet-views__item">Т</li>
-                    <li class="alphabet-views__item">У</li>
-                    <li class="alphabet-views__item">Ф</li>
-                    <li class="alphabet-views__item">Х</li>
-                    <li class="alphabet-views__item">Ц</li>
-                    <li class="alphabet-views__item">Ч</li>
-                    <li class="alphabet-views__item">Ш</li>
-                    <li class="alphabet-views__item">Щ</li>
-                    <li class="alphabet-views__item">Э</li>
-                    <li class="alphabet-views__item">Ю</li>
-                    <li class="alphabet-views__item">Я</li>
+                  </fieldset>
+                </div>
+                <div class="sort-block">
+                  <fieldset class="sort-item">
+                    <legend class="sort-item__title">Музыка</legend>
+                    <button class="sort-item__toggle">Закрыть</button>
+                    <div class="sort-parameters">
+                      <input class="visually-hidden" type="checkbox" name="heavymetal" id="music-heavymetal" checked>
+                      <label class="sort-item__label" for="music-heavymetal">Тяжелый рок</label>
+                      <input class="visually-hidden" type="checkbox" name="rusrap" id="music-rusrap">
+                      <label class="sort-item__label" for="music-rusrap">Русский рэп</label>
+                      <input class="visually-hidden" type="checkbox" name="eurodance" id="music-eurodance">
+                      <label class="sort-item__label" for="music-eurodance">Евроденс</label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="sort-block">
+                  <fieldset class="sort-item">
+                    <legend class="sort-item__title">Еда</legend>
+                    <button class="sort-item__toggle">Открыть</button>
+                    <div class="sort-parameters">
+                      <input class="visually-hidden" type="checkbox" name="meat" id="food-meat" checked>
+                      <label class="sort-item__label" for="food-meat">Мясоед</label>
+                      <input class="visually-hidden" type="checkbox" name="post" id="food-post">
+                      <label class="sort-item__label" for="food-post">Сидит на ПП</label>
+                      <input class="visually-hidden" type="checkbox" name="vegan" id="food-vegan">
+                      <label class="sort-item__label" for="food-vegan">Веган-сыроед</label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="sort-block">
+                  <fieldset class="sort-item">
+                    <legend class="sort-item__title">Транспорт</legend>
+                    <button class="sort-item__toggle">Закрыть</button>
+                    <div class="sort-parameters">
+                      <input class="visually-hidden" type="checkbox" name="avia" id="transport-avia" checked>
+                      <label class="sort-item__label" for="transport-avia">Самолет</label>
+                      <input class="visually-hidden" type="checkbox" name="bus" id="transport-bus">
+                      <label class="sort-item__label" for="transport-bus">Автобус</label>
+                      <input class="visually-hidden" type="checkbox" name="bike" id="transport-bike" checked>
+                      <label class="sort-item__label" for="transport-bike">Велосипед</label>
+                      <input class="visually-hidden" type="checkbox" name="walk" id="transport-walk" checked>
+                      <label class="sort-item__label" for="transport-walk">Пешком</label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="sort-block">
+                  <fieldset class="sort-item">
+                    <legend class="sort-item__title">Левел</legend>
+                    <button class="sort-item__toggle">Закрыть</button>
+                    <div class="sort-parameters">
+                      <div class="sort-level">
+                        <label class="sort-level__label" for="level-min">
+                          <input class="sort-level__input" type="text" name="level-min" id="level-min" value="30">
+                        </label>
+                        <label class="sort-level__label" for="level-max">
+                          <input class="sort-level__input" type="text" name="level-max" id="level-max" value="100">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="sort-line">
+                      <span class="sort-line__roller sort-line__roller--min"></span>
+                      <span class="sort-line__roller sort-line__roller--max"></span>
+                    </div>
+                  </fieldset>
+                </div>
+                <button class="sort__send button button--white button--ellipse" type="submit">Показать</button>
+              </form>
+            </div>
+          </section>
+          <div class="travelmates-content">
+            <h2 class="travelmates-content__title visually-hidden">Список попутчиков:</h2>
+            <ul class="travelmates-list">
+
+              <li class="travelmates-list__item card travelmate">
+
+                <div class="travelmate__photo">
+                  <a class="travelmate__photo-link" href="#">
+                    <img class="card__photo-image travelmate__photo-image" src="https://placehold.it/70x70" alt="Фотография попутчика">
+                  </a>
+                  <a class="travelmate__like" href="#">Like!</a>
+                </div>
+
+                <a class="card__name travelmate__name" href="#">Таня Фирсова</a>
+                <span class="card__count travelmate__count">1.5 m</span>
+
+                <p class="card__tags travelmate__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+
+                <div class="travelmate__country nations">
+                  <p class="card__title nations__title">хочет посетить:</p>
+                  <ul class="card__list nations-list">
+                    <li class="card__item card__item--nations nations-list__item">
+                      <img class="icon icon--lka" src="https://placehold.it/26x18" alt="Шри Ланка">
+                      <span>Шри Ланка</span>
+                    </li>
+                    <li class="card__item card__item--nations nations-list__item">
+                      <img class="icon icon--tha" src="https://placehold.it/26x18" alt="Тайланд">
+                      <span>Тайланд</span>
+                    </li>
+                    <li class="card__item card__item--nations nations-list__item">
+                      <img class="icon icon--syc" src="https://placehold.it/26x18" alt="Сейшелы">
+                      <span>Сейшелы</span>
+                    </li>
                   </ul>
-                </fieldset>
-                <fieldset class="filter-country">
-                  <legend class="filter-country__title visually-hidden">Страны</legend>
-                    <div class="filter-parameters">
-                      <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-afg" value="afg">
-                      <label class="filter-country__label" for="country-afg">Афганистан</label>
-                      <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-alb" value="alb">
-                      <label class="filter-country__label" for="country-alb">Албания</label>
-                      <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-alg" value="alg">
-                      <label class="filter-country__label" for="country-alg">Алгерия</label>
-                      <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-and" value="and">
-                      <label class="filter-country__label" for="country-and">Андорра</label>
-                      <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-arg" value="arg">
-                      <label class="filter-country__label" for="country-arg">Аргентина</label>
-                      <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-arm" value="arm">
-                      <label class="filter-country__label" for="country-arm">Армения</label>
-                      <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-aus" value="aus">
-                      <label class="filter-country__label" for="country-aus">Австралия</label>
-                      <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-aut" value="aut">
-                      <label class="filter-country__label" for="country-aut">Австрия</label>
-                      <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-aze" value="aze">
-                      <label class="filter-country__label" for="country-aze">Азербайджан</label>
-                    </div>
-                </fieldset>
-              </div>
-            </form>
-            <button class="filter__close button button--ellipse">Свернуть</button>
+                </div>
+
+                <div class="travelmate__parameters">
+                  <div class="travelmate__transport method">
+                    <p class="card__title method__title">транспорт:</p>
+                    <ul class="card__list method-list">
+                      <li class="card__item card__item--method card__item--active icon icon--avia">Авиаперелет</li>
+                      <li class="card__item card__item--method icon icon--bus">Автобус</li>
+                      <li class="card__item card__item--method icon icon--bike">Велосипед</li>
+                      <li class="card__item card__item--method icon icon--walk">Пешком</li>
+                    </ul>
+                  </div>
+                  <div class="travelmate-level level">
+                    <p class="card__title level__title">левел:</p>
+                    <span class="card__level level__value">99</span>
+                  </div>
+                </div>
+
+                <div class="travelmate__action">
+                  <a class="card__link travelmate__link" href="#">Позвать!</a>
+                  <a class="travelmate__action-link" href="#">
+                    <img class="travelmate__action-like" src="https://placehold.it/50x50" alt="Like!">
+                  </a>
+                  <span class="card__count travelmate__action-count">1.5 m</span>
+                </div>
+
+              </li>
+
+              <li class="travelmates-list__item card travelmate">
+                <a class="travelmate__photo-link" href="#">
+                  <img class="travelmate__photo-image" src="https://placehold.it/70x70" alt="Фотография попутчика">
+                </a>
+                <a class="card__name travelmate__name" href="#">Петя Демин</a>
+                <span class="card__count travelmate__count">150</span>
+                <p class="card__tags travelmate__tags">#бургер #бар #футбол #концерт #крафт</p>
+                <div class="travelmate-country nations">
+                  <p class="card__title nations__title">хочет посетить:</p>
+                  <ul class="card__list nations-list">
+                    <li class="card__item card__item--nations nations-list__item">
+                      <img class="icon icon--bel" src="https://placehold.it/26x18" alt="Бельгия">
+                      <span>Бельгия</span>
+                    </li>
+                    <li class="card__item card__item--nations nations-list__item">
+                      <img class="icon icon--cze" src="https://placehold.it/26x18" alt="Чехия">
+                      <span>Чехия</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="travelmate-transport method">
+                  <p class="card__title method__title">транспорт:</p>
+                  <ul class="card__list method-list">
+                    <li class="card__item card__item--method card__item--active icon icon--avia">Авиаперелет</li>
+                    <li class="card__item card__item--method card__item--active icon icon--bus">Автобус</li>
+                    <li class="card__item card__item--method icon icon--bike">Велосипед</li>
+                    <li class="card__item card__item--method card__item--active icon icon--walk">Пешком</li>
+                  </ul>
+                </div>
+                <div class="travelmate-level level">
+                  <p class="card__title level__title">левел:</p>
+                  <span class="card__level level__value">80</span>
+                </div>
+                <a class="card__link travelmate__link" href="#">Позвать!</a>
+              </li>
+
+              <li class="travelmates-list__item card travelmate">
+                <a class="travelmate__photo-link" href="#">
+                  <img class="travelmate__photo-image" src="https://placehold.it/70x70" alt="Фотография попутчика">
+                </a>
+                <a class="card__name travelmate__name" href="#">Марк Смолов</a>
+                <span class="card__count travelmate__count">1700</span>
+                <p class="card__tags travelmate__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+                <div class="travelmate-country nations">
+                  <p class="card__title nations__title">хочет посетить:</p>
+                  <ul class="card__list nations-list">
+                    <li class="card__item card__item--nations nations-list__item">
+                      <img class="icon icon--usa" src="https://placehold.it/26x18" alt="США">
+                      <span>США</span>
+                    </li>
+                    <li class="card__item card__item--nations nations-list__item">
+                      <img class="icon icon--aus" src="https://placehold.it/26x18" alt="Австралия">
+                      <span>Австралия</span>
+                    </li>
+                    <li class="card__item card__item--nations nations-list__item">
+                      <img class="icon icon--dom" src="https://placehold.it/26x18" alt="Доминикана">
+                      <span>Доминикана</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="travelmate-transport method">
+                  <p class="card__title method__title">транспорт:</p>
+                  <ul class="card__list method-list">
+                    <li class="card__item card__item--method card__item--active icon icon--avia">Авиаперелет</li>
+                    <li class="card__item card__item--method icon icon--bus">Автобус</li>
+                    <li class="card__item card__item--method card__item--active icon icon--bike">Велосипед</li>
+                    <li class="card__item card__item--method icon icon--walk">Пешком</li>
+                  </ul>
+                </div>
+                <div class="travelmate-level level">
+                  <p class="card__title level__title">левел:</p>
+                  <span class="card__level level__value">25</span>
+                </div>
+                <a class="card__link travelmate__link" href="#">Позвать!</a>
+              </li>
+
+              <li class="travelmates-list__item card travelmate">
+                <a class="travelmate__photo-link" href="#">
+                  <img class="travelmate__photo-image" src="https://placehold.it/70x70" alt="Фотография попутчика">
+                </a>
+                <a class="card__name travelmate__name" href="#">Лариса Роговая</a>
+                <span class="card__count travelmate__count">23</span>
+                <p class="card__tags travelmate__tags">#образование #карьера #учеба #линкедин</p>
+                <div class="travelmate-country nations">
+                  <p class="card__title nations__title">хочет посетить:</p>
+                  <ul class="card__list nations-list">
+                    <li class="card__item card__item--nations nations-list__item">
+                      <img class="icon icon--gdr" src="https://placehold.it/26x18" alt="Великбритания">
+                      <span>Великбритания</span>
+                    </li>
+                    <li class="card__item card__item--nations nations-list__item">
+                      <img class="icon icon--deu" src="https://placehold.it/26x18" alt="Германия">
+                      <span>Германия</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="travelmate-transport method">
+                  <p class="card__title method__title">транспорт:</p>
+                  <ul class="card__list method-list">
+                    <li class="card__item card__item--method card__item--active icon icon--avia">Авиаперелет</li>
+                    <li class="card__item card__item--method card__item--active icon icon--bus">Автобус</li>
+                    <li class="card__item card__item--method icon icon--bike">Велосипед</li>
+                    <li class="card__item card__item--method icon icon--walk">Пешком</li>
+                  </ul>
+                </div>
+                <div class="travelmate-level level">
+                  <p class="card__title level__title">левел:</p>
+                  <span class="card__level level__value">50</span>
+                </div>
+                <a class="card__link travelmate__link" href="#">Позвать!</a>
+              </li>
+
+            </ul>
           </div>
-        </section>
-        <section class="travelmates-sort sort">
-          <h2 class="sort__title">Подберите идеального попутчика</h2>
-          <div class="sort-wrapper">
-            <form class="sort-list" action="https://echo.htmlacademy.ru" method="post">
-              <div class="sort-block">
-                <fieldset class="sort-item">
-                  <legend class="sort-item__title">Хобби</legend>
-                  <button class="sort-item__toggle">Открыть</button>
-                  <div class="sort-parameters">
-                    <input class="visually-hidden" type="checkbox" name="sport" id="hobby-sport" checked>
-                    <label class="sort-item__label" for="hobby-sport">Спортзал</label>
-                    <input class="visually-hidden" type="checkbox" name="hookah" id="hobby-hookah">
-                    <label class="sort-item__label" for="hobby-hookah">Кальян</label>
-                    <input class="visually-hidden" type="checkbox" name="sofa" id="hobby-sofa">
-                    <label class="sort-item__label" for="hobby-sofa">Диван</label>
-                  </div>
-                </fieldset>
+        </div>
+        <div class="page-block__wrapper">
+          <div class="travelmates__footer">
+            <a class="travelmates__link" href="#">Показать еще</a>
+            <div class="pages">
+              <ul class="pages-list">
+                <li class="pages-list__item">1</li>
+                <li class="pages-list__item">2</li>
+                <li class="pages-list__item">3</li>
+                <li class="pages-list__item">4</li>
+              </ul>
+              <div class="pages-pagination">
+                <a class="pages__prev button button--prev" href="#">Предыдущая страница</a>
+                <a class="pages__next button button--next" href="#">Следующая страница</a>
               </div>
-              <div class="sort-block">
-                <fieldset class="sort-item">
-                  <legend class="sort-item__title">Музыка</legend>
-                  <button class="sort-item__toggle">Закрыть</button>
-                  <div class="sort-parameters">
-                    <input class="visually-hidden" type="checkbox" name="heavymetal" id="music-heavymetal" checked>
-                    <label class="sort-item__label" for="music-heavymetal">Тяжелый рок</label>
-                    <input class="visually-hidden" type="checkbox" name="rusrap" id="music-rusrap">
-                    <label class="sort-item__label" for="music-rusrap">Русский рэп</label>
-                    <input class="visually-hidden" type="checkbox" name="eurodance" id="music-eurodance">
-                    <label class="sort-item__label" for="music-eurodance">Евроденс</label>
-                  </div>
-                </fieldset>
-              </div>
-              <div class="sort-block">
-                <fieldset class="sort-item">
-                  <legend class="sort-item__title">Еда</legend>
-                  <button class="sort-item__toggle">Открыть</button>
-                  <div class="sort-parameters">
-                    <input class="visually-hidden" type="checkbox" name="meat" id="food-meat" checked>
-                    <label class="sort-item__label" for="food-meat">Мясоед</label>
-                    <input class="visually-hidden" type="checkbox" name="post" id="food-post">
-                    <label class="sort-item__label" for="food-post">Сидит на ПП</label>
-                    <input class="visually-hidden" type="checkbox" name="vegan" id="food-vegan">
-                    <label class="sort-item__label" for="food-vegan">Веган-сыроед</label>
-                  </div>
-                </fieldset>
-              </div>
-              <div class="sort-block">
-                <fieldset class="sort-item">
-                  <legend class="sort-item__title">Транспорт</legend>
-                  <button class="sort-item__toggle">Закрыть</button>
-                  <div class="sort-parameters">
-                    <input class="visually-hidden" type="checkbox" name="avia" id="transport-avia" checked>
-                    <label class="sort-item__label" for="transport-avia">Самолет</label>
-                    <input class="visually-hidden" type="checkbox" name="bus" id="transport-bus">
-                    <label class="sort-item__label" for="transport-bus">Автобус</label>
-                    <input class="visually-hidden" type="checkbox" name="bike" id="transport-bike" checked>
-                    <label class="sort-item__label" for="transport-bike">Велосипед</label>
-                    <input class="visually-hidden" type="checkbox" name="walk" id="transport-walk" checked>
-                    <label class="sort-item__label" for="transport-walk">Пешком</label>
-                  </div>
-                </fieldset>
-              </div>
-              <div class="sort-block">
-                <fieldset class="sort-item">
-                  <legend class="sort-item__title">Левел</legend>
-                  <button class="sort-item__toggle">Закрыть</button>
-                  <div class="sort-parameters">
-                    <div class="sort-level">
-                      <label class="sort-level__label" for="level-min">
-                        <input class="sort-level__input" type="text" name="level-min" id="level-min" value="30">
-                      </label>
-                      <label class="sort-level__label" for="level-max">
-                        <input class="sort-level__input" type="text" name="level-max" id="level-max" value="100">
-                      </label>
-                    </div>
-                  </div>
-                  <div class="sort-line">
-                    <span class="sort-line__roller sort-line__roller--min"></span>
-                    <span class="sort-line__roller sort-line__roller--max"></span>
-                  </div>
-                </fieldset>
-              </div>
-              <button class="sort__send button button--white button--ellipse" type="submit">Показать</button>
-            </form>
+            </div>
           </div>
-        </section>
-        <h2 class="travelmates__title visually-hidden">Список попутчиков:</h2>
-        <ul class="travelmates-list">
-          <li class="travelmates-list__item travelmate">
-            <a class="travelmate__photo-link" href="#">
-              <img class="travelmate__photo-image" src="https://placehold.it/70x70" alt="Фотография попутчика">
-            </a>
-            <a class="travelmate__name" href="#">Таня Фирсова</a>
-            <span class="travelmate__count">1.5 m</span>
-            <p class="travelmate__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <div class="travelmate__country nations">
-              <p class="nations__title">хочет посетить:</p>
-              <ul class="nations-list">
-                <li class="nations-list__item">
-                  <img class="nations-list__item-flag nations-list__item-flag--lka" src="https://placehold.it/26x18" alt="Шри Ланка">
-                  <span class="nations-list__item-name">Шри Ланка</span>
-                </li>
-                <li class="nations-list__item">
-                  <img class="nations-list__item-flag nations-list__item-flag--tha" src="https://placehold.it/26x18" alt="Тайланд">
-                  <span class="nations-list__item-name">Тайланд</span>
-                </li>
-                <li class="nations-list__item">
-                  <img class="nations-list__item-flag nations-list__item-flag--syc" src="https://placehold.it/26x18" alt="Сейшелы">
-                  <span class="nations-list__item-name">Сейшелы</span>
-                </li>
-              </ul>
-            </div>
-            <div class="travelmate-transport method">
-              <p class="method__title">транспорт:</p>
-              <ul class="method-list">
-                <li class="method-list__item icon icon--avia method-list__item--active">Авиаперелет</li>
-                <li class="method-list__item icon icon--bus">Автобус</li>
-                <li class="method-list__item icon icon--bike">Велосипед</li>
-                <li class="method-list__item icon icon--walk">Пешком</li>
-              </ul>
-            </div>
-            <div class="travelmate-level level">
-              <p class="level__title">левел:</p>
-              <span class="level__value">99</span>
-            </div>
-            <a class="travelmate__link" href="#">Позвать!</a>
-          </li>
-          <li class="travelmates-list__item travelmate">
-            <a href="#">
-              <img class="travelmate__photo" src="https://placehold.it/70x70" alt="Фотография попутчика">
-            </a>
-            <a class="travelmate__name" href="#">Петя Демин</a>
-            <span class="travelmate__count">150</span>
-            <p class="travelmate__tags">#бургер #бар #футбол #концерт #крафт</p>
-            <div class="travelmate-country nations">
-              <p class="nations__title">хочет посетить:</p>
-              <ul class="nations-list">
-                <li class="nations-list__item">
-                  <img class="nations-list__item-flag nations-list__item-flag--bel" src="https://placehold.it/26x18" alt="Бельгия">
-                  <span class="nations-list__item-name">Бельгия</span>
-                </li>
-                <li class="nations-list__item">
-                  <img class="nations-list__item-flag nations-list__item-flag--cze" src="https://placehold.it/26x18" alt="Чехия">
-                  <span class="nations-list__item-name">Чехия</span>
-                </li>
-              </ul>
-            </div>
-            <div class="travelmate-transport method">
-              <p class="method__title">транспорт:</p>
-              <ul class="method-list">
-                <li class="method-list__item icon icon--avia method-list__item--active">Авиаперелет</li>
-                <li class="method-list__item icon icon--bus method-list__item--active">Автобус</li>
-                <li class="method-list__item icon icon--bike">Велосипед</li>
-                <li class="method-list__item icon icon--walk method-list__item--active">Пешком</li>
-              </ul>
-            </div>
-            <div class="travelmate-level level">
-              <p class="level__title">левел:</p>
-              <span class="level__value">80</span>
-            </div>
-            <a class="travelmate__link" href="#">Позвать!</a>
-          </li>
-          <li class="travelmates-list__item travelmate">
-            <a href="">
-              <img class="travelmate__photo" src="https://placehold.it/70x70" alt="Фотография попутчика">
-            </a>
-            <a class="travelmate__name" href="#">Марк Смолов</a>
-            <span class="travelmate__count">1700</span>
-            <p class="travelmate__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-            <div class="travelmate-country nations">
-              <p class="nations__title">хочет посетить:</p>
-              <ul class="nations-list">
-                <li class="nations-list__item">
-                  <img class="nations-list__item-flag nations-list__item-flag--usa" src="https://placehold.it/26x18" alt="США">
-                  <span class="nations-list__item-name">США</span>
-                </li>
-                <li class="nations-list__item">
-                  <img class="nations-list__item-flag nations-list__item-flag--aus" src="https://placehold.it/26x18" alt="Австралия">
-                  <span class="nations-list__item-name">Австралия</span>
-                </li>
-                <li class="nations-list__item">
-                  <img class="nations-list__item-flag nations-list__item-flag--dom" src="https://placehold.it/26x18" alt="Доминикана">
-                  <span class="nations-list__item-name">Доминикана</span>
-                </li>
-              </ul>
-            </div>
-            <div class="travelmate-transport method">
-              <p class="method__title">транспорт:</p>
-              <ul class="method-list">
-                <li class="method-list__item icon icon--avia method-list__item--active">Авиаперелет</li>
-                <li class="method-list__item icon icon--bus">Автобус</li>
-                <li class="method-list__item icon icon--bike method-list__item--active">Велосипед</li>
-                <li class="method-list__item icon icon--walk">Пешком</li>
-              </ul>
-            </div>
-            <div class="travelmate-level level">
-              <p class="level__title">левел:</p>
-              <span class="level__value">25</span>
-            </div>
-            <a class="travelmate__link" href="#">Позвать!</a>
-          </li>
-          <li class="travelmates-list__item travelmate">
-            <a href="#">
-              <img class="travelmate__photo" src="https://placehold.it/70x70" alt="Фотография попутчика">
-            </a>
-            <a class="travelmate__name" href="#">Лариса Роговая</a>
-            <span class="travelmate__count">23</span>
-            <p class="travelmate__tags">#образование #карьера #учеба #линкедин</p>
-            <div class="travelmate-country nations">
-              <p class="nations__title">хочет посетить:</p>
-              <ul class="nations-list">
-                <li class="nations-list__item">
-                  <img class="nations-list__item-flag nations-list__item-flag--gdr" src="https://placehold.it/26x18" alt="Великбритания">
-                  <span class="nations-list__item-name">Великбритания</span>
-                </li>
-                <li class="nations-list__item">
-                  <img class="nations-list__item-flag nations-list__item-flag--deu" src="https://placehold.it/26x18" alt="Германия">
-                  <span class="nations-list__item-name">Германия</span>
-                </li>
-              </ul>
-            </div>
-            <div class="travelmate-transport method">
-              <p class="method__title">транспорт:</p>
-              <ul class="method-list">
-                <li class="method-list__item icon icon--avia method-list__item--active">Авиаперелет</li>
-                <li class="method-list__item icon icon--bus method-list__item--active">Автобус</li>
-                <li class="method-list__item icon icon--bike">Велосипед</li>
-                <li class="method-list__item icon icon--walk">Пешком</li>
-              </ul>
-            </div>
-            <div class="travelmate-level level">
-              <p class="level__title">левел:</p>
-              <span class="level__value">50</span>
-            </div>
-            <a class="travelmate__link" href="#">Позвать!</a>
-          </li>
-        </ul>
-        <a class="travelmates__link" href="#">Показать еще</a>
-        <div class="pages">
-          <a class="pages__prev button button--prev" href="#">Предыдущая страница</a>
-          <a class="pages__next button button--next" href="#">Следующая страница</a>
         </div>
       </section>
     </main>
-    <footer class="page-footer page-block page-block--top">
-      <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип сайта">
-      <div class="footer-contact">
-        <ul class="footer-contact__list">
-          <li class="footer-contact__item">
-            <a class="footer-contact__link footer-contact__link--facebook" href="#">facebook</a>
-          </li>
-          <li class="footer-contact__item">
-            <a class="footer-contact__link footer-contact__link--vkontakte" href="#">vkontakte</a>
-          </li>
-          <li class="footer-contact__item">
-            <a class="footer-contact__link footer-contact__link--instagram" href="#">instagram</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-copyright">
-        <p class="footer-copyright__text">Разработано</p>
-        <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <img class="footer-copyright__logo" src="https://placehold.it/27x34" alt="Логотип разработчика">
-        </a>
+    <footer class="page-block page-block--top page-footer">
+      <div class="page-block__wrapper page-footer__wrapper">
+        <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип сайта">
+        <div class="footer-contact">
+          <ul class="footer-contact__list">
+            <li class="footer-contact__item">
+              <a class="footer-contact__link footer-contact__link--facebook" href="#">facebook</a>
+            </li>
+            <li class="footer-contact__item">
+              <a class="footer-contact__link footer-contact__link--vkontakte" href="#">vkontakte</a>
+            </li>
+            <li class="footer-contact__item">
+              <a class="footer-contact__link footer-contact__link--instagram" href="#">instagram</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p class="footer-copyright__text">Разработано</p>
+          <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+            <img class="footer-copyright__logo" src="https://placehold.it/27x34" alt="Логотип разработчика">
+          </a>
+        </div>
       </div>
     </footer>
   </body>

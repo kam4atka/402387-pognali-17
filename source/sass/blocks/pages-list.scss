@@ -1,0 +1,13 @@
+.pages-list {
+  margin: 0;
+  padding: 0;
+  display: none;
+  list-style: none;
+}
+
+@media (min-width: $tablet-width) {
+  .pages-list {
+    display: flex;
+    flex-direction: row;
+  }
+}

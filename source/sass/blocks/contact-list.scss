@@ -1,5 +1,6 @@
 .contact-list {
   list-style: none;
+  margin-bottom: 60px;
 }
 
 .contact-list__link {
@@ -9,6 +10,25 @@
   color: #192144;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.contact-list__item {
+  padding-left: 60px;
+}
+
+@media (min-width: $tablet-width) {
+  .contact-list {
+    margin-bottom: 150px;
+  }
+
+  .contact-list__item {
+    margin-left: 60px;
+  }
+
+  .contact-list__link {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 @media (min-width: $desktop-width) {

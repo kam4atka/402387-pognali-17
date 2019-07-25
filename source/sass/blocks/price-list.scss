@@ -1,0 +1,30 @@
+.price-list {
+  margin-bottom: 45px;
+}
+
+.price-list__row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .price-list {
+    width: 560px;
+    margin-bottom: 80px;
+    margin-left: 90px;
+  }
+
+  .price-list__row {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price-list {
+    width: 815px;
+    margin-left: 160px;
+  }
+}
