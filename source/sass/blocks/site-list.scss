@@ -1,19 +1,9 @@
 .site-list {
   margin-bottom: 55px;
-  list-style: none;
 }
 
 .site-list__item {
   text-align: center;
-}
-
-.site-list__link {
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 36px;
-  color: #192144;
-  text-transform: uppercase;
-  text-decoration: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -25,11 +15,6 @@
     margin-left: 60px;
     text-align: left;
   }
-
-  .site-list__link {
-    font-size: 60px;
-    line-height: 71.01px;
-  }
 }
 
 @media (min-width: $desktop-width) {
@@ -37,11 +22,5 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 0;
-  }
-
-  .site-list__link {
-    font-size: 20px;
-    line-height: 30px;
-    color: #ffffff;
   }
 }

@@ -13,6 +13,11 @@
     background-color: #ffffff;
     color: #444444;
   }
+
+  &--yellow {
+    background-color: #ffd74b;
+    color: #192144;
+  }
 }
 
 .block__intro {
@@ -43,6 +48,19 @@
 
 .block__list {
   list-style: none;
+}
+
+.block__address {
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #192144;
+
+  &--link {
+    color: #1d2e5b;
+    text-transform: initial;
+    text-decoration: none;
+  }
 }
 
 .block__link {
@@ -84,6 +102,11 @@
       font-size: 21px;
       line-height: 25px;
     }
+  }
+
+  .block__address {
+    font-size: 28px;
+    line-height: 28px;
   }
 
   .block__link {

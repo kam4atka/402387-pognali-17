@@ -1,4 +1,5 @@
 .filter {
+  padding: 20px;
   background-color: #e2e5f2;
 }
 
@@ -24,4 +25,25 @@
   color: #161c35;
   line-height: 29.45px;
   text-transform: uppercase;
+  background-color: #d6daed;
+}
+
+.filter__wrapper {
+  display: none;
+  flex-direction: column;
+}
+
+.filter__block {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $tablet-width) {
+  .filter__header {
+    display: none;
+  }
+
+  .filter__block {
+    flex-direction: row;
+  }
 }

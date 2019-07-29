@@ -1,0 +1,12 @@
+@media (min-width: $tablet-width) {
+  .guide {
+    position: relative;
+    bottom: -128px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .guide {
+    bottom: 0;
+  }
+}

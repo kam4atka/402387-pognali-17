@@ -6,7 +6,7 @@
     <title>Попутчики</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="side">
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
@@ -68,7 +68,6 @@
       </div>
     </header>
     <main class="page-side">
-
       <section class="page-block travelmates">
         <div class="travelmates__header">
           <div class="page-block__wrapper">
@@ -84,9 +83,9 @@
               <h2 class="filter__title">Фильтрация по странам</h2>
               <button class="filter__toggle">Открыть</button>
             </div>
-            <div class="filter-wrapper visually-hidden">
+            <div class="filter__wrapper">
                 <form class="filter-list" action="https://echo.htmlacademy.ru" method="post">
-                  <div class="filter-block">
+                  <div class="filter__block">
                     <fieldset class="filter-continent">
                       <legend class="filter-continent__title visually-hidden">Континенты</legend>
                         <div class="filter-parameters">
@@ -169,7 +168,7 @@
                     </fieldset>
                     <fieldset class="filter-country">
                       <legend class="filter-country__title visually-hidden">Страны</legend>
-                        <div class="filter-parameters">
+                        <div class="filter-parameters filter-parameters--country">
                           <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-afg" value="afg">
                           <label class="filter-country__label" for="country-afg">Афганистан</label>
                           <input class="filter-country__input visually-hidden" type="radio" name="country" id="country-alb" value="alb">
@@ -196,90 +195,100 @@
             </div>
           </div>
         </section>
-        <div class="page-block__wrapper travelmates__wrapper">
-          <section class="travelmates-sort sort">
-            <h2 class="sort__title">Подберите идеального попутчика</h2>
+        <div class="page-block__wrapper block travelmates__wrapper">
+          <section class="travelmates-sort block-sort sort">
+            <h2 class="block-sort__title sort__title">Подберите идеального попутчика</h2>
             <div class="sort-wrapper">
               <form class="sort-list" action="https://echo.htmlacademy.ru" method="post">
                 <div class="sort-block">
-                  <fieldset class="sort-item">
-                    <legend class="sort-item__title">Хобби</legend>
-                    <button class="sort-item__toggle">Открыть</button>
-                    <div class="sort-parameters">
-                      <input class="visually-hidden" type="checkbox" name="sport" id="hobby-sport" checked>
-                      <label class="sort-item__label" for="hobby-sport">Спортзал</label>
-                      <input class="visually-hidden" type="checkbox" name="hookah" id="hobby-hookah">
-                      <label class="sort-item__label" for="hobby-hookah">Кальян</label>
-                      <input class="visually-hidden" type="checkbox" name="sofa" id="hobby-sofa">
-                      <label class="sort-item__label" for="hobby-sofa">Диван</label>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="sort-block">
-                  <fieldset class="sort-item">
-                    <legend class="sort-item__title">Музыка</legend>
-                    <button class="sort-item__toggle">Закрыть</button>
-                    <div class="sort-parameters">
-                      <input class="visually-hidden" type="checkbox" name="heavymetal" id="music-heavymetal" checked>
-                      <label class="sort-item__label" for="music-heavymetal">Тяжелый рок</label>
-                      <input class="visually-hidden" type="checkbox" name="rusrap" id="music-rusrap">
-                      <label class="sort-item__label" for="music-rusrap">Русский рэп</label>
-                      <input class="visually-hidden" type="checkbox" name="eurodance" id="music-eurodance">
-                      <label class="sort-item__label" for="music-eurodance">Евроденс</label>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="sort-block">
-                  <fieldset class="sort-item">
-                    <legend class="sort-item__title">Еда</legend>
-                    <button class="sort-item__toggle">Открыть</button>
-                    <div class="sort-parameters">
-                      <input class="visually-hidden" type="checkbox" name="meat" id="food-meat" checked>
-                      <label class="sort-item__label" for="food-meat">Мясоед</label>
-                      <input class="visually-hidden" type="checkbox" name="post" id="food-post">
-                      <label class="sort-item__label" for="food-post">Сидит на ПП</label>
-                      <input class="visually-hidden" type="checkbox" name="vegan" id="food-vegan">
-                      <label class="sort-item__label" for="food-vegan">Веган-сыроед</label>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="sort-block">
-                  <fieldset class="sort-item">
-                    <legend class="sort-item__title">Транспорт</legend>
-                    <button class="sort-item__toggle">Закрыть</button>
-                    <div class="sort-parameters">
-                      <input class="visually-hidden" type="checkbox" name="avia" id="transport-avia" checked>
-                      <label class="sort-item__label" for="transport-avia">Самолет</label>
-                      <input class="visually-hidden" type="checkbox" name="bus" id="transport-bus">
-                      <label class="sort-item__label" for="transport-bus">Автобус</label>
-                      <input class="visually-hidden" type="checkbox" name="bike" id="transport-bike" checked>
-                      <label class="sort-item__label" for="transport-bike">Велосипед</label>
-                      <input class="visually-hidden" type="checkbox" name="walk" id="transport-walk" checked>
-                      <label class="sort-item__label" for="transport-walk">Пешком</label>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="sort-block">
-                  <fieldset class="sort-item">
-                    <legend class="sort-item__title">Левел</legend>
-                    <button class="sort-item__toggle">Закрыть</button>
-                    <div class="sort-parameters">
-                      <div class="sort-level">
-                        <label class="sort-level__label" for="level-min">
-                          <input class="sort-level__input" type="text" name="level-min" id="level-min" value="30">
-                        </label>
-                        <label class="sort-level__label" for="level-max">
-                          <input class="sort-level__input" type="text" name="level-max" id="level-max" value="100">
-                        </label>
+                  <fieldset class="block-sort__item sort-item">
+                    <div class="sort-item__wrapper">
+                      <legend class="block-sort__item-title">Хобби</legend>
+                      <button class="block-sort__item-toggle">Открыть</button>
+                      <div class="sort-parameters">
+                        <input class="visually-hidden" type="checkbox" name="sport" id="hobby-sport" checked>
+                        <label class="block-sort__item__label" for="hobby-sport">Спортзал</label>
+                        <input class="visually-hidden" type="checkbox" name="hookah" id="hobby-hookah">
+                        <label class="block-sort__item__label" for="hobby-hookah">Кальян</label>
+                        <input class="visually-hidden" type="checkbox" name="sofa" id="hobby-sofa">
+                        <label class="block-sort__item__label" for="hobby-sofa">Диван</label>
                       </div>
                     </div>
-                    <div class="sort-line">
-                      <span class="sort-line__roller sort-line__roller--min"></span>
-                      <span class="sort-line__roller sort-line__roller--max"></span>
+                  </fieldset>
+                </div>
+                <div class="sort-block">
+                  <fieldset class="block-sort__item sort-item">
+                    <div class="sort-item__wrapper">
+                      <legend class="block-sort__item-title">Музыка</legend>
+                      <button class="block-sort__item-toggle">Закрыть</button>
+                      <div class="sort-parameters">
+                        <input class="visually-hidden" type="checkbox" name="heavymetal" id="music-heavymetal" checked>
+                        <label class="block-sort__item__label" for="music-heavymetal">Тяжелый рок</label>
+                        <input class="visually-hidden" type="checkbox" name="rusrap" id="music-rusrap">
+                        <label class="block-sort__item__label" for="music-rusrap">Русский рэп</label>
+                        <input class="visually-hidden" type="checkbox" name="eurodance" id="music-eurodance">
+                        <label class="block-sort__item__label" for="music-eurodance">Евроденс</label>
+                      </div>
                     </div>
                   </fieldset>
                 </div>
-                <button class="sort__send button button--white button--ellipse" type="submit">Показать</button>
+                <div class="sort-block">
+                  <fieldset class="block-sort__item sort-item">
+                    <div class="sort-item__wrapper">
+                      <legend class="block-sort__item-title">Еда</legend>
+                      <button class="block-sort__item-toggle">Открыть</button>
+                      <div class="sort-parameters">
+                        <input class="visually-hidden" type="checkbox" name="meat" id="food-meat" checked>
+                        <label class="block-sort__item__label" for="food-meat">Мясоед</label>
+                        <input class="visually-hidden" type="checkbox" name="post" id="food-post">
+                        <label class="block-sort__item__label" for="food-post">Сидит на ПП</label>
+                        <input class="visually-hidden" type="checkbox" name="vegan" id="food-vegan">
+                        <label class="block-sort__item__label" for="food-vegan">Веган-сыроед</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="sort-block">
+                  <fieldset class="block-sort__item sort-item">
+                    <div class="sort-item__wrapper">
+                      <legend class="block-sort__item-title">Транспорт</legend>
+                      <button class="block-sort__item-toggle">Закрыть</button>
+                      <div class="sort-parameters sort-parameters--transport">
+                        <input class="visually-hidden" type="checkbox" name="avia" id="transport-avia" checked>
+                        <label class="block-sort__item__label" for="transport-avia">Самолет</label>
+                        <input class="visually-hidden" type="checkbox" name="bus" id="transport-bus">
+                        <label class="block-sort__item__label" for="transport-bus">Автобус</label>
+                        <input class="visually-hidden" type="checkbox" name="bike" id="transport-bike" checked>
+                        <label class="block-sort__item__label" for="transport-bike">Велосипед</label>
+                        <input class="visually-hidden" type="checkbox" name="walk" id="transport-walk" checked>
+                        <label class="block-sort__item__label" for="transport-walk">Пешком</label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="sort-block">
+                  <fieldset class="block-sort__item sort-item">
+                    <div class="sort-item__wrapper">
+                      <legend class="block-sort__item-title">Левел</legend>
+                      <button class="block-sort__item-toggle">Закрыть</button>
+                      <div class="sort-parameters sort-parameters--level">
+                        <div class="sort-level">
+                          <label class="sort-level__label" for="level-min">
+                            <input class="sort-level__input" type="text" name="level-min" id="level-min" value="30">
+                          </label>
+                          <label class="sort-level__label" for="level-max">
+                            <input class="sort-level__input" type="text" name="level-max" id="level-max" value="100">
+                          </label>
+                        </div>
+                      </div>
+                      <div class="sort-line">
+                        <span class="sort-line__roller sort-line__roller--min"></span>
+                        <span class="sort-line__roller sort-line__roller--max"></span>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <button class="block-sort__send button button--white button--ellipse" type="submit">Показать</button>
               </form>
             </div>
           </section>
@@ -288,19 +297,17 @@
             <ul class="travelmates-list">
 
               <li class="travelmates-list__item card travelmate">
-
                 <div class="travelmate__photo">
                   <a class="travelmate__photo-link" href="#">
                     <img class="card__photo-image travelmate__photo-image" src="https://placehold.it/70x70" alt="Фотография попутчика">
                   </a>
                   <a class="travelmate__like" href="#">Like!</a>
                 </div>
-
-                <a class="card__name travelmate__name" href="#">Таня Фирсова</a>
-                <span class="card__count travelmate__count">1.5 m</span>
-
-                <p class="card__tags travelmate__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-
+                <div class="travelmate__desc">
+                  <a class="card__name travelmate__name" href="#">Таня Фирсова</a>
+                  <span class="card__count travelmate__count">1.5 m</span>
+                  <p class="card__tags travelmate__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                </div>
                 <div class="travelmate__country nations">
                   <p class="card__title nations__title">хочет посетить:</p>
                   <ul class="card__list nations-list">
@@ -318,7 +325,6 @@
                     </li>
                   </ul>
                 </div>
-
                 <div class="travelmate__parameters">
                   <div class="travelmate__transport method">
                     <p class="card__title method__title">транспорт:</p>
@@ -334,25 +340,27 @@
                     <span class="card__level level__value">99</span>
                   </div>
                 </div>
-
                 <div class="travelmate__action">
-                  <a class="card__link travelmate__link" href="#">Позвать!</a>
+                  <a class="card__link travelmate__link button button--yellow button--ellipse" href="#">Позвать!</a>
                   <a class="travelmate__action-link" href="#">
                     <img class="travelmate__action-like" src="https://placehold.it/50x50" alt="Like!">
                   </a>
                   <span class="card__count travelmate__action-count">1.5 m</span>
                 </div>
-
               </li>
-
               <li class="travelmates-list__item card travelmate">
-                <a class="travelmate__photo-link" href="#">
-                  <img class="travelmate__photo-image" src="https://placehold.it/70x70" alt="Фотография попутчика">
-                </a>
-                <a class="card__name travelmate__name" href="#">Петя Демин</a>
-                <span class="card__count travelmate__count">150</span>
-                <p class="card__tags travelmate__tags">#бургер #бар #футбол #концерт #крафт</p>
-                <div class="travelmate-country nations">
+                <div class="travelmate__photo">
+                  <a class="travelmate__photo-link" href="#">
+                    <img class="card__photo-image travelmate__photo-image" src="https://placehold.it/70x70" alt="Фотография попутчика">
+                  </a>
+                  <a class="travelmate__like" href="#">Like!</a>
+                </div>
+                <div class="travelmate__desc">
+                  <a class="card__name travelmate__name" href="#">Петя Демин</a>
+                  <span class="card__count travelmate__count">150</span>
+                  <p class="card__tags travelmate__tags">#бургер #бар #футбол #концерт #крафт</p>
+                </div>
+                <div class="travelmate__country nations">
                   <p class="card__title nations__title">хочет посетить:</p>
                   <ul class="card__list nations-list">
                     <li class="card__item card__item--nations nations-list__item">
@@ -365,30 +373,42 @@
                     </li>
                   </ul>
                 </div>
-                <div class="travelmate-transport method">
-                  <p class="card__title method__title">транспорт:</p>
-                  <ul class="card__list method-list">
-                    <li class="card__item card__item--method card__item--active icon icon--avia">Авиаперелет</li>
-                    <li class="card__item card__item--method card__item--active icon icon--bus">Автобус</li>
-                    <li class="card__item card__item--method icon icon--bike">Велосипед</li>
-                    <li class="card__item card__item--method card__item--active icon icon--walk">Пешком</li>
-                  </ul>
+                <div class="travelmate__parameters">
+                  <div class="travelmate__transport method">
+                    <p class="card__title method__title">транспорт:</p>
+                    <ul class="card__list method-list">
+                      <li class="card__item card__item--method card__item--active icon icon--avia">Авиаперелет</li>
+                      <li class="card__item card__item--method card__item--active icon icon--bus">Автобус</li>
+                      <li class="card__item card__item--method icon icon--bike">Велосипед</li>
+                      <li class="card__item card__item--method card__item--active icon icon--walk">Пешком</li>
+                    </ul>
+                  </div>
+                  <div class="travelmate-level level">
+                    <p class="card__title level__title">левел:</p>
+                    <span class="card__level level__value">99</span>
+                  </div>
                 </div>
-                <div class="travelmate-level level">
-                  <p class="card__title level__title">левел:</p>
-                  <span class="card__level level__value">80</span>
+                <div class="travelmate__action">
+                  <a class="card__link travelmate__link button button--yellow button--ellipse" href="#">Позвать!</a>
+                  <a class="travelmate__action-link" href="#">
+                    <img class="travelmate__action-like" src="https://placehold.it/50x50" alt="Like!">
+                  </a>
+                  <span class="card__count travelmate__action-count">150</span>
                 </div>
-                <a class="card__link travelmate__link" href="#">Позвать!</a>
               </li>
-
               <li class="travelmates-list__item card travelmate">
-                <a class="travelmate__photo-link" href="#">
-                  <img class="travelmate__photo-image" src="https://placehold.it/70x70" alt="Фотография попутчика">
-                </a>
-                <a class="card__name travelmate__name" href="#">Марк Смолов</a>
-                <span class="card__count travelmate__count">1700</span>
-                <p class="card__tags travelmate__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-                <div class="travelmate-country nations">
+                <div class="travelmate__photo">
+                  <a class="travelmate__photo-link" href="#">
+                    <img class="card__photo-image travelmate__photo-image" src="https://placehold.it/70x70" alt="Фотография попутчика">
+                  </a>
+                  <a class="travelmate__like" href="#">Like!</a>
+                </div>
+                <div class="travelmate__desc">
+                  <a class="card__name travelmate__name" href="#">Марк Смолов</a>
+                  <span class="card__count travelmate__count">1700</span>
+                  <p class="card__tags travelmate__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+                </div>
+                <div class="travelmate__country nations">
                   <p class="card__title nations__title">хочет посетить:</p>
                   <ul class="card__list nations-list">
                     <li class="card__item card__item--nations nations-list__item">
@@ -405,30 +425,42 @@
                     </li>
                   </ul>
                 </div>
-                <div class="travelmate-transport method">
-                  <p class="card__title method__title">транспорт:</p>
-                  <ul class="card__list method-list">
-                    <li class="card__item card__item--method card__item--active icon icon--avia">Авиаперелет</li>
-                    <li class="card__item card__item--method icon icon--bus">Автобус</li>
-                    <li class="card__item card__item--method card__item--active icon icon--bike">Велосипед</li>
-                    <li class="card__item card__item--method icon icon--walk">Пешком</li>
-                  </ul>
+                <div class="travelmate__parameters">
+                  <div class="travelmate__transport method">
+                    <p class="card__title method__title">транспорт:</p>
+                    <ul class="card__list method-list">
+                      <li class="card__item card__item--method card__item--active icon icon--avia">Авиаперелет</li>
+                      <li class="card__item card__item--method icon icon--bus">Автобус</li>
+                      <li class="card__item card__item--method card__item--active icon icon--bike">Велосипед</li>
+                      <li class="card__item card__item--method icon icon--walk">Пешком</li>
+                    </ul>
+                  </div>
+                  <div class="travelmate-level level">
+                    <p class="card__title level__title">левел:</p>
+                    <span class="card__level level__value">99</span>
+                  </div>
                 </div>
-                <div class="travelmate-level level">
-                  <p class="card__title level__title">левел:</p>
-                  <span class="card__level level__value">25</span>
+                <div class="travelmate__action">
+                  <a class="card__link travelmate__link button button--yellow button--ellipse" href="#">Позвать!</a>
+                  <a class="travelmate__action-link" href="#">
+                    <img class="travelmate__action-like" src="https://placehold.it/50x50" alt="Like!">
+                  </a>
+                  <span class="card__count travelmate__action-count">1700</span>
                 </div>
-                <a class="card__link travelmate__link" href="#">Позвать!</a>
               </li>
-
               <li class="travelmates-list__item card travelmate">
-                <a class="travelmate__photo-link" href="#">
-                  <img class="travelmate__photo-image" src="https://placehold.it/70x70" alt="Фотография попутчика">
-                </a>
-                <a class="card__name travelmate__name" href="#">Лариса Роговая</a>
-                <span class="card__count travelmate__count">23</span>
-                <p class="card__tags travelmate__tags">#образование #карьера #учеба #линкедин</p>
-                <div class="travelmate-country nations">
+                <div class="travelmate__photo">
+                  <a class="travelmate__photo-link" href="#">
+                    <img class="card__photo-image travelmate__photo-image" src="https://placehold.it/70x70" alt="Фотография попутчика">
+                  </a>
+                  <a class="travelmate__like" href="#">Like!</a>
+                </div>
+                <div class="travelmate__desc">
+                  <a class="card__name travelmate__name" href="#">Лариса Роговая</a>
+                  <span class="card__count travelmate__count">23</span>
+                  <p class="card__tags travelmate__tags">#образование #карьера #учеба #линкедин #смузи</p>
+                </div>
+                <div class="travelmate__country nations">
                   <p class="card__title nations__title">хочет посетить:</p>
                   <ul class="card__list nations-list">
                     <li class="card__item card__item--nations nations-list__item">
@@ -441,22 +473,29 @@
                     </li>
                   </ul>
                 </div>
-                <div class="travelmate-transport method">
-                  <p class="card__title method__title">транспорт:</p>
-                  <ul class="card__list method-list">
-                    <li class="card__item card__item--method card__item--active icon icon--avia">Авиаперелет</li>
-                    <li class="card__item card__item--method card__item--active icon icon--bus">Автобус</li>
-                    <li class="card__item card__item--method icon icon--bike">Велосипед</li>
-                    <li class="card__item card__item--method icon icon--walk">Пешком</li>
-                  </ul>
+                <div class="travelmate__parameters">
+                  <div class="travelmate__transport method">
+                    <p class="card__title method__title">транспорт:</p>
+                    <ul class="card__list method-list">
+                      <li class="card__item card__item--method card__item--active icon icon--avia">Авиаперелет</li>
+                      <li class="card__item card__item--method card__item--active icon icon--bus">Автобус</li>
+                      <li class="card__item card__item--method icon icon--bike">Велосипед</li>
+                      <li class="card__item card__item--method icon icon--walk">Пешком</li>
+                    </ul>
+                  </div>
+                  <div class="travelmate-level level">
+                    <p class="card__title level__title">левел:</p>
+                    <span class="card__level level__value">99</span>
+                  </div>
                 </div>
-                <div class="travelmate-level level">
-                  <p class="card__title level__title">левел:</p>
-                  <span class="card__level level__value">50</span>
+                <div class="travelmate__action">
+                  <a class="card__link travelmate__link button button--yellow button--ellipse" href="#">Позвать!</a>
+                  <a class="travelmate__action-link" href="#">
+                    <img class="travelmate__action-like" src="https://placehold.it/50x50" alt="Like!">
+                  </a>
+                  <span class="card__count travelmate__action-count">23</span>
                 </div>
-                <a class="card__link travelmate__link" href="#">Позвать!</a>
               </li>
-
             </ul>
           </div>
         </div>
@@ -471,8 +510,8 @@
                 <li class="pages-list__item">4</li>
               </ul>
               <div class="pages-pagination">
-                <a class="pages__prev button button--prev" href="#">Предыдущая страница</a>
-                <a class="pages__next button button--next" href="#">Следующая страница</a>
+                <a class="pages-pagination__prev button button--prev" href="#">Предыдущая</a>
+                <a class="pages-pagination__next button button--next" href="#">Следующая</a>
               </div>
             </div>
           </div>

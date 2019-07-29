@@ -1,6 +1,16 @@
 .filter-country {
+  margin: 0 25px;
+  padding: 0;
   font-size: 16px;
   line-height: 22px;
   color: #444444;
   border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-country {
+    margin: 0 35px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

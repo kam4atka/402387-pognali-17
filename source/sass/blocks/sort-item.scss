@@ -1,17 +1,25 @@
 .sort-item {
-  border: none;
+  margin: 0;
+  padding: 0;
 }
 
-.sort-item__title {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
-  color: #1d2e5b;
-  text-transform: uppercase;
+.sort-item__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 13px 0;
 }
 
-.sort-item__label {
-  font-size: 15px;
-  line-height: 15px;
-  color: #444444;
+@media (min-width: $tablet-width) {
+  .sort-item__wrapper {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .sort-item__wrapper {
+    justify-content: space-between;
+  }
 }

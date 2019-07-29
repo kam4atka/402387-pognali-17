@@ -1,4 +1,6 @@
 .intro {
+  padding-top: 25px;
+  padding-bottom: 40px;
   background-color: #161c36;
 }
 
@@ -16,6 +18,11 @@
 }
 
 @media (min-width: $tablet-width) {
+  .intro {
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+
   .intro__title {
     width: 395px;
     margin: 0 auto;
@@ -25,7 +32,8 @@
 
 @media (min-width: $desktop-width) {
   .intro {
-    padding-top: 100px;
+    padding-top: 120px;
+    padding-bottom: 125px;
   }
 
   .intro__wrapper {

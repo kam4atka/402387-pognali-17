@@ -1,0 +1,69 @@
+.block-sort__title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 22.49px;
+  color: #1d2e5b;
+}
+
+.block-sort__send {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #161c35;
+  text-transform: uppercase;
+}
+
+.block-sort__item {
+  border: none;
+}
+
+.block-sort__item-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #1d2e5b;
+  text-transform: uppercase;
+}
+
+.block-sort__item-toggle {
+  background-color: transparent;
+  border: none;
+}
+
+.block-sort__item__label {
+  font-size: 15px;
+  line-height: 15px;
+  color: #444444;
+}
+
+@media (min-width: $tablet-width) {
+  .block-sort__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .block-sort__item-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  .block-sort__item-toggle {
+    display: none;
+  }
+
+  .block-sort__item__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .block-sort__send {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .block-sort__item-toggle {
+    display: block;
+  }
+}

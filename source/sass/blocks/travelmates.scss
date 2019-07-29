@@ -25,9 +25,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-top: 25px;
 }
 
 .travelmates__link {
+  margin-bottom: 25px;
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
@@ -49,6 +51,8 @@
 
 @media (min-width: $tablet-width) {
   .travelmates__link {
+    margin-bottom: 50px;
+
     &--home {
       display: inline-block;
     }
@@ -59,6 +63,10 @@
   .travelmates__wrapper {
     flex-direction: row;
     align-items: flex-start;
+  }
+
+  .travelmates__link {
+    margin-bottom: 75px;
   }
 
   .travelmates__footer {

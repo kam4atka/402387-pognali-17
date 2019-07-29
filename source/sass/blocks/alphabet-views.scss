@@ -1,8 +1,19 @@
 .alphabet-views {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .alphabet-views__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 43px;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -15,5 +26,25 @@
   &--active {
     color: #ffffff;
     background-color: #1d2e5b;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .alphabet {
+    width: 350px;
+  }
+
+  .alphabet-views__item {
+    width: 70px;
+    height: 70px;
+    font-size: 60px;
+    line-height: 60px;
+    border: none;
+    color: #babdcf;
+    background-color: transparent;
+
+    &--active {
+      color: #192144;
+    }
   }
 }

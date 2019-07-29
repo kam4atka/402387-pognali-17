@@ -3,6 +3,10 @@
   top: 430px;
 }
 
+.side .sub-nav {
+  display: none;
+}
+
 .sub-nav__list {
   display: flex;
   flex-direction: row;
@@ -23,6 +27,10 @@
   .sub-nav {
     position: static;
     width: auto;
+  }
+
+  .side .sub-nav {
+    display: block;
   }
 
   .sub-nav__item:not(:last-child) {

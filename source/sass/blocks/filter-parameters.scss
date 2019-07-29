@@ -1,0 +1,14 @@
+.filter-parameters {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-parameters {
+    flex-direction: row;
+
+    &--country {
+      flex-direction: column;
+    }
+  }
+}

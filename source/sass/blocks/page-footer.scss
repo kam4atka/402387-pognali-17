@@ -2,16 +2,11 @@
   background-color: #ffffff;
 }
 
-.page-footer__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.page-footer__list {
+  list-style: none;
 }
 
-@media (min-width: $tablet-width) {
-  .page-footer__wrapper {
-    flex-direction: row;
-    align-items: center;
-  }
+.page-footer__link {
+  color: #192144;
+  text-decoration: none;
 }

@@ -1,8 +1,26 @@
+.sort-level {
+  display: flex;
+  flex-direction: row;
+}
+
 .sort-level__input {
+  width: 110px;
   font-size: 15px;
   font-weight: 500;
   line-height: 13.49px;
   color: #1d2e5b;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+@media (min-width: $tablet-width) {
+  .sort-level__input {
+    width: 75px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .sort-level__input {
+    width: 95px;
+  }
 }

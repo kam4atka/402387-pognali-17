@@ -3,5 +3,21 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 45px;
+  box-sizing: border-box;
   background-color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .pages {
+    padding: 25px 30px;
+    margin-bottom: 65px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .pages {
+    padding: 25px 30px;
+    margin-bottom: 75px;
+  }
 }
