@@ -1,0 +1,10 @@
+.filter-alphabet {
+  margin-left: 25px;
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-alphabet {
+    margin-left: 35px;
+  }
+}

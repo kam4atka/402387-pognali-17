@@ -1,0 +1,35 @@
+.comment {
+  width: 150px;
+}
+
+.comment__quote {
+  margin: 0;
+  margin-bottom: 25px;
+  position: 0;
+}
+
+.comment__author {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .comment {
+    width: 260px;
+  }
+
+  .comment__quote {
+    margin-bottom: 50px;
+  }
+
+  .comment__author {
+    margin-bottom: 215px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .comment__author {
+    margin-bottom: 50px;
+  }
+}

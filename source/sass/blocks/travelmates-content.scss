@@ -1,0 +1,26 @@
+.travelmates-content {
+  margin-bottom: 25px;
+}
+
+.travelmates-content__title {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .travelmates-content {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmates-content {
+    width: 950px;
+    margin-bottom: 75px;
+    order: -1;
+  }
+}

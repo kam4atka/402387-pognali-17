@@ -1,5 +1,20 @@
+.footer-copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
 .footer-copyright__text {
-  font-size: 16px;
-  line-height: 22px;
-  color: #444444;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .footer-copyright {
+    width: auto;
+    align-items: center;
+  }
 }

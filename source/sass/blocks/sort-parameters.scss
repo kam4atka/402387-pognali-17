@@ -1,0 +1,42 @@
+.sort-parameters {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 25px;
+  margin-top: 15px;
+
+  &--transport {
+    flex-direction: row;
+    margin-left: 0;
+  }
+
+  &--level {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .sort-parameters {
+    flex-direction: row;
+    margin: 0;
+    width: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .sort-parameters {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 25px;
+    margin-top: 25px;
+
+    &--transport {
+      flex-direction: row;
+      margin-left: 0;
+    }
+
+    &--level {
+      margin-left: 0;
+    }
+  }
+}

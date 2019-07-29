@@ -1,15 +1,75 @@
+.travelmates {
+  background-color: #edeff6;
+}
+
+.travelmates__header {
+  background-color: #161c35;
+}
+
+.travelmates__header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .travelmates__title {
-  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 22.49px;
-  color: #1d2e5b;
+  line-height: 40px;
+  color: #ffffff;
+}
+
+.travelmates__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 25px;
 }
 
 .travelmates__link {
+  margin-bottom: 25px;
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
   color: #1d2e5b;
   text-transform: uppercase;
   text-decoration: none;
+
+  &--home {
+    display: none;
+    color: #ffffff;
+  }
+}
+
+.travelmates__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .travelmates__link {
+    margin-bottom: 50px;
+
+    &--home {
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmates__wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .travelmates__link {
+    margin-bottom: 75px;
+  }
+
+  .travelmates__footer {
+    width: 950px;
+  }
 }

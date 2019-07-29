@@ -1,12 +1,13 @@
 .user-list {
-  list-style: none;
+  margin-bottom: 50px;
 }
 
-.user-list__link {
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 30px;
-  color: #161c35;
-  text-transform: uppercase;
-  text-decoration: none;
+.user-list__item {
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .user-list {
+    display: none;
+  }
 }

@@ -1,8 +1,19 @@
 .social-list {
-  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 45px;
 }
 
-.social-list__link {
-  color: #192144;
-  text-decoration: none;
+@media (min-width: $tablet-width) {
+  .social-list {
+    justify-content: flex-start;
+    margin-bottom: 95px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social-list {
+    display: none;
+  }
 }

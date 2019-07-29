@@ -1,0 +1,17 @@
+.pages-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pages-pagination__prev,
+.pages-pagination__next {
+  width: 135px;
+}
+
+@media (min-width: $tablet-width) {
+  .pages-pagination {
+    width: auto;
+  }
+}

@@ -1,19 +1,29 @@
 .sort {
+  box-sizing: border-box;
+  padding: 25px;
   border-radius: 20px;
   background-color: #ffd74b;
 }
 
 .sort__title {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 22.49px;
-  color: #1d2e5b;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
 }
 
-.sort__send {
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 30px;
-  color: #161c35;
-  text-transform: uppercase;
+@media (min-width: $tablet-width) {
+  .sort__title {
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .sort {
+    width: 285px;
+    padding: 45px;
+  }
+
+  .sort__title {
+    margin-bottom: 40px;
+  }
 }

@@ -1,36 +1,174 @@
-.travelmate__photo-image {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+.travelmate {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  padding: 15px 0 20px 0;
+  border-radius: 20px;
+}
+
+.travelmate:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+
+.travelmate__photo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.travelmate__like {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.travelmate__desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.travelmate__name,
+.travelmate__count {
+  margin-left: 100px;
+  margin-bottom: 10px;
 }
 
 .travelmate__name {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 20px;
-  color: #1d2e5b;
-  text-decoration: none;
+  width: 40%;
 }
 
 .travelmate__count {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 21px;
-  color: #161c35;
-  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .travelmate__tags {
-  font-size: 15px;
-  line-height: 18px;
-  color: #444444;
+  margin: 0;
+  padding: 0;
+  padding-left: 25px;
+}
+
+.travelmate__parameters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.travelmate__action {
+  display: flex;
+  flex-direction: row;
 }
 
 .travelmate__link {
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 30px;
-  color: #161c35;
-  text-transform: uppercase;
-  text-decoration: none;
+  flex-grow: 1;
+  margin: 0 25px;
+}
+
+.travelmate__action-link,
+.travelmate__action-count {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .travelmate {
+    flex-direction: row;
+    padding: 35px 0 25px 0;
+  }
+
+  .travelmate__photo {
+    position: static;
+    margin: 0 35px;
+  }
+
+  .travelmate__like,
+  .travelmate__count {
+    display: none;
+  }
+
+  .travelmate__desc {
+    width: 35%;
+  }
+
+  .travelmate__name,
+  .travelmate__count {
+    margin-left: 0;
+  }
+
+  .travelmate__name {
+    width: auto;
+    margin-bottom: 25px;
+  }
+
+  .travelmate__tags {
+    margin-bottom: 50px;
+    padding: 0;
+  }
+
+  .travelmate__country {
+    order: 1;
+  }
+
+  .travelmate__parameters {
+    flex-direction: column;
+  }
+
+  .travelmate__action {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmate {
+    padding: 50px 50px 50px 345px;
+  }
+
+  .travelmate__photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 285px;
+    margin: 0;
+  }
+
+  .travelmate__photo-image {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 15px;
+  }
+
+  .travelmate__desc {
+    width: 50%;
+  }
+
+  .travelmate__country {
+    order: 0;
+    width: 50%;
+  }
+
+  .travelmate__parameters {
+    order: 1;
+    width: 50%;
+  }
+
+  .travelmate__link {
+    margin: 0;
+  }
+
+  .travelmate__action {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+
+  .travelmate__action-link,
+  .travelmate__action-count {
+    display: block;
+  }
 }

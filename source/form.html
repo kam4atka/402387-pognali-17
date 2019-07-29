@@ -2,384 +2,408 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Направления</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" alt="На главную страницу">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">О сервисе</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Направления</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Попутчики</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__link" href="#">Авторизация</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list contact-list">
-            <li class="contact-list__item">
-              <a class="contact-list__link contact-list__link--phone" href="tel:88005558628">8 800 555-86-28</a>
-            </li>
-            <li class="contact-list__item">
-              <a class="contact-list__link contact-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list social-list">
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--facebook" href="#">facebook</a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--vkontakte" href="#">vkontakte</a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link social-list__link--instagram" href="#">instagram</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main class="page-side">
-      <section class="user">
-        <div class="user-title">
-          <h1 class="page-side__title user-title__text">Направления</h1>
-        </div>
-        <section class="user-info">
-          <h2 class="user-info__title visually-hidden">Информация о пользователе</h2>
-          <div class="user-level">
-            <span class="user-level__value">80</span>
-            <span class="user-level__title">level</span>
-          </div>
-          <img class="user-info__photo" src="https://placehold.it/100x100" alt="Фотография пользователя">
-          <form class="user-info__photo-edit photo-edit" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
-            <input class="photo-edit__input" type="file" name="photo" id="user-photo" multiple>
-            <label class="photo-edit__label button button--blue-light button--ellipse" for="user-photo">Сменить фото</label>
-          </form>
-          <div class="user-tags">
-            <h3 class="user-tags__title">Тэги</h3>
-            <p class="user-tags__list">#бургер #бар #футбол #концерт #крафт</p>
-          </div>
-          <div class="user-transport">
-            <h3 class="user-transport__title">Транспорт</h3>
-            <ul class="user-transport__list">
-              <li class="user-transport__item user-transport__item--active">Авиаперелет</li>
-              <li class="user-transport__item user-transport__item--active">Автобус</li>
-              <li class="user-transport__item">Велосипед</li>
-              <li class="user-transport__item user-transport__item--active">Пешком</li>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" alt="Вы на главной странице">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link" href="#">О сервисе</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Направления</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">Попутчики</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list user-list">
+              <li class="user-list__item">
+                <a class="user-list__link" href="#">Авторизация</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list contact-list">
+              <li class="contact-list__item">
+                <a class="contact-list__link contact-list__link--phone" href="tel:88005558628">8 800 555-86-28</a>
+              </li>
+              <li class="contact-list__item">
+                <a class="contact-list__link contact-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list social-list">
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--facebook" href="#">facebook</a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--vkontakte" href="#">vkontakte</a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link social-list__link--instagram" href="#">instagram</a>
+              </li>
             </ul>
           </div>
-        </section>
-        <section class="page-block page-block--top todo">
-          <h2 class="todo__title">Мои планы:</h2>
-          <ul class="todo-list">
-            <li class="todo-item">
-              <p class="todo-item__name">Франция, Италия</p>
-              <p class="todo-item__count">3 попутчика</p>
-              <p class="todo-item__date">26 мар — 29 мар</p>
-              <a class="todo-item__edit" href="#">Изменить</a>
+        </nav>
+        <div class="sub-nav">
+          <ul class="sub-nav__list">
+            <li class="sub-nav__item">
+              <a class="sub-nav__link sub-nav__link--phone button button--orange" href="tel:88005558628">phone</a>
             </li>
-            <li class="todo-item">
-              <p class="todo-item__name">Тайланд, Индонезия</p>
-              <p class="todo-item__count">1 попутчик</p>
-              <p class="todo-item__date">1 июл — 15 июл</p>
-              <a class="todo-item__edit" href="#">Изменить</a>
+            <li class="sub-nav__item">
+              <a class="sub-nav__link sub-nav__link--email button button--yellow-dark" href="mailto:mail@htmlacademy.ru">email</a>
+            </li>
+            <li class="sub-nav__item">
+              <a class="sub-nav__link sub-nav__link--auth button button--yellow button--ellipse" href="#">Авторизация</a>
             </li>
           </ul>
-        </section>
-        <section class="page-block page-block--top todoadd">
-          <h2 class="todoadd__title">Добавить план:</h2>
-          <form class="todoadd-form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="todoadd-item">
-              <h3 class="todoadd-item__title">Шаг 1. Даты пребывания</h3>
-              <p class="todoadd-item__desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-              <fieldset>
-                <label class="todoadd-form__label" for="todoadd-companion">Ищу попутчиков:<span class="todoadd-form__label-unit">Чел.</span></label>
-                <div class="todoadd-form__input-wrapper">
-                  <button class="button button--transparent button--minus" type="button">Уменьшить</button>
-                  <input class="todoadd-form__input" type="text" name="companion" id="todoadd-companion" value="2">
-                  <button class="button button--transparent button--plus" type="button">Увеличить</button>
+        </div>
+      </div>
+    </header>
+    <main class="page-side">
+      <section class="page-block user">
+        <div class="user__wrapper">
+          <div class="page-block__wrapper">
+            <div class="user__header-wrapper">
+              <h1 class="user__title">Направления</h1>
+            </div>
+          </div>
+        </div>
+        <div class="page-block__wrapper">
+          <section class="user-info">
+            <h2 class="user-info__title visually-hidden">Информация о пользователе</h2>
+            <div class="user-level">
+              <span class="user-level__value">80</span>
+              <span class="user-level__title">level</span>
+            </div>
+            <img class="user-info__photo" src="https://placehold.it/100x100" alt="Фотография пользователя">
+            <form class="user-info__photo-edit photo-edit" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+              <input class="photo-edit__input" type="file" name="photo" id="user-photo" multiple>
+              <label class="photo-edit__label button button--blue-light button--ellipse" for="user-photo">Сменить фото</label>
+            </form>
+            <div class="user-tags">
+              <h3 class="user-tags__title">Тэги</h3>
+              <p class="user-tags__list">#бургер #бар #футбол #концерт #крафт</p>
+            </div>
+            <div class="user-transport">
+              <h3 class="user-transport__title">Транспорт</h3>
+              <ul class="user-transport__list">
+                <li class="user-transport__item user-transport__item--active">Авиаперелет</li>
+                <li class="user-transport__item user-transport__item--active">Автобус</li>
+                <li class="user-transport__item">Велосипед</li>
+                <li class="user-transport__item user-transport__item--active">Пешком</li>
+              </ul>
+            </div>
+          </section>
+          <section class="page-block page-block--top todo">
+            <h2 class="todo__title">Мои планы:</h2>
+            <ul class="todo-list">
+              <li class="todo-item">
+                <p class="todo-item__name">Франция, Италия</p>
+                <p class="todo-item__count">3 попутчика</p>
+                <p class="todo-item__date">26 мар — 29 мар</p>
+                <a class="todo-item__edit" href="#">Изменить</a>
+              </li>
+              <li class="todo-item">
+                <p class="todo-item__name">Тайланд, Индонезия</p>
+                <p class="todo-item__count">1 попутчик</p>
+                <p class="todo-item__date">1 июл — 15 июл</p>
+                <a class="todo-item__edit" href="#">Изменить</a>
+              </li>
+            </ul>
+          </section>
+          <section class="page-block page-block--top todoadd">
+            <h2 class="todoadd__title">Добавить план:</h2>
+            <form class="todoadd-form" action="https://echo.htmlacademy.ru" method="post">
+              <div class="todoadd-item">
+                <h3 class="todoadd-item__title">Шаг 1. Даты пребывания</h3>
+                <p class="todoadd-item__desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                <fieldset>
+                  <label class="todoadd-form__label" for="todoadd-companion">Ищу попутчиков:<span class="todoadd-form__label-unit">Чел.</span></label>
+                  <div class="todoadd-form__input-wrapper">
+                    <button class="button button--transparent button--minus" type="button">Уменьшить</button>
+                    <input class="todoadd-form__input" type="text" name="companion" id="todoadd-companion" value="2">
+                    <button class="button button--transparent button--plus" type="button">Увеличить</button>
+                  </div>
+                  <label class="todoadd-form__label" for="todoadd-duration">Длительность:<span class="todoadd-form__label-unit">Дн.</span></label>
+                  <div class="todoadd-form__input-wrapper">
+                    <button class="button button--transparent button--minus" type="button">Уменьшить</button>
+                    <input class="todoadd-form__input" type="text" name="duration" id="todoadd-duration" value="2">
+                    <button class="button button--transparent button--plus" type="button">Увеличить</button>
+                  </div>
+                  <input class="todoadd-form__input" type="checkbox" name="child" id="todoadd-child" checked>
+                  <label class="todoadd-form__label todoadd-form__label--small" for="todoadd-child">Можно с детьми</label>
+                </fieldset>
+                <div class="todoadd-calendar calendar">
+                  <h4 class="calendar__title visually-hidden">Календарь выбора дат плана</h4>
+                  <table class="calendar-table">
+                    <caption class="calendar-table__title">Март 2019</caption>
+                    <thead class="calendar-table__week">
+                      <tr class="calendar-table__week-row">
+                        <td class="calendar-table__week-cell">П</td>
+                        <td class="calendar-table__week-cell">В</td>
+                        <td class="calendar-table__week-cell">С</td>
+                        <td class="calendar-table__week-cell">Ч</td>
+                        <td class="calendar-table__week-cell">П</td>
+                        <td class="calendar-table__week-cell">С</td>
+                        <td class="calendar-table__week-cell">В</td>
+                      </tr>
+                    </thead>
+                    <tbody class="calendar-table__day">
+                      <tr class="calendar-table__day-row">
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">24</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">25</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">26</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">27</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">28</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">1</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">2</td>
+                      </tr>
+                      <tr class="calendar-table__day-row">
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">3</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">4</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">5</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">6</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">7</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">8</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">9</td>
+                      </tr>
+                      <tr class="calendar-table__day-row">
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">10</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">11</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">12</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">13</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">14</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">15</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">16</td>
+                      </tr>
+                      <tr class="calendar-table__day-row">
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">17</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">18</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">19</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">20</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">21</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">22</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">23</td>
+                      </tr>
+                      <tr class="calendar-table__day-row">
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">24</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">25</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">26</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--selected">27</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--selected">28</td>
+                        <td class="calendar-table__day-cell calendar-table__day-cell--selected">29</td>
+                        <td class="calendar-table__day-cell">30</td>
+                      </tr>
+                      <tr class="calendar-table__day-row">
+                        <td class="calendar-table__day-cell">31</td>
+                        <td class="calendar-table__day-cell">1</td>
+                        <td class="calendar-table__day-cell">2</td>
+                        <td class="calendar-table__day-cell">3</td>
+                        <td class="calendar-table__day-cell">4</td>
+                        <td class="calendar-table__day-cell">5</td>
+                        <td class="calendar-table__day-cell">6</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <label class="todoadd-form__label" for="todoadd-duration">Длительность:<span class="todoadd-form__label-unit">Дн.</span></label>
-                <div class="todoadd-form__input-wrapper">
-                  <button class="button button--transparent button--minus" type="button">Уменьшить</button>
-                  <input class="todoadd-form__input" type="text" name="duration" id="todoadd-duration" value="2">
-                  <button class="button button--transparent button--plus" type="button">Увеличить</button>
-                </div>
-                <input class="todoadd-form__input" type="checkbox" name="child" id="todoadd-child" checked>
-                <label class="todoadd-form__label todoadd-form__label--small" for="todoadd-child">Можно с детьми</label>
-              </fieldset>
-              <div class="todoadd-calendar calendar">
-                <h4 class="calendar__title visually-hidden">Календарь выбора дат плана</h4>
-                <table class="calendar-table">
-                  <caption class="calendar-table__title">Март 2019</caption>
-                  <thead class="calendar-table__week">
-                    <tr class="calendar-table__week-row">
-                      <td class="calendar-table__week-cell">П</td>
-                      <td class="calendar-table__week-cell">В</td>
-                      <td class="calendar-table__week-cell">С</td>
-                      <td class="calendar-table__week-cell">Ч</td>
-                      <td class="calendar-table__week-cell">П</td>
-                      <td class="calendar-table__week-cell">С</td>
-                      <td class="calendar-table__week-cell">В</td>
-                    </tr>
-                  </thead>
-                  <tbody class="calendar-table__day">
-                    <tr class="calendar-table__day-row">
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">24</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">25</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">26</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">27</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">28</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">1</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">2</td>
-                    </tr>
-                    <tr class="calendar-table__day-row">
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">3</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">4</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">5</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">6</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">7</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">8</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">9</td>
-                    </tr>
-                    <tr class="calendar-table__day-row">
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">10</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">11</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">12</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">13</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">14</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">15</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">16</td>
-                    </tr>
-                    <tr class="calendar-table__day-row">
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">17</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">18</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">19</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">20</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">21</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">22</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">23</td>
-                    </tr>
-                    <tr class="calendar-table__day-row">
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">24</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">25</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--inactive">26</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--selected">27</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--selected">28</td>
-                      <td class="calendar-table__day-cell calendar-table__day-cell--selected">29</td>
-                      <td class="calendar-table__day-cell">30</td>
-                    </tr>
-                    <tr class="calendar-table__day-row">
-                      <td class="calendar-table__day-cell">31</td>
-                      <td class="calendar-table__day-cell">1</td>
-                      <td class="calendar-table__day-cell">2</td>
-                      <td class="calendar-table__day-cell">3</td>
-                      <td class="calendar-table__day-cell">4</td>
-                      <td class="calendar-table__day-cell">5</td>
-                      <td class="calendar-table__day-cell">6</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <a class="todoadd-item__link button button--yellow button--ellipse" href="#">Следующий шаг</a>
               </div>
-              <a class="todoadd-item__link button button--yellow button--ellipse" href="#">Следующий шаг</a>
-            </div>
-            <div class="todoadd-item">
-              <h3 class="todoadd-item__title">Шаг 2. Маршрут</h3>
-              <p class="todoadd-item__desc">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
-              <fieldset class='todoadd-form__select'>
-                <div class="todoadd-form__select-item">
-                  <select class="todoadd-country" name="todoadd-country" id="country-bih">
-                    <option class="todoadd-country__item" value="null">Выберите страну</option>
-                    <option class="todoadd-country__item" value="bih" selected>Босния и герцеговина</option>
-                    <option class="todoadd-country__item" value="chs">Чехословакия</option>
-                  </select>
-                  <div class="todoadd-form__select-flag">
-                    <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+              <div class="todoadd-item">
+                <h3 class="todoadd-item__title">Шаг 2. Маршрут</h3>
+                <p class="todoadd-item__desc">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+                <fieldset class='todoadd-form__select'>
+                  <div class="todoadd-form__select-item">
+                    <select class="todoadd-country" name="todoadd-country" id="country-bih">
+                      <option class="todoadd-country__item" value="null">Выберите страну</option>
+                      <option class="todoadd-country__item" value="bih" selected>Босния и герцеговина</option>
+                      <option class="todoadd-country__item" value="chs">Чехословакия</option>
+                    </select>
+                    <div class="todoadd-form__select-flag">
+                      <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+                    </div>
+                    <button class="todoadd-form__select-remove" type="button">Удалить</button>
                   </div>
-                  <button class="todoadd-form__select-remove" type="button">Удалить</button>
-                </div>
-                <div class="todoadd-form__select-item">
-                  <select class="todoadd-country" name="todoadd-contry" id="country-chs">
-                    <option class="todoadd-country__item" value="null">Выберите страну</option>
-                    <option class="todoadd-country__item" value="bih">Босния и герцеговина</option>
-                    <option class="todoadd-country__item" value="chs" selected>Чехословакия</option>
-                  </select>
-                  <div class="todoadd-form__select-flag">
-                    <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+                  <div class="todoadd-form__select-item">
+                    <select class="todoadd-country" name="todoadd-contry" id="country-chs">
+                      <option class="todoadd-country__item" value="null">Выберите страну</option>
+                      <option class="todoadd-country__item" value="bih">Босния и герцеговина</option>
+                      <option class="todoadd-country__item" value="chs" selected>Чехословакия</option>
+                    </select>
+                    <div class="todoadd-form__select-flag">
+                      <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+                    </div>
+                    <button class="todoadd-form__select-remove" type="button">Удалить</button>
                   </div>
-                  <button class="todoadd-form__select-remove" type="button">Удалить</button>
-                </div>
-                <div class="todoadd-form__select-item">
-                  <select class="todoadd-country" name="todo-country" id="contry-add">
-                    <option class="todoadd-country__item" value="empty" selected>Выберите страну</option>
-                    <option class="todoadd-country__item" value="bih">Босния и герцеговина</option>
-                    <option class="todoadd-country__item" value="chs">Чехословакия</option>
-                  </select>
-                  <div class="todoadd-form__select-flag visually-hidden">
-                    <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+                  <div class="todoadd-form__select-item">
+                    <select class="todoadd-country" name="todo-country" id="contry-add">
+                      <option class="todoadd-country__item" value="empty" selected>Выберите страну</option>
+                      <option class="todoadd-country__item" value="bih">Босния и герцеговина</option>
+                      <option class="todoadd-country__item" value="chs">Чехословакия</option>
+                    </select>
+                    <div class="todoadd-form__select-flag visually-hidden">
+                      <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+                    </div>
+                    <button class="todoadd-form__select-remove" type="button">Удалить</button>
                   </div>
-                  <button class="todoadd-form__select-remove" type="button">Удалить</button>
-                </div>
-                <button class="todoadd-form__country__add" type="button">Добавить страну</button>
-                <div class="todo-modal contryadd visually-hidden">
-                  <div class="countryadd-block">
-                    <fieldset class="countryadd-alphabet">
-                      <legend class="countryadd-alphabet__header">
-                        <span class="countryadd-alphabet__header-title">Выбрать страну</span>
-                        <button class="countryadd-alphabet__header-close" type="button">Закрыть</button>
-                      </legend>
-                      <select class="countryadd-alphabet alphabet-select" name="todo-select" id="contry-select">
-                        <option class="alphabet-select__item" value="alphabet-a" selected>А</option>
-                        <option class="alphabet-select__item" value="alphabet-b">Б</option>
-                        <option class="alphabet-select__item" value="alphabet-v">В</option>
-                        <option class="alphabet-select__item" value="alphabet-g">Г</option>
-                        <option class="alphabet-select__item" value="alphabet-d">Д</option>
-                        <option class="alphabet-select__item" value="alphabet-e">Е</option>
-                        <option class="alphabet-select__item" value="alphabet-ye">Ё</option>
-                        <option class="alphabet-select__item" value="alphabet-zh">Ж</option>
-                        <option class="alphabet-select__item" value="alphabet-z">З</option>
-                        <option class="alphabet-select__item" value="alphabet-i">И</option>
-                        <option class="alphabet-select__item" value="alphabet-j">Й</option>
-                        <option class="alphabet-select__item" value="alphabet-k">К</option>
-                        <option class="alphabet-select__item" value="alphabet-1">Л</option>
-                        <option class="alphabet-select__item" value="alphabet-m">М</option>
-                        <option class="alphabet-select__item" value="alphabet-n">Н</option>
-                        <option class="alphabet-select__item" value="alphabet-o">О</option>
-                        <option class="alphabet-select__item" value="alphabet-p">П</option>
-                        <option class="alphabet-select__item" value="alphabet-r">Р</option>
-                        <option class="alphabet-select__item" value="alphabet-s">С</option>
-                        <option class="alphabet-select__item" value="alphabet-t">Т</option>
-                        <option class="alphabet-select__item" value="alphabet-y">У</option>
-                        <option class="alphabet-select__item" value="alphabet-f">Ф</option>
-                        <option class="alphabet-select__item" value="alphabet-h">Х</option>
-                        <option class="alphabet-select__item" value="alphabet-ts">Ц</option>
-                        <option class="alphabet-select__item" value="alphabet-ch">Ч</option>
-                        <option class="alphabet-select__item" value="alphabet-sh">Ш</option>
-                        <option class="alphabet-select__item" value="alphabet-shch">Щ</option>
-                        <option class="alphabet-select__item" value="alphabet-ie">Э</option>
-                        <option class="alphabet-select__item" value="alphabet-yu">Ю</option>
-                        <option class="alphabet-select__item" value="alphabet-ya">Я</option>
-                      </select>
-                      <ul class="alphabet-views">
-                        <li class="alphabet-views__item">А</li>
-                        <li class="alphabet-views__item">Б</li>
-                        <li class="alphabet-views__item">В</li>
-                        <li class="alphabet-views__item">Г</li>
-                        <li class="alphabet-views__item">Д</li>
-                        <li class="alphabet-views__item">Е</li>
-                        <li class="alphabet-views__item">Ё</li>
-                        <li class="alphabet-views__item">Ж</li>
-                        <li class="alphabet-views__item">З</li>
-                        <li class="alphabet-views__item">И</li>
-                        <li class="alphabet-views__item">Й</li>
-                        <li class="alphabet-views__item">К</li>
-                        <li class="alphabet-views__item">Л</li>
-                        <li class="alphabet-views__item">М</li>
-                        <li class="alphabet-views__item">Н</li>
-                        <li class="alphabet-views__item">О</li>
-                        <li class="alphabet-views__item">П</li>
-                        <li class="alphabet-views__item">Р</li>
-                        <li class="alphabet-views__item">С</li>
-                        <li class="alphabet-views__item">Т</li>
-                        <li class="alphabet-views__item">У</li>
-                        <li class="alphabet-views__item">Ф</li>
-                        <li class="alphabet-views__item">Х</li>
-                        <li class="alphabet-views__item">Ц</li>
-                        <li class="alphabet-views__item">Ч</li>
-                        <li class="alphabet-views__item">Ш</li>
-                        <li class="alphabet-views__item">Щ</li>
-                        <li class="alphabet-views__item">Э</li>
-                        <li class="alphabet-views__item">Ю</li>
-                        <li class="alphabet-views__item">Я</li>
-                      </ul>
-                    </fieldset>
-                    <fieldset class="countryadd-country">
-                      <legend class="countryadd-country__title visually-hidden">Страны</legend>
-                      <div class="countryadd-parameters">
-                        <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-afg" value="afg">
-                        <label class="countryadd-country__label" for="country-afg">Афганистан</label>
-                        <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-alb" value="alb">
-                        <label class="countryadd-country__label" for="country-alb">Албания</label>
-                        <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-alg" value="alg">
-                        <label class="countryadd-country__label" for="country-alg">Алгерия</label>
-                        <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-and" value="and">
-                        <label class="countryadd-country__label" for="country-and">Андорра</label>
-                        <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-arg" value="arg">
-                        <label class="countryadd-country__label" for="country-arg">Аргентина</label>
-                        <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-arm" value="arm">
-                        <label class="countryadd-country__label" for="country-arm">Армения</label>
-                        <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-aus" value="aus">
-                        <label class="countryadd-country__label" for="country-aus">Австралия</label>
-                        <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-aut" value="aut">
-                        <label class="countryadd-country__label" for="country-aut">Австрия</label>
-                        <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-aze" value="aze">
-                        <label class="countryadd-country__label" for="country-aze">Азербайджанм</label>
-                      </div>
-                    </fieldset>
+                  <button class="todoadd-form__country__add" type="button">Добавить страну</button>
+                  <div class="todo-modal contryadd visually-hidden">
+                    <div class="countryadd-block">
+                      <fieldset class="countryadd-alphabet">
+                        <legend class="countryadd-alphabet__header">
+                          <span class="countryadd-alphabet__header-title">Выбрать страну</span>
+                          <button class="countryadd-alphabet__header-close" type="button">Закрыть</button>
+                        </legend>
+                        <select class="countryadd-alphabet alphabet-select" name="todo-select" id="contry-select">
+                          <option class="alphabet-select__item" value="alphabet-a" selected>А</option>
+                          <option class="alphabet-select__item" value="alphabet-b">Б</option>
+                          <option class="alphabet-select__item" value="alphabet-v">В</option>
+                          <option class="alphabet-select__item" value="alphabet-g">Г</option>
+                          <option class="alphabet-select__item" value="alphabet-d">Д</option>
+                          <option class="alphabet-select__item" value="alphabet-e">Е</option>
+                          <option class="alphabet-select__item" value="alphabet-ye">Ё</option>
+                          <option class="alphabet-select__item" value="alphabet-zh">Ж</option>
+                          <option class="alphabet-select__item" value="alphabet-z">З</option>
+                          <option class="alphabet-select__item" value="alphabet-i">И</option>
+                          <option class="alphabet-select__item" value="alphabet-j">Й</option>
+                          <option class="alphabet-select__item" value="alphabet-k">К</option>
+                          <option class="alphabet-select__item" value="alphabet-1">Л</option>
+                          <option class="alphabet-select__item" value="alphabet-m">М</option>
+                          <option class="alphabet-select__item" value="alphabet-n">Н</option>
+                          <option class="alphabet-select__item" value="alphabet-o">О</option>
+                          <option class="alphabet-select__item" value="alphabet-p">П</option>
+                          <option class="alphabet-select__item" value="alphabet-r">Р</option>
+                          <option class="alphabet-select__item" value="alphabet-s">С</option>
+                          <option class="alphabet-select__item" value="alphabet-t">Т</option>
+                          <option class="alphabet-select__item" value="alphabet-y">У</option>
+                          <option class="alphabet-select__item" value="alphabet-f">Ф</option>
+                          <option class="alphabet-select__item" value="alphabet-h">Х</option>
+                          <option class="alphabet-select__item" value="alphabet-ts">Ц</option>
+                          <option class="alphabet-select__item" value="alphabet-ch">Ч</option>
+                          <option class="alphabet-select__item" value="alphabet-sh">Ш</option>
+                          <option class="alphabet-select__item" value="alphabet-shch">Щ</option>
+                          <option class="alphabet-select__item" value="alphabet-ie">Э</option>
+                          <option class="alphabet-select__item" value="alphabet-yu">Ю</option>
+                          <option class="alphabet-select__item" value="alphabet-ya">Я</option>
+                        </select>
+                        <ul class="alphabet-views">
+                          <li class="alphabet-views__item">А</li>
+                          <li class="alphabet-views__item">Б</li>
+                          <li class="alphabet-views__item">В</li>
+                          <li class="alphabet-views__item">Г</li>
+                          <li class="alphabet-views__item">Д</li>
+                          <li class="alphabet-views__item">Е</li>
+                          <li class="alphabet-views__item">Ё</li>
+                          <li class="alphabet-views__item">Ж</li>
+                          <li class="alphabet-views__item">З</li>
+                          <li class="alphabet-views__item">И</li>
+                          <li class="alphabet-views__item">Й</li>
+                          <li class="alphabet-views__item">К</li>
+                          <li class="alphabet-views__item">Л</li>
+                          <li class="alphabet-views__item">М</li>
+                          <li class="alphabet-views__item">Н</li>
+                          <li class="alphabet-views__item">О</li>
+                          <li class="alphabet-views__item">П</li>
+                          <li class="alphabet-views__item">Р</li>
+                          <li class="alphabet-views__item">С</li>
+                          <li class="alphabet-views__item">Т</li>
+                          <li class="alphabet-views__item">У</li>
+                          <li class="alphabet-views__item">Ф</li>
+                          <li class="alphabet-views__item">Х</li>
+                          <li class="alphabet-views__item">Ц</li>
+                          <li class="alphabet-views__item">Ч</li>
+                          <li class="alphabet-views__item">Ш</li>
+                          <li class="alphabet-views__item">Щ</li>
+                          <li class="alphabet-views__item">Э</li>
+                          <li class="alphabet-views__item">Ю</li>
+                          <li class="alphabet-views__item">Я</li>
+                        </ul>
+                      </fieldset>
+                      <fieldset class="countryadd-country">
+                        <legend class="countryadd-country__title visually-hidden">Страны</legend>
+                        <div class="countryadd-parameters">
+                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-afg" value="afg">
+                          <label class="countryadd-country__label" for="country-afg">Афганистан</label>
+                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-alb" value="alb">
+                          <label class="countryadd-country__label" for="country-alb">Албания</label>
+                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-alg" value="alg">
+                          <label class="countryadd-country__label" for="country-alg">Алгерия</label>
+                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-and" value="and">
+                          <label class="countryadd-country__label" for="country-and">Андорра</label>
+                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-arg" value="arg">
+                          <label class="countryadd-country__label" for="country-arg">Аргентина</label>
+                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-arm" value="arm">
+                          <label class="countryadd-country__label" for="country-arm">Армения</label>
+                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-aus" value="aus">
+                          <label class="countryadd-country__label" for="country-aus">Австралия</label>
+                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-aut" value="aut">
+                          <label class="countryadd-country__label" for="country-aut">Австрия</label>
+                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-aze" value="aze">
+                          <label class="countryadd-country__label" for="country-aze">Азербайджанм</label>
+                        </div>
+                      </fieldset>
+                    </div>
                   </div>
-                </div>
-              </fieldset>
-              <a class="todoadd-item__link todoadd-item__link--next button button--yellow button--ellipse" href="#">Следующий шаг</a>
-              <a class="todoadd-item__link todoadd-item__link--prev" href="#">На шаг назад</a>
-            </div>
-            <div class="todoadd-item">
-              <h3 class="todoadd-item__title">Шаг 3. Развлечения</h3>
-              <p class="todoadd-item__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-              <fieldset class="todoadd-form__leisure">
-                <div class="todoadd-form__leisure-item leisure-item">
-                  <div class="leisure-item__head">
-                    <label class="leisure-item__country" for="leisure-bih">Босния и герцеговина</label>
-                    <img class="leisure-item__flag" src="http://placehold.it/35x24" alt="Флаг страны">
+                </fieldset>
+                <a class="todoadd-item__link todoadd-item__link--next button button--yellow button--ellipse" href="#">Следующий шаг</a>
+                <a class="todoadd-item__link todoadd-item__link--prev" href="#">На шаг назад</a>
+              </div>
+              <div class="todoadd-item">
+                <h3 class="todoadd-item__title">Шаг 3. Развлечения</h3>
+                <p class="todoadd-item__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                <fieldset class="todoadd-form__leisure">
+                  <div class="todoadd-form__leisure-item leisure-item">
+                    <div class="leisure-item__head">
+                      <label class="leisure-item__country" for="leisure-bih">Босния и герцеговина</label>
+                      <img class="leisure-item__flag" src="http://placehold.it/35x24" alt="Флаг страны">
+                    </div>
+                    <textarea class="leisure-item__textarea" name="leisure" id="leisure-bih" cols="30" rows="10" placeholder="План действий"></textarea>
                   </div>
-                  <textarea class="leisure-item__textarea" name="leisure" id="leisure-bih" cols="30" rows="10" placeholder="План действий"></textarea>
-                </div>
-                <div class="todoadd-form__leisure-item leisure-item">
-                  <div class="leisure-item__head">
-                    <label class="leisure-item__country" for="leisure-chs">Чехословакия</label>
-                    <img class="leisure-item__flag" src="http://placehold.it/35x24" alt="Флаг страны">
+                  <div class="todoadd-form__leisure-item leisure-item">
+                    <div class="leisure-item__head">
+                      <label class="leisure-item__country" for="leisure-chs">Чехословакия</label>
+                      <img class="leisure-item__flag" src="http://placehold.it/35x24" alt="Флаг страны">
+                    </div>
+                    <textarea class="leisure-item__textarea" name="leisure" id="leisure-chs" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
                   </div>
-                  <textarea class="leisure-item__textarea" name="leisure" id="leisure-chs" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
-                </div>
-              </fieldset>
-              <button class="todoadd-item__send button button--yellow button--ellipse" type="submit">Отправить</button>
-              <a class="todoadd-item__link todoadd-item__link--prev" href="#">На шаг назад</a>
-            </div>
-          </form>
-        </section>
+                </fieldset>
+                <button class="todoadd-item__send button button--yellow button--ellipse" type="submit">Отправить</button>
+                <a class="todoadd-item__link todoadd-item__link--prev" href="#">На шаг назад</a>
+              </div>
+            </form>
+          </section>
+        </div>
       </section>
     </main>
-    <footer class="page-footer page-block page-block--top">
-      <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип сайта">
-      <div class="footer-contact">
-        <ul class="footer-contact__list">
-          <li class="footer-contact__item">
-            <a class="footer-contact__link footer-contact__link--facebook" href="#">facebook</a>
-          </li>
-          <li class="footer-contact__item">
-            <a class="footer-contact__link footer-contact__link--vkontakte" href="#">vkontakte</a>
-          </li>
-          <li class="footer-contact__item">
-            <a class="footer-contact__link footer-contact__link--instagram" href="#">instagram</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-copyright">
-        <p class="footer-copyright__text">Разработано</p>
-        <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <img class="footer-copyright__logo" src="https://placehold.it/27x34" alt="Логотип разработчика">
-        </a>
+    <footer class="page-block page-block--top page-footer">
+      <div class="page-block__wrapper page-footer__wrapper">
+        <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип сайта">
+        <div class="footer-contact">
+          <ul class="footer-contact__list">
+            <li class="footer-contact__item">
+              <a class="footer-contact__link footer-contact__link--facebook" href="#">facebook</a>
+            </li>
+            <li class="footer-contact__item">
+              <a class="footer-contact__link footer-contact__link--vkontakte" href="#">vkontakte</a>
+            </li>
+            <li class="footer-contact__item">
+              <a class="footer-contact__link footer-contact__link--instagram" href="#">instagram</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p class="footer-copyright__text">Разработано</p>
+          <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+            <img class="footer-copyright__logo" src="https://placehold.it/27x34" alt="Логотип разработчика">
+          </a>
+        </div>
       </div>
     </footer>
   </body>

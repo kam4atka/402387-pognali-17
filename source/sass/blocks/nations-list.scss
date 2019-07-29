@@ -1,11 +1,19 @@
 .nations-list {
-  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 25px;
 }
 
-.nations-list__item-name {
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 18px;
-  color: #1d2e5b;
-  text-transform: uppercase;
+@media (min-width: $tablet-width) {
+  .nations-list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nations-list {
+    padding-left: 0;
+    flex-direction: column;
+  }
 }

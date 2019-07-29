@@ -1,12 +1,10 @@
 .level__title {
-  font-size: 15px;
-  line-height: 18px;
-  color: #444444;
+  margin: 0;
+  padding: 0;
 }
 
-.level__value {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 18px;
-  color: #1d2e5b;
+@media (min-width: $tablet-width) {
+  .level__title {
+    display: none;
+  }
 }

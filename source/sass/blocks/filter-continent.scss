@@ -1,4 +1,6 @@
 .filter-continent {
+  margin: 0 25px;
+  padding: 0;
   border: none;
 }
 
@@ -14,5 +16,16 @@
 .filter-continent__input {
   &:checked + .filter-continent__label {
     opacity: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filter-continent {
+    display: none;
+  }
+
+  .filter-continent__label {
+    font-size: 20px;
+    line-height: 24px;
   }
 }

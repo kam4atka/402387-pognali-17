@@ -2,3 +2,69 @@
   color: #ffffff;
   background-color: #161c36;
 }
+
+.page-header__toogle {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+
+.page-header__wrapper {
+  background-color: #ffffff;
+}
+
+.page-header__list {
+  list-style: none;
+}
+
+.page-header__link {
+  color: #192144;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &--normal {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  &--medium {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #161c35;
+  }
+
+  &--bold {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__link {
+    &--normal {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    &--bold {
+      font-size: 60px;
+      line-height: 71.01px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__link {
+    &--bold {
+      font-size: 20px;
+      line-height: 30px;
+      color: #ffffff;
+    }
+  }
+}

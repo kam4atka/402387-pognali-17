@@ -1,0 +1,23 @@
+.tariff-list {
+  margin-bottom: 45px;
+}
+
+.tariff-list__row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.tariff-list__cell {
+  text-align: left;
+  color: #444444;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .tariff-list__row {
+    flex-direction: row;
+  }
+}

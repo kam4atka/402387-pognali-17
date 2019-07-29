@@ -1,8 +1,14 @@
 .companion-item {
+  position: relative;
+  width: 270px;
+  margin-bottom: 10px;
   background-color: #ffffff;
 }
 
 .companion-item__level {
+  position: absolute;
+  top: 15px;
+  left: 15px;
   font-size: 24px;
   line-height: 24px;
   color: #ffffff;
@@ -20,6 +26,11 @@
 
 .companion-item__country-list,
 .companion-item__transport-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -27,6 +38,13 @@
 .companion-item__transport-item {
   color: #192144;
   text-decoration: none;
+}
+
+.companion-item__name,
+.companion-item__tags {
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .companion-item__name {
