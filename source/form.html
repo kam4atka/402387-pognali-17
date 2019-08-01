@@ -6,225 +6,239 @@
     <title>Направления</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="page-header">
-      <div class="page-header__wrapper">
+  <body class="side page">
+    <header class="page-header header">
+      <div class="page__wrapper header__wrapper">
         <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" alt="Вы на главной странице">
         </a>
         <nav class="main-nav">
-          <button class="main-nav__toggle">Открыть меню</button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
+          <button class="page-header__toogle main-nav__toggle">Открыть меню</button>
+          <div class="page-header__wrapper main-nav__wrapper">
+            <ul class="page-header__list main-nav__list site-list">
               <li class="site-list__item">
-                <a class="site-list__link" href="#">О сервисе</a>
+                <a class="page-header__link page-header__link--bold" href="#">О сервисе</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="form.html">Направления</a>
+                <a class="page-header__link page-header__link--bold" href="form.html">Направления</a>
               </li>
               <li class="site-list__item">
-                <a class="site-list__link" href="catalog.html">Попутчики</a>
+                <a class="page-header__link page-header__link--bold" href="catalog.html">Попутчики</a>
               </li>
             </ul>
-            <ul class="main-nav__list user-list">
+            <ul class="page-header__list main-nav__list user-list">
               <li class="user-list__item">
-                <a class="user-list__link" href="#">Авторизация</a>
+                <a class="page-header__link page-header__link--medium" href="#">Авторизация</a>
               </li>
             </ul>
-            <ul class="main-nav__list contact-list">
+            <ul class="page-header__list main-nav__list contact-list">
               <li class="contact-list__item">
-                <a class="contact-list__link contact-list__link--phone" href="tel:88005558628">8 800 555-86-28</a>
+                <a class="page-header__link page-header__link--normal icon icon--phone" href="tel:88005558628">8 800 555-86-28</a>
               </li>
               <li class="contact-list__item">
-                <a class="contact-list__link contact-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                <a class="page-header__link page-header__link--normal icon icon--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </li>
             </ul>
-            <ul class="main-nav__list social-list">
+            <ul class="page-header__list main-nav__list social-list">
               <li class="social-list__item">
-                <a class="social-list__link social-list__link--facebook" href="#">facebook</a>
+                <a class="page-header__link icon icon--facebook" href="#">facebook</a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__link social-list__link--vkontakte" href="#">vkontakte</a>
+                <a class="page-header__link icon icon--vkontakte" href="#">vkontakte</a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__link social-list__link--instagram" href="#">instagram</a>
+                <a class="page-header__link icon icon--instagram" href="#">instagram</a>
               </li>
             </ul>
           </div>
         </nav>
         <div class="sub-nav">
-          <ul class="sub-nav__list">
+          <ul class="page-header__list sub-nav__list">
             <li class="sub-nav__item">
-              <a class="sub-nav__link sub-nav__link--phone button button--orange" href="tel:88005558628">phone</a>
+              <a class="page-header__link page-header__link--medium icon icon--phone button button--orange" href="tel:88005558628">phone</a>
             </li>
             <li class="sub-nav__item">
-              <a class="sub-nav__link sub-nav__link--email button button--yellow-dark" href="mailto:mail@htmlacademy.ru">email</a>
+              <a class="page-header__link page-header__link--medium icon icon--email button button--yellow-dark" href="mailto:mail@htmlacademy.ru">email</a>
             </li>
             <li class="sub-nav__item">
-              <a class="sub-nav__link sub-nav__link--auth button button--yellow button--ellipse" href="#">Авторизация</a>
+              <a class="page-header__link page-header__link--medium icon icon--auth button button--yellow button--ellipse" href="#">Авторизация</a>
             </li>
           </ul>
         </div>
       </div>
     </header>
-    <main class="page-side">
-      <section class="page-block user">
-        <div class="user__wrapper">
-          <div class="page-block__wrapper">
+    <main>
+      <section class="block block--light user">
+
+        <div class="block block--intro user__header">
+          <div class="page__wrapper">
             <div class="user__header-wrapper">
-              <h1 class="user__title">Направления</h1>
+              <h1 class="block__header user__title">Направления</h1>
             </div>
           </div>
         </div>
-        <div class="page-block__wrapper">
+
+        <div class="page__wrapper block block-user user__wrapper">
           <section class="user-info">
             <h2 class="user-info__title visually-hidden">Информация о пользователе</h2>
-            <div class="user-level">
-              <span class="user-level__value">80</span>
-              <span class="user-level__title">level</span>
+
+            <div class="block-user__level user-level">
+              <span class="block-user__level-value">80</span>
+              <span class="block-user__level-title">level</span>
             </div>
-            <img class="user-info__photo" src="https://placehold.it/100x100" alt="Фотография пользователя">
+
+            <img class="block-user__info-photo user-info__photo" src="https://placehold.it/100x100" alt="Фотография пользователя">
+
             <form class="user-info__photo-edit photo-edit" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
-              <input class="photo-edit__input" type="file" name="photo" id="user-photo" multiple>
-              <label class="photo-edit__label button button--blue-light button--ellipse" for="user-photo">Сменить фото</label>
+              <input class="photo-edit__input visually-hidden" type="file" name="photo" id="user-photo" multiple>
+              <label class="block-user__photo-edit photo-edit__label button button--blue-light button--ellipse" for="user-photo">Сменить фото</label>
             </form>
-            <div class="user-tags">
-              <h3 class="user-tags__title">Тэги</h3>
+
+            <div class="block-user__tags-wrapper user-tags">
+              <h3 class="block-user__tags-title user-tags__title">Тэги</h3>
               <p class="user-tags__list">#бургер #бар #футбол #концерт #крафт</p>
             </div>
-            <div class="user-transport">
-              <h3 class="user-transport__title">Транспорт</h3>
-              <ul class="user-transport__list">
-                <li class="user-transport__item user-transport__item--active">Авиаперелет</li>
-                <li class="user-transport__item user-transport__item--active">Автобус</li>
-                <li class="user-transport__item">Велосипед</li>
-                <li class="user-transport__item user-transport__item--active">Пешком</li>
+
+            <div class="block-user__tags-wrapper user-transport">
+              <h3 class="block-user__tags-title user-transport__title">Транспорт</h3>
+              <ul class="block-user__list user-transport__list">
+                <li class="block-user__list-item block-user__list-item--active">Авиаперелет</li>
+                <li class="block-user__list-item block-user__list-item--active">Автобус</li>
+                <li class="block-user__list-item">Велосипед</li>
+                <li class="block-user__list-item block-user__list-item--active">Пешком</li>
               </ul>
             </div>
+
           </section>
-          <section class="page-block page-block--top todo">
-            <h2 class="todo__title">Мои планы:</h2>
-            <ul class="todo-list">
-              <li class="todo-item">
-                <p class="todo-item__name">Франция, Италия</p>
-                <p class="todo-item__count">3 попутчика</p>
-                <p class="todo-item__date">26 мар — 29 мар</p>
-                <a class="todo-item__edit" href="#">Изменить</a>
+
+          <section class="page-block page-block--top block-user__todo todo">
+            <h2 class="block-user__title todo__title">Мои планы:</h2>
+            <ul class="block-user__list todo__list">
+              <li class="block-user__todo-item todo__item">
+                <p class="block-user__item-name todo__item-text">Франция, Италия</p>
+                <p class="block-user__item-count todo__item-text">3 попутчика</p>
+                <p class="block-user__item-date todo__item-text">26 мар — 29 мар</p>
+                <a class="block-user__item-edit todo__item-text" href="#">Изменить</a>
               </li>
-              <li class="todo-item">
-                <p class="todo-item__name">Тайланд, Индонезия</p>
-                <p class="todo-item__count">1 попутчик</p>
-                <p class="todo-item__date">1 июл — 15 июл</p>
-                <a class="todo-item__edit" href="#">Изменить</a>
+              <li class="block-user__todo-item todo__item">
+                <p class="block-user__item-name todo__item-text">Тайланд, Индонезия</p>
+                <p class="block-user__item-count todo__item-text">1 попутчик</p>
+                <p class="block-user__item-date todo__item-text">1 июл — 15 июл</p>
+                <a class="block-user__item-edit todo__item-text" href="#">Изменить</a>
               </li>
             </ul>
           </section>
-          <section class="page-block page-block--top todoadd">
-            <h2 class="todoadd__title">Добавить план:</h2>
+
+          <section class="page-block page-block--top block-user__todoadd todoadd">
+
+            <h2 class="block-user__title todoadd__title">Добавить план:</h2>
+
             <form class="todoadd-form" action="https://echo.htmlacademy.ru" method="post">
-              <div class="todoadd-item">
-                <h3 class="todoadd-item__title">Шаг 1. Даты пребывания</h3>
-                <p class="todoadd-item__desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-                <fieldset>
-                  <label class="todoadd-form__label" for="todoadd-companion">Ищу попутчиков:<span class="todoadd-form__label-unit">Чел.</span></label>
+
+              <div class="block-user__todoadd-item todoadd-item">
+                <h3 class="block-user__todoadd-title">Шаг 1. Даты пребывания</h3>
+                <p class="block-user__todoadd-desc todoadd-item__desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                <fieldset class='todoadd-form__select'>
+                  <label class="block-user__todoadd-label" for="todoadd-companion">Ищу попутчиков:<span class="block-user__todoadd-label block-user__todoadd-label--unit">Чел.</span></label>
                   <div class="todoadd-form__input-wrapper">
                     <button class="button button--transparent button--minus" type="button">Уменьшить</button>
-                    <input class="todoadd-form__input" type="text" name="companion" id="todoadd-companion" value="2">
+                    <input class="block-user__todoadd-input" type="text" name="companion" id="todoadd-companion" value="2">
                     <button class="button button--transparent button--plus" type="button">Увеличить</button>
                   </div>
-                  <label class="todoadd-form__label" for="todoadd-duration">Длительность:<span class="todoadd-form__label-unit">Дн.</span></label>
+                  <label class="block-user__todoadd-label" for="todoadd-duration">Длительность:<span class="block-user__todoadd-label block-user__todoadd-label--unit">Дн.</span></label>
                   <div class="todoadd-form__input-wrapper">
                     <button class="button button--transparent button--minus" type="button">Уменьшить</button>
-                    <input class="todoadd-form__input" type="text" name="duration" id="todoadd-duration" value="2">
+                    <input class="block-user__todoadd-input" type="text" name="duration" id="todoadd-duration" value="2">
                     <button class="button button--transparent button--plus" type="button">Увеличить</button>
                   </div>
                   <input class="todoadd-form__input" type="checkbox" name="child" id="todoadd-child" checked>
-                  <label class="todoadd-form__label todoadd-form__label--small" for="todoadd-child">Можно с детьми</label>
+                  <label class="block-user__todoadd-label block-user__todoadd-label--small" for="todoadd-child">Можно с детьми</label>
                 </fieldset>
-                <div class="todoadd-calendar calendar">
+                <div class="calendar">
                   <h4 class="calendar__title visually-hidden">Календарь выбора дат плана</h4>
-                  <table class="calendar-table">
-                    <caption class="calendar-table__title">Март 2019</caption>
+                  <table class="block-calendar calendar-table">
+                    <caption class="block-calendar__title">Март 2019</caption>
                     <thead class="calendar-table__week">
                       <tr class="calendar-table__week-row">
-                        <td class="calendar-table__week-cell">П</td>
-                        <td class="calendar-table__week-cell">В</td>
-                        <td class="calendar-table__week-cell">С</td>
-                        <td class="calendar-table__week-cell">Ч</td>
-                        <td class="calendar-table__week-cell">П</td>
-                        <td class="calendar-table__week-cell">С</td>
-                        <td class="calendar-table__week-cell">В</td>
+                        <td class="block-calendar__week-cell">П</td>
+                        <td class="block-calendar__week-cell">В</td>
+                        <td class="block-calendar__week-cell">С</td>
+                        <td class="block-calendar__week-cell">Ч</td>
+                        <td class="block-calendar__week-cell">П</td>
+                        <td class="block-calendar__week-cell">С</td>
+                        <td class="block-calendar__week-cell">В</td>
                       </tr>
                     </thead>
                     <tbody class="calendar-table__day">
                       <tr class="calendar-table__day-row">
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">24</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">25</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">26</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">27</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">28</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">1</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">2</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">24</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">25</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">26</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">27</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">28</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">1</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">2</td>
                       </tr>
                       <tr class="calendar-table__day-row">
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">3</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">4</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">5</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">6</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">7</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">8</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">9</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">3</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">4</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">5</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">6</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">7</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">8</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">9</td>
                       </tr>
                       <tr class="calendar-table__day-row">
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">10</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">11</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">12</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">13</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">14</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">15</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">16</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">10</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">11</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">12</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">13</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">14</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">15</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">16</td>
                       </tr>
                       <tr class="calendar-table__day-row">
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">17</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">18</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">19</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">20</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">21</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">22</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">23</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">17</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">18</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">19</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">20</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">21</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">22</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">23</td>
                       </tr>
                       <tr class="calendar-table__day-row">
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">24</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">25</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--inactive">26</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--selected">27</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--selected">28</td>
-                        <td class="calendar-table__day-cell calendar-table__day-cell--selected">29</td>
-                        <td class="calendar-table__day-cell">30</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">24</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">25</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">26</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--selected">27</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--selected">28</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--selected">29</td>
+                        <td class="block-calendar__day-cell">30</td>
                       </tr>
                       <tr class="calendar-table__day-row">
-                        <td class="calendar-table__day-cell">31</td>
-                        <td class="calendar-table__day-cell">1</td>
-                        <td class="calendar-table__day-cell">2</td>
-                        <td class="calendar-table__day-cell">3</td>
-                        <td class="calendar-table__day-cell">4</td>
-                        <td class="calendar-table__day-cell">5</td>
-                        <td class="calendar-table__day-cell">6</td>
+                        <td class="block-calendar__day-cell">31</td>
+                        <td class="block-calendar__day-cell">1</td>
+                        <td class="block-calendar__day-cell">2</td>
+                        <td class="block-calendar__day-cell">3</td>
+                        <td class="block-calendar__day-cell">4</td>
+                        <td class="block-calendar__day-cell">5</td>
+                        <td class="block-calendar__day-cell">6</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <a class="todoadd-item__link button button--yellow button--ellipse" href="#">Следующий шаг</a>
+                <a class="block-user__todoadd-link button button--yellow button--ellipse" href="#">Следующий шаг</a>
               </div>
-              <div class="todoadd-item">
-                <h3 class="todoadd-item__title">Шаг 2. Маршрут</h3>
-                <p class="todoadd-item__desc">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+
+              <div class="block-user__todo-item todoadd-item">
+                <h3 class="block-user__todoadd-title">Шаг 2. Маршрут</h3>
+                <p class="block-user__todoadd-desc todoadd-item__desc">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
                 <fieldset class='todoadd-form__select'>
                   <div class="todoadd-form__select-item">
-                    <select class="todoadd-country" name="todoadd-country" id="country-bih">
-                      <option class="todoadd-country__item" value="null">Выберите страну</option>
-                      <option class="todoadd-country__item" value="bih" selected>Босния и герцеговина</option>
-                      <option class="todoadd-country__item" value="chs">Чехословакия</option>
+                    <select class="block-user__select" name="todoadd-country" id="country-bih">
+                      <option class="block-user__select-item" value="null">Выберите страну</option>
+                      <option class="block-user__select-item" value="bih" selected>Босния и герцеговина</option>
+                      <option class="block-user__select-item" value="chs">Чехословакия</option>
                     </select>
                     <div class="todoadd-form__select-flag">
                       <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
@@ -232,10 +246,10 @@
                     <button class="todoadd-form__select-remove" type="button">Удалить</button>
                   </div>
                   <div class="todoadd-form__select-item">
-                    <select class="todoadd-country" name="todoadd-contry" id="country-chs">
-                      <option class="todoadd-country__item" value="null">Выберите страну</option>
-                      <option class="todoadd-country__item" value="bih">Босния и герцеговина</option>
-                      <option class="todoadd-country__item" value="chs" selected>Чехословакия</option>
+                    <select class="block-user__select" name="todoadd-contry" id="country-chs">
+                      <option class="block-user__select-item" value="null">Выберите страну</option>
+                      <option class="block-user__select-item" value="bih">Босния и герцеговина</option>
+                      <option class="block-user__select-item" value="chs" selected>Чехословакия</option>
                     </select>
                     <div class="todoadd-form__select-flag">
                       <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
@@ -243,23 +257,24 @@
                     <button class="todoadd-form__select-remove" type="button">Удалить</button>
                   </div>
                   <div class="todoadd-form__select-item">
-                    <select class="todoadd-country" name="todo-country" id="contry-add">
-                      <option class="todoadd-country__item" value="empty" selected>Выберите страну</option>
-                      <option class="todoadd-country__item" value="bih">Босния и герцеговина</option>
-                      <option class="todoadd-country__item" value="chs">Чехословакия</option>
+                    <select class="block-user__select" name="todo-country" id="contry-add">
+                      <option class="block-user__select-item" value="empty" selected>Выберите страну</option>
+                      <option class="block-user__select-item" value="bih">Босния и герцеговина</option>
+                      <option class="block-user__select-item" value="chs">Чехословакия</option>
                     </select>
                     <div class="todoadd-form__select-flag visually-hidden">
                       <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
                     </div>
                     <button class="todoadd-form__select-remove" type="button">Удалить</button>
                   </div>
-                  <button class="todoadd-form__country__add" type="button">Добавить страну</button>
-                  <div class="todo-modal contryadd visually-hidden">
-                    <div class="countryadd-block">
-                      <fieldset class="countryadd-alphabet">
-                        <legend class="countryadd-alphabet__header">
-                          <span class="countryadd-alphabet__header-title">Выбрать страну</span>
-                          <button class="countryadd-alphabet__header-close" type="button">Закрыть</button>
+                  <button class="block-user__todoadd-countryadd" type="button">Добавить страну</button>
+                  <!-- Нужно переделать -->
+                  <div class="todo-modal contryadd">
+                    <div class="block-countryadd countryadd-block">
+                      <fieldset class="block-countryadd__alphabet countryadd-alphabet">
+                        <legend class="block-countryadd__alphabet-header countryadd-alphabet__header">
+                          <span class="block-countryadd__alphabet-title countryadd-alphabet__header-title">Выбрать страну</span>
+                          <button class="block-countryadd__header-close" type="button">Закрыть</button>
                         </legend>
                         <select class="countryadd-alphabet alphabet-select" name="todo-select" id="contry-select">
                           <option class="alphabet-select__item" value="alphabet-a" selected>А</option>
@@ -293,7 +308,7 @@
                           <option class="alphabet-select__item" value="alphabet-yu">Ю</option>
                           <option class="alphabet-select__item" value="alphabet-ya">Я</option>
                         </select>
-                        <ul class="alphabet-views">
+                        <ul class="block-countryadd__list alphabet-views">
                           <li class="alphabet-views__item">А</li>
                           <li class="alphabet-views__item">Б</li>
                           <li class="alphabet-views__item">В</li>
@@ -326,7 +341,7 @@
                           <li class="alphabet-views__item">Я</li>
                         </ul>
                       </fieldset>
-                      <fieldset class="countryadd-country">
+                      <fieldset class="block-countryadd__country countryadd-country">
                         <legend class="countryadd-country__title visually-hidden">Страны</legend>
                         <div class="countryadd-parameters">
                           <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-afg" value="afg">
@@ -351,50 +366,57 @@
                       </fieldset>
                     </div>
                   </div>
+                  <!-- Нужно переделать -->
                 </fieldset>
-                <a class="todoadd-item__link todoadd-item__link--next button button--yellow button--ellipse" href="#">Следующий шаг</a>
-                <a class="todoadd-item__link todoadd-item__link--prev" href="#">На шаг назад</a>
+                <a class="block-user__todoadd-link button button--yellow button--ellipse" href="#">Следующий шаг</a>
+                <a class="block-user__todoadd-link block-user__todoadd-link--prev" href="#">На шаг назад</a>
               </div>
-              <div class="todoadd-item">
-                <h3 class="todoadd-item__title">Шаг 3. Развлечения</h3>
-                <p class="todoadd-item__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+
+              <div class="block-user__todo-item todoadd-item">
+                <h3 class="block-user__todoadd-title">Шаг 3. Развлечения</h3>
+                <p class="block-user__todoadd-desc todoadd-item__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+
                 <fieldset class="todoadd-form__leisure">
                   <div class="todoadd-form__leisure-item leisure-item">
                     <div class="leisure-item__head">
-                      <label class="leisure-item__country" for="leisure-bih">Босния и герцеговина</label>
+                      <label class="block-user_leisure-country" for="leisure-bih">Босния и герцеговина</label>
                       <img class="leisure-item__flag" src="http://placehold.it/35x24" alt="Флаг страны">
                     </div>
-                    <textarea class="leisure-item__textarea" name="leisure" id="leisure-bih" cols="30" rows="10" placeholder="План действий"></textarea>
+                    <textarea class="block-user_leisure-textarea" name="leisure" id="leisure-bih" cols="30" rows="10" placeholder="План действий"></textarea>
                   </div>
                   <div class="todoadd-form__leisure-item leisure-item">
                     <div class="leisure-item__head">
-                      <label class="leisure-item__country" for="leisure-chs">Чехословакия</label>
+                      <label class="block-user_leisure-country" for="leisure-chs">Чехословакия</label>
                       <img class="leisure-item__flag" src="http://placehold.it/35x24" alt="Флаг страны">
                     </div>
-                    <textarea class="leisure-item__textarea" name="leisure" id="leisure-chs" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
+                    <textarea class="block-user_leisure-textarea" name="leisure" id="leisure-chs" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
                   </div>
                 </fieldset>
-                <button class="todoadd-item__send button button--yellow button--ellipse" type="submit">Отправить</button>
-                <a class="todoadd-item__link todoadd-item__link--prev" href="#">На шаг назад</a>
+
+                <button class="block-user__todoadd-send button button--yellow button--ellipse" type="submit">Отправить</button>
+                <a class="block-user__todoadd-link block-user__todoadd-link--prev" href="#">На шаг назад</a>
               </div>
+
             </form>
+
           </section>
         </div>
+
       </section>
     </main>
-    <footer class="page-block page-block--top page-footer">
-      <div class="page-block__wrapper page-footer__wrapper">
+    <footer class="page-footer block block--top footer">
+      <div class="page__wrapper footer__wrapper">
         <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип сайта">
-        <div class="footer-contact">
-          <ul class="footer-contact__list">
-            <li class="footer-contact__item">
-              <a class="footer-contact__link footer-contact__link--facebook" href="#">facebook</a>
+        <div class="footer-social">
+          <ul class="page-footer__list footer-social__list">
+            <li class="footer-social__item">
+              <a class="page-footer__link footer-social__link footer-social__link--facebook" href="#">facebook</a>
             </li>
-            <li class="footer-contact__item">
-              <a class="footer-contact__link footer-contact__link--vkontakte" href="#">vkontakte</a>
+            <li class="footer-social__item">
+              <a class="page-footer__link footer-social__link footer-social__link--vkontakte" href="#">vkontakte</a>
             </li>
-            <li class="footer-contact__item">
-              <a class="footer-contact__link footer-contact__link--instagram" href="#">instagram</a>
+            <li class="footer-social__item">
+              <a class="page-footer__link footer-social__link footer-social__link--instagram" href="#">instagram</a>
             </li>
           </ul>
         </div>

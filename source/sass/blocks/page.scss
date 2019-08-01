@@ -1,16 +1,16 @@
-.page-block__wrapper {
+.page__wrapper {
   width: 270px;
   margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) {
-  .page-block__wrapper {
+  .page__wrapper {
     width: 688px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-block__wrapper {
+  .page__wrapper {
     width: 1320px;
   }
 }

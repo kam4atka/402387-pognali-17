@@ -58,6 +58,10 @@
 .travelmate__action {
   display: flex;
   flex-direction: row;
+
+  &--tablet {
+    display: none;
+  }
 }
 
 .travelmate__link {
@@ -113,8 +117,25 @@
     flex-direction: column;
   }
 
+  .travelmate__link {
+    margin: 0;
+  }
+
   .travelmate__action {
     display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+    &--tablet {
+      display: flex;
+
+      .travelmate__action-link,
+      .travelmate__action-count {
+        display: block;
+      }
+    }
   }
 }
 
@@ -161,10 +182,10 @@
 
   .travelmate__action {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
+
+    &--tablet {
+      display: none;
+    }
   }
 
   .travelmate__action-link,

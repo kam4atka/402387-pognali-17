@@ -9,6 +9,11 @@
     color: #444444;
   }
 
+  &--intro {
+    background-color: #161c36;
+    color: #ffffff;
+  }
+
   &--white {
     background-color: #ffffff;
     color: #444444;
@@ -18,6 +23,23 @@
     background-color: #ffd74b;
     color: #192144;
   }
+}
+
+.block__header {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #ffffff;
+}
+
+.block__header-link {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  /* color: #1d2e5b; */
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .block__intro {
@@ -46,8 +68,129 @@
   text-decoration: underline;
 }
 
+.block__guide-item {
+  &--one {
+    background-color: #ff8d30;
+  }
+
+  &--two {
+    background-color: #ffa530;
+  }
+
+  &--three {
+    background-color: #ffbd30;
+  }
+
+  &--four {
+    background-color: #ffd74b;
+  }
+}
+
+.block__guide-text {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #161c35;
+}
+
+.block__guide-count {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #ffffff;
+}
+
 .block__list {
   list-style: none;
+}
+
+.block__card-desc {
+  background-color: #ffffff;
+}
+
+.block__card-level {
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+
+  &--value {
+    font-weight: 700;
+  }
+
+  &--title {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.block__card-title,
+.block__card-name {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.block__card-title {
+  color: #161c35;
+}
+
+.block__card-name {
+  color: #1d2e5b;
+}
+
+.block__card-motto,
+.block__card-tags {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #444444;
+}
+
+.block__card-motto {
+  font-weight: 500;
+  opacity: 0.3;
+}
+
+.block__card-count {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #444444;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+.block__card-icon {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #444444;
+}
+
+.block__link {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #1d2e5b;
+  text-decoration: none;
+
+  &--smaller {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &--tariff {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &--contact {
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffd74b;
+    text-transform: uppercase;
+  }
 }
 
 .block__address {
@@ -63,27 +206,12 @@
   }
 }
 
-.block__link {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 18px;
-  color: #1d2e5b;
-  text-decoration: none;
-
-  &--smaller {
-    font-size: 16px;
-    line-height: 16px;
-  }
-
-  &--contact {
-    font-size: 16px;
-    line-height: 22px;
-    color: #ffd74b;
-    text-transform: uppercase;
-  }
-}
-
 @media (min-width: $tablet-width) {
+  .block__header {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
   .block__intro {
     font-size: 60px;
     line-height: 70px;
@@ -104,9 +232,35 @@
     }
   }
 
-  .block__address {
-    font-size: 28px;
-    line-height: 28px;
+  .block__guide-text {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .block__guide-count {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .block__card-title,
+  .block__card-name {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .block__card-motto {
+    font-size: 20px;
+    line-height: 17.68px;
+  }
+
+  .block__card-tags {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .block__card-count {
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .block__link {
@@ -118,9 +272,26 @@
       line-height: 20px;
     }
 
+    &--tariff {
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: none;
+    }
+
     &--contact {
       font-size: 28px;
       line-height: 28px;
     }
+  }
+
+  .block__address {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .block__guide-count {
+    font-size: 24px;
   }
 }

@@ -3,8 +3,18 @@
   padding: 0;
 }
 
+.method__list {
+  margin: 0;
+  padding: 0;
+  padding-left: 25px;
+}
+
 @media (min-width: $tablet-width) {
   .method__title {
     display: none;
+  }
+
+  .method__list {
+    padding: 0;
   }
 }
