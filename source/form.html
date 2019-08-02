@@ -68,7 +68,7 @@
       </div>
     </header>
     <main>
-      <section class="block block--light user">
+      <section class="block block--light block-user user">
 
         <div class="block block--intro user__header">
           <div class="page__wrapper">
@@ -108,10 +108,10 @@
                 <li class="block-user__list-item block-user__list-item--active">Пешком</li>
               </ul>
             </div>
-
           </section>
-
-          <section class="page-block page-block--top block-user__todo todo">
+        </div>
+        <section class="page-block page-block--top block-user__todo todo">
+          <div class="page__wrapper">
             <h2 class="block-user__title todo__title">Мои планы:</h2>
             <ul class="block-user__list todo__list">
               <li class="block-user__todo-item todo__item">
@@ -127,18 +127,18 @@
                 <a class="block-user__item-edit todo__item-text" href="#">Изменить</a>
               </li>
             </ul>
-          </section>
-
-          <section class="page-block page-block--top block-user__todoadd todoadd">
-
+          </div>
+        </section>
+        <section class="page-block page-block--top block-user__todoadd todoadd">
+          <div class="page__wrapper">
             <h2 class="block-user__title todoadd__title">Добавить план:</h2>
 
             <form class="todoadd-form" action="https://echo.htmlacademy.ru" method="post">
 
-              <div class="block-user__todoadd-item todoadd-item">
+              <div class="block-user__todoadd-item todoadd__item todoadd-item">
                 <h3 class="block-user__todoadd-title">Шаг 1. Даты пребывания</h3>
                 <p class="block-user__todoadd-desc todoadd-item__desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-                <fieldset class='todoadd-form__select'>
+                <fieldset class='block-user__todoadd-fieldset todoadd-form__select'>
                   <label class="block-user__todoadd-label" for="todoadd-companion">Ищу попутчиков:<span class="block-user__todoadd-label block-user__todoadd-label--unit">Чел.</span></label>
                   <div class="todoadd-form__input-wrapper">
                     <button class="button button--transparent button--minus" type="button">Уменьшить</button>
@@ -157,7 +157,7 @@
                 <div class="calendar">
                   <h4 class="calendar__title visually-hidden">Календарь выбора дат плана</h4>
                   <table class="block-calendar calendar-table">
-                    <caption class="block-calendar__title">Март 2019</caption>
+                    <caption class="block-calendar__title calendar-table__title">Март 2019</caption>
                     <thead class="calendar-table__week">
                       <tr class="calendar-table__week-row">
                         <td class="block-calendar__week-cell">П</td>
@@ -230,10 +230,10 @@
                 <a class="block-user__todoadd-link button button--yellow button--ellipse" href="#">Следующий шаг</a>
               </div>
 
-              <div class="block-user__todo-item todoadd-item">
+              <div class="block-user__todo-item todoadd__item todoadd-item">
                 <h3 class="block-user__todoadd-title">Шаг 2. Маршрут</h3>
                 <p class="block-user__todoadd-desc todoadd-item__desc">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
-                <fieldset class='todoadd-form__select'>
+                <fieldset class='block-user__todoadd-fieldset todoadd-form__select'>
                   <div class="todoadd-form__select-item">
                     <select class="block-user__select" name="todoadd-country" id="country-bih">
                       <option class="block-user__select-item" value="null">Выберите страну</option>
@@ -268,128 +268,351 @@
                     <button class="todoadd-form__select-remove" type="button">Удалить</button>
                   </div>
                   <button class="block-user__todoadd-countryadd" type="button">Добавить страну</button>
-                  <!-- Нужно переделать -->
-                  <div class="todo-modal contryadd">
-                    <div class="block-countryadd countryadd-block">
-                      <fieldset class="block-countryadd__alphabet countryadd-alphabet">
-                        <legend class="block-countryadd__alphabet-header countryadd-alphabet__header">
-                          <span class="block-countryadd__alphabet-title countryadd-alphabet__header-title">Выбрать страну</span>
-                          <button class="block-countryadd__header-close" type="button">Закрыть</button>
-                        </legend>
-                        <select class="countryadd-alphabet alphabet-select" name="todo-select" id="contry-select">
-                          <option class="alphabet-select__item" value="alphabet-a" selected>А</option>
-                          <option class="alphabet-select__item" value="alphabet-b">Б</option>
-                          <option class="alphabet-select__item" value="alphabet-v">В</option>
-                          <option class="alphabet-select__item" value="alphabet-g">Г</option>
-                          <option class="alphabet-select__item" value="alphabet-d">Д</option>
-                          <option class="alphabet-select__item" value="alphabet-e">Е</option>
-                          <option class="alphabet-select__item" value="alphabet-ye">Ё</option>
-                          <option class="alphabet-select__item" value="alphabet-zh">Ж</option>
-                          <option class="alphabet-select__item" value="alphabet-z">З</option>
-                          <option class="alphabet-select__item" value="alphabet-i">И</option>
-                          <option class="alphabet-select__item" value="alphabet-j">Й</option>
-                          <option class="alphabet-select__item" value="alphabet-k">К</option>
-                          <option class="alphabet-select__item" value="alphabet-1">Л</option>
-                          <option class="alphabet-select__item" value="alphabet-m">М</option>
-                          <option class="alphabet-select__item" value="alphabet-n">Н</option>
-                          <option class="alphabet-select__item" value="alphabet-o">О</option>
-                          <option class="alphabet-select__item" value="alphabet-p">П</option>
-                          <option class="alphabet-select__item" value="alphabet-r">Р</option>
-                          <option class="alphabet-select__item" value="alphabet-s">С</option>
-                          <option class="alphabet-select__item" value="alphabet-t">Т</option>
-                          <option class="alphabet-select__item" value="alphabet-y">У</option>
-                          <option class="alphabet-select__item" value="alphabet-f">Ф</option>
-                          <option class="alphabet-select__item" value="alphabet-h">Х</option>
-                          <option class="alphabet-select__item" value="alphabet-ts">Ц</option>
-                          <option class="alphabet-select__item" value="alphabet-ch">Ч</option>
-                          <option class="alphabet-select__item" value="alphabet-sh">Ш</option>
-                          <option class="alphabet-select__item" value="alphabet-shch">Щ</option>
-                          <option class="alphabet-select__item" value="alphabet-ie">Э</option>
-                          <option class="alphabet-select__item" value="alphabet-yu">Ю</option>
-                          <option class="alphabet-select__item" value="alphabet-ya">Я</option>
-                        </select>
-                        <ul class="block-countryadd__list alphabet-views">
-                          <li class="alphabet-views__item">А</li>
-                          <li class="alphabet-views__item">Б</li>
-                          <li class="alphabet-views__item">В</li>
-                          <li class="alphabet-views__item">Г</li>
-                          <li class="alphabet-views__item">Д</li>
-                          <li class="alphabet-views__item">Е</li>
-                          <li class="alphabet-views__item">Ё</li>
-                          <li class="alphabet-views__item">Ж</li>
-                          <li class="alphabet-views__item">З</li>
-                          <li class="alphabet-views__item">И</li>
-                          <li class="alphabet-views__item">Й</li>
-                          <li class="alphabet-views__item">К</li>
-                          <li class="alphabet-views__item">Л</li>
-                          <li class="alphabet-views__item">М</li>
-                          <li class="alphabet-views__item">Н</li>
-                          <li class="alphabet-views__item">О</li>
-                          <li class="alphabet-views__item">П</li>
-                          <li class="alphabet-views__item">Р</li>
-                          <li class="alphabet-views__item">С</li>
-                          <li class="alphabet-views__item">Т</li>
-                          <li class="alphabet-views__item">У</li>
-                          <li class="alphabet-views__item">Ф</li>
-                          <li class="alphabet-views__item">Х</li>
-                          <li class="alphabet-views__item">Ц</li>
-                          <li class="alphabet-views__item">Ч</li>
-                          <li class="alphabet-views__item">Ш</li>
-                          <li class="alphabet-views__item">Щ</li>
-                          <li class="alphabet-views__item">Э</li>
-                          <li class="alphabet-views__item">Ю</li>
-                          <li class="alphabet-views__item">Я</li>
-                        </ul>
-                      </fieldset>
-                      <fieldset class="block-countryadd__country countryadd-country">
-                        <legend class="countryadd-country__title visually-hidden">Страны</legend>
-                        <div class="countryadd-parameters">
-                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-afg" value="afg">
-                          <label class="countryadd-country__label" for="country-afg">Афганистан</label>
-                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-alb" value="alb">
-                          <label class="countryadd-country__label" for="country-alb">Албания</label>
-                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-alg" value="alg">
-                          <label class="countryadd-country__label" for="country-alg">Алгерия</label>
-                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-and" value="and">
-                          <label class="countryadd-country__label" for="country-and">Андорра</label>
-                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-arg" value="arg">
-                          <label class="countryadd-country__label" for="country-arg">Аргентина</label>
-                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-arm" value="arm">
-                          <label class="countryadd-country__label" for="country-arm">Армения</label>
-                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-aus" value="aus">
-                          <label class="countryadd-country__label" for="country-aus">Австралия</label>
-                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-aut" value="aut">
-                          <label class="countryadd-country__label" for="country-aut">Австрия</label>
-                          <input class="countryadd-country__input visually-hidden" type="radio" name="country" id="country-aze" value="aze">
-                          <label class="countryadd-country__label" for="country-aze">Азербайджанм</label>
-                        </div>
-                      </fieldset>
+
+                    <div class="block-filter alphabet-views alphabet-views--modal">
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="a" id="letter-a" checked>
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-a">A</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Афганистан</li>
+                        <li class="block-filter__country-item">Албания</li>
+                        <li class="block-filter__country-item">Алгерия</li>
+                        <li class="block-filter__country-item">Андорра</li>
+                        <li class="block-filter__country-item">Аргентина</li>
+                        <li class="block-filter__country-item">Армения</li>
+                        <li class="block-filter__country-item">Австралия</li>
+                        <li class="block-filter__country-item">Австрия</li>
+                        <li class="block-filter__country-item">Азербайджан</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="b" id="letter-b">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-b">Б</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Багамские Острова</li>
+                        <li class="block-filter__country-item">Бангладеш</li>
+                        <li class="block-filter__country-item">Барбадос</li>
+                        <li class="block-filter__country-item">Бахрейн</li>
+                        <li class="block-filter__country-item">Белоруссия</li>
+                        <li class="block-filter__country-item">Белиз</li>
+                        <li class="block-filter__country-item">Бельгия</li>
+                        <li class="block-filter__country-item">Бенин</li>
+                        <li class="block-filter__country-item">Болгария</li>
+                        <li class="block-filter__country-item">Боливия</li>
+                        <li class="block-filter__country-item">Босния и Герцеговина</li>
+                        <li class="block-filter__country-item">Ботсвана</li>
+                        <li class="block-filter__country-item">Бразилия</li>
+                        <li class="block-filter__country-item">Бруней</li>
+                        <li class="block-filter__country-item">Буркина-Фасо</li>
+                        <li class="block-filter__country-item">Бурунди</li>
+                        <li class="block-filter__country-item">Бутан</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="v" id="letter-v">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-v">В</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Вануату</li>
+                        <li class="block-filter__country-item">Великобритания</li>
+                        <li class="block-filter__country-item">Венгрия</li>
+                        <li class="block-filter__country-item">Венесуэла</li>
+                        <li class="block-filter__country-item">Восточный Тимор</li>
+                        <li class="block-filter__country-item">Вьетнам</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="g" id="letter-g">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-g">Г</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Габон</li>
+                        <li class="block-filter__country-item">Гаити</li>
+                        <li class="block-filter__country-item">Гайана</li>
+                        <li class="block-filter__country-item">Гамбия</li>
+                        <li class="block-filter__country-item">Гана</li>
+                        <li class="block-filter__country-item">Гватемала</li>
+                        <li class="block-filter__country-item">Гвинея</li>
+                        <li class="block-filter__country-item">Гвинея-Бисау</li>
+                        <li class="block-filter__country-item">Германия</li>
+                        <li class="block-filter__country-item">Гондурас</li>
+                        <li class="block-filter__country-item">Гренада</li>
+                        <li class="block-filter__country-item">Греция</li>
+                        <li class="block-filter__country-item">Грузия</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="d" id="letter-d">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-d">Д</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Дания</li>
+                        <li class="block-filter__country-item">Джибути</li>
+                        <li class="block-filter__country-item">Доминика</li>
+                        <li class="block-filter__country-item">Доминикана</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="e" id="letter-e">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-e">Е</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Египет</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="jo" id="letter-jo">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-jo">Ё</label>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="zh" id="letter-zh">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-zh">Ж</label>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="z" id="letter-z">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-z">З</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Замбия</li>
+                        <li class="block-filter__country-item">Зимбабве</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="i" id="letter-i">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-i">И</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Израиль</li>
+                        <li class="block-filter__country-item">Индия</li>
+                        <li class="block-filter__country-item">Индонезия</li>
+                        <li class="block-filter__country-item">Иордания</li>
+                        <li class="block-filter__country-item">Ирак</li>
+                        <li class="block-filter__country-item">Иран</li>
+                        <li class="block-filter__country-item">Ирландия</li>
+                        <li class="block-filter__country-item">Исландия</li>
+                        <li class="block-filter__country-item">Испания</li>
+                        <li class="block-filter__country-item">Италия</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="j" id="letter-j">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-j">Й</label>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="k" id="letter-k">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-k">К</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Кабо-Верде</li>
+                        <li class="block-filter__country-item">Казахстан</li>
+                        <li class="block-filter__country-item">Камбоджа</li>
+                        <li class="block-filter__country-item">Камерун</li>
+                        <li class="block-filter__country-item">Канада</li>
+                        <li class="block-filter__country-item">Катар</li>
+                        <li class="block-filter__country-item">Кения</li>
+                        <li class="block-filter__country-item">Кипр</li>
+                        <li class="block-filter__country-item">Киргизия</li>
+                        <li class="block-filter__country-item">Кирибати</li>
+                        <li class="block-filter__country-item">Китай</li>
+                        <li class="block-filter__country-item">Колумбия</li>
+                        <li class="block-filter__country-item">Коморы</li>
+                        <li class="block-filter__country-item">Конго</li>
+                        <li class="block-filter__country-item">КНДР</li>
+                        <li class="block-filter__country-item">Республика Корея</li>
+                        <li class="block-filter__country-item">Коста-Рика</li>
+                        <li class="block-filter__country-item">Кот-д'Ивуар</li>
+                        <li class="block-filter__country-item">Куба</li>
+                        <li class="block-filter__country-item">Кувейт</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="l" id="letter-l">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-l">Л</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Лаос</li>
+                        <li class="block-filter__country-item">Латвия</li>
+                        <li class="block-filter__country-item">Лесото</li>
+                        <li class="block-filter__country-item">Либерия</li>
+                        <li class="block-filter__country-item">Ливан</li>
+                        <li class="block-filter__country-item">Ливия</li>
+                        <li class="block-filter__country-item">Литва</li>
+                        <li class="block-filter__country-item">Лихтенштейн</li>
+                        <li class="block-filter__country-item">Люксембург</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="m" id="letter-m">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-m">М</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Маврикий</li>
+                        <li class="block-filter__country-item">Мавритания</li>
+                        <li class="block-filter__country-item">Мадагаскар</li>
+                        <li class="block-filter__country-item">Малави</li>
+                        <li class="block-filter__country-item">Малазия</li>
+                        <li class="block-filter__country-item">Мали</li>
+                        <li class="block-filter__country-item">Мальдивы</li>
+                        <li class="block-filter__country-item">Мальта</li>
+                        <li class="block-filter__country-item">Марокко</li>
+                        <li class="block-filter__country-item">Маршалловы Острова</li>
+                        <li class="block-filter__country-item">Мексика</li>
+                        <li class="block-filter__country-item">Мозамбик</li>
+                        <li class="block-filter__country-item">Молдавия</li>
+                        <li class="block-filter__country-item">Монако</li>
+                        <li class="block-filter__country-item">Монголия</li>
+                        <li class="block-filter__country-item">Мьянма</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="n" id="letter-n">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-n">Н</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Намибия</li>
+                        <li class="block-filter__country-item">Науру</li>
+                        <li class="block-filter__country-item">Непал</li>
+                        <li class="block-filter__country-item">Нигер</li>
+                        <li class="block-filter__country-item">Нигерия</li>
+                        <li class="block-filter__country-item">Нидерланды</li>
+                        <li class="block-filter__country-item">Никарагуа</li>
+                        <li class="block-filter__country-item">Новая Зеландия</li>
+                        <li class="block-filter__country-item">Норвегия</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="o" id="letter-o">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-o">О</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">ОАЭ</li>
+                        <li class="block-filter__country-item">Оман</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="p" id="letter-p">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-p">П</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Пакистан</li>
+                        <li class="block-filter__country-item">Палау</li>
+                        <li class="block-filter__country-item">Панама</li>
+                        <li class="block-filter__country-item">Папуа - Новая Гвинея</li>
+                        <li class="block-filter__country-item">Парагвай</li>
+                        <li class="block-filter__country-item">Перу</li>
+                        <li class="block-filter__country-item">Польша</li>
+                        <li class="block-filter__country-item">Португалия</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="r" id="letter-r">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-r">Р</label>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="s" id="letter-s">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-s">С</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Сальвадор</li>
+                        <li class="block-filter__country-item">Самоа</li>
+                        <li class="block-filter__country-item">Сан-Марино</li>
+                        <li class="block-filter__country-item">Сан-Томе и Принсипи</li>
+                        <li class="block-filter__country-item">Саудовская Аравия</li>
+                        <li class="block-filter__country-item">Северная Македония</li>
+                        <li class="block-filter__country-item">Сейшелы</li>
+                        <li class="block-filter__country-item">Сенегал</li>
+                        <li class="block-filter__country-item">Сент-Люсия</li>
+                        <li class="block-filter__country-item">Сербия</li>
+                        <li class="block-filter__country-item">Сингапур</li>
+                        <li class="block-filter__country-item">Сирия</li>
+                        <li class="block-filter__country-item">Словакия</li>
+                        <li class="block-filter__country-item">Словения</li>
+                        <li class="block-filter__country-item">США</li>
+                        <li class="block-filter__country-item">Сомали</li>
+                        <li class="block-filter__country-item">Судан</li>
+                        <li class="block-filter__country-item">Суринам</li>
+                        <li class="block-filter__country-item">Сьерра-Леоне</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="t" id="letter-t">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-t">Т</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Таджикистан</li>
+                        <li class="block-filter__country-item">Таиланд</li>
+                        <li class="block-filter__country-item">Таназия</li>
+                        <li class="block-filter__country-item">Того</li>
+                        <li class="block-filter__country-item">Тонга</li>
+                        <li class="block-filter__country-item">Тринидад и Тобаго</li>
+                        <li class="block-filter__country-item">Тувалу</li>
+                        <li class="block-filter__country-item">Тунис</li>
+                        <li class="block-filter__country-item">Туркмения</li>
+                        <li class="block-filter__country-item">Турция</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="y" id="letter-y">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-y">У</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Уганда</li>
+                        <li class="block-filter__country-item">Узбекистан</li>
+                        <li class="block-filter__country-item">Украина</li>
+                        <li class="block-filter__country-item">Уругвай</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="f" id="letter-f">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-f">Ф</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Фиджи</li>
+                        <li class="block-filter__country-item">Филиппины</li>
+                        <li class="block-filter__country-item">Финляндия</li>
+                        <li class="block-filter__country-item">Франция</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="h" id="letter-h">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-h">Х</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Хорватия</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="tc" id="letter-tc">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-tc">Ц</label>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="ch" id="letter-ch">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-ch">Ч</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Чад</li>
+                        <li class="block-filter__country-item">Черногория</li>
+                        <li class="block-filter__country-item">Чехия</li>
+                        <li class="block-filter__country-item">Чили</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="sh" id="letter-sh">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-sh">Ш</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Швецария</li>
+                        <li class="block-filter__country-item">Швеция</li>
+                        <li class="block-filter__country-item">Шри-Ланка</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="sch" id="letter-sch">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-sch">Щ</label>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="ie" id="letter-ie">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-ie">Э</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Эквадор</li>
+                        <li class="block-filter__country-item">Эритрея</li>
+                        <li class="block-filter__country-item">Эсватини</li>
+                        <li class="block-filter__country-item">Эстония</li>
+                        <li class="block-filter__country-item">Эфиопия</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="u" id="letter-u">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-u">Ю</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">ЮАР</li>
+                        <li class="block-filter__country-item">Южный Судан</li>
+                      </ul>
+
+                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="ia" id="letter-ia">
+                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-ia">Я</label>
+                      <ul class="block-filter__country-list alphabet-views__country-list">
+                        <li class="block-filter__country-item">Ямайка</li>
+                        <li class="block-filter__country-item">Япония</li>
+                      </ul>
+
                     </div>
-                  </div>
-                  <!-- Нужно переделать -->
                 </fieldset>
                 <a class="block-user__todoadd-link button button--yellow button--ellipse" href="#">Следующий шаг</a>
                 <a class="block-user__todoadd-link block-user__todoadd-link--prev" href="#">На шаг назад</a>
               </div>
 
-              <div class="block-user__todo-item todoadd-item">
+              <div class="block-user__todo-item todoadd__item todoadd-item">
                 <h3 class="block-user__todoadd-title">Шаг 3. Развлечения</h3>
                 <p class="block-user__todoadd-desc todoadd-item__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
 
-                <fieldset class="todoadd-form__leisure">
+                <fieldset class="block-user__todoadd-fieldset todoadd-form__leisure">
                   <div class="todoadd-form__leisure-item leisure-item">
                     <div class="leisure-item__head">
                       <label class="block-user_leisure-country" for="leisure-bih">Босния и герцеговина</label>
                       <img class="leisure-item__flag" src="http://placehold.it/35x24" alt="Флаг страны">
                     </div>
-                    <textarea class="block-user_leisure-textarea" name="leisure" id="leisure-bih" cols="30" rows="10" placeholder="План действий"></textarea>
+                    <textarea class="block-user_leisure-textarea leisure-item__textarea" name="leisure" id="leisure-bih" cols="30" rows="10" placeholder="План действий"></textarea>
                   </div>
                   <div class="todoadd-form__leisure-item leisure-item">
                     <div class="leisure-item__head">
                       <label class="block-user_leisure-country" for="leisure-chs">Чехословакия</label>
                       <img class="leisure-item__flag" src="http://placehold.it/35x24" alt="Флаг страны">
                     </div>
-                    <textarea class="block-user_leisure-textarea" name="leisure" id="leisure-chs" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
+                    <textarea class="block-user_leisure-textarea leisure-item__textarea" name="leisure" id="leisure-chs" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
                   </div>
                 </fieldset>
 
@@ -398,9 +621,8 @@
               </div>
 
             </form>
-
-          </section>
-        </div>
+          </div>
+        </section>
 
       </section>
     </main>

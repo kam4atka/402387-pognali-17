@@ -8,8 +8,24 @@
   padding: 0;
 }
 
+.todoadd__item {
+  margin-bottom: 10px;
+  padding: 25px;
+}
+
 @media (min-width: $tablet-width) {
   .todoadd {
     padding: 55px;
+  }
+
+  .todoadd__item {
+    margin-bottom: 40px;
+    padding: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .todoadd__item {
+    padding: 100px 160px;
   }
 }

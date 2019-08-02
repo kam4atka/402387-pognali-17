@@ -55,6 +55,11 @@
     background-color: #1d2e5b;
   }
 
+  &:checked + .block-filter__country-label--modal {
+    color: #1d2e5b;
+    background-color: #edeff6;
+  }
+
   &:checked + .block-filter__country-label + .block-filter__country-list {
     display: block;
   }
@@ -87,12 +92,26 @@
     border: none;
     background-color: transparent;
     color: #babdcf;
+
+    &--modal {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #1d2e5b;
+      border: 1px solid #cbced9;
+      background-color: #ffffff;
+    }
   }
 
   .block-filter__country-input {
     &:checked + .block-filter__country-label {
       color: #192144;
       background-color: transparent;
+    }
+
+    &:checked + .block-filter__country-label--modal {
+      color: #ffffff;
+      background-color: #1d2e5b;
     }
   }
 

@@ -1,3 +1,9 @@
+.todoadd-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
 .todoadd-item__desc {
   margin: 0;
   padding: 0;

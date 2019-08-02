@@ -1,4 +1,11 @@
 .calendar-table {
+  width: 100%;
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
+}
+
+.calendar-table__title {
+  margin: 10px 0;
+  text-align: center;
 }

@@ -12,8 +12,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 45px;
-  height: 43px;
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
 }
 
 .alphabet-views__country-list {
@@ -24,10 +25,22 @@
 }
 
 @media (min-width: $tablet-width) {
+  .alphabet-views {
+    &--modal {
+      width: 330px;
+    }
+  }
+
   .alphabet-views__label {
     justify-content: flex-start;
     width: 70px;
     height: 70px;
+
+    &--modal {
+      justify-content: center;
+      width: 55px;
+      height: 70px;
+    }
   }
 
   .alphabet-views__input {
@@ -38,6 +51,14 @@
       height: 400px;
       overflow: scroll;
     }
+
+    &:checked + .alphabet-views__label--modal + .alphabet-views__country-list {
+      position: absolute;
+      left: 400px;
+      width: 210px;
+      height: 340px;
+      overflow: scroll;
+    }
   }
 
   .alphabet-views__country-list {
@@ -46,14 +67,29 @@
 }
 
 @media (min-width: $desktop-width) {
-  .alphabet-views__label {
-    display: none;
+  .alphabet-views {
+    &--modal {
+      width: 510px;
+    }
   }
 
   .alphabet-views__country-list {
     display: block;
     box-sizing: border-box;
     width: 218px;
+  }
+
+  .alphabet-views__label {
+    display: none;
+
+    &--modal {
+      display: flex;
+      margin: 15px;
+    }
+
+    &--modal + .alphabet-views__country-list {
+      display: none;
+    }
   }
 
   .alphabet-views__input {
@@ -63,6 +99,14 @@
       width: 210px;
       height: auto;
       overflow: unset;
+    }
+
+    &:checked + .alphabet-views__label--modal + .alphabet-views__country-list {
+      position: absolute;
+      left: 550px;
+      width: 210px;
+      height: 490px;
+      overflow: scroll;
     }
   }
 }
