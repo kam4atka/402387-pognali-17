@@ -4,7 +4,6 @@
   align-items: center;
   margin: 0 auto;
   padding: 0;
-  list-style: none;
 }
 
 .guide-list__item {
@@ -13,36 +12,6 @@
   justify-content: space-between;
   width: 220px;
   padding: 20px 25px;
-
-  &--one {
-    background-color: #ff8d30;
-  }
-
-  &--two {
-    background-color: #ffa530;
-  }
-
-  &--three {
-    background-color: #ffbd30;
-  }
-
-  &--four {
-    background-color: #ffd74b;
-  }
-}
-
-.guide-list__text {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 18px;
-  color: #161c35;
-}
-
-.guide-list__count {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 18px;
-  color: #ffffff;
 }
 
 @media (min-width: $tablet-width) {
@@ -59,13 +28,6 @@
 
   .guide-list__text {
     margin-bottom: 10px;
-    font-size: 24px;
-    line-height: 24px;
-  }
-
-  .guide-list__count {
-    font-size: 30px;
-    line-height: 30px;
   }
 }
 
@@ -82,9 +44,5 @@
 
   .guide-list__text {
     margin: 0;
-  }
-
-  .guide-list__count {
-    font-size: 24px;
   }
 }

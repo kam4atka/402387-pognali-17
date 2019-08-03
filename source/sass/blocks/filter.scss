@@ -1,49 +1,67 @@
 .filter {
-  padding: 20px;
-  background-color: #e2e5f2;
+  padding: 20px 0;
 }
 
 .filter__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .filter__title {
-  margin: 0;
+  margin: 0 0 0 25px;
   padding: 0;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  color: #192144;
-  text-transform: uppercase;
 }
 
-.filter__close {
-  font-size: 17px;
-  font-weight: 700;
-  color: #161c35;
-  line-height: 29.45px;
-  text-transform: uppercase;
-  background-color: #d6daed;
+.filter__toggle {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
 }
 
 .filter__wrapper {
-  display: none;
+  display: flex;
   flex-direction: column;
 }
 
-.filter__block {
+.filter__list {
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: $tablet-width) {
+  .filter {
+    padding: 70px 0;
+  }
+
   .filter__header {
     display: none;
   }
 
-  .filter__block {
+  .filter__list {
+    margin-bottom: 75px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter__header {
+    display: flex;
+    margin-bottom: 65px;
+    margin-right: 35px;
+  }
+
+  .filter__toggle {
+    display: none;
+  }
+
+  .filter__title {
+    margin: 0;
+  }
+
+  .filter__list {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }

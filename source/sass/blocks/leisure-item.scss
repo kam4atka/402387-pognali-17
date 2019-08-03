@@ -1,13 +1,9 @@
-.leisure-item__country {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 18px;
-  color: #1d2e5b;
+.leisure-item {
+  margin: 0;
+  padding: 0;
 }
 
 .leisure-item__textarea {
-  &:placeholder {
-    opacity: 0.3;
-    color: #444444;
-  }
+  margin: 0;
+  padding: 0;
 }

@@ -2,3 +2,23 @@
   margin: 0;
   padding: 0;
 }
+
+.nations__list {
+  margin: 0;
+  padding: 0;
+  padding-left: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .nations__list {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nations__list {
+    padding-left: 0;
+    flex-direction: column;
+  }
+}

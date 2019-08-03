@@ -1,3 +1,15 @@
 .alphabet {
   border: none;
 }
+
+@media (min-width: $tablet-width) {
+  .alphabet {
+    width: 350px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .alphabet {
+    width: auto;
+  }
+}

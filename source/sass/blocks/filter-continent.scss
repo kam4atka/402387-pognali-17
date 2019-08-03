@@ -1,31 +1,25 @@
 .filter-continent {
-  margin: 0 25px;
+  margin: 25px;
   padding: 0;
   border: none;
 }
 
-.filter-continent__label {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 22px;
-  color: #192144;
-  text-transform: uppercase;
-  opacity: 0.3;
-}
-
-.filter-continent__input {
-  &:checked + .filter-continent__label {
-    opacity: 1;
-  }
+.filter-continent__item:not(:last-of-type) {
+  margin-bottom: 15px;
 }
 
 @media (min-width: $tablet-width) {
   .filter-continent {
-    display: none;
+    margin: 0 0 70px 0;
   }
 
-  .filter-continent__label {
-    font-size: 20px;
-    line-height: 24px;
+  .filter-continent__item:not(:last-of-type) {
+    margin: 0 15px 0 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-continent {
+    margin: 0 0 65px 0;
   }
 }

@@ -27,8 +27,14 @@
   margin-bottom: 65px;
 }
 
+.country__list {
+  order: 2;
+  margin-bottom: 15px;
+}
+
 .country__link {
   align-self: stretch;
+  order: 3;
 }
 
 @media (min-width: $tablet-width) {
@@ -53,6 +59,10 @@
   .country__desc {
     margin-bottom: 110px;
   }
+
+  .country__list {
+    margin-bottom: 45px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -62,23 +72,29 @@
   }
 
   .country__wrapper {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 400px;
+    display: block;
+    height: auto;
     margin: 0 70px;
   }
 
   .country__header {
+    width: auto;
     margin-left: 170px;
   }
 
   .country__desc {
-    width: 340px;
+    width: auto;
     margin-bottom: 100px;
   }
 
   .country__link {
     align-self: auto;
     margin-left: 170px;
+  }
+
+  .country__list {
+    order: -1;
+    float: left;
+    width: 600px;
   }
 }

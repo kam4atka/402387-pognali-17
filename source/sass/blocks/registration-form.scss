@@ -1,6 +1,27 @@
-.registration-form__label {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
-  color: #ffffff;
+.registration-form {
+  position: relative;
+  margin-bottom: 30px;
+  align-self: stretch;
+}
+
+.registration-form__input {
+  width: 98%;
+}
+
+.registration-form__send {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .registration-form {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .registration-form {
+    margin-bottom: 70px;
+  }
 }

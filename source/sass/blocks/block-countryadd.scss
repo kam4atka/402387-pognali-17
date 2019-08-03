@@ -1,0 +1,40 @@
+.block-countryadd__list {
+  list-style: none;
+}
+
+.block-countryadd__alphabet,
+.block-countryadd__country {
+  border: none;
+}
+
+.block-countryadd__alphabet-header {
+  background-color: #1d2e5b;
+}
+
+.block-countryadd__alphabet-title,
+.block-countryadd__header-close {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+.block-countryadd__header-close {
+  background-color: transparent;
+  border: none;
+}
+
+.block-countryadd__country-label {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .block-countryadd__alphabet-title,
+  .block-countryadd__header-close {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

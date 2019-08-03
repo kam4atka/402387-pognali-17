@@ -1,10 +1,36 @@
 .todo {
-  background-color: #dfe3f0;
+  padding: 30px 25px;
+}
+
+.todo__title,
+.todo__list,
+.todo__item-text {
+  margin: 0;
+  padding: 0;
 }
 
 .todo__title {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #1d2e5b;
+  margin-bottom: 35px;
+}
+
+.todo__item {
+  padding: 25px;
+}
+
+.todo__item:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .todo {
+    padding: 55px;
+  }
+
+  .todo__title {
+    margin-bottom: 55px;
+  }
+
+  .todo__item {
+    padding: 20px 40px;
+  }
 }

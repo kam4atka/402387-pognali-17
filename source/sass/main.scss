@@ -26,3 +26,9 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
