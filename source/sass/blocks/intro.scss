@@ -1,6 +1,10 @@
 .intro {
   padding-top: 25px;
   padding-bottom: 40px;
+  background-image: url("../img/traveller-illustration-mobile@1x.png'), url('../img/globe-back-mobile@1x.jpg");
+  background-size: auto, auto 100%;
+  background-position: 70% 18%, 0 -45%;
+  background-repeat: no-repeat;
 }
 
 .intro__wrapper {
@@ -20,6 +24,9 @@
   .intro {
     padding-top: 80px;
     padding-bottom: 0;
+    background-color: #182044;
+    background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
+    background-position: 70% 80%, 50% 100%;
   }
 
   .intro__title {
@@ -33,6 +40,8 @@
   .intro {
     padding-top: 120px;
     padding-bottom: 125px;
+    background-image: url("../img/traveller-illustration-desktop@1x.png"), url("../img/globe-back-desktop@1x.jpg");
+    background-position: 60% 100%, 0 0;
   }
 
   .intro__wrapper {

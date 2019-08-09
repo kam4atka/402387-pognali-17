@@ -1,11 +1,15 @@
 .price {
   position: relative;
-  padding-top: 50px;
-  padding-bottom: 40px;
+  padding: 30px 0 40px 0;
 }
 
 .price__wrapper {
   margin-left: 25px;
+  padding-top: 20px;
+  background-image: url("../img/rates@1x.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 50%;
 }
 
 .price__title,
@@ -21,12 +25,15 @@
 
 @media (min-width: $tablet-width) {
   .price {
-    padding-top: 75px;
-    padding-bottom: 85px;
+    padding-top: 75px 0 45px 0;
   }
 
   .price__wrapper {
     margin-left: 0;
+    padding-bottom: 40px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 15%;
   }
 
   .price__desc {
@@ -36,7 +43,24 @@
   }
 
   .price__link {
+    position: relative;
     margin-left: 90px;
+  }
+
+  .price__link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -90px;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    background-color: #e1e5f1;
+    background-image: url("../img/business.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 25%;
+    transform: translateY(-50%);
   }
 }
 
@@ -48,6 +72,7 @@
 
   .price__wrapper {
     margin: 0 70px;
+    background-position: 100% 55%;
   }
 
   .price__desc {

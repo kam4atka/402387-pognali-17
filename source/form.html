@@ -7,61 +7,72 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="side page">
-    <header class="page-header header">
+    <header class="block-header header">
       <div class="page__wrapper header__wrapper">
-        <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" alt="Вы на главной странице">
+        <a class="block-header__logo header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo-desktop-white@1x.png">
+            <img class="block-header__logo-image" src="img/logo-mobile-white@1x.png" alt="Вы на главной странице">
+          </picture>
         </a>
-        <nav class="main-nav">
-          <button class="page-header__toogle main-nav__toggle">Открыть меню</button>
-          <div class="page-header__wrapper main-nav__wrapper">
-            <ul class="page-header__list main-nav__list site-list">
+        <nav class="block-header__nav main-nav main-nav--closed">
+          <button class="block-header__toggle main-nav__toggle">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="block-header__wrapper main-nav__wrapper">
+            <ul class="block-header__list main-nav__list site-list">
               <li class="site-list__item">
-                <a class="page-header__link page-header__link--bold" href="#">О сервисе</a>
+                <a class="block-header__link block-header__link--bold" href="#">О сервисе</a>
               </li>
               <li class="site-list__item">
-                <a class="page-header__link page-header__link--bold" href="form.html">Направления</a>
+                <a class="block-header__link block-header__link--bold" href="form.html">Направления</a>
               </li>
               <li class="site-list__item">
-                <a class="page-header__link page-header__link--bold" href="catalog.html">Попутчики</a>
+                <a class="block-header__link block-header__link--bold" href="catalog.html">Попутчики</a>
               </li>
             </ul>
-            <ul class="page-header__list main-nav__list user-list">
+            <ul class="block-header__list main-nav__list user-list">
               <li class="user-list__item">
-                <a class="page-header__link page-header__link--medium" href="#">Авторизация</a>
+                <a class="block-header__btn user-list__link button button--yellow button--ellipse" href="#">Авторизация</a>
               </li>
             </ul>
-            <ul class="page-header__list main-nav__list contact-list">
+            <ul class="block-header__list main-nav__list contact-list">
               <li class="contact-list__item">
-                <a class="page-header__link page-header__link--normal icon icon--phone" href="tel:88005558628">8 800 555-86-28</a>
+                <a class="block-header__link block-header__link--normal contact-list__link contact-list__link--phone" href="tel:88005558628">8 800 555-86-28</a>
               </li>
               <li class="contact-list__item">
-                <a class="page-header__link page-header__link--normal icon icon--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                <a class="block-header__link block-header__link--normal contact-list__link contact-list__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </li>
             </ul>
-            <ul class="page-header__list main-nav__list social-list">
+            <ul class="block-header__list main-nav__list social-list">
               <li class="social-list__item">
-                <a class="page-header__link icon icon--facebook" href="#">facebook</a>
+                <a class="block-header__link social-list__link social-list__link--facebook" href="#">
+                  <span class="visually-hidden">facebook</span>
+                </a>
               </li>
               <li class="social-list__item">
-                <a class="page-header__link icon icon--vkontakte" href="#">vkontakte</a>
+                <a class="block-header__link social-list__link social-list__link--vkontakte" href="#">
+                  <span class="visually-hidden">vkontakte</span>
+                </a>
               </li>
               <li class="social-list__item">
-                <a class="page-header__link icon icon--instagram" href="#">instagram</a>
+                <a class="block-header__link social-list__link social-list__link--instagram" href="#">
+                  <span class="visually-hidden">instagram</span>
+                </a>
               </li>
             </ul>
           </div>
         </nav>
         <div class="sub-nav">
-          <ul class="page-header__list sub-nav__list">
+          <ul class="block-header__list sub-nav__list">
             <li class="sub-nav__item">
-              <a class="page-header__link page-header__link--medium icon icon--phone button button--orange" href="tel:88005558628">phone</a>
+              <a class="sub-nav__link sub-nav__link--icon icon icon--phone button button--orange button--round" href="tel:88005558628"><span class="visually-hidden">phone</span></a>
             </li>
             <li class="sub-nav__item">
-              <a class="page-header__link page-header__link--medium icon icon--email button button--yellow-dark" href="mailto:mail@htmlacademy.ru">email</a>
+              <a class="sub-nav__link sub-nav__link--icon icon icon--email button button--yellowdark button--round" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">email</span></a>
             </li>
             <li class="sub-nav__item">
-              <a class="page-header__link page-header__link--medium icon icon--auth button button--yellow button--ellipse" href="#">Авторизация</a>
+              <a class="block-header__btn button button--yellow button--ellipse" href="#">Авторизация</a>
             </li>
           </ul>
         </div>
@@ -628,24 +639,35 @@
     </main>
     <footer class="page-footer block block--top footer">
       <div class="page__wrapper footer__wrapper">
-        <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип сайта">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-desktop-blue@1x.png">
+          <img class="page-footer__logo-image footer__logo" src="img/logo-mobile-blue@1x.png" alt="Вы на главной странице">
+        </picture>
         <div class="footer-social">
           <ul class="page-footer__list footer-social__list">
             <li class="footer-social__item">
-              <a class="page-footer__link footer-social__link footer-social__link--facebook" href="#">facebook</a>
+              <a class="page-footer__link footer-social__link icon icon--facebook" href="#">
+                <span class="visually-hidden">facebook</span>
+              </a>
             </li>
             <li class="footer-social__item">
-              <a class="page-footer__link footer-social__link footer-social__link--vkontakte" href="#">vkontakte</a>
+              <a class="page-footer__link footer-social__link icon icon--vkontakte" href="#">
+                <span class="visually-hidden">vkontakte</span>
+              </a>
             </li>
             <li class="footer-social__item">
-              <a class="page-footer__link footer-social__link footer-social__link--instagram" href="#">instagram</a>
+              <a class="page-footer__link footer-social__link icon icon--instagram" href="#">
+                <span class="visually-hidden">instagram</span>
+              </a>
             </li>
           </ul>
         </div>
         <div class="footer-copyright">
           <p class="footer-copyright__text">Разработано</p>
           <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-            <img class="footer-copyright__logo" src="https://placehold.it/27x34" alt="Логотип разработчика">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 34" width="27" height="34">
+              <path d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6 0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9 3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2 11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z" fill="#231f20"/>
+            </svg>
           </a>
         </div>
       </div>

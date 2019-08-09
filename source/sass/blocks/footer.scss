@@ -6,9 +6,18 @@
   padding: 35px 0 15px 0;
 }
 
+.footer__logo {
+  margin-bottom: 40px;
+}
+
 @media (min-width: $tablet-width) {
   .footer__wrapper {
     flex-direction: row;
     align-items: center;
+    padding: 45px 0;
+  }
+
+  .footer__logo {
+    margin-bottom: 0;
   }
 }

@@ -1,13 +1,13 @@
-.page-header {
+.block-header {
   color: #ffffff;
   background-color: #161c36;
 }
 
-.page-header__wrapper {
+.block-header__wrapper {
   background-color: #ffffff;
 }
 
-.page-header__toogle {
+.block-header__toggle {
   font-size: 16px;
   font-weight: 300;
   line-height: 22px;
@@ -16,11 +16,11 @@
   border: none;
 }
 
-.page-header__list {
+.block-header__list {
   list-style: none;
 }
 
-.page-header__link {
+.block-header__link {
   color: #192144;
   text-transform: uppercase;
   text-decoration: none;
@@ -43,13 +43,46 @@
     font-weight: 500;
     line-height: 36px;
   }
+
+  &:hover,
+  &:focus {
+    color: #ffd74b;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.block-header__btn {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgba(23, 29, 54, 1);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-yellowdark;
+  }
+
+  &:active {
+    color: rgba(23, 29, 54, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .page-header__link {
+  .block-header__link {
     &--normal {
       font-size: 28px;
       line-height: 28px;
+    }
+
+    &--medium {
+      font-size: 20px;
+      line-height: 30px;
     }
 
     &--bold {
@@ -57,10 +90,15 @@
       line-height: 71.01px;
     }
   }
+
+  .block-header__btn {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .page-header__link {
+  .block-header__link {
     &--bold {
       font-size: 20px;
       line-height: 30px;

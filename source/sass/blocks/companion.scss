@@ -92,7 +92,6 @@
     order: 2;
     margin-bottom: 0;
     float: right;
-    width: 600px;
   }
 
   .companion__list-item:nth-of-type(odd) {
@@ -100,6 +99,6 @@
   }
 
   .companion__link {
-    align-self: flex-start;
+    width: 270px;
   }
 }

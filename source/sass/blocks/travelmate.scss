@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: stretch;
   padding: 15px 0 20px 0;
   border-radius: 20px;
@@ -20,8 +21,19 @@
 
 .travelmate__like {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
+}
+
+.travelmate__like-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+
+  &--active {
+    transform: translate(-50%, -25%);
+  }
 }
 
 .travelmate__desc {
@@ -36,7 +48,7 @@
 }
 
 .travelmate__name {
-  width: 40%;
+  width: 37%;
 }
 
 .travelmate__count {
@@ -44,7 +56,7 @@
 }
 
 .travelmate__tags {
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 0;
   padding-left: 25px;
 }
@@ -77,12 +89,12 @@
 @media (min-width: $tablet-width) {
   .travelmate {
     flex-direction: row;
-    padding: 35px 0 25px 0;
+    padding: 35px 0 0 0;
   }
 
   .travelmate__photo {
     position: static;
-    margin: 0 35px;
+    margin: 0 35px 25px 35px;
   }
 
   .travelmate__like,
@@ -91,7 +103,7 @@
   }
 
   .travelmate__desc {
-    width: 35%;
+    width: 40%;
   }
 
   .travelmate__name,
@@ -105,7 +117,7 @@
   }
 
   .travelmate__tags {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     padding: 0;
   }
 
@@ -115,6 +127,9 @@
 
   .travelmate__parameters {
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 25px 0 auto;
   }
 
   .travelmate__link {
@@ -126,7 +141,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 50%;
 
     &--tablet {
       display: flex;
@@ -135,6 +149,20 @@
       .travelmate__action-count {
         display: block;
       }
+    }
+
+    &-count {
+      margin-left: 10px;
+    }
+
+    &-icon {
+      width: 25px;
+      height: 25px;
+    }
+
+    &-icon--active {
+      width: 40px;
+      height: 40px;
     }
   }
 }
@@ -163,29 +191,39 @@
   }
 
   .travelmate__desc {
-    width: 50%;
+    width: 65%;
   }
 
   .travelmate__country {
     order: 0;
-    width: 50%;
+    width: 35%;
   }
 
   .travelmate__parameters {
+    flex-direction: row;
+    justify-content: space-between;
     order: 1;
-    width: 50%;
-  }
-
-  .travelmate__link {
+    width: 35%;
     margin: 0;
   }
 
   .travelmate__action {
     display: flex;
+    justify-content: flex-start;
+    width: 65%;
 
     &--tablet {
       display: none;
     }
+  }
+
+  .travelmate__link {
+    flex-grow: 0;
+    margin: 0;
+  }
+
+  .travelmate__action-like {
+    border-radius: 50%;
   }
 
   .travelmate__action-link,

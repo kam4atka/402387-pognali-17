@@ -1,0 +1,30 @@
+.footer-social__list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social__item {
+  width: 45px;
+  height: 45px;
+}
+
+.footer-social {
+  margin-bottom: 35px;
+}
+
+.footer-social__link {
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .footer-social {
+    margin-bottom: 0;
+  }
+
+  .footer-social__item {
+    width: 60px;
+    height: 60px;
+  }
+}
