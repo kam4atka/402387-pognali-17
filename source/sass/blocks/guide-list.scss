@@ -11,7 +11,18 @@
   flex-direction: row;
   justify-content: space-between;
   width: 220px;
+  margin-top: -10px;
   padding: 20px 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.guide-list__item:not(:last-of-type) {
+  padding: 20px 25px 30px 25px;
+}
+
+.guide-list__item:last-of-type {
+  border-radius: 10px;
 }
 
 @media (min-width: $tablet-width) {
@@ -24,6 +35,29 @@
   .guide-list__item {
     flex-direction: column;
     width: 294px;
+    margin-top: 0;
+  }
+
+  .guide-list__item:not(:last-of-type) {
+    padding: 20px 25px;
+  }
+
+  .guide-list__item:nth-of-type(odd) {
+    padding: 20px 45px 20px 25px;
+  }
+
+  .guide-list__item:nth-of-type(even) {
+    margin-left: -20px;
+  }
+
+  .guide-list__item:nth-of-type(3) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 20px;
+  }
+
+  .guide-list__item:nth-of-type(4) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   .guide-list__text {
@@ -40,9 +74,26 @@
   .guide-list__item {
     flex-direction: row;
     width: 280px;
+    margin-left: -20px;
+    padding: 30px;
   }
 
   .guide-list__text {
     margin: 0;
+  }
+
+  .guide-list__item:not(:last-of-type) {
+    padding: 30px 50px 30px 30px;
+  }
+
+  .guide-list__item:nth-of-type(n) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 0;
+  }
+
+  .guide-list__item:last-of-type {
+    border-radius: 20px;
   }
 }

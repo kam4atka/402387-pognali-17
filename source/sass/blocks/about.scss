@@ -1,6 +1,9 @@
 .about {
   padding-top: 30px;
   padding-bottom: 60px;
+  background-image: url("../img/about-mobile@1x.png");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
 }
 
 .about__wrapper {
@@ -23,6 +26,9 @@
   .about {
     padding-top: 280px;
     padding-bottom: 90px;
+    background-image: url("../img/about-tablet@1x.png");
+    background-position: 95% 95%;
+    background-repeat: no-repeat;
   }
 
   .about__wrapper {
@@ -43,6 +49,8 @@
 
   .about__link {
     display: inline-block;
+    box-sizing: border-box;
+    width: 275px;
   }
 
   .about__title,
@@ -55,6 +63,9 @@
   .about {
     padding-top: 130px;
     padding-bottom: 160px;
+    background-image: url("../img/about-desktop@1x.png");
+    background-position: 95% 95%;
+    background-repeat: no-repeat;
   }
 
   .about__wrapper {

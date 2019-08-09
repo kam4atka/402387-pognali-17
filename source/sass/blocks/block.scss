@@ -23,6 +23,16 @@
     background-color: #ffd74b;
     color: #192144;
   }
+
+  &--top {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  &--bottom {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
 }
 
 .block__header {
@@ -115,6 +125,7 @@
 
   &--value {
     font-weight: 700;
+    border-bottom: 1px solid #ffffff;
   }
 
   &--title {
@@ -216,6 +227,18 @@
 }
 
 @media (min-width: $tablet-width) {
+  .block {
+    &--top {
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+    }
+
+    &--bottom {
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+  }
+
   .block__header {
     font-size: 60px;
     line-height: 70px;

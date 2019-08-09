@@ -78,8 +78,7 @@
   }
 
   .country__header {
-    width: auto;
-    margin-left: 170px;
+    margin-left: 740px;
   }
 
   .country__desc {
@@ -88,13 +87,13 @@
   }
 
   .country__link {
-    align-self: auto;
-    margin-left: 170px;
+    box-sizing: border-box;
+    width: 270px;
+    margin-left: 740px;
   }
 
   .country__list {
     order: -1;
     float: left;
-    width: 600px;
   }
 }

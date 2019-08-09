@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+.user-list__link {
+  display: block;
+}
+
 @media (min-width: $tablet-width) {
   .user-list {
     display: none;

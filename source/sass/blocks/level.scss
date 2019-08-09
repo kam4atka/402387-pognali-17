@@ -1,3 +1,24 @@
+.level__title {
+  position: relative;
+  margin: 0 0 15px 0;
+  padding: 0 20px 0 10px;
+}
+
+.level__title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 1px;
+  width: 20%;
+  background-color: #edeff6;
+  transform: translateY(-50%);
+}
+
+.level__wrapper {
+  padding: 0 20px 0 10px;
+}
+
 .level__desc {
   display: none;
 }
@@ -5,6 +26,10 @@
 @media (min-width: $tablet-width) {
   .level__title {
     display: none;
+  }
+
+  .level__wrapper {
+    padding: 0;
   }
 
   .level__desc {

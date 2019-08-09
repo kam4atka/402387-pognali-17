@@ -3,8 +3,9 @@
 @import "variable.scss";
 @import "main.scss";
 @import "./blocks/button.scss";
+@import "./blocks/icon.scss";
 /* for header */
-@import "./blocks/page-header.scss";
+@import "./blocks/block-header.scss";
 @import "./blocks/header.scss";
 @import "./blocks/main-nav.scss";
 @import "./blocks/site-list.scss";
@@ -31,6 +32,7 @@
 @import "./blocks/registration.scss";
 @import "./blocks/registration-form.scss";
 @import "./blocks/address.scss";
+@import "./blocks/map.scss";
 /* for catalog */
 @import "./blocks/card.scss";
 @import "./blocks/travelmates.scss";
@@ -83,5 +85,5 @@
 /* for footer */
 @import "./blocks/page-footer.scss";
 @import "./blocks/footer.scss";
-@import "./blocks/footer-contact.scss";
+@import "./blocks/footer-social.scss";
 @import "./blocks/footer-copyright.scss";

@@ -9,10 +9,22 @@
   justify-content: space-between;
 }
 
+.header__logo {
+  margin-top: 20px;
+}
+
 @media (min-width: $tablet-width) {
+  .header {
+    padding: 40px 0;
+  }
+
   .header__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .header__logo {
+    margin: 0;
   }
 }
 
@@ -21,5 +33,9 @@
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
+  }
+
+  .header__logo {
+    margin-top: 0;
   }
 }

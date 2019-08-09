@@ -1,22 +1,88 @@
 .nations__title {
-  margin: 0;
-  padding: 0;
+  position: relative;
+  margin: 0 0 15px 0;
+  padding: 0 0 0 20px;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    background-color: #edeff6;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    right: 0;
+    width: 55%;
+  }
+
+  &::before {
+    left: 0;
+    width: 5%;
+  }
 }
 
 .nations__list {
-  margin: 0;
-  padding: 0;
-  padding-left: 25px;
+  margin: 0 0 15px 0;
+  padding: 0 0 0 25px;
+}
+
+.nations__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nations__item:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.nations__item-flag {
+  margin-right: 15px;
 }
 
 @media (min-width: $tablet-width) {
+  .nations {
+    flex-grow: 1;
+  }
+
+  .nations__title {
+    margin: 0 0 20px 0;
+    padding: 0 0 0 80px;
+
+    &::after {
+      width: 72%;
+    }
+
+    &::before {
+      width: 10%;
+    }
+  }
+
   .nations__list {
     display: flex;
     flex-direction: row;
+    padding: 0 0 0 40px;
+  }
+
+  .nations__item:not(:last-of-type) {
+    margin-right: 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .nations__title {
+    display: none;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
   .nations__list {
     padding-left: 0;
     flex-direction: column;
