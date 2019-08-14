@@ -5,23 +5,66 @@
 }
 
 .registration-form__input {
-  width: 98%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px 95px 25px 25px;
+  border: none;
+  border-radius: 10px;
 }
 
 .registration-form__send {
   position: absolute;
   top: 0;
   right: 0;
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 10px;
+}
+
+.registration-form__send-label {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
   .registration-form {
+    width: 618px;
     margin-bottom: 60px;
+    align-self: center;
+  }
+
+  .registration-form__input {
+    padding: 30px 95px 30px 30px;
+    border-radius: 20px;
+  }
+
+  .registration-form__send {
+    width: 86px;
+    height: 86px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .registration-form {
+    width: 1178px;
     margin-bottom: 70px;
+  }
+
+  .registration-form__send {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 325px;
+    padding: 0 40px;
+  }
+
+  .registration-form__send-label {
+    display: inline-block;
+    vertical-align: middle;
   }
 }

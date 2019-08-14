@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.sort-item__label {
+  margin-bottom: 20px;
+}
+
 .sort-item__wrapper {
   display: flex;
   flex-direction: row;
@@ -13,13 +17,19 @@
 }
 
 @media (min-width: $tablet-width) {
-  .sort-item__wrapper {
-    justify-content: flex-start;
+  .sort-item__label {
+    width: 130px;
+    margin: 0 0 0 35px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .sort-item__wrapper {
     justify-content: space-between;
+  }
+
+  .sort-item__label {
+    width: auto;
+    margin: 0 0 20px 0;
   }
 }

@@ -1,8 +1,15 @@
+.block-calendar {
+  border-collapse: collapse;
+}
+
 .block-calendar__title {
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
   color: #1d2e5b;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .block-calendar__week-cell {
@@ -11,6 +18,15 @@
   text-transform: uppercase;
   color: #444444;
   text-align: center;
+
+  &--tablet {
+    display: none;
+  }
+
+  &--red &--mobile,
+  &--red &--tablet {
+    color: #ff5c23;
+  }
 }
 
 .block-calendar__day-cell {
@@ -20,6 +36,7 @@
   text-transform: uppercase;
   text-align: center;
   background-color: #edeff6;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 
   &--inactive {
     opacity: 0.3;
@@ -42,6 +59,14 @@
     font-size: 18px;
     line-height: 30px;
     text-transform: none;
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: inline-block;
+    }
   }
 
   .block-calendar__day-cell {
@@ -56,5 +81,11 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 30px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .block-calendar__week-cell {
+    text-align: left;
   }
 }

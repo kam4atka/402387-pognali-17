@@ -10,8 +10,29 @@
     margin-left: 0;
   }
 
+  &--transport .sort-parameters__label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+
   &--level {
     margin-left: 0;
+    align-items: center;
+  }
+}
+
+.sort-parameters__label-icon {
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
   }
 }
 
@@ -19,7 +40,22 @@
   .sort-parameters {
     flex-direction: row;
     margin: 0;
-    width: auto;
+    width: 500px;
+
+    &--transport .sort-parameters__label {
+      width: 45px;
+      height: 45px;
+    }
+
+    &--level {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+
+  .sort-parameters__label-icon {
+    width: 17px;
+    height: 21px;
   }
 }
 

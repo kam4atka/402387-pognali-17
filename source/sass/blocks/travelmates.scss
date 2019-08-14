@@ -1,4 +1,5 @@
 .travelmates__header-wrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -17,7 +18,14 @@
   }
 
   &--more {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-bottom: 25px;
+  }
+
+  &-text {
+    margin-left: 15px;
   }
 }
 
@@ -40,27 +48,21 @@
   }
 
   .travelmates__link {
-    &--home {
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 100px;
+    &-icon {
+      margin-left: 30px;
     }
 
-    &--home::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: -60px;
-      width: 30px;
-      height: 20px;
-      transform: translateY(-50%);
-      background-image: url("../img/return.svg");
-      background-repeat: no-repeat;
+    &--home {
+      display: inline-block;
+      vertical-align: middle;
     }
 
     &--more {
       margin-bottom: 50px;
+    }
+
+    &-text {
+      margin-left: 25px;
     }
   }
 }

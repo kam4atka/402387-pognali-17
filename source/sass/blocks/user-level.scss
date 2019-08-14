@@ -1,19 +1,28 @@
 .user-level {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
   margin-right: 35px;
+}
+
+.user-level__value {
+  margin-bottom: 5px;
 }
 
 @media (min-width: $tablet-width) {
   .user-level {
     order: 1;
-    margin-right: 60px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .user-level {
     order: 0;
-    margin: 0;
+    margin-left: auto;
+    margin-top: 45px;
   }
 }

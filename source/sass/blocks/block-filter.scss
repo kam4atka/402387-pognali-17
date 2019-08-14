@@ -11,7 +11,16 @@
 }
 
 .block-filter__header-toggle {
-  font-size: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.block-filter__icon {
+  fill: #121836;
+
+  &--white {
+    fill: #ffffff;
+  }
 }
 
 .block-filter__close {
@@ -21,6 +30,10 @@
   line-height: 29.45px;
   text-transform: uppercase;
   background-color: #d6daed;
+
+  &--tablet {
+    display: none;
+  }
 }
 
 .block-filter__continent-label {
@@ -83,6 +96,15 @@
   .block-filter__continent-label {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .block-filter__close {
+    &--tablet {
+      display: inline-block;
+      vertical-align: middle;
+      background-color: transparent;
+      border: none;
+    }
   }
 
   .block-filter__country-label {
