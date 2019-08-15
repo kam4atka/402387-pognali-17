@@ -81,7 +81,7 @@
   margin: 0 25px;
 }
 
-.travelmate__action-link,
+.travelmate__action-like,
 .travelmate__action-count {
   display: none;
 }
@@ -145,7 +145,7 @@
     &--tablet {
       display: flex;
 
-      .travelmate__action-link,
+      .travelmate__action-like,
       .travelmate__action-count {
         display: block;
       }
@@ -226,7 +226,7 @@
     border-radius: 50%;
   }
 
-  .travelmate__action-link,
+  .travelmate__action-like,
   .travelmate__action-count {
     display: block;
   }

@@ -1,5 +1,22 @@
 .user__header {
-  padding: 35px 0 15px 0;
+  padding: 35px 0 0 0;
+}
+
+.user__header-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ff8d30;
+    border-radius: 2px;
+  }
 }
 
 .user__title {
@@ -9,17 +26,34 @@
 
 @media (min-width: $tablet-width) {
   .user__header {
-    padding: 110px 0 60px 0;
+    padding: 110px 0 0 0;
+  }
+
+  .user__header-wrapper {
+    margin: 0 0 0 34px;
+    padding: 0 0 60px 0;
+  }
+
+  .user__header-wrapper::before {
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .user__header {
-    padding: 110px 0 60px 0;
+    padding: 110px 0 0 0;
+  }
+
+  .user__header-wrapper {
+    margin: 0 0 0 60px;
+    padding: 0 0 70px 0;
   }
 
   .user__wrapper {
-    position: relative;
-    top: -195px;
+    margin-top: -195px;
   }
 }

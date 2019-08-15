@@ -14,12 +14,21 @@
   }
 
   .filter-continent__item:not(:last-of-type) {
-    margin: 0 15px 0 0;
+    margin: 0 25px 0 0;
+  }
+
+  .filter-continent__close {
+    margin-left: auto;
+  }
+
+  .filter-continent__close-text {
+    margin-right: 65px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .filter-continent {
+    flex-grow: 1;
     margin: 0 0 65px 0;
   }
 }

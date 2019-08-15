@@ -20,6 +20,7 @@
 
 .block-sort__item {
   border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .block-sort__item-title {
@@ -33,6 +34,16 @@
 .block-sort__item-toggle {
   background-color: transparent;
   border: none;
+}
+
+.block__sort-icon {
+  &--close {
+    transform: rotate(180deg);
+  }
+}
+
+.block-sort__icon-dropdown {
+  fill: #192143;
 }
 
 .block-sort__item-label {

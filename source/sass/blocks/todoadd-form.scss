@@ -3,8 +3,148 @@
   padding: 0;
 }
 
-.todoadd-form__select,
+.todoadd-form__parameters {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.todoadd-form__parameters-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.todoadd-form__select {
+  margin: 0 0 25px 0;
+  padding: 0;
+}
+
+.todoadd-form__label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.todoadd-form__input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.todoadd-form__input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+}
+
+.todoadd-form__input-btn {
+  position: absolute;
+  transform: translateY(-50%);
+
+  &--minus {
+    top: 50%;
+    left: 15px;
+  }
+
+  &--plus {
+    top: 55%;
+    right: 15px;
+  }
+}
+
+.todoadd-form__input-icon {
+  opacity: 0.2;
+}
+
+.todoadd-form__checkbox-label {
+  order: 1;
+  margin: 0 0 0 40px;
+}
+
+.todoadd-form__select-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.todoadd-form__select-add {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.todoadd-form__country__add {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+}
+
 .todoadd-form__leisure {
   margin: 0 0 20px 0;
   padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .todoadd-form {
+    padding: 0 34px;
+  }
+
+  .todoadd-form__label {
+    margin-bottom: 25px;
+  }
+
+  .todoadd-form__input {
+    padding: 25px;
+  }
+
+  .todoadd-form__input-wrapper {
+    margin-bottom: 35px;
+  }
+
+  .todoadd-form__checkbox-label {
+    order: 0;
+    padding: 0 0 35px 60px;
+    margin: 0 0 25px 0;
+  }
+
+  .todoadd-form__select,
+  .todoadd-form__leisure {
+    margin: 0 0 50px 0;
+  }
+
+  .todoadd-form__country__add {
+    width: 370px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .todoadd-form {
+    padding: 0;
+  }
+
+  .todoadd-form__select-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .todoadd-form__label {
+    width: 25%;
+  }
+
+  .todoadd-form__input-wrapper {
+    width: 25%;
+    margin: 0 0 15px 0;
+  }
+
+  .todoadd-form__checkbox-label {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .todoadd-form__country__add {
+    width: 730px;
+  }
 }

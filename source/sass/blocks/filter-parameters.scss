@@ -6,6 +6,7 @@
 @media (min-width: $tablet-width) {
   .filter-parameters {
     flex-direction: row;
+    align-items: center;
 
     &--country {
       flex-direction: column;

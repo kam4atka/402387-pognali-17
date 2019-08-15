@@ -7,6 +7,44 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="side page">
+    <svg style="display: none;">
+      <symbol id="plane" viewBox="0 0 19 21">
+        <path class="card__icon card__icon-plane" d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,.8c0,0,1,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z"/>
+      </symbol>
+      <symbol id="bus" viewBox="0 0 17 21">
+        <path class="card__icon card__icon-bus" d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6zM8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z"/>
+      </symbol>
+      <symbol id="bike" viewBox="0 0 24 21">
+        <path class="card__icon card__icon-bike" d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6zM14.8,8.9H19V7.1h-3.2l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z"/>
+      </symbol>
+      <symbol id="run" viewBox="0 0 20 21">
+        <g class="card__icon card__icon-run">
+          <ellipse cx="14.3" cy="2" rx="2.1" ry="2"/>
+          <path d="M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6C5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5c0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4c0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6z"/>
+        </g>
+      </symbol>
+      <symbol id="minus" viewBox="0 0 14 2">
+        <rect class="todoadd__plus" width="14" height="2"/>
+      </symbol>
+      <symbol id="plus" viewBox="0 0 14 14">
+        <polygon class="todoadd__minus" points="8,6 8,0 6,0 6,6 0,6 0,8 6,8 6,14 8,14 8,8 14,8 14,6 "/>
+      </symbol>
+      <symbol id="country-remove" viewBox="0 0 9 9">
+        <path class="block-user__todoadd-icon" d="M5.2,4.5l3.7-3.7C9,0.6,9,0.3,8.9,0.1S8.4,0,8.2,0.1L4.5,3.8L0.8,0.1C0.6,0,0.3,0,0.1,0.1S0,0.6,0.1,0.8l3.7,3.7L0.1,8.2C0,8.4,0,8.7,0.1,8.9C0.2,9,0.4,9,0.5,9s0.2,0,0.3-0.1l3.7-3.7l3.7,3.7C8.3,9,8.4,9,8.5,9s0.2,0,0.3-0.1C9,8.7,9,8.4,8.9,8.2L5.2,4.5z"/>
+      </symbol>
+      <symbol id="month-narrow__left" viewBox="0 0 18 34">
+        <path class="block-user__todoadd-icon" d="M3.6,17l14-14.4c0.6-0.6,0.6-1.6,0-2.1c-0.6-0.6-1.5-0.6-2.1,0L0.4,15.9c-0.6,0.6-0.6,1.6,0,2.1l15.1,15.5c0.3,0.3,0.7,0.4,1,0.4s0.8-0.1,1-0.4c0.6-0.6,0.6-1.6,0-2.1L3.6,17z"/>
+      </symbol>
+      <symbol id="month-narrow__right" viewBox="0 0 18 34">
+        <path class="block-user__todoadd-icon" d="M14.4,17L0.4,2.6C-0.1,2-0.1,1,0.4,0.4c0.6-0.6,1.5-0.6,2.1,0l15.1,15.5c0.6,0.6,0.6,1.6,0,2.1L2.5,33.6c-0.3,0.3-0.7,0.4-1,0.4s-0.8-0.1-1-0.4c-0.6-0.6-0.6-1.6,0-2.1L14.4,17z"/>
+      </symbol>
+      <symbol id="triangle-right" viewBox="0 0 10 14">
+        <polygon class="block__button-icon" points="0,14 0,0.1 10,7.1 "/>
+      </symbol>
+      <symbol id="footer-logo" viewBox="0 0 27 34">
+        <path class="st0" d="M13.6,0l-0.2,0L0,1.4V26l13.5,8L27,26l0,0V1.4L13.6,0z M19.3,16.8l-0.9,0.5l-5-3l0,1.4l3.8,2.3l-0.8,0.5l-3-1.8l0,1.4l1.9,1.1l-1.8,1.1L2,13.6l11.4-6.8L25,13.5l-4.5,2.6l-7.1-4.2l0,1.4L19.3,16.8z M1.9,15.1l11.4,6.8l0,1l-8-4.7l0,1.4l8,4.8l0,1.1l-8-4.7l0,1.4l8,4.8l0,0l8.2-4.9v-1.3l0-0.1V17l3.4-2v10l-11.6,6.9L1.9,24.9V15.1z M1.9,12.1V3.1l11.6-1.2l11.6,1.2v9L13.5,5.3l0-0.1l-0.1,0l-0.1,0v0.1L1.9,12.1z"/>
+      </symbol>
+    </svg>
     <header class="block-header header">
       <div class="page__wrapper header__wrapper">
         <a class="block-header__logo header__logo" href="index.html">
@@ -94,11 +132,15 @@
             <h2 class="user-info__title visually-hidden">Информация о пользователе</h2>
 
             <div class="block-user__level user-level">
-              <span class="block-user__level-value">80</span>
+              <span class="block-user__level-value user-level__value">80</span>
               <span class="block-user__level-title">level</span>
             </div>
 
-            <img class="block-user__info-photo user-info__photo" src="https://placehold.it/100x100" alt="Фотография пользователя">
+            <picture class="user-info__photo-wrapper">
+              <source media="(min-width: 1440px)" srcset="../img/demin-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="../img/demin-tablet@1x.jpg">
+              <img class="block-user__info-photo user-info__photo" src="../img/demin-mobile@1x.jpg" alt="Фотография пользователя">
+            </picture>
 
             <form class="user-info__photo-edit photo-edit" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
               <input class="photo-edit__input visually-hidden" type="file" name="photo" id="user-photo" multiple>
@@ -107,16 +149,36 @@
 
             <div class="block-user__tags-wrapper user-tags">
               <h3 class="block-user__tags-title user-tags__title">Тэги</h3>
-              <p class="user-tags__list">#бургер #бар #футбол #концерт #крафт</p>
+              <p class="block-user__tags-desc user-tags__list">#бургер #бар #футбол #концерт #крафт</p>
             </div>
 
             <div class="block-user__tags-wrapper user-transport">
               <h3 class="block-user__tags-title user-transport__title">Транспорт</h3>
               <ul class="block-user__list user-transport__list">
-                <li class="block-user__list-item block-user__list-item--active">Авиаперелет</li>
-                <li class="block-user__list-item block-user__list-item--active">Автобус</li>
-                <li class="block-user__list-item">Велосипед</li>
-                <li class="block-user__list-item block-user__list-item--active">Пешком</li>
+                <li class="block-user__list-item user-transport__item">
+                  <span class="visually-hidden">Авиаперелет</span>
+                  <svg class="block-user__list-icon block-user__list-icon--active" width="16" height="17">
+                    <use xlink:href="#plane"></use>
+                  </svg>
+                </li>
+                <li class="block-user__list-item user-transport__item">
+                  <span class="visually-hidden">Автобус</span>
+                  <svg class="block-user__list-icon block-user__list-icon--active" width="16" height="17">
+                    <use xlink:href="#bus"></use>
+                  </svg>
+                </li>
+                <li class="block-user__list-item user-transport__item">
+                  <span class="visually-hidden">Велосипед</span>
+                  <svg class="block-user__list-icon" width="16" height="17">
+                    <use xlink:href="#bike"></use>
+                  </svg>
+                </li>
+                <li class="block-user__list-item user-transport__item">
+                  <span class="visually-hidden">Пешком</span>
+                  <svg class="block-user__list-icon block-user__list-icon--active" width="16" height="17">
+                    <use xlink:href="#run"></use>
+                  </svg>
+                </li>
               </ul>
             </div>
           </section>
@@ -126,15 +188,15 @@
             <h2 class="block-user__title todo__title">Мои планы:</h2>
             <ul class="block-user__list todo__list">
               <li class="block-user__todo-item todo__item">
-                <p class="block-user__item-name todo__item-text">Франция, Италия</p>
-                <p class="block-user__item-count todo__item-text">3 попутчика</p>
-                <p class="block-user__item-date todo__item-text">26 мар — 29 мар</p>
+                <p class="block-user__item-name todo__item-text todo__item-country">Франция, Италия</p>
+                <p class="block-user__item-count todo__item-text todo__item-count">3 попутчика</p>
+                <p class="block-user__item-date todo__item-text todo__item-date">26 мар — 29 мар</p>
                 <a class="block-user__item-edit todo__item-text" href="#">Изменить</a>
               </li>
               <li class="block-user__todo-item todo__item">
-                <p class="block-user__item-name todo__item-text">Тайланд, Индонезия</p>
-                <p class="block-user__item-count todo__item-text">1 попутчик</p>
-                <p class="block-user__item-date todo__item-text">1 июл — 15 июл</p>
+                <p class="block-user__item-name todo__item-text todo__item-country">Тайланд, Индонезия</p>
+                <p class="block-user__item-count todo__item-text todo__item-count">1 попутчик</p>
+                <p class="block-user__item-date todo__item-text todo__item-date">1 июл — 15 июл</p>
                 <a class="block-user__item-edit todo__item-text" href="#">Изменить</a>
               </li>
             </ul>
@@ -146,142 +208,228 @@
 
             <form class="todoadd-form" action="https://echo.htmlacademy.ru" method="post">
 
-              <div class="block-user__todoadd-item todoadd__item todoadd-item">
-                <h3 class="block-user__todoadd-title">Шаг 1. Даты пребывания</h3>
-                <p class="block-user__todoadd-desc todoadd-item__desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-                <fieldset class='block-user__todoadd-fieldset todoadd-form__select'>
-                  <label class="block-user__todoadd-label" for="todoadd-companion">Ищу попутчиков:<span class="block-user__todoadd-label block-user__todoadd-label--unit">Чел.</span></label>
-                  <div class="todoadd-form__input-wrapper">
-                    <button class="button button--transparent button--minus" type="button">Уменьшить</button>
-                    <input class="block-user__todoadd-input" type="text" name="companion" id="todoadd-companion" value="2">
-                    <button class="button button--transparent button--plus" type="button">Увеличить</button>
+              <div class="block-user__todoadd-item todoadd__item">
+                <h3 class="block-user__todoadd-title todoadd__item-title">Шаг 1. Даты пребывания</h3>
+                <p class="block-user__todoadd-desc todoadd__item-desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+
+                <fieldset class='block-user__todoadd-fieldset todoadd-form__parameters'>
+                  <div class="todoadd-form__parameters-wrapper">
+                    <label class="block-user__todoadd-label todoadd-form__label" for="todoadd-companion">
+                      Ищу попутчиков:
+                      <span class="block-user__todoadd-label block-user__todoadd-label--unit">Чел.</span>
+                    </label>
+                    <div class="todoadd-form__input-wrapper">
+                      <button class="button button--transparent todoadd-form__input-btn todoadd-form__input-btn--minus" type="button">
+                        <span class="visually-hidden">Уменьшить</span>
+                        <svg class="todoadd-form__input-icon" width="14" height="14">
+                          <use xlink:href="#minus"></use>
+                        </svg>
+                      </button>
+                      <input class="block-user__todoadd-input todoadd-form__input" type="text" name="companion" id="todoadd-companion" value="2">
+                      <button class="button button--transparent todoadd-form__input-btn todoadd-form__input-btn--plus" type="button">
+                        <span class="visually-hidden">Увеличить</span>
+                        <svg class="todoadd-form__input-icon" width="14" height="14">
+                          <use xlink:href="#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <input class="todoadd-form__checkbox visually-hidden" type="checkbox" name="child" id="todoadd-child" checked>
+                    <label class="block-user__todoadd-label block-user__todoadd-label--small todoadd-form__checkbox-label" for="todoadd-child">Можно с детьми</label>
+                    <label class="block-user__todoadd-label todoadd-form__label" for="todoadd-duration">
+                      Длительность:
+                      <span class="block-user__todoadd-label block-user__todoadd-label--unit">Дн.</span>
+                    </label>
+                    <div class="todoadd-form__input-wrapper">
+                      <button class="button button--transparent todoadd-form__input-btn todoadd-form__input-btn--minus" type="button">
+                        <span class="visually-hidden">Уменьшить</span>
+                        <svg class="todoadd-form__input-icon" width="14" height="14">
+                          <use xlink:href="#minus"></use>
+                        </svg>
+                      </button>
+                      <input class="block-user__todoadd-input todoadd-form__input" type="text" name="duration" id="todoadd-duration" value="2">
+                      <button class="button button--transparent todoadd-form__input-btn todoadd-form__input-btn--plus" type="button">
+                        <span class="visually-hidden">Увеличить</span>
+                        <svg class="todoadd-form__input-icon" width="14" height="14">
+                          <use xlink:href="#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
-                  <label class="block-user__todoadd-label" for="todoadd-duration">Длительность:<span class="block-user__todoadd-label block-user__todoadd-label--unit">Дн.</span></label>
-                  <div class="todoadd-form__input-wrapper">
-                    <button class="button button--transparent button--minus" type="button">Уменьшить</button>
-                    <input class="block-user__todoadd-input" type="text" name="duration" id="todoadd-duration" value="2">
-                    <button class="button button--transparent button--plus" type="button">Увеличить</button>
-                  </div>
-                  <input class="todoadd-form__input" type="checkbox" name="child" id="todoadd-child" checked>
-                  <label class="block-user__todoadd-label block-user__todoadd-label--small" for="todoadd-child">Можно с детьми</label>
                 </fieldset>
                 <div class="calendar">
                   <h4 class="calendar__title visually-hidden">Календарь выбора дат плана</h4>
                   <table class="block-calendar calendar-table">
-                    <caption class="block-calendar__title calendar-table__title">Март 2019</caption>
+
+                    <caption class="block-calendar__title calendar-table__title">
+                      <div class="calendar-table__title-wrapper">
+                        <svg class="calendar-table__icon" width="10" height="17">
+                          <use xlink:href="#month-narrow__left"></use>
+                        </svg>
+                        Март 2019
+                        <svg class="calendar-table__icon" width="10" height="17">
+                          <use xlink:href="#month-narrow__right"></use>
+                        </svg>
+                      </div>
+                    </caption>
+
                     <thead class="calendar-table__week">
                       <tr class="calendar-table__week-row">
-                        <td class="block-calendar__week-cell">П</td>
-                        <td class="block-calendar__week-cell">В</td>
-                        <td class="block-calendar__week-cell">С</td>
-                        <td class="block-calendar__week-cell">Ч</td>
-                        <td class="block-calendar__week-cell">П</td>
-                        <td class="block-calendar__week-cell">С</td>
-                        <td class="block-calendar__week-cell">В</td>
+                        <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
+                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">П</span>
+                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Пн</span>
+                        </td>
+                        <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
+                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">В</span>
+                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Вт</span>
+                        </td>
+                        <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
+                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">С</span>
+                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Ср</span>
+                        </td>
+                        <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
+                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">Ч</span>
+                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Чт</span>
+                        </td>
+                        <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
+                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">П</span>
+                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Пт</span>
+                        </td>
+                        <td class="block-calendar__week-cell block-calendar__week-cell--red calendar-table__cell calendar-table__cell--week">
+                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">С</span>
+                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Сб</span>
+                        </td>
+                        <td class="block-calendar__week-cell block-calendar__week-cell--red calendar-table__cell calendar-table__cell--week">
+                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">В</span>
+                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Вс</span>
+                        </td>
                       </tr>
                     </thead>
+
                     <tbody class="calendar-table__day">
                       <tr class="calendar-table__day-row">
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">24</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">25</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">26</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">27</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">28</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">1</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">2</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">24</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">25</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">26</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">27</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">28</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">1</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">2</td>
                       </tr>
                       <tr class="calendar-table__day-row">
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">3</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">4</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">5</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">6</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">7</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">8</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">9</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">3</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">4</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">5</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">6</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">7</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">8</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">9</td>
                       </tr>
                       <tr class="calendar-table__day-row">
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">10</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">11</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">12</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">13</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">14</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">15</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">16</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">10</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">11</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">12</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">13</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">14</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">15</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">16</td>
                       </tr>
                       <tr class="calendar-table__day-row">
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">17</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">18</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">19</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">20</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">21</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">22</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">23</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">17</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">18</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">19</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">20</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">21</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">22</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">23</td>
                       </tr>
                       <tr class="calendar-table__day-row">
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">24</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">25</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive">26</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--selected">27</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--selected">28</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--selected">29</td>
-                        <td class="block-calendar__day-cell">30</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">24</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">25</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">26</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--selected calendar-table__cell calendar-table__cell--active">27</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--selected calendar-table__cell">28</td>
+                        <td class="block-calendar__day-cell block-calendar__day-cell--selected calendar-table__cell">29</td>
+                        <td class="block-calendar__day-cell calendar-table__cell">30</td>
                       </tr>
                       <tr class="calendar-table__day-row">
-                        <td class="block-calendar__day-cell">31</td>
-                        <td class="block-calendar__day-cell">1</td>
-                        <td class="block-calendar__day-cell">2</td>
-                        <td class="block-calendar__day-cell">3</td>
-                        <td class="block-calendar__day-cell">4</td>
-                        <td class="block-calendar__day-cell">5</td>
-                        <td class="block-calendar__day-cell">6</td>
+                        <td class="block-calendar__day-cell calendar-table__cell">31</td>
+                        <td class="block-calendar__day-cell calendar-table__cell">1</td>
+                        <td class="block-calendar__day-cell calendar-table__cell">2</td>
+                        <td class="block-calendar__day-cell calendar-table__cell">3</td>
+                        <td class="block-calendar__day-cell calendar-table__cell">4</td>
+                        <td class="block-calendar__day-cell calendar-table__cell">5</td>
+                        <td class="block-calendar__day-cell calendar-table__cell">6</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <a class="block-user__todoadd-link button button--yellow button--ellipse" href="#">Следующий шаг</a>
+                <div class="todoadd__item-action">
+                  <a class="block-user__todoadd-link button button--yellow button--ellipse todoadd__item-next" href="#">
+                    <span class="todoadd__next-text">Следующий шаг</span>
+                    <svg class="todoadd__next-icon" width="21" height="19">
+                      <use xlink:href="#triangle-right"></use>
+                    </svg>
+                  </a>
+                </div>
+
               </div>
 
-              <div class="block-user__todo-item todoadd__item todoadd-item">
-                <h3 class="block-user__todoadd-title">Шаг 2. Маршрут</h3>
-                <p class="block-user__todoadd-desc todoadd-item__desc">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+              <div class="block-user__todoadd-item todoadd__item">
+                <h3 class="block-user__todoadd-title todoadd__item-title">Шаг 2. Маршрут</h3>
+                <p class="block-user__todoadd-desc todoadd__item-desc">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+
                 <fieldset class='block-user__todoadd-fieldset todoadd-form__select'>
-                  <div class="todoadd-form__select-item">
-                    <select class="block-user__select" name="todoadd-country" id="country-bih">
+
+                  <div class="todoadd-country todoadd-form__select-item">
+                    <select class="block-user__select todoadd-country__select" name="todoadd-country" id="country-item-01">
                       <option class="block-user__select-item" value="null">Выберите страну</option>
                       <option class="block-user__select-item" value="bih" selected>Босния и герцеговина</option>
                       <option class="block-user__select-item" value="chs">Чехословакия</option>
                     </select>
-                    <div class="todoadd-form__select-flag">
-                      <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+                    <div class="block-user__flag todoadd-country__flag">
+
+                      <picture class="todoadd-country__picture">
+                        <source media="(min-width: 768px)" srcset="https://placehold.it/70x47">
+                        <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+                      </picture>
+
                     </div>
-                    <button class="todoadd-form__select-remove" type="button">Удалить</button>
+                    <button class="block-user__select-remove todoadd-country__remove" type="button">
+                      <svg class="" width="10" height="10">
+                        <use xlink:href="#country-remove"></use>
+                      </svg>
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
                   </div>
-                  <div class="todoadd-form__select-item">
-                    <select class="block-user__select" name="todoadd-contry" id="country-chs">
+
+                  <div class="todoadd-country todoadd-form__select-item">
+                    <select class="block-user__select todoadd-country__select" name="todoadd-country" id="country-item-02">
                       <option class="block-user__select-item" value="null">Выберите страну</option>
                       <option class="block-user__select-item" value="bih">Босния и герцеговина</option>
                       <option class="block-user__select-item" value="chs" selected>Чехословакия</option>
                     </select>
-                    <div class="todoadd-form__select-flag">
-                      <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+                    <div class="block-user__flag todoadd-country__flag">
+                      <picture class="todoadd-country__picture">
+                        <source media="(min-width: 768px)" srcset="https://placehold.it/70x47">
+                        <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
+                      </picture>
                     </div>
-                    <button class="todoadd-form__select-remove" type="button">Удалить</button>
+                    <button class="block-user__select-remove todoadd-country__remove" type="button">
+                      <svg class="" width="10" height="10">
+                        <use xlink:href="#country-remove"></use>
+                      </svg>
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
                   </div>
-                  <div class="todoadd-form__select-item">
-                    <select class="block-user__select" name="todo-country" id="contry-add">
-                      <option class="block-user__select-item" value="empty" selected>Выберите страну</option>
+
+                  <div class="todoadd-country todoadd-form__select-item todoadd-form__select-add">
+                    <select class="block-user__select todoadd-country__select todoadd-country__select--add" name="todoadd-country" id="country-item-03">
+                      <option class="block-user__select-item" value="null">Выберите страну</option>
                       <option class="block-user__select-item" value="bih">Босния и герцеговина</option>
                       <option class="block-user__select-item" value="chs">Чехословакия</option>
                     </select>
-                    <div class="todoadd-form__select-flag visually-hidden">
-                      <img src="https://placehold.it/35x24" alt="Флаг выбранной страны">
-                    </div>
-                    <button class="todoadd-form__select-remove" type="button">Удалить</button>
-                  </div>
-                  <button class="block-user__todoadd-countryadd" type="button">Добавить страну</button>
 
-                    <div class="block-filter alphabet-views alphabet-views--modal">
-
+                    <div class="block-user__alphabet block-filter todoadd-country__alphabet alphabet-views alphabet-views--modal">
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="a" id="letter-a" checked>
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-a">A</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -295,7 +443,6 @@
                         <li class="block-filter__country-item">Австрия</li>
                         <li class="block-filter__country-item">Азербайджан</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="b" id="letter-b">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-b">Б</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -317,7 +464,6 @@
                         <li class="block-filter__country-item">Бурунди</li>
                         <li class="block-filter__country-item">Бутан</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="v" id="letter-v">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-v">В</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -328,7 +474,6 @@
                         <li class="block-filter__country-item">Восточный Тимор</li>
                         <li class="block-filter__country-item">Вьетнам</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="g" id="letter-g">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-g">Г</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -346,7 +491,6 @@
                         <li class="block-filter__country-item">Греция</li>
                         <li class="block-filter__country-item">Грузия</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="d" id="letter-d">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-d">Д</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -355,26 +499,21 @@
                         <li class="block-filter__country-item">Доминика</li>
                         <li class="block-filter__country-item">Доминикана</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="e" id="letter-e">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-e">Е</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
                         <li class="block-filter__country-item">Египет</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="jo" id="letter-jo">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-jo">Ё</label>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="zh" id="letter-zh">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-zh">Ж</label>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="z" id="letter-z">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-z">З</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
                         <li class="block-filter__country-item">Замбия</li>
                         <li class="block-filter__country-item">Зимбабве</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="i" id="letter-i">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-i">И</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -389,10 +528,8 @@
                         <li class="block-filter__country-item">Испания</li>
                         <li class="block-filter__country-item">Италия</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="j" id="letter-j">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-j">Й</label>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="k" id="letter-k">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-k">К</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -417,7 +554,6 @@
                         <li class="block-filter__country-item">Куба</li>
                         <li class="block-filter__country-item">Кувейт</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="l" id="letter-l">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-l">Л</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -431,7 +567,6 @@
                         <li class="block-filter__country-item">Лихтенштейн</li>
                         <li class="block-filter__country-item">Люксембург</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="m" id="letter-m">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-m">М</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -452,7 +587,6 @@
                         <li class="block-filter__country-item">Монголия</li>
                         <li class="block-filter__country-item">Мьянма</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="n" id="letter-n">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-n">Н</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -466,14 +600,12 @@
                         <li class="block-filter__country-item">Новая Зеландия</li>
                         <li class="block-filter__country-item">Норвегия</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="o" id="letter-o">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-o">О</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
                         <li class="block-filter__country-item">ОАЭ</li>
                         <li class="block-filter__country-item">Оман</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="p" id="letter-p">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-p">П</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -486,10 +618,8 @@
                         <li class="block-filter__country-item">Польша</li>
                         <li class="block-filter__country-item">Португалия</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="r" id="letter-r">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-r">Р</label>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="s" id="letter-s">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-s">С</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -513,7 +643,6 @@
                         <li class="block-filter__country-item">Суринам</li>
                         <li class="block-filter__country-item">Сьерра-Леоне</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="t" id="letter-t">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-t">Т</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -528,7 +657,6 @@
                         <li class="block-filter__country-item">Туркмения</li>
                         <li class="block-filter__country-item">Турция</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="y" id="letter-y">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-y">У</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -537,7 +665,6 @@
                         <li class="block-filter__country-item">Украина</li>
                         <li class="block-filter__country-item">Уругвай</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="f" id="letter-f">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-f">Ф</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -546,16 +673,13 @@
                         <li class="block-filter__country-item">Финляндия</li>
                         <li class="block-filter__country-item">Франция</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="h" id="letter-h">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-h">Х</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
                         <li class="block-filter__country-item">Хорватия</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="tc" id="letter-tc">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-tc">Ц</label>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="ch" id="letter-ch">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-ch">Ч</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -564,7 +688,6 @@
                         <li class="block-filter__country-item">Чехия</li>
                         <li class="block-filter__country-item">Чили</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="sh" id="letter-sh">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-sh">Ш</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -572,10 +695,8 @@
                         <li class="block-filter__country-item">Швеция</li>
                         <li class="block-filter__country-item">Шри-Ланка</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="sch" id="letter-sch">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-sch">Щ</label>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="ie" id="letter-ie">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-ie">Э</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
@@ -585,50 +706,98 @@
                         <li class="block-filter__country-item">Эстония</li>
                         <li class="block-filter__country-item">Эфиопия</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="u" id="letter-u">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-u">Ю</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
                         <li class="block-filter__country-item">ЮАР</li>
                         <li class="block-filter__country-item">Южный Судан</li>
                       </ul>
-
                       <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="ia" id="letter-ia">
                       <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-ia">Я</label>
                       <ul class="block-filter__country-list alphabet-views__country-list">
                         <li class="block-filter__country-item">Ямайка</li>
                         <li class="block-filter__country-item">Япония</li>
                       </ul>
-
                     </div>
+
+                    <button class="block-user__select-remove todoadd-country__remove" type="button">
+                      <svg class="" width="10" height="10">
+                        <use xlink:href="#country-remove"></use>
+                      </svg>
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                  </div>
+
+                  <button class="block-user__todoadd-countryadd todoadd-form__country__add" type="button">
+                    Добавить страну
+                    <svg class="todoadd-form__input-icon" width="14" height="14">
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </button>
+
                 </fieldset>
-                <a class="block-user__todoadd-link button button--yellow button--ellipse" href="#">Следующий шаг</a>
-                <a class="block-user__todoadd-link block-user__todoadd-link--prev" href="#">На шаг назад</a>
+
+                <div class="todoadd__item-action">
+                  <a class="block-user__todoadd-link button button--yellow button--ellipse todoadd__item-next" href="#">
+                    <span class="todoadd__next-text">Следующий шаг</span>
+                    <svg class="todoadd__next-icon" width="21" height="19">
+                      <use xlink:href="#triangle-right"></use>
+                    </svg>
+                  </a>
+                  <a class="block-user__todoadd-link button todoadd__item-prev" href="#">
+                    <span class="todoadd__prev-text">На шаг назад</span>
+                    <svg class="todoadd__prev-icon" width="21" height="19">
+                      <use xlink:href="#triangle-right"></use>
+                    </svg>
+                  </a>
+                </div>
               </div>
 
-              <div class="block-user__todo-item todoadd__item todoadd-item">
-                <h3 class="block-user__todoadd-title">Шаг 3. Развлечения</h3>
-                <p class="block-user__todoadd-desc todoadd-item__desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <div class="block-user__todoadd-item todoadd__item">
+                <h3 class="block-user__todoadd-title todoadd__item-title">Шаг 3. Развлечения</h3>
+                <p class="block-user__todoadd-desc todoadd__item-desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
 
                 <fieldset class="block-user__todoadd-fieldset todoadd-form__leisure">
                   <div class="todoadd-form__leisure-item leisure-item">
                     <div class="leisure-item__head">
                       <label class="block-user_leisure-country" for="leisure-bih">Босния и герцеговина</label>
-                      <img class="leisure-item__flag" src="http://placehold.it/35x24" alt="Флаг страны">
+
+                      <picture class="leisure-item__picture">
+                        <source media="(min-width: 768px)" srcset="https://placehold.it/70x47">
+                        <img class="leisure-item__flag" src="https://placehold.it/35x24" alt="Флаг страны">
+                      </picture>
+
                     </div>
                     <textarea class="block-user_leisure-textarea leisure-item__textarea" name="leisure" id="leisure-bih" cols="30" rows="10" placeholder="План действий"></textarea>
                   </div>
                   <div class="todoadd-form__leisure-item leisure-item">
                     <div class="leisure-item__head">
                       <label class="block-user_leisure-country" for="leisure-chs">Чехословакия</label>
-                      <img class="leisure-item__flag" src="http://placehold.it/35x24" alt="Флаг страны">
+
+                      <picture class="leisure-item__picture">
+                        <source media="(min-width: 768px)" srcset="https://placehold.it/70x47">
+                        <img class="leisure-item__flag" src="https://placehold.it/35x24" alt="Флаг страны">
+                      </picture>
+
                     </div>
                     <textarea class="block-user_leisure-textarea leisure-item__textarea" name="leisure" id="leisure-chs" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
                   </div>
                 </fieldset>
 
-                <button class="block-user__todoadd-send button button--yellow button--ellipse" type="submit">Отправить</button>
-                <a class="block-user__todoadd-link block-user__todoadd-link--prev" href="#">На шаг назад</a>
+                <div class="todoadd__item-action">
+                  <a class="block-user__todoadd-link button button--yellow button--ellipse todoadd__item-next" href="#">
+                    <span class="todoadd__next-text">Следующий шаг</span>
+                    <svg class="todoadd__next-icon" width="21" height="19">
+                      <use xlink:href="#triangle-right"></use>
+                    </svg>
+                  </a>
+                  <a class="block-user__todoadd-link button todoadd__item-prev" href="#">
+                    <span class="todoadd__prev-text">На шаг назад</span>
+                    <svg class="todoadd__prev-icon" width="21" height="19">
+                      <use xlink:href="#triangle-right"></use>
+                    </svg>
+                  </a>
+                </div>
               </div>
 
             </form>
@@ -646,17 +815,17 @@
         <div class="footer-social">
           <ul class="page-footer__list footer-social__list">
             <li class="footer-social__item">
-              <a class="page-footer__link footer-social__link icon icon--facebook" href="#">
+              <a class="page-footer__link footer-social__link icon icon--social icon--facebook" href="#">
                 <span class="visually-hidden">facebook</span>
               </a>
             </li>
             <li class="footer-social__item">
-              <a class="page-footer__link footer-social__link icon icon--vkontakte" href="#">
+              <a class="page-footer__link footer-social__link icon icon--social icon--vkontakte" href="#">
                 <span class="visually-hidden">vkontakte</span>
               </a>
             </li>
             <li class="footer-social__item">
-              <a class="page-footer__link footer-social__link icon icon--instagram" href="#">
+              <a class="page-footer__link footer-social__link icon icon--social icon--instagram" href="#">
                 <span class="visually-hidden">instagram</span>
               </a>
             </li>
@@ -665,8 +834,8 @@
         <div class="footer-copyright">
           <p class="footer-copyright__text">Разработано</p>
           <a class="footer-copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 34" width="27" height="34">
-              <path d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6 0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9 3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2 11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z" fill="#231f20"/>
+            <svg width="27" height="34">
+              <use xlink:href="#footer-logo"></use>
             </svg>
           </a>
         </div>

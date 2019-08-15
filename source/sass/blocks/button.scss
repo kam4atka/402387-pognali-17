@@ -1,6 +1,7 @@
 .button {
   display: block;
   border: none;
+  text-align: center;
 
   &--yellow {
     background-color: $btn-yellow;
@@ -8,22 +9,22 @@
 
   &--yellowdark {
     background-color: $btn-yellowdark;
-  }
 
-  &--yellowdark:hover,
-  &--yellowdark:focus,
-  &--yellowdark:active {
-    background-color: $btn-orange;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $btn-orange;
+    }
   }
 
   &--orange {
     background-color: $btn-orange;
-  }
 
-  &--orange:hover,
-  &--orange:focus,
-  &--orange:active {
-    background-color: $btn-orange-hover;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $btn-orange-hover;
+    }
   }
 
   &--white {
@@ -44,7 +45,7 @@
   }
 
   &--ellipse {
-    padding: 10px 30px;
+    padding: 5px 30px;
     border-radius: 25px;
   }
 
@@ -54,7 +55,7 @@
     border-radius: 10px;
   }
 
-  &--square::after {
+  /* &--square::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -63,7 +64,7 @@
     height: 15px;
     background-image: url("../img/triangle-arrow-right.svg");
     transform: translateY(-50%);
-  }
+  } */
 
   &--round {
     border-radius: 50%;
@@ -75,12 +76,12 @@
     &--square {
       padding: 28px 35px;
       border-radius: 20px;
-    }
 
-    &--square::after {
-      right: 35px;
-      width: 10px;
-      height: 15px;
+      &::after {
+        right: 35px;
+        width: 10px;
+        height: 15px;
+      }
     }
   }
 }

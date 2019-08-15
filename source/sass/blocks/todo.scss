@@ -13,12 +13,40 @@
   margin-bottom: 35px;
 }
 
+.todo__list {
+  counter-reset: todoitem;
+}
+
 .todo__item {
-  padding: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0;
+}
+
+.todo__item::before {
+  counter-increment: todoitem;
+  content: counter(todoitem) ".";
+  position: absolute;
+  top: 25px;
+  left: 25px;
 }
 
 .todo__item:not(:last-of-type) {
   margin-bottom: 10px;
+}
+
+.todo__item-text {
+  padding: 0 25px;
+}
+
+.todo__item-country,
+.todo__item-date {
+  margin-bottom: 25px;
+}
+
+.todo__item-country {
+  padding-left: 43px;
 }
 
 @media (min-width: $tablet-width) {
@@ -28,9 +56,72 @@
 
   .todo__title {
     margin-bottom: 55px;
+    padding: 0 34px;
+  }
+
+  .todo__list {
+    padding: 0 34px;
   }
 
   .todo__item {
-    padding: 20px 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 0 0 0;
+  }
+
+  .todo__item::before {
+    left: auto;
+    right: 37px;
+    top: 50px;
+  }
+
+  .todo__item-country,
+  .todo__item-count {
+    padding: 0 37px;
+  }
+
+  .todo__item-country {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+  }
+
+  .todo__item-date {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .todo__title,
+  .todo__list {
+    padding: 0 0 0 70px;
+  }
+
+  .todo__item {
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 30px 40px;
+  }
+
+  .todo__item::before {
+    left: 45px;
+    right: auto;
+    top: 45px;
+  }
+
+  .todo__item-text {
+    padding: 0;
+  }
+
+  .todo__item-country {
+    width: 530px;
+    margin: 0;
+    padding: 0 0 0 50px;
+  }
+
+  .todo__item-date {
+    margin: 0;
+    padding: 0;
   }
 }

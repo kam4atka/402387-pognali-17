@@ -3,7 +3,11 @@
 }
 
 .block-user__list-item {
-  opacity: 0.15;
+  background-color: #ffffff;
+}
+
+.block-user__list-icon {
+  opacity: 0.3;
 
   &--active {
     opacity: 1;
@@ -16,11 +20,17 @@
   border-radius: 50%;
 }
 
+.block-user__level {
+  border: 3px solid #ff8d30;
+  border-radius: 50%;
+}
+
 .block-user__level-value {
   font-size: 38px;
   font-weight: 700;
   line-height: 38px;
   color: #161c35;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .block-user__level-title {
@@ -47,7 +57,13 @@
   font-weight: 700;
   line-height: 18px;
   color: #1d2e5b;
+  background-color: #edeff6;
   text-transform: uppercase;
+}
+
+.block-user__tags-desc {
+  font-size: 16px;
+  line-height: 22px;
 }
 
 /* todo + todoadd */
@@ -70,6 +86,14 @@
 .block-user__todo-item,
 .block-user__todoadd-item {
   background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.block-user__todo-item::before {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #1d2e5b;
 }
 
 .block-user__item-name {
@@ -111,6 +135,10 @@
   color: #1d2e5b;
 }
 
+.block-user__alphabet {
+  background-color: #ffffff;
+}
+
 .block-user__todoadd-link,
 .block-user__todoadd-send {
   font-size: 17px;
@@ -119,6 +147,12 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #161c35;
+}
+
+.block-user__todoadd-link {
+  &--prev {
+    text-align: center;
+  }
 }
 
 .block-user__todoadd-label {
@@ -150,6 +184,8 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .block-user__todoadd-countryadd {
@@ -160,6 +196,13 @@
   text-transform: uppercase;
   letter-spacing: 1.4px;
   background-color: #edeff6;
+  border: none;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.block-user__todoadd-icon {
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 .block-user__select,
@@ -171,6 +214,18 @@
   text-transform: uppercase;
   letter-spacing: 1.4px;
   background-color: transparent;
+}
+
+.block-user__select,
+.block-user__flag {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.block-user__select-remove {
+  background-color: #edeff5;
+  border: none;
+  border-radius: 50%;
 }
 
 .block-user_leisure-country {
@@ -197,6 +252,7 @@
     font-weight: 700;
     line-height: 38px;
     color: #161c35;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
 
   .block-user__level-title {
@@ -216,6 +272,11 @@
     line-height: 20px;
   }
 
+  .block-user__tags-desc {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
   .block-user__title {
     font-size: 36px;
     line-height: 50px;
@@ -224,6 +285,7 @@
   .block-user__item-name {
     font-size: 24px;
     line-height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .block-user__item-count,
@@ -237,14 +299,24 @@
     line-height: 20px;
   }
 
+  .block-user__todo-item::before {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   .block-user__todoadd-title {
     font-size: 36px;
     line-height: 50px;
   }
 
+  .block-user__todoadd-item {
+    border-radius: 25px;
+  }
+
   .block-user__todoadd-desc {
     font-size: 20px;
     line-height: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   .block-user__todoadd-link,
@@ -253,6 +325,7 @@
     line-height: 24px;
     text-transform: none;
     text-decoration: none;
+    border-right: 15px;
   }
 
   .block-user__todoadd-label {
@@ -265,6 +338,7 @@
       line-height: 20px;
       text-transform: uppercase;
       color: #1d2e5b;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -272,6 +346,10 @@
   .block-user__select-item {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .block-user__flag {
+    border: none;
   }
 
   .block-user__todoadd-input {
@@ -282,6 +360,10 @@
   .block-user__todoadd-countryadd {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .block-user__select-remove {
+    background-color: transparent;
   }
 
   .block-user_leisure-country {
@@ -299,7 +381,17 @@
 
 @media (min-width: $desktop-width) {
   .block-user__info-photo {
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0;
+  }
+
+  .block-user__photo-edit {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   .block-user__level-value {
@@ -308,5 +400,24 @@
 
   .block-user__level-title {
     color: #ffffff;
+  }
+
+  .block-user__item-name {
+    border: none;
+  }
+
+  .block-user__todoadd-item {
+    border-radius: 50px;
+  }
+
+  .block-user__todoadd-label {
+    &--small {
+      border: none;
+      text-align: right;
+    }
+
+    &--unit {
+      display: none;
+    }
   }
 }
