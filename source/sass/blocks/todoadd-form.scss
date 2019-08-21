@@ -135,6 +135,7 @@
   .todoadd-form {
     padding: 0;
   }
+
   .todoadd-form__parameters-wrapper {
     flex-direction: row;
     flex-wrap: wrap;
@@ -156,17 +157,14 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    width: 50%;
+    margin: 0;
+    padding: 0;
   }
 
   .todoadd-form__input-wrapper {
     width: 25%;
     margin: 0 0 15px 0;
-  }
-
-  .todoadd-form__checkbox-label {
-    width: 50%;
-    margin: 0;
-    padding: 0;
   }
 
   .todoadd-form__country-add {

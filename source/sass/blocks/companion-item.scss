@@ -42,6 +42,10 @@
 .companion-item__country-item {
   position: relative;
 
+  &:not(:first-of-type) {
+    margin-left: 15px;
+  }
+
   &:hover .companion-item__country-label,
   &:focus .companion-item__country-label {
     position: absolute;
@@ -89,16 +93,6 @@
 
 .companion-item__transport-label {
   display: none;
-}
-
-.companion-item__country-item {
-  &:not(:first-of-type) {
-    margin-left: 20px;
-  }
-
-  &:not(:first-of-type) {
-    margin-left: 15px;
-  }
 }
 
 .companion-item__name,

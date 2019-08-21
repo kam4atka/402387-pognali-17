@@ -8,7 +8,7 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0px 0 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
     outline: none;
   }
 
@@ -237,7 +237,7 @@
     opacity: 0.6;
   }
 
-   &:active > .block-user__todoadd-active {
+  &:active > .block-user__todoadd-active {
     opacity: 0.2;
   }
 }
@@ -289,7 +289,7 @@
 
 .block-user__todoadd-checkbox {
   &:checked + .block-user__todoadd-label--small::before {
-    background-image: url('../img/tick.svg');
+    background-image: url("../img/tick.svg");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: 50%;

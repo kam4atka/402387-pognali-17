@@ -90,7 +90,7 @@
 
 .block-sort__item-input {
   &:checked + .block-sort__item-label::before {
-    background-image: url('../img/tick.svg');
+    background-image: url("../img/tick.svg");
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: 50%;
