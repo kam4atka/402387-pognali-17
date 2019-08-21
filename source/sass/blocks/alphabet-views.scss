@@ -20,8 +20,13 @@
 .alphabet-views__country-list {
   display: none;
   order: 1;
-  margin: 25px 0 25px 0;
-  padding: 0;
+  width: 100%;
+  margin: 0;
+  padding: 25px 0;
+
+  &--add {
+    padding: 20px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -50,14 +55,16 @@
       left: 460px;
       width: 210px;
       height: 400px;
-      overflow: scroll;
+      overflow-y: scroll;
     }
 
     &:checked + .alphabet-views__label--modal + .alphabet-views__country-list {
       position: absolute;
-      left: 395px;
+      left: 370px;
+      top: 0;
       width: 180px;
       height: 340px;
+      padding: 40px 12px;
       overflow: scroll;
     }
   }

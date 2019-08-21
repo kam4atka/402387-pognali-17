@@ -12,6 +12,21 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.block-calendar__title-btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  &:hover > .block-calendar__title-icon,
+  &:focus > .block-calendar__title-icon {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}
+
 .block-calendar__week-cell {
   font-size: 14px;
   line-height: 18px;

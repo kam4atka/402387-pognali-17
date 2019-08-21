@@ -28,11 +28,19 @@
   }
 }
 
-.sort-parameters__label-icon {
-  opacity: 0.3;
+.sort-parameters__label > .sort-parameters__label-icon {
+  opacity: 0.5;
+}
 
-  &--active {
+.sort-parameters__input {
+  &:checked + .sort-parameters__label > .sort-parameters__label-icon {
     opacity: 1;
+  }
+
+  &:hover + .sort-parameters__label,
+  &:focus + .sort-parameters__label {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    outline: none;
   }
 }
 

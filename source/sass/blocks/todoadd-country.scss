@@ -1,4 +1,5 @@
 .todoadd-country {
+  position: relative;
   margin: 0 0 20px 0;
   padding: 0;
 }
@@ -10,7 +11,7 @@
 
 .todoadd-country__select {
   width: 165px;
-  padding: 15px 10px;
+  padding: 14px 10px;
 
   &--add {
     width: 100%;
@@ -35,7 +36,10 @@
 }
 
 .todoadd-country__alphabet {
-  /* display: none; */
+  display: none;
+  position: absolute;
+  top: 45px;
+  z-index: 1;
 }
 
 @media (min-width: $tablet-width) {
@@ -50,7 +54,13 @@
   }
 
   .todoadd-country__flag {
-    padding: 10px 25px;
+    padding: 0;
+  }
+
+
+  .todoadd-country__flag-icon {
+    width: 70px;
+    height: 47px;
   }
 
   .todoadd-country__remove {

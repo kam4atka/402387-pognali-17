@@ -38,12 +38,11 @@
 
   .user-info__photo-wrapper {
     order: 0;
-    width: 195px;
-    height: 195px;
     margin-right: 95px;
   }
 
   .user-info__photo {
+    display: block;
     width: 195px;
     height: 195px;
     margin: 0;

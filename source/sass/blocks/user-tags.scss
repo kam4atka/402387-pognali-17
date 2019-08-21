@@ -2,13 +2,18 @@
   position: relative;
   width: 100%;
   margin: 0 0 25px 0;
-  padding: 25px;
 }
 
 .user-tags__title,
 .user-tags__list {
   margin: 0;
   padding: 0;
+}
+
+.user-tags__list {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 25px;
 }
 
 .user-tags__title {
@@ -23,6 +28,9 @@
   .user-tags {
     order: 5;
     margin: 0 0 60px 0;
+  }
+
+  .user-tags__list {
     padding: 40px;
   }
 

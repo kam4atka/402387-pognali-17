@@ -1,11 +1,13 @@
 .footer-copyright {
+  width: 100%;
+  padding-top: 15px;
+}
+
+.footer-copyright__link {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding-top: 15px;
-  border-top: 2px solid #f2f2f2;
 }
 
 .footer-copyright__text {
@@ -23,5 +25,9 @@
 
   .footer-copyright__link {
     margin-left: 25px;
+  }
+
+  .footer-copyright__text {
+    margin-right: 25px;
   }
 }

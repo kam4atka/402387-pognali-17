@@ -13,6 +13,7 @@
 }
 
 .country-item__desc {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -20,6 +21,12 @@
   margin-top: -15px;
   padding: 23px;
   border-radius: 10px;
+}
+
+.country__item-flag {
+  position: absolute;
+  top: -13px;
+  left: 25px;
 }
 
 .country-item__title,
@@ -71,6 +78,14 @@
     border-top-right-radius: 0;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 0;
+  }
+
+  .country__item-flag {
+    top: 20px;
+    left: auto;
+    right: -30px;
+    width: 71px;
+    height: 48px;
   }
 
   .country-item__title {

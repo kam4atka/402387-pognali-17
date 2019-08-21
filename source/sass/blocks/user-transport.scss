@@ -25,7 +25,7 @@
   justify-content: center;
 }
 
-.user-transport__item {
+.user-transport__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,6 +55,11 @@
   .user-transport__title {
     top: auto;
     bottom: -10px;
+  }
+
+  .user-transport__btn {
+    width: 43px;
+    height: 43px;
   }
 }
 

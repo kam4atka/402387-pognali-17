@@ -8,26 +8,26 @@
 }
 
 .address__item {
-  position: relative;
-  width: 70%;
-  margin: 0 0 35px 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 35px 0;
   padding: 0;
-}
 
-.address__item::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -60px;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: #121836;
-  background-image: url("../img/contacts-location.svg");
-  background-repeat: no-repeat;
-  background-size: 35%;
-  background-position: 50%;
-  transform: translateY(-50%);
+  &-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+  }
+
+  &-text {
+    width: 70%;
+    margin-left: 15px;
+  }
 }
 
 .address__link {
@@ -42,13 +42,21 @@
     padding: 70px 0 85px 0;
   }
 
-  .address__item,
-  .address__link {
-    margin: 0 35px;
+  .address__item {
+    margin: 0 35px 45px 35px;
+
+    &-icon {
+      width: 68px;
+      height: 68px;
+    }
+
+    &-text {
+      margin-left: 25px;
+    }
   }
 
-  .address__item {
-    margin-bottom: 65px;
+  .address__link {
+    margin: 0 35px;
   }
 }
 
@@ -60,11 +68,11 @@
   }
 
   .address__item {
-    margin-right: 145px;
+    margin: 0 145px 0 0;
   }
 
   .address__link {
     width: 325px;
-    margin-right: 75px;
+    margin: 0 75px 0 0;
   }
 }

@@ -71,6 +71,11 @@
   .nations__item:not(:last-of-type) {
     margin-right: 30px;
   }
+
+  .nations__item-flag {
+    width: 35px;
+    height: 24px;
+  }
 }
 
 @media (min-width: $desktop-width) {

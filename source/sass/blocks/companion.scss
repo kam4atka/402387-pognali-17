@@ -1,21 +1,31 @@
-.companion {
-  padding-top: 70px;
-  padding-bottom: 30px;
+.companion__container {
+  width: $mobile-width;
+  margin: 0 auto;
+  background-image: url("../img/rogovaya-back-mobile@1x.png"), url("../img/smolov-back-desktop@1x.png");
+  background-size: auto, auto;
+  background-position: -7% 24%, 80% 3%;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/rogovaya-back-mobile@2x.png"), url("../img/smolov-back-desktop@2x.png");
+    background-size: 22%, 45%;
+  }
 }
 
 .companion__wrapper {
   display: flex;
   flex-direction: column;
+  padding: 70px 0 30px 0;
 }
 
 .companion__header {
+  width: 80%;
   margin-left: 25px;
 }
 
 .companion__title,
 .companion__desc {
-  margin: 0;
-  margin-bottom: 25px;
+  margin: 0 0 25px 0;
   padding: 0;
 }
 
@@ -41,13 +51,21 @@
 }
 
 @media (min-width: $tablet-width) {
-  .companion {
-    padding-top: 145px;
-    padding-bottom: 90px;
+  .companion__container {
+    width: $tablet-width;
+    background-image: url("../img/rogovaya-back-desktop@1x.png"), url("../img/smolov-back-desktop@1x.png");
+    background-position: 80% 10%, 5% 40%;
+    background-size: 35%, auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/rogovaya-back-desktop@2x.png"), url("../img/smolov-back-desktop@2x.png");
+      background-size: 35%, 20%;
+    }
   }
 
   .companion__wrapper {
     margin: 0 35px;
+    padding-top: 145px;
   }
 
   .companion__header {
@@ -76,14 +94,22 @@
 }
 
 @media (min-width: $desktop-width) {
-  .companion {
-    padding: 135px 0;
+  .companion__container {
+    width: $desktop-width;
+    margin: 0 auto;
+    background-position: 20% 80%, 42% 20%;
+    background-size: 20%, auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: 20%, 10%;
+    }
   }
 
   .companion__wrapper {
     display: block;
     height: auto;
     margin: 0 70px;
+    padding: 135px 0;
   }
 
   .companion__desc {
