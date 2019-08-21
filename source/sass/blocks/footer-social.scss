@@ -1,11 +1,16 @@
 .footer-social__list {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
 
-.footer-social__item {
+.footer-social__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 45px;
   height: 45px;
 }
@@ -14,17 +19,18 @@
   margin-bottom: 35px;
 }
 
-.footer-social__link {
-  position: relative;
-}
-
 @media (min-width: $tablet-width) {
   .footer-social {
     margin-bottom: 0;
   }
 
-  .footer-social__item {
+  .footer-social__link {
     width: 60px;
     height: 60px;
+  }
+
+  .footer-social__svg {
+    width: 30px;
+    height: 30px;
   }
 }

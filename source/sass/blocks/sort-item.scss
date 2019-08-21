@@ -16,10 +16,30 @@
   margin: 13px 0;
 }
 
+.sort-item__legend {
+  display: none;
+}
+
+.sort-item__toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 @media (min-width: $tablet-width) {
   .sort-item__label {
     width: 130px;
     margin: 0 0 0 35px;
+  }
+
+  .sort-item__legend {
+    display: block;
+  }
+
+  .sort-item__toggle {
+    display: none;
   }
 }
 

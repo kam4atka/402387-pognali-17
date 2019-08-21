@@ -1,6 +1,6 @@
 .sub-nav {
   position: absolute;
-  top: 430px;
+  top: 439px;
 }
 
 .side .sub-nav {
@@ -15,11 +15,12 @@
 }
 
 .sub-nav__link {
-  &--icon {
-    display: block;
-    width: 50px;
-    height: 50px;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
 }
 
 @media (min-width: $tablet-width) {

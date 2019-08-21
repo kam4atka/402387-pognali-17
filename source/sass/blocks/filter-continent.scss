@@ -1,4 +1,5 @@
 .filter-continent {
+  display: none;
   margin: 25px;
   padding: 0;
   border: none;
@@ -10,15 +11,25 @@
 
 @media (min-width: $tablet-width) {
   .filter-continent {
-    margin: 0 0 70px 0;
+    display: block;
+    margin: 0;
+
+    &--open {
+      margin: 0 0 70px 0;
+    }
+
+    &__close {
+      display: none;
+      margin-left: auto;
+    }
+
+    &__open {
+      margin-left: auto;
+    }
   }
 
   .filter-continent__item:not(:last-of-type) {
     margin: 0 25px 0 0;
-  }
-
-  .filter-continent__close {
-    margin-left: auto;
   }
 
   .filter-continent__close-text {
@@ -30,5 +41,9 @@
   .filter-continent {
     flex-grow: 1;
     margin: 0 0 65px 0;
+
+    &__close {
+      display: inline-block;
+    }
   }
 }

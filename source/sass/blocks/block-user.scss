@@ -4,13 +4,29 @@
 
 .block-user__list-item {
   background-color: #ffffff;
+  border: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0 5px 0px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+
+  &:active {
+    background-color: #e1e5f1;
+    box-shadow: none;
+  }
+
+  &:active .block-user__list-icon {
+    opacity: 0.3;
+  }
 }
 
 .block-user__list-icon {
-  opacity: 0.3;
+  fill: rgba(29, 45, 91, 0.2);
 
   &--active {
-    opacity: 1;
+    fill: rgba(29, 45, 91, 1);
   }
 }
 
@@ -42,14 +58,13 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
-  color: #161c35;
+  color: rgba(22, 28, 53, 1);
   text-transform: uppercase;
   text-align: center;
-}
 
-.block-user__tags-wrapper {
-  border: 1px solid #cbced9;
-  border-radius: 10px;
+  &:active {
+    color: rgba(22, 28, 53, 0.5);
+  }
 }
 
 .block-user__tags-title {
@@ -64,6 +79,24 @@
 .block-user__tags-desc {
   font-size: 16px;
   line-height: 22px;
+  color: rgba(68, 68, 68, 1);
+  background-color: transparent;
+  border: 1px solid #cbced9;
+  border-radius: 10px;
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.5);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid #aeb4cb;
+  }
+
+  &:active {
+    border: 1px solid #161c35;
+  }
 }
 
 /* todo + todoadd */
@@ -121,7 +154,17 @@
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1.4px;
-  opacity: 0.3;
+  opacity: 0.4;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }
 
 .block-user__todoadd-fieldset {
@@ -150,12 +193,57 @@
 }
 
 .block-user__todoadd-link {
+  outline: none;
+
   &--prev {
     text-align: center;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba(22, 28, 53, 0.6);
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
+
+  &:focus .block-user__todoadd-next,
+  &:focus .block-user__todoadd-prev,
+  &:hover .block-user__todoadd-next,
+  &:hover .block-user__todoadd-prev {
+    opacity: 0.6;
+  }
+
+  &:active .block-user__todoadd-next,
+  &:active .block-user__todoadd-prev {
+    opacity: 0.3;
+  }
+}
+
+.block-user__todoadd-btn {
+  &--minus {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &--plus {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  &:hover > .block-user__todoadd-active,
+  &:focus > .block-user__todoadd-active {
+    opacity: 0.6;
+  }
+
+   &:active > .block-user__todoadd-active {
+    opacity: 0.2;
   }
 }
 
 .block-user__todoadd-label {
+  position: relative;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
@@ -169,10 +257,53 @@
     line-height: 15px;
     color: #444444;
     text-transform: none;
+    outline: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: -40px;
+      width: 24px;
+      height: 24px;
+      background-color: #ffffff;
+      border: 1px solid #cbced9;
+      border-radius: 4px;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      border: 1px solid #aeb4cb;
+    }
+
+    &:active::before {
+      background-color: #e1e5f1;
+      border: 1px solid #e1e5f1;
+    }
   }
 
   &--unit {
     opacity: 0.3;
+  }
+}
+
+.block-user__todoadd-checkbox {
+  &:checked + .block-user__todoadd-label--small::before {
+    background-image: url('../img/tick.svg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &:active:checked + .block-user__todoadd-label--small::before {
+    background-color: #e1e5f1;
+    border: 1px solid #e1e5f1;
+    opacity: 0.3;
+  }
+
+  &:hover + .block-user__todoadd-label--small::before,
+  &:focus + .block-user__todoadd-label--small::before {
+    border: 1px solid #aeb4cb;
   }
 }
 
@@ -186,23 +317,60 @@
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.5);
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid #aeb4cb;
+  }
+
+  &:active {
+    border: 1px solid #161c35;
+  }
 }
 
 .block-user__todoadd-countryadd {
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
-  color: #1d2e5b;
+  color: rgba(29, 46, 91, 1);
   text-transform: uppercase;
   letter-spacing: 1.4px;
   background-color: #edeff6;
   border: none;
   border-radius: 4px;
   text-align: left;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: #dfe3ef;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.5);
+  }
+
+  &:hover .block-user__countryadd-icon,
+  &:focus .block-user__countryadd-icon {
+    opacity: 0.4;
+  }
+
+  &:active .block-user__countryadd-icon {
+    opacity: 0.2;
+  }
+}
+
+.block-user__countryadd-icon {
+  opacity: 0.3;
 }
 
 .block-user__todoadd-icon {
-  fill: rgba(0, 0, 0, 0.3);
+  fill: rgba(0, 0, 0, 0.4);
 }
 
 .block-user__select,
@@ -220,12 +388,34 @@
 .block-user__flag {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  outline: none;
+}
+
+.block-user__select {
+  &:hover,
+  &:focus {
+    border: 1px solid #aeb4cb;
+  }
 }
 
 .block-user__select-remove {
   background-color: #edeff5;
   border: none;
   border-radius: 50%;
+  outline: none;
+
+  &:hover .block-user__select-icon,
+  &:focus .block-user__select-icon {
+    opacity: 0.8;
+  }
+
+  &:active .block-user__select-icon {
+    opacity: 0.2;
+  }
+}
+
+.block-user__select-icon {
+  opacity: 0.4;
 }
 
 .block-user_leisure-country {
@@ -236,9 +426,23 @@
 }
 
 .block-user_leisure-textarea {
+  border: 1px solid rgba(21, 27, 53, 0.2);
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+
   &:placeholder {
     opacity: 0.3;
     color: #444444;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(21, 27, 53, 0.6);
+  }
+
+  &:active {
+    border: 1px solid rgba(21, 27, 53, 1);
   }
 }
 
@@ -264,6 +468,7 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 20px;
+    border-radius: 10px;
   }
 
   .block-user__tags-title {
@@ -339,6 +544,10 @@
       text-transform: uppercase;
       color: #1d2e5b;
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+      &::before {
+        left: 0;
+      }
     }
   }
 
@@ -414,6 +623,13 @@
     &--small {
       border: none;
       text-align: right;
+
+      &::before {
+        left: auto;
+        right: 205px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
 
     &--unit {

@@ -1,17 +1,33 @@
 .tariff {
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 50%;
   width: 270px;
-  padding: 30px 25px 0 25px;
   box-sizing: border-box;
   transform: translateX(-50%);
+}
+
+.tariff__wrapper {
+  padding: 30px 25px 0 25px;
+}
+
+.tariff__title {
+  margin: 0;
+  padding: 0 0 45px 0;
+}
+
+.tariff__close {
+  width: 100%;
+  padding: 20px 0;
 }
 
 @media (min-width: $tablet-width) {
   .tariff {
     top: 620px;
     width: 688px;
+  }
+
+  .tariff__wrapper {
     padding: 50px 90px 0 90px;
   }
 }
@@ -20,6 +36,9 @@
   .tariff {
     top: 110px;
     width: 750px;
+  }
+
+  .tariff__wrapper {
     padding: 50px 60px 0 60px;
   }
 }

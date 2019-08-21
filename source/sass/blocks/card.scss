@@ -12,33 +12,41 @@
   width: 30px;
   height: 30px;
   font-size: 0;
-  background-color: #edeff5;
+  background-color: rgba(237, 239, 245, 1);
   border-radius: 50%;
+  outline: none;
 
-  &--active {
-    background-color: #f9eaea;
+  &:hover,
+  &:focus {
+    background-color: rgba(225, 229, 241, 1);
   }
-}
 
-.card__like-unactive {
-  fill: #adb1bf;
-}
-
-.card__like-active {
-  fill: #f02222;
-}
-
-.card__active-like {
-  width: 25px;
-  height: 25px;
-  padding: 15px;
-  border-radius: 50%;
-  background-color: #edeff5;
+  &:active .card__like-unactive {
+    fill: rgba(173, 177, 191, 0.6);
+  }
 
   &--active {
-    width: 40px;
-    height: 20px;
-    padding: 15px 5px;
+    background-color: rgba(249, 234, 234, 1);
+  }
+
+  &--active:hover,
+  &--active:focus {
+    background-color: rgba(249, 215, 215, 1);
+  }
+
+  &--active:active .card__like-active {
+    fill: rgba(240, 34, 34, 0.6);
+  }
+
+  &-unactive {
+    fill: rgba(173, 177, 191, 1);
+  }
+
+  &-active {
+    fill: rgba(240, 34, 34, 1);
+  }
+
+  &--tablet {
     background-color: #f9eaea;
   }
 }
@@ -49,6 +57,17 @@
   line-height: 20px;
   color: #1d2e5b;
   text-decoration: none;
+  text-align: left;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }
 
 .card__desc {
@@ -62,18 +81,21 @@
   line-height: 21px;
   color: #161c35;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .card__tags {
   font-size: 15px;
   line-height: 18px;
   color: #444444;
+  text-align: left;
 }
 
 .card__title {
   font-size: 15px;
   line-height: 18px;
   color: #444444;
+  text-align: left;
 }
 
 .card__level {
@@ -98,17 +120,12 @@
   }
 }
 
-.card__icon-plane,
-.card__icon-bus,
-.card__icon-bike,
-.card__icon-run {
-  fill: #1d2d5b;
-}
-
 .card__method-icon {
-  width: 15px;
-  height: 17px;
-  opacity: 0.3;
+  fill: rgba(29, 45, 91, 0.2);
+
+  &--active {
+    fill: rgba(29, 45, 91, 1);
+  }
 }
 
 .card__method-item {

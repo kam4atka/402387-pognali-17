@@ -1,10 +1,22 @@
 .button {
   display: block;
   border: none;
+  color: rgba(23, 29, 54, 1);
   text-align: center;
+
+  &:active {
+    color: rgba(23, 29, 54, 0.5);
+  }
 
   &--yellow {
     background-color: $btn-yellow;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $btn-yellowdark;
+      outline: none;
+    }
   }
 
   &--yellowdark {
@@ -14,6 +26,7 @@
     &:focus,
     &:active {
       background-color: $btn-orange;
+      outline: none;
     }
   }
 
@@ -24,6 +37,7 @@
     &:focus,
     &:active {
       background-color: $btn-orange-hover;
+      outline: none;
     }
   }
 
@@ -33,6 +47,12 @@
 
   &--blue-light {
     background-color: $btn-blue-light;
+
+    &:hover,
+    &:focus {
+      background-color: #d1d6e9;
+      outline: none;
+    }
   }
 
   &--transparent {
@@ -41,11 +61,11 @@
 
   &--border {
     border-style: solid;
-    border-color: #192144;
+    border-color: #1d2d5b;
   }
 
   &--ellipse {
-    padding: 5px 30px;
+    padding: 5px 40px;
     border-radius: 25px;
   }
 
@@ -54,17 +74,6 @@
     padding: 21px 25px;
     border-radius: 10px;
   }
-
-  /* &--square::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 25px;
-    width: 10px;
-    height: 15px;
-    background-image: url("../img/triangle-arrow-right.svg");
-    transform: translateY(-50%);
-  } */
 
   &--round {
     border-radius: 50%;

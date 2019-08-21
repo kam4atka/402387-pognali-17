@@ -1,11 +1,12 @@
 .tariff-list {
-  margin-bottom: 45px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .tariff-list__row {
   display: flex;
   flex-direction: column;
-  margin-bottom: 25px;
+  padding: 10px 0;
 }
 
 .tariff-list__cell {
@@ -19,5 +20,6 @@
 @media (min-width: $tablet-width) {
   .tariff-list__row {
     flex-direction: row;
+    justify-content: space-between;
   }
 }

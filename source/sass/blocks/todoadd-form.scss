@@ -38,21 +38,34 @@
 
 .todoadd-form__input-btn {
   position: absolute;
+  height: 100%;
   transform: translateY(-50%);
+  outline: none;
 
   &--minus {
     top: 50%;
-    left: 15px;
+    left: 0;
+    padding-left: 15px;
   }
 
   &--plus {
-    top: 55%;
-    right: 15px;
+    top: 50%;
+    right: 0;
+    padding-right: 15px;
   }
 }
 
 .todoadd-form__input-icon {
-  opacity: 0.2;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }
 
 .todoadd-form__checkbox-label {
@@ -72,7 +85,7 @@
   flex-direction: column;
 }
 
-.todoadd-form__country__add {
+.todoadd-form__country-add {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -113,7 +126,7 @@
     margin: 0 0 50px 0;
   }
 
-  .todoadd-form__country__add {
+  .todoadd-form__country-add {
     width: 370px;
   }
 }
@@ -121,6 +134,10 @@
 @media (min-width: $desktop-width) {
   .todoadd-form {
     padding: 0;
+  }
+  .todoadd-form__parameters-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .todoadd-form__select-wrapper {
@@ -130,7 +147,15 @@
   }
 
   .todoadd-form__label {
+    align-items: center;
     width: 25%;
+  }
+
+  .todoadd-form__checkbox-label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .todoadd-form__input-wrapper {
@@ -144,7 +169,7 @@
     padding: 0;
   }
 
-  .todoadd-form__country__add {
+  .todoadd-form__country-add {
     width: 730px;
   }
 }
