@@ -1,24 +1,12 @@
-.about {
-  background-image: url("../img/about-mobile@1x.png");
-  background-size: 320px 390px;
-  background-position: 50% 100%;
-  background-repeat: no-repeat;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/about-mobile@2x.png");
-  }
-}
-
 .about__wrapper {
   margin-left: 25px;
-  padding: 30px 0 60px 0;
+  padding: 33px 0 60px 0;
 }
 
 .about__title,
 .about__desc {
-  width: 200px;
-  margin: 0;
-  margin-bottom: 25px;
+  width: 213px;
+  margin: 0 0 21px 0;
   padding: 0;
 }
 
@@ -27,35 +15,21 @@
 }
 
 @media (min-width: $tablet-width) {
-  .about {
-    background-image: none;
-  }
-
   .about__container {
-    width: $tablet-width;
     margin: 0 auto;
-    background-image: url("../img/about-tablet@1x.png");
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: 95% 75%;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/about-tablet@2x.png");
-      background-size: 375px 550px;
-    }
   }
 
   .about__wrapper {
     margin-left: 35px;
-    padding: 280px 0 90px 0;
+    padding: 270px 0 87px 0;
   }
 
   .about__title {
-    margin-bottom: 45px;
+    margin-bottom: 36px;
   }
 
   .about__desc {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
     &--bold {
       margin-bottom: 55px;
@@ -78,17 +52,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .about__container {
-    width: $desktop-width;
-    background-image: url("../img/about-desktop@1x.png");
-    background-position: 95% 100%;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/about-desktop@2x.png");
-      background-size: 600px 665px;
-    }
-  }
-
   .about__wrapper {
     margin-left: 70px;
     padding: 130px 0 160px 0;
@@ -96,7 +59,7 @@
 
   .about__title,
   .about__desc {
-    width: 600px;
+    width: 650px;
   }
 
   .about__title {
@@ -104,7 +67,7 @@
   }
 
   .about__desc {
-    margin-bottom: 45px;
+    margin-bottom: 36px;
 
     &--bold {
       margin-bottom: 85px;

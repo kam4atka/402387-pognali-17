@@ -10,7 +10,7 @@
 }
 
 .travelmate:not(:last-of-type) {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .travelmate__photo {
@@ -25,8 +25,8 @@
 
 .travelmate__like {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -3px;
+  right: -13px;
 }
 
 .travelmate__like-icon {
@@ -47,20 +47,21 @@
 
 .travelmate__name,
 .travelmate__count {
-  margin-left: 100px;
+  margin-left: 105px;
   margin-bottom: 10px;
 }
 
 .travelmate__name {
   width: 37%;
+  margin-bottom: 6px;
 }
 
 .travelmate__count {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .travelmate__tags {
-  margin: 0 0 20px 0;
+  margin: 0 0 13px 0;
   padding: 0;
   padding-left: 25px;
 }
@@ -96,6 +97,10 @@
     padding: 35px 0 0 0;
   }
 
+  .travelmate:not(:last-of-type) {
+    margin-bottom: 44px;
+  }
+
   .travelmate__photo {
     position: static;
     margin: 0 35px 25px 35px;
@@ -117,11 +122,11 @@
 
   .travelmate__name {
     width: auto;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
   .travelmate__tags {
-    margin-bottom: 35px;
+    margin-bottom: 45px;
     padding: 0;
   }
 
@@ -133,7 +138,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 25px 0 auto;
+    margin: 0 40px 0 auto;
   }
 
   .travelmate__link {
@@ -148,6 +153,11 @@
 
     &--tablet {
       display: flex;
+      justify-content: flex-start;
+
+      .travelmate__link {
+        flex-grow: 0;
+      }
 
       .travelmate__action-like,
       .travelmate__action-count {
@@ -186,6 +196,10 @@
     padding: 50px 50px 50px 345px;
   }
 
+  .travelmate:not(:last-of-type) {
+    margin-bottom: 27px;
+  }
+
   .travelmate__photo {
     position: absolute;
     top: 0;
@@ -205,7 +219,11 @@
   }
 
   .travelmate__desc {
-    width: 65%;
+    width: 52%;
+  }
+
+  .travelmate__tags {
+    margin-bottom: 40px;
   }
 
   .travelmate__country {
@@ -225,7 +243,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 65%;
+    width: 58%;
 
     &--tablet {
       display: none;

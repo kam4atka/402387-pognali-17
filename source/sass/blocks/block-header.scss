@@ -3,6 +3,10 @@
   background-color: #161c36;
 }
 
+.nojs .block-header {
+  background-color: #ffffff;
+}
+
 .block-header__wrapper {
   background-color: #ffffff;
 }
@@ -10,12 +14,12 @@
 .block-header__logo {
   outline: none;
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     opacity: 0.7;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.5;
   }
 }
@@ -116,7 +120,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .block-header {
+  .main .block-header {
     background-color: #182044;
   }
 
@@ -144,7 +148,8 @@
 }
 
 @media (min-width: $desktop-width) {
-  .block-header {
+  .main .block-header,
+  .nojs .block-header {
     background-color: #161c36;
   }
 

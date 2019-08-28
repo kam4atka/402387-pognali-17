@@ -1,15 +1,17 @@
 .price {
   position: relative;
-  padding: 30px 0 40px 0;
+}
+
+.price__container {
+  padding: 25px 0 32px 0;
 }
 
 .price__wrapper {
-  margin-left: 25px;
-  padding-top: 20px;
+  padding: 27px 0 0 25px;
   background-image: url("../img/rates@1x.png");
   background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 50%;
+  background-position: 100% 11px;
+  background-size: 37%;
 }
 
 .price__title,
@@ -20,31 +22,31 @@
 
 .price__desc {
   width: 115px;
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 }
 
 @media (min-width: $tablet-width) {
-  .price {
-    padding-top: 75px 0 45px 0;
+  .price__container {
+    padding: 47px 0 45px 0;
   }
 
   .price__wrapper {
     margin-left: 0;
     padding-bottom: 40px;
     background-repeat: no-repeat;
-    background-position: 90% 100%;
+    background-position: 92% 100%;
     background-size: 15%;
   }
 
   .price__desc {
     width: auto;
-    margin-bottom: 70px;
+    margin-bottom: 90px;
     text-align: center;
   }
 
   .price__link {
     position: relative;
-    margin-left: 90px;
+    margin-left: 65px;
   }
 
   .price__link::before {
@@ -65,21 +67,20 @@
 }
 
 @media (min-width: $desktop-width) {
-  .price {
-    padding-top: 110px;
-    padding-bottom: 185px;
+  .price__container {
+    padding: 80px 0 143px 0;
   }
 
   .price__wrapper {
-    margin: 0 70px;
-    background-position: 100% 200px;
+    margin: 0;
+    background-position: 93% 206px;
   }
 
   .price__desc {
-    margin-bottom: 130px;
+    margin-bottom: 150px;
   }
 
   .price__link {
-    margin-left: 160px;
+    margin-left: 140px;
   }
 }

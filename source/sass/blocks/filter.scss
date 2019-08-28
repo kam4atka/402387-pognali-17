@@ -1,5 +1,5 @@
 .filter {
-  padding: 20px 0;
+  padding: 17px 0;
 }
 
 .filter__header {
@@ -16,10 +16,6 @@
 .filter__title {
   margin: 0;
   padding: 0;
-}
-
-.filter__title-icon {
-  margin-right: 10px;
 }
 
 .filter__wrapper {
@@ -45,7 +41,7 @@
 
 @media (min-width: $tablet-width) {
   .filter {
-    padding: 70px 0;
+    padding: 60px 0 50px 0;
   }
 
   .filter__toggle-icon {
@@ -86,14 +82,17 @@
 }
 
 @media (min-width: $desktop-width) {
+  .filter {
+    padding: 55px 0 68px 0;
+  }
+
   .filter__wrapper {
-    padding: 0 60px;
+    padding: 0;
   }
 
   .filter__header {
     display: flex;
-    margin-bottom: 65px;
-    margin-right: 35px;
+    margin: 0 35px 60px 20px;
   }
 
   .filter__toggle {
@@ -112,7 +111,7 @@
   .filter__list {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 0 15px 0;
   }
 
   .filter__close {

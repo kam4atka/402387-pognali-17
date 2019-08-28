@@ -6,7 +6,7 @@
     <title>Направления</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="side page">
+  <body class="side page page__form">
     <svg style="display: none;">
       <symbol id="phone-topmenu" viewBox="0 0 18 18">
         <g>
@@ -99,14 +99,35 @@
           <path d="M2.19 2.38a6.34 6.34 0 0 0-1.9 4.54v34.27a6.34 6.34 0 0 0 1.95 4.57l23.05-21.21L2.19 2.38z" fill="#4758A9"/>
         </g>
       </symbol>
+      <symbol id="circle" viewBox="0 0 46 46">
+        <g>
+          <ellipse cx="22.534389" cy="22.831198" rx="22.01087" ry="22.010868" />
+        </g>
+      </symbol>
+      <svg id="small-arrow" viewBox="0 0 5 10">
+        <polygon points="3,8.1 3,0 2,0 2,8.1 0,6.1 0,7.5 2.5,10 5,7.5 5,6.1 "/>
+      </svg>
     </svg>
     <header class="block-header header">
       <div class="page__wrapper header__wrapper">
         <a class="block-header__logo header__logo" href="index.html">
           <picture class="header__logo-wrapper">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-            <img class="block-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="На главную страницу">
+            <img class="block-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Вы на главной странице">
+          </picture>
+        </a>
+        <a class="block-header__logo header__logo header__logo--hide">
+          <picture class="header__logo-wrapper">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <img class="block-header__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Вы на главной странице">
           </picture>
         </a>
         <nav class="block-header__nav main-nav main-nav--closed">
@@ -207,7 +228,7 @@
     </header>
     <main>
       <section class="block block--light block-user user">
-        <div class="block block--intro user__header">
+        <div class="block block--bottom block--intro user__header">
           <div class="page__wrapper">
             <div class="user__header-wrapper">
               <h1 class="block__header user__title">Направления</h1>
@@ -220,59 +241,65 @@
             <div class="block-user__level user-level">
               <span class="block-user__level-value user-level__value">80</span>
               <span class="block-user__level-title">level</span>
+
+              <div class="user-level__border-wrapper">
+                <svg class="block__level-border block__level-border--80" width="100" height="100">
+                  <use xlink:href="#circle"></use>
+                </svg>
+              </div>
+
             </div>
             <picture class="user-info__photo-wrapper">
-              <source media="(min-width: 768px)" srcset="../img/photo-account-tablet@1x.jpg 1x, ../img/photo-account-tablet@2x.jpg 2x">
-              <img class="block-user__info-photo user-info__photo" src="../img/photo-account-mobile@1x.jpg" srcset="../img/photo-account-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-account-mobile@1x.webp 1x, img/photo-account-mobile@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+              <img class="block-user__info-photo user-info__photo" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" alt="Фотография пользователя">
             </picture>
             <form class="user-info__photo-edit photo-edit" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
               <input class="photo-edit__input visually-hidden" type="file" name="photo" id="user-photo" multiple>
               <label class="block-user__photo-edit photo-edit__label button button--blue-light button--ellipse" for="user-photo" tabindex=0>Сменить фото</label>
             </form>
+
             <div class="block-user__tags-wrapper user-tags">
               <h3 class="block-user__tags-title user-tags__title">Тэги</h3>
-              <input class="block-user__tags-desc user-tags__list" type="text" value="#бургер #бар #футбол #концерт #крафт" placeholder="Коротко о себе в виде 5-8 хештэгов">
+              <textarea class="block-user__tags-desc user-tags__list" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
-            <div class="block-user__tags-wrapper user-transport">
+            <div class="block-user__tags-desc user-transport">
               <h3 class="block-user__tags-title user-transport__title">Транспорт</h3>
-              <ul class="block-user__list user-transport__list">
-                <li class="user-transport__item">
-                  <button class="block-user__list-item user-transport__btn" type="button">
-                    <span class="visually-hidden">Авиаперелет</span>
-                    <svg class="block-user__list-icon block-user__list-icon--active" width="16" height="17">
-                      <use xlink:href="#plane"></use>
-                    </svg>
-                  </button>
-                </li>
-                <li class="user-transport__item">
-                  <button class="block-user__list-item user-transport__btn" type="button">
-                    <span class="visually-hidden">Автобус</span>
-                    <svg class="block-user__list-icon block-user__list-icon--active" width="16" height="17">
-                      <use xlink:href="#bus"></use>
-                    </svg>
-                  </button>
-                </li>
-                <li class="user-transport__item">
-                  <button class="block-user__list-item user-transport__btn" type="button">
-                    <span class="visually-hidden">Велосипед</span>
-                    <svg class="block-user__list-icon" width="16" height="17">
-                      <use xlink:href="#bike"></use>
-                    </svg>
-                  </button>
-                </li>
-                <li class="user-transport__item">
-                  <button class="block-user__list-item user-transport__btn" type="button">
-                    <span class="visually-hidden">Пешком</span>
-                    <svg class="block-user__list-icon block-user__list-icon--active" width="16" height="17">
-                      <use xlink:href="#run"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
+              <div class="block-user__list user-transport__list">
+                <input class="block-user__list-input visually-hidden" type="checkbox" name="avia" id="transport-avia" checked>
+                <label class="block-user__list-label user-transport__btn" for="transport-avia">
+                  <span class="visually-hidden">Самолет</span>
+                  <svg class="block-user__list-icon" width="13" height="16">
+                    <use xlink:href="#plane"></use>
+                  </svg>
+                </label>
+                <input class="block-user__list-input visually-hidden" type="checkbox" name="bus" id="transport-bus" checked>
+                <label class="block-user__list-label user-transport__btn" for="transport-bus">
+                  <span class="visually-hidden">Автобус</span>
+                  <svg class="block-user__list-icon" width="13" height="16">
+                    <use xlink:href="#bus"></use>
+                  </svg>
+                </label>
+                <input class="block-user__list-input visually-hidden" type="checkbox" name="bike" id="transport-bike">
+                <label class="block-user__list-label user-transport__btn" for="transport-bike">
+                  <span class="visually-hidden">Велосипед</span>
+                  <svg class="block-user__list-icon" width="13" height="16">
+                    <use xlink:href="#bike"></use>
+                  </svg>
+                </label>
+                <input class="block-user__list-input visually-hidden" type="checkbox" name="walk" id="transport-walk" checked>
+                <label class="block-user__list-label user-transport__btn" for="transport-walk">
+                  <span class="visually-hidden">Пешком</span>
+                  <svg class="block-user__list-icon" width="13" height="16">
+                    <use xlink:href="#run"></use>
+                  </svg>
+                </label>
+              </div>
             </div>
           </section>
         </div>
-        <section class="page-block page-block--top block-user__todo todo">
+        <section class="block block--top block-user__todo todo">
           <div class="page__wrapper">
             <h2 class="block-user__title todo__title">Мои планы:</h2>
             <ul class="block-user__list todo__list">
@@ -280,603 +307,769 @@
                 <p class="block-user__item-name todo__item-text todo__item-country">Франция, Италия</p>
                 <p class="block-user__item-count todo__item-text todo__item-count">3 попутчика</p>
                 <p class="block-user__item-date todo__item-text todo__item-date">26 мар — 29 мар</p>
-                <a class="block-user__item-edit todo__item-text" href="#">Изменить</a>
+                <a class="block-user__item-edit todo__item-text todo__item-edit" href="#">Изменить</a>
               </li>
               <li class="block-user__todo-item todo__item">
                 <p class="block-user__item-name todo__item-text todo__item-country">Тайланд, Индонезия</p>
                 <p class="block-user__item-count todo__item-text todo__item-count">1 попутчик</p>
                 <p class="block-user__item-date todo__item-text todo__item-date">1 июл — 15 июл</p>
-                <a class="block-user__item-edit todo__item-text" href="#">Изменить</a>
+                <a class="block-user__item-edit todo__item-text todo__item-edit" href="#">Изменить</a>
               </li>
             </ul>
           </div>
         </section>
-        <section class="page-block page-block--top block-user__todoadd todoadd">
-          <div class="page__wrapper">
-            <h2 class="block-user__title todoadd__title">Добавить план:</h2>
-            <form class="todoadd-form" action="https://echo.htmlacademy.ru" method="post">
-              <div class="block-user__todoadd-item todoadd__item">
-                <h3 class="block-user__todoadd-title todoadd__item-title">Шаг 1. Даты пребывания</h3>
-                <p class="block-user__todoadd-desc todoadd__item-desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-                <fieldset class='block-user__todoadd-fieldset todoadd-form__parameters'>
-                  <div class="todoadd-form__parameters-wrapper">
-                    <label class="block-user__todoadd-label todoadd-form__label" for="todoadd-companion">
-                      Ищу попутчиков:
-                      <span class="block-user__todoadd-label block-user__todoadd-label--unit">Чел.</span>
-                    </label>
-                    <div class="todoadd-form__input-wrapper">
-                      <button class="block-user__todoadd-btn block-user__todoadd-btn--minus button button--transparent todoadd-form__input-btn todoadd-form__input-btn--minus" type="button">
-                        <span class="visually-hidden">Уменьшить</span>
-                        <svg class="block-user__todoadd-active todoadd-form__input-icon" width="14" height="14">
-                          <use xlink:href="#minus"></use>
-                        </svg>
-                      </button>
-                      <input class="block-user__todoadd-input todoadd-form__input" type="text" name="companion" id="todoadd-companion" value="2">
-                      <button class="block-user__todoadd-btn block-user__todoadd-btn--plus button button--transparent todoadd-form__input-btn todoadd-form__input-btn--plus" type="button">
-                        <span class="visually-hidden">Увеличить</span>
-                        <svg class="block-user__todoadd-active todoadd-form__input-icon" width="14" height="14">
-                          <use xlink:href="#plus"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <input class="block-user__todoadd-checkbox todoadd-form__checkbox visually-hidden" type="checkbox" name="child" id="todoadd-child" checked>
-                    <label class="block-user__todoadd-label block-user__todoadd-label--small todoadd-form__checkbox-label" for="todoadd-child">Можно с детьми</label>
-                    <label class="block-user__todoadd-label todoadd-form__label" for="todoadd-duration">
-                      Длительность:
-                      <span class="block-user__todoadd-label block-user__todoadd-label--unit">Дн.</span>
-                    </label>
-                    <div class="todoadd-form__input-wrapper">
-                      <button class="block-user__todoadd-btn block-user__todoadd-btn--minus button button--transparent todoadd-form__input-btn todoadd-form__input-btn--minus" type="button">
-                        <span class="visually-hidden">Уменьшить</span>
-                        <svg class="block-user__todoadd-active todoadd-form__input-icon" width="14" height="14">
-                          <use xlink:href="#minus"></use>
-                        </svg>
-                      </button>
-                      <input class="block-user__todoadd-input todoadd-form__input" type="text" name="duration" id="todoadd-duration" value="2">
-                      <button class="block-user__todoadd-btn block-user__todoadd-btn--plus button button--transparent todoadd-form__input-btn todoadd-form__input-btn--plus" type="button">
-                        <span class="visually-hidden">Увеличить</span>
-                        <svg class="block-user__todoadd-active todoadd-form__input-icon" width="14" height="14">
-                          <use xlink:href="#plus"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </fieldset>
-                <div class="calendar">
-                  <h4 class="calendar__title visually-hidden">Календарь выбора дат плана</h4>
-                  <table class="block-calendar calendar-table">
-                    <caption class="block-calendar__title calendar-table__title">
-                      <div class="calendar-table__title-wrapper">
-                        <button class="block-calendar__title-btn" type="button">
-                          <svg class="block-user__todoadd-icon block-calendar__title-icon calendar-table__icon" width="10" height="17">
-                            <use xlink:href="#month-narrow__left"></use>
+        <section class="block-user__todoadd todoadd">
+          <div class="block block--top block-user__todoadd-container todoadd__container">
+            <div class="page__wrapper">
+              <h2 class="block-user__title todoadd__title">Добавить план:</h2>
+              <form class="todoadd-form" action="https://echo.htmlacademy.ru" method="post">
+                <div class="block-user__todoadd-item todoadd__item" id="firststep">
+                  <h3 class="block-user__todoadd-title todoadd__item-title">Шаг 1. <span class="block-user__todoadd-subtitle todoadd__title-name">Даты пребывания</span></h3>
+                  <p class="block-user__todoadd-desc todoadd__item-desc">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                  <fieldset class='block-user__todoadd-fieldset todoadd-form__parameters'>
+                    <div class="todoadd-form__parameters-wrapper">
+                      <label class="block-user__todoadd-label todoadd-form__label" for="todoadd-companion">
+                        Ищу попутчиков:
+                        <span class="block-user__todoadd-label block-user__todoadd-label--unit">Чел.</span>
+                      </label>
+                      <div class="todoadd-form__input-wrapper">
+                        <button class="block-user__todoadd-btn block-user__todoadd-btn--minus button button--transparent todoadd-form__input-btn todoadd-form__input-btn--minus" type="button">
+                          <span class="visually-hidden">Уменьшить</span>
+                          <svg class="block-user__todoadd-active todoadd-form__input-icon" width="14" height="14">
+                            <use xlink:href="#minus"></use>
                           </svg>
-                          <span class="visually-hidden">Предыдущий месяц</span>
                         </button>
-                        Март 2019
-                        <button class="block-calendar__title-btn" type="button">
-                          <svg class="block-user__todoadd-icon block-calendar__title-icon calendar-table__icon" width="10" height="17">
-                            <use xlink:href="#month-narrow__right"></use>
+                        <input class="block-user__todoadd-input todoadd-form__input" type="text" name="companion" id="todoadd-companion" value="2">
+                        <button class="block-user__todoadd-btn block-user__todoadd-btn--plus button button--transparent todoadd-form__input-btn todoadd-form__input-btn--plus" type="button">
+                          <span class="visually-hidden">Увеличить</span>
+                          <svg class="block-user__todoadd-active todoadd-form__input-icon" width="14" height="14">
+                            <use xlink:href="#plus"></use>
                           </svg>
-                          <span class="visually-hidden">Предыдущий месяц</span>
                         </button>
                       </div>
-                    </caption>
-                    <thead class="calendar-table__week">
-                      <tr class="calendar-table__week-row">
-                        <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
-                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">П</span>
-                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Пн</span>
-                        </td>
-                        <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
-                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">В</span>
-                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Вт</span>
-                        </td>
-                        <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
-                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">С</span>
-                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Ср</span>
-                        </td>
-                        <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
-                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">Ч</span>
-                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Чт</span>
-                        </td>
-                        <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
-                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">П</span>
-                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Пт</span>
-                        </td>
-                        <td class="block-calendar__week-cell block-calendar__week-cell--red calendar-table__cell calendar-table__cell--week">
-                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">С</span>
-                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Сб</span>
-                        </td>
-                        <td class="block-calendar__week-cell block-calendar__week-cell--red calendar-table__cell calendar-table__cell--week">
-                          <span class="block-calendar__week-cell block-calendar__week-cell--mobile">В</span>
-                          <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Вс</span>
-                        </td>
-                      </tr>
-                    </thead>
-                    <tbody class="calendar-table__day">
-                      <tr class="calendar-table__day-row">
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">24</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">25</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">26</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">27</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">28</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">1</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">2</td>
-                      </tr>
-                      <tr class="calendar-table__day-row">
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">3</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">4</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">5</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">6</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">7</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">8</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">9</td>
-                      </tr>
-                      <tr class="calendar-table__day-row">
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">10</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">11</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">12</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">13</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">14</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">15</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">16</td>
-                      </tr>
-                      <tr class="calendar-table__day-row">
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">17</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">18</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">19</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">20</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">21</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">22</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">23</td>
-                      </tr>
-                      <tr class="calendar-table__day-row">
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">24</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">25</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">26</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--selected calendar-table__cell calendar-table__cell--active">27</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--selected calendar-table__cell">28</td>
-                        <td class="block-calendar__day-cell block-calendar__day-cell--selected calendar-table__cell">29</td>
-                        <td class="block-calendar__day-cell calendar-table__cell">30</td>
-                      </tr>
-                      <tr class="calendar-table__day-row">
-                        <td class="block-calendar__day-cell calendar-table__cell">31</td>
-                        <td class="block-calendar__day-cell calendar-table__cell">1</td>
-                        <td class="block-calendar__day-cell calendar-table__cell">2</td>
-                        <td class="block-calendar__day-cell calendar-table__cell">3</td>
-                        <td class="block-calendar__day-cell calendar-table__cell">4</td>
-                        <td class="block-calendar__day-cell calendar-table__cell">5</td>
-                        <td class="block-calendar__day-cell calendar-table__cell">6</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="todoadd__item-action">
-                  <a class="block-user__todoadd-link button button--yellow button--ellipse todoadd__item-next" href="#">
-                    <span class="todoadd__next-text">Следующий шаг</span>
-                    <svg class="block__button-icon block-user__todoadd-next todoadd__next-icon" width="21" height="19">
-                      <use xlink:href="#triangle-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="block-user__todoadd-item todoadd__item">
-                <h3 class="block-user__todoadd-title todoadd__item-title">Шаг 2. Маршрут</h3>
-                <p class="block-user__todoadd-desc todoadd__item-desc">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
-                <fieldset class='block-user__todoadd-fieldset todoadd-form__select'>
-                  <div class="todoadd-country todoadd-form__select-item">
-                    <select class="block-user__select todoadd-country__select" name="todoadd-country" id="country-item-01">
-                      <option class="block-user__select-item" value="null">Выберите страну</option>
-                      <option class="block-user__select-item" value="bih" selected>Босния и герцеговина</option>
-                      <option class="block-user__select-item" value="chs">Чехословакия</option>
-                    </select>
-                    <div class="block-user__flag todoadd-country__flag">
-                      <svg class="todoadd-country__flag-icon" width="35" height="24">
-                        <use xlink:href="#flag-bih"></use>
-                      </svg>
+                      <input class="block-user__todoadd-checkbox todoadd-form__checkbox visually-hidden" type="checkbox" name="child" id="todoadd-child" checked>
+                      <label class="block-user__todoadd-label block-user__todoadd-label--small todoadd-form__checkbox-label" for="todoadd-child">Можно с детьми</label>
+                      <label class="block-user__todoadd-label todoadd-form__label" for="todoadd-duration">
+                        Длительность:
+                        <span class="block-user__todoadd-label block-user__todoadd-label--unit">Дн.</span>
+                      </label>
+                      <div class="todoadd-form__input-wrapper">
+                        <button class="block-user__todoadd-btn block-user__todoadd-btn--minus button button--transparent todoadd-form__input-btn todoadd-form__input-btn--minus" type="button">
+                          <span class="visually-hidden">Уменьшить</span>
+                          <svg class="block-user__todoadd-active todoadd-form__input-icon" width="14" height="14">
+                            <use xlink:href="#minus"></use>
+                          </svg>
+                        </button>
+                        <input class="block-user__todoadd-input todoadd-form__input" type="text" name="duration" id="todoadd-duration" value="2">
+                        <button class="block-user__todoadd-btn block-user__todoadd-btn--plus button button--transparent todoadd-form__input-btn todoadd-form__input-btn--plus" type="button">
+                          <span class="visually-hidden">Увеличить</span>
+                          <svg class="block-user__todoadd-active todoadd-form__input-icon" width="14" height="14">
+                            <use xlink:href="#plus"></use>
+                          </svg>
+                        </button>
+                      </div>
                     </div>
-                    <button class="block-user__select-remove todoadd-country__remove" type="button">
-                      <svg class="block-user__todoadd-icon block-user__select-icon" width="10" height="10">
-                        <use xlink:href="#country-remove"></use>
-                      </svg>
-                      <span class="visually-hidden">Удалить</span>
-                    </button>
-                  </div>
-                  <div class="todoadd-country todoadd-form__select-item">
-                    <select class="block-user__select todoadd-country__select" name="todoadd-country" id="country-item-02">
-                      <option class="block-user__select-item" value="null">Выберите страну</option>
-                      <option class="block-user__select-item" value="bih">Босния и герцеговина</option>
-                      <option class="block-user__select-item" value="chs" selected>Чехословакия</option>
-                    </select>
-                    <div class="block-user__flag todoadd-country__flag">
-                      <svg class="todoadd-country__flag-icon" width="35" height="24">
-                        <use xlink:href="#flag-cze"></use>
-                      </svg>
-                    </div>
-                    <button class="block-user__select-remove todoadd-country__remove" type="button">
-                      <svg class="block-user__todoadd-icon block-user__select-icon" width="10" height="10">
-                        <use xlink:href="#country-remove"></use>
-                      </svg>
-                      <span class="visually-hidden">Удалить</span>
-                    </button>
-                  </div>
-                  <div class="todoadd-country todoadd-form__select-item todoadd-form__select-add">
-                    <select class="block-user__select todoadd-country__select todoadd-country__select--add" name="todoadd-country" id="country-item-03">
-                      <option class="block-user__select-item" value="null">Выберите страну</option>
-                      <option class="block-user__select-item" value="bih">Босния и герцеговина</option>
-                      <option class="block-user__select-item" value="chs">Чехословакия</option>
-                    </select>
-                    <div class="block-user__alphabet block-filter todoadd-country__alphabet alphabet-views alphabet-views--modal">
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="a" id="letter-a" checked>
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-a">A</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Афганистан</li>
-                        <li class="block-filter__country-item">Албания</li>
-                        <li class="block-filter__country-item">Алгерия</li>
-                        <li class="block-filter__country-item">Андорра</li>
-                        <li class="block-filter__country-item">Аргентина</li>
-                        <li class="block-filter__country-item">Армения</li>
-                        <li class="block-filter__country-item">Австралия</li>
-                        <li class="block-filter__country-item">Австрия</li>
-                        <li class="block-filter__country-item">Азербайджан</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="b" id="letter-b">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-b">Б</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Багамские Острова</li>
-                        <li class="block-filter__country-item">Бангладеш</li>
-                        <li class="block-filter__country-item">Барбадос</li>
-                        <li class="block-filter__country-item">Бахрейн</li>
-                        <li class="block-filter__country-item">Белоруссия</li>
-                        <li class="block-filter__country-item">Белиз</li>
-                        <li class="block-filter__country-item">Бельгия</li>
-                        <li class="block-filter__country-item">Бенин</li>
-                        <li class="block-filter__country-item">Болгария</li>
-                        <li class="block-filter__country-item">Боливия</li>
-                        <li class="block-filter__country-item">Босния и Герцеговина</li>
-                        <li class="block-filter__country-item">Ботсвана</li>
-                        <li class="block-filter__country-item">Бразилия</li>
-                        <li class="block-filter__country-item">Бруней</li>
-                        <li class="block-filter__country-item">Буркина-Фасо</li>
-                        <li class="block-filter__country-item">Бурунди</li>
-                        <li class="block-filter__country-item">Бутан</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="v" id="letter-v">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-v">В</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Вануату</li>
-                        <li class="block-filter__country-item">Великобритания</li>
-                        <li class="block-filter__country-item">Венгрия</li>
-                        <li class="block-filter__country-item">Венесуэла</li>
-                        <li class="block-filter__country-item">Восточный Тимор</li>
-                        <li class="block-filter__country-item">Вьетнам</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="g" id="letter-g">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-g">Г</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Габон</li>
-                        <li class="block-filter__country-item">Гаити</li>
-                        <li class="block-filter__country-item">Гайана</li>
-                        <li class="block-filter__country-item">Гамбия</li>
-                        <li class="block-filter__country-item">Гана</li>
-                        <li class="block-filter__country-item">Гватемала</li>
-                        <li class="block-filter__country-item">Гвинея</li>
-                        <li class="block-filter__country-item">Гвинея-Бисау</li>
-                        <li class="block-filter__country-item">Германия</li>
-                        <li class="block-filter__country-item">Гондурас</li>
-                        <li class="block-filter__country-item">Гренада</li>
-                        <li class="block-filter__country-item">Греция</li>
-                        <li class="block-filter__country-item">Грузия</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="d" id="letter-d">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-d">Д</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Дания</li>
-                        <li class="block-filter__country-item">Джибути</li>
-                        <li class="block-filter__country-item">Доминика</li>
-                        <li class="block-filter__country-item">Доминикана</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="e" id="letter-e">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-e">Е</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Египет</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="jo" id="letter-jo">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-jo">Ё</label>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="zh" id="letter-zh">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-zh">Ж</label>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="z" id="letter-z">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-z">З</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Замбия</li>
-                        <li class="block-filter__country-item">Зимбабве</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="i" id="letter-i">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-i">И</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Израиль</li>
-                        <li class="block-filter__country-item">Индия</li>
-                        <li class="block-filter__country-item">Индонезия</li>
-                        <li class="block-filter__country-item">Иордания</li>
-                        <li class="block-filter__country-item">Ирак</li>
-                        <li class="block-filter__country-item">Иран</li>
-                        <li class="block-filter__country-item">Ирландия</li>
-                        <li class="block-filter__country-item">Исландия</li>
-                        <li class="block-filter__country-item">Испания</li>
-                        <li class="block-filter__country-item">Италия</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="j" id="letter-j">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-j">Й</label>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="k" id="letter-k">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-k">К</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Кабо-Верде</li>
-                        <li class="block-filter__country-item">Казахстан</li>
-                        <li class="block-filter__country-item">Камбоджа</li>
-                        <li class="block-filter__country-item">Камерун</li>
-                        <li class="block-filter__country-item">Канада</li>
-                        <li class="block-filter__country-item">Катар</li>
-                        <li class="block-filter__country-item">Кения</li>
-                        <li class="block-filter__country-item">Кипр</li>
-                        <li class="block-filter__country-item">Киргизия</li>
-                        <li class="block-filter__country-item">Кирибати</li>
-                        <li class="block-filter__country-item">Китай</li>
-                        <li class="block-filter__country-item">Колумбия</li>
-                        <li class="block-filter__country-item">Коморы</li>
-                        <li class="block-filter__country-item">Конго</li>
-                        <li class="block-filter__country-item">КНДР</li>
-                        <li class="block-filter__country-item">Республика Корея</li>
-                        <li class="block-filter__country-item">Коста-Рика</li>
-                        <li class="block-filter__country-item">Кот-д'Ивуар</li>
-                        <li class="block-filter__country-item">Куба</li>
-                        <li class="block-filter__country-item">Кувейт</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="l" id="letter-l">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-l">Л</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Лаос</li>
-                        <li class="block-filter__country-item">Латвия</li>
-                        <li class="block-filter__country-item">Лесото</li>
-                        <li class="block-filter__country-item">Либерия</li>
-                        <li class="block-filter__country-item">Ливан</li>
-                        <li class="block-filter__country-item">Ливия</li>
-                        <li class="block-filter__country-item">Литва</li>
-                        <li class="block-filter__country-item">Лихтенштейн</li>
-                        <li class="block-filter__country-item">Люксембург</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="m" id="letter-m">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-m">М</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Маврикий</li>
-                        <li class="block-filter__country-item">Мавритания</li>
-                        <li class="block-filter__country-item">Мадагаскар</li>
-                        <li class="block-filter__country-item">Малави</li>
-                        <li class="block-filter__country-item">Малазия</li>
-                        <li class="block-filter__country-item">Мали</li>
-                        <li class="block-filter__country-item">Мальдивы</li>
-                        <li class="block-filter__country-item">Мальта</li>
-                        <li class="block-filter__country-item">Марокко</li>
-                        <li class="block-filter__country-item">Маршалловы Острова</li>
-                        <li class="block-filter__country-item">Мексика</li>
-                        <li class="block-filter__country-item">Мозамбик</li>
-                        <li class="block-filter__country-item">Молдавия</li>
-                        <li class="block-filter__country-item">Монако</li>
-                        <li class="block-filter__country-item">Монголия</li>
-                        <li class="block-filter__country-item">Мьянма</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="n" id="letter-n">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-n">Н</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Намибия</li>
-                        <li class="block-filter__country-item">Науру</li>
-                        <li class="block-filter__country-item">Непал</li>
-                        <li class="block-filter__country-item">Нигер</li>
-                        <li class="block-filter__country-item">Нигерия</li>
-                        <li class="block-filter__country-item">Нидерланды</li>
-                        <li class="block-filter__country-item">Никарагуа</li>
-                        <li class="block-filter__country-item">Новая Зеландия</li>
-                        <li class="block-filter__country-item">Норвегия</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="o" id="letter-o">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-o">О</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">ОАЭ</li>
-                        <li class="block-filter__country-item">Оман</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="p" id="letter-p">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-p">П</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Пакистан</li>
-                        <li class="block-filter__country-item">Палау</li>
-                        <li class="block-filter__country-item">Панама</li>
-                        <li class="block-filter__country-item">Папуа - Новая Гвинея</li>
-                        <li class="block-filter__country-item">Парагвай</li>
-                        <li class="block-filter__country-item">Перу</li>
-                        <li class="block-filter__country-item">Польша</li>
-                        <li class="block-filter__country-item">Португалия</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="r" id="letter-r">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-r">Р</label>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="s" id="letter-s">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-s">С</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Сальвадор</li>
-                        <li class="block-filter__country-item">Самоа</li>
-                        <li class="block-filter__country-item">Сан-Марино</li>
-                        <li class="block-filter__country-item">Сан-Томе и Принсипи</li>
-                        <li class="block-filter__country-item">Саудовская Аравия</li>
-                        <li class="block-filter__country-item">Северная Македония</li>
-                        <li class="block-filter__country-item">Сейшелы</li>
-                        <li class="block-filter__country-item">Сенегал</li>
-                        <li class="block-filter__country-item">Сент-Люсия</li>
-                        <li class="block-filter__country-item">Сербия</li>
-                        <li class="block-filter__country-item">Сингапур</li>
-                        <li class="block-filter__country-item">Сирия</li>
-                        <li class="block-filter__country-item">Словакия</li>
-                        <li class="block-filter__country-item">Словения</li>
-                        <li class="block-filter__country-item">США</li>
-                        <li class="block-filter__country-item">Сомали</li>
-                        <li class="block-filter__country-item">Судан</li>
-                        <li class="block-filter__country-item">Суринам</li>
-                        <li class="block-filter__country-item">Сьерра-Леоне</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="t" id="letter-t">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-t">Т</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Таджикистан</li>
-                        <li class="block-filter__country-item">Таиланд</li>
-                        <li class="block-filter__country-item">Таназия</li>
-                        <li class="block-filter__country-item">Того</li>
-                        <li class="block-filter__country-item">Тонга</li>
-                        <li class="block-filter__country-item">Тринидад и Тобаго</li>
-                        <li class="block-filter__country-item">Тувалу</li>
-                        <li class="block-filter__country-item">Тунис</li>
-                        <li class="block-filter__country-item">Туркмения</li>
-                        <li class="block-filter__country-item">Турция</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="y" id="letter-y">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-y">У</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Уганда</li>
-                        <li class="block-filter__country-item">Узбекистан</li>
-                        <li class="block-filter__country-item">Украина</li>
-                        <li class="block-filter__country-item">Уругвай</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="f" id="letter-f">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-f">Ф</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Фиджи</li>
-                        <li class="block-filter__country-item">Филиппины</li>
-                        <li class="block-filter__country-item">Финляндия</li>
-                        <li class="block-filter__country-item">Франция</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="h" id="letter-h">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-h">Х</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Хорватия</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="tc" id="letter-tc">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-tc">Ц</label>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="ch" id="letter-ch">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-ch">Ч</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Чад</li>
-                        <li class="block-filter__country-item">Черногория</li>
-                        <li class="block-filter__country-item">Чехия</li>
-                        <li class="block-filter__country-item">Чили</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="sh" id="letter-sh">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-sh">Ш</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Швецария</li>
-                        <li class="block-filter__country-item">Швеция</li>
-                        <li class="block-filter__country-item">Шри-Ланка</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="sch" id="letter-sch">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-sch">Щ</label>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="ie" id="letter-ie">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-ie">Э</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Эквадор</li>
-                        <li class="block-filter__country-item">Эритрея</li>
-                        <li class="block-filter__country-item">Эсватини</li>
-                        <li class="block-filter__country-item">Эстония</li>
-                        <li class="block-filter__country-item">Эфиопия</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="u" id="letter-u">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-u">Ю</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">ЮАР</li>
-                        <li class="block-filter__country-item">Южный Судан</li>
-                      </ul>
-                      <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="ia" id="letter-ia">
-                      <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-ia">Я</label>
-                      <ul class="block-filter__country-list alphabet-views__country-list alphabet-views__country-list--add">
-                        <li class="block-filter__country-item">Ямайка</li>
-                        <li class="block-filter__country-item">Япония</li>
-                      </ul>
-                    </div>
-                    <button class="block-user__select-remove todoadd-country__remove" type="button">
-                      <svg class="block-user__todoadd-icon block-user__select-icon" width="10" height="10">
-                        <use xlink:href="#country-remove"></use>
-                      </svg>
-                      <span class="visually-hidden">Удалить</span>
-                    </button>
-                  </div>
-                  <button class="block-user__todoadd-countryadd todoadd-form__country-add" type="button">
-                    Добавить страну
-                    <svg class="block-user__countryadd-icon" width="14" height="14">
-                      <use xlink:href="#plus"></use>
-                    </svg>
-                  </button>
-                </fieldset>
+                  </fieldset>
+                  <div class="calendar">
+                    <h4 class="calendar__title visually-hidden">Календарь выбора дат плана</h4>
+                    <table class="block-calendar calendar-table">
+                      <caption class="block-calendar__title calendar-table__title">
+                        <div class="calendar-table__title-wrapper">
+                          <button class="block-calendar__title-btn" type="button">
+                            <svg class="block-user__todoadd-icon block-calendar__title-icon calendar-table__icon" width="10" height="17">
+                              <use xlink:href="#month-narrow__left"></use>
+                            </svg>
+                            <span class="visually-hidden">Предыдущий месяц</span>
+                          </button>
+                          Март 2019
+                          <button class="block-calendar__title-btn" type="button">
+                            <svg class="block-user__todoadd-icon block-calendar__title-icon calendar-table__icon" width="10" height="17">
+                              <use xlink:href="#month-narrow__right"></use>
+                            </svg>
+                            <span class="visually-hidden">Предыдущий месяц</span>
+                          </button>
+                        </div>
+                      </caption>
+                      <thead class="calendar-table__week">
+                        <tr class="calendar-table__week-row">
+                          <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
+                            <span class="block-calendar__week-cell block-calendar__week-cell--mobile">П</span>
+                            <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Пн</span>
+                          </td>
+                          <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
+                            <span class="block-calendar__week-cell block-calendar__week-cell--mobile">В</span>
+                            <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Вт</span>
+                          </td>
+                          <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
+                            <span class="block-calendar__week-cell block-calendar__week-cell--mobile">С</span>
+                            <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Ср</span>
+                          </td>
+                          <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
+                            <span class="block-calendar__week-cell block-calendar__week-cell--mobile">Ч</span>
+                            <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Чт</span>
+                          </td>
+                          <td class="block-calendar__week-cell calendar-table__cell calendar-table__cell--week">
+                            <span class="block-calendar__week-cell block-calendar__week-cell--mobile">П</span>
+                            <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Пт</span>
+                          </td>
+                          <td class="block-calendar__week-cell block-calendar__week-cell--red calendar-table__cell calendar-table__cell--week">
+                            <span class="block-calendar__week-cell block-calendar__week-cell--mobile">С</span>
+                            <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Сб</span>
+                          </td>
+                          <td class="block-calendar__week-cell block-calendar__week-cell--red calendar-table__cell calendar-table__cell--week">
+                            <span class="block-calendar__week-cell block-calendar__week-cell--mobile">В</span>
+                            <span class="block-calendar__week-cell block-calendar__week-cell--tablet">Вс</span>
+                          </td>
+                        </tr>
+                      </thead>
+                      <tbody class="calendar-table__day">
+                        <tr class="calendar-table__day-row">
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d02-24" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d02-24">24</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d02-25" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d02-25">25</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d02-26" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d02-26">26</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d02-27" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d02-27">27</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d02-28" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d02-28">28</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-01" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-01">1</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-02" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-02">2</label>
+                          </td>
+                        </tr>
+                        <tr class="calendar-table__day-row">
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-03" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-03">3</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-04" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-04">4</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-05" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-05">5</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-06" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-06">6</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-07" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-07">7</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-08" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-08">8</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-09" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-09">9</label>
+                          </td>
+                        </tr>
+                        <tr class="calendar-table__day-row">
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-10" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-10">10</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-11" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-11">11</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-12" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-12">12</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-13" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-13">13</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-14" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-14">14</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-15" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-15">15</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-16" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-16">16</label>
+                          </td>
+                        </tr>
+                        <tr class="calendar-table__day-row">
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-17" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-17">17</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-18" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-18">18</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-19" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-19">19</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-20" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-20">20</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-21" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-21">21</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-22" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-22">22</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-23" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-23">23</label>
+                          </td>
+                        </tr>
+                        <tr class="calendar-table__day-row">
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-24" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-24">24</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-25" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-25">25</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--inactive calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-26" disabled>
+                            <label class="block-calendar__label calendar-table__label" for="d03-26">26</label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--selected calendar-table__cell calendar-table__cell--active">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-27" checked>
+                            <label class="block-calendar__label calendar-table__label" for="d03-27">
+                              27
+                              <span class="block-calendar__text calendar-table__text">Заезд</span>
+                            </label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--selected calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-28" checked>
+                            <label class="block-calendar__label calendar-table__label" for="d03-28">
+                              28
+                              <span class="block-calendar__text calendar-table__text">Заезд</span>
+                            </label>
+                          </td>
+                          <td class="block-calendar__day-cell block-calendar__day-cell--selected calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-29" checked>
+                            <label class="block-calendar__label calendar-table__label" for="d03-29">
+                              29
+                              <span class="block-calendar__text calendar-table__text">Заезд</span>
+                            </label>
+                          </td>
+                          <td class="block-calendar__day-cell calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-30">
+                            <label class="block-calendar__label calendar-table__label" for="d03-30">
+                              30
+                              <span class="block-calendar__text calendar-table__text">Заезд</span>
+                            </label>
+                          </td>
+                        </tr>
+                        <tr class="calendar-table__day-row">
+                          <td class="block-calendar__day-cell calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d03-31">
+                            <label class="block-calendar__label calendar-table__label" for="d03-31">31</label>
+                          </td>
+                          <td class="block-calendar__day-cell calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d04-01">
+                            <label class="block-calendar__label calendar-table__label" for="d04-01">1</label>
+                          </td>
+                          <td class="block-calendar__day-cell calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d04-02">
+                            <label class="block-calendar__label calendar-table__label" for="d04-02">2</label>
+                          </td>
+                          <td class="block-calendar__day-cell calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d04-03">
+                            <label class="block-calendar__label calendar-table__label" for="d04-03">3</label>
+                          </td>
+                          <td class="block-calendar__day-cell calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d04-04">
+                            <label class="block-calendar__label calendar-table__label" for="d04-04">4</label>
+                          </td>
+                          <td class="block-calendar__day-cell calendar-table__cell">
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d04-05">
+                            <label class="block-calendar__label calendar-table__label" for="d04-05">5</label>
+                          </td>
+                          <td class="block-calendar__day-cell calendar-table__cell">
 
-                <div class="todoadd__item-action">
-                  <a class="block-user__todoadd-link button button--yellow button--ellipse todoadd__item-next" href="#">
-                    <span class="todoadd__next-text">Следующий шаг</span>
-                    <svg class="block__button-icon block-user__todoadd-next todoadd__next-icon" width="21" height="19">
-                      <use xlink:href="#triangle-right"></use>
-                    </svg>
-                  </a>
-                  <a class="block-user__todoadd-link button todoadd__item-prev" href="#">
-                    <span class="todoadd__prev-text">На шаг назад</span>
-                    <svg class="block__button-icon block-user__todoadd-prev todoadd__prev-icon" width="21" height="19">
-                      <use xlink:href="#triangle-right"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="block-user__todoadd-item todoadd__item">
-                <h3 class="block-user__todoadd-title todoadd__item-title">Шаг 3. Развлечения</h3>
-                <p class="block-user__todoadd-desc todoadd__item-desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-                <fieldset class="block-user__todoadd-fieldset todoadd-form__leisure">
-                  <div class="todoadd-form__leisure-item leisure-item">
-                    <div class="leisure-item__head">
-                      <label class="block-user_leisure-country" for="leisure-bih">Босния и герцеговина</label>
-                      <svg class="leisure-item__flag" width="35" height="24">
-                        <use xlink:href="#flag-bih"></use>
-                      </svg>
-                    </div>
-                    <textarea class="block-user_leisure-textarea leisure-item__textarea" name="leisure" id="leisure-bih" cols="30" rows="10" placeholder="План действий"></textarea>
+                            <input class="block-calendar__checkbox visually-hidden" type="checkbox" name="day" id="d04-06">
+                            <label class="block-calendar__label calendar-table__label" for="d04-06">6</label>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <div class="todoadd-form__leisure-item leisure-item">
-                    <div class="leisure-item__head">
-                      <label class="block-user_leisure-country" for="leisure-chs">Чехословакия</label>
-                      <svg class="leisure-item__flag" width="35" height="24">
-                        <use xlink:href="#flag-cze"></use>
+                  <div class="todoadd__item-action">
+                    <a class="block-user__todoadd-link button button--yellow button--ellipse todoadd__item-next" href="#secondstep">
+                      <span class="todoadd__next-text">Следующий шаг</span>
+                      <svg class="block__button-icon block-user__todoadd-next todoadd__next-icon" width="21" height="19">
+                        <use xlink:href="#triangle-right"></use>
                       </svg>
-                    </div>
-                    <textarea class="block-user_leisure-textarea leisure-item__textarea" name="leisure" id="leisure-chs" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                    </a>
                   </div>
-                </fieldset>
-                <div class="todoadd__item-action">
-                  <a class="block-user__todoadd-link button button--yellow button--ellipse todoadd__item-next" href="#">
-                    <span class="todoadd__next-text">Следующий шаг</span>
-                    <svg class="block__button-icon block-user__todoadd-next todoadd__next-icon" width="21" height="19">
-                      <use xlink:href="#triangle-right"></use>
-                    </svg>
-                  </a>
-                  <a class="block-user__todoadd-link button todoadd__item-prev" href="#">
-                    <span class="todoadd__prev-text">На шаг назад</span>
-                    <svg class="block__button-icon block-user__todoadd-prev todoadd__prev-icon" width="21" height="19">
-                      <use xlink:href="#triangle-right"></use>
-                    </svg>
-                  </a>
                 </div>
-              </div>
-            </form>
+                <div class="block-user__todoadd-item todoadd__item" id="secondstep">
+                  <h3 class="block-user__todoadd-title todoadd__item-title">Шаг 2. <span class="block-user__todoadd-subtitle todoadd__title-name">Маршрут</span></h3>
+                  <p class="block-user__todoadd-desc todoadd__item-desc">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+                  <fieldset class='block-user__todoadd-fieldset block-user__todoadd-country todoadd-form__select'>
+                    <div class="todoadd-country todoadd-form__select-item">
+                      <select class="block-user__select todoadd-country__select" name="todoadd-country" id="country-item-01">
+                        <option class="block-user__select-item" value="null">Выберите страну</option>
+                        <option class="block-user__select-item" value="bih" selected>Босния и герцеговина</option>
+                        <option class="block-user__select-item" value="chs">Чехословакия</option>
+                      </select>
+                      <div class="block-user__flag todoadd-country__flag">
+                        <svg class="todoadd-country__flag-icon" width="35" height="24">
+                          <use xlink:href="#flag-bih"></use>
+                        </svg>
+                      </div>
+                      <div class="todoadd-country__decor-narrow">
+                        <svg class="block-user__decor-narrow" width="5" height="10">
+                          <use xlink:href="#small-arrow"></use>
+                        </svg>
+                      </div>
+                      <button class="block-user__select-remove todoadd-country__remove" type="button">
+                        <svg class="block-user__todoadd-icon block-user__select-icon" width="10" height="10">
+                          <use xlink:href="#country-remove"></use>
+                        </svg>
+                        <span class="visually-hidden">Удалить</span>
+                      </button>
+                    </div>
+                    <div class="todoadd-country todoadd-form__select-item">
+                      <select class="block-user__select todoadd-country__select" name="todoadd-country" id="country-item-02">
+                        <option class="block-user__select-item" value="null">Выберите страну</option>
+                        <option class="block-user__select-item" value="bih">Босния и герцеговина</option>
+                        <option class="block-user__select-item" value="chs" selected>Чехословакия</option>
+                      </select>
+                      <div class="block-user__flag todoadd-country__flag">
+                        <svg class="todoadd-country__flag-icon" width="35" height="24">
+                          <use xlink:href="#flag-cze"></use>
+                        </svg>
+                      </div>
+                      <div class="todoadd-country__decor-narrow">
+                        <svg class="block-user__decor-narrow" width="5" height="10">
+                          <use xlink:href="#small-arrow"></use>
+                        </svg>
+                      </div>
+                      <button class="block-user__select-remove todoadd-country__remove" type="button">
+                        <svg class="block-user__todoadd-icon block-user__select-icon" width="10" height="10">
+                          <use xlink:href="#country-remove"></use>
+                        </svg>
+                        <span class="visually-hidden">Удалить</span>
+                      </button>
+                    </div>
+                    <div class="todoadd-country todoadd-form__select-item todoadd-form__select-add">
+                      <select class="block-user__select todoadd-country__select todoadd-country__select--add" name="todoadd-country" id="country-item-03">
+                        <option class="block-user__select-item" value="null">Выберите страну</option>
+                        <option class="block-user__select-item" value="bih">Босния и герцеговина</option>
+                        <option class="block-user__select-item" value="chs">Чехословакия</option>
+                      </select>
+                      <div class="block-user__alphabet block-filter todoadd-country__alphabet alphabet-views alphabet-views--modal">
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="a" id="letter-a" checked>
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-a">A</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Афганистан</li>
+                          <li class="block-filter__country-item">Албания</li>
+                          <li class="block-filter__country-item">Алгерия</li>
+                          <li class="block-filter__country-item">Андорра</li>
+                          <li class="block-filter__country-item">Аргентина</li>
+                          <li class="block-filter__country-item">Армения</li>
+                          <li class="block-filter__country-item">Австралия</li>
+                          <li class="block-filter__country-item">Австрия</li>
+                          <li class="block-filter__country-item">Азербайджан</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="b" id="letter-b">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-b">Б</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Багамские Острова</li>
+                          <li class="block-filter__country-item">Бангладеш</li>
+                          <li class="block-filter__country-item">Барбадос</li>
+                          <li class="block-filter__country-item">Бахрейн</li>
+                          <li class="block-filter__country-item">Белоруссия</li>
+                          <li class="block-filter__country-item">Белиз</li>
+                          <li class="block-filter__country-item">Бельгия</li>
+                          <li class="block-filter__country-item">Бенин</li>
+                          <li class="block-filter__country-item">Болгария</li>
+                          <li class="block-filter__country-item">Боливия</li>
+                          <li class="block-filter__country-item">Босния и Герцеговина</li>
+                          <li class="block-filter__country-item">Ботсвана</li>
+                          <li class="block-filter__country-item">Бразилия</li>
+                          <li class="block-filter__country-item">Бруней</li>
+                          <li class="block-filter__country-item">Буркина-Фасо</li>
+                          <li class="block-filter__country-item">Бурунди</li>
+                          <li class="block-filter__country-item">Бутан</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="v" id="letter-v">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-v">В</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Вануату</li>
+                          <li class="block-filter__country-item">Великобритания</li>
+                          <li class="block-filter__country-item">Венгрия</li>
+                          <li class="block-filter__country-item">Венесуэла</li>
+                          <li class="block-filter__country-item">Восточный Тимор</li>
+                          <li class="block-filter__country-item">Вьетнам</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="g" id="letter-g">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-g">Г</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Габон</li>
+                          <li class="block-filter__country-item">Гаити</li>
+                          <li class="block-filter__country-item">Гайана</li>
+                          <li class="block-filter__country-item">Гамбия</li>
+                          <li class="block-filter__country-item">Гана</li>
+                          <li class="block-filter__country-item">Гватемала</li>
+                          <li class="block-filter__country-item">Гвинея</li>
+                          <li class="block-filter__country-item">Гвинея-Бисау</li>
+                          <li class="block-filter__country-item">Германия</li>
+                          <li class="block-filter__country-item">Гондурас</li>
+                          <li class="block-filter__country-item">Гренада</li>
+                          <li class="block-filter__country-item">Греция</li>
+                          <li class="block-filter__country-item">Грузия</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="d" id="letter-d">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-d">Д</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Дания</li>
+                          <li class="block-filter__country-item">Джибути</li>
+                          <li class="block-filter__country-item">Доминика</li>
+                          <li class="block-filter__country-item">Доминикана</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="e" id="letter-e">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-e">Е</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Египет</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="jo" id="letter-jo">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-jo">Ё</label>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="zh" id="letter-zh">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-zh">Ж</label>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="z" id="letter-z">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-z">З</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Замбия</li>
+                          <li class="block-filter__country-item">Зимбабве</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="i" id="letter-i">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-i">И</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Израиль</li>
+                          <li class="block-filter__country-item">Индия</li>
+                          <li class="block-filter__country-item">Индонезия</li>
+                          <li class="block-filter__country-item">Иордания</li>
+                          <li class="block-filter__country-item">Ирак</li>
+                          <li class="block-filter__country-item">Иран</li>
+                          <li class="block-filter__country-item">Ирландия</li>
+                          <li class="block-filter__country-item">Исландия</li>
+                          <li class="block-filter__country-item">Испания</li>
+                          <li class="block-filter__country-item">Италия</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="j" id="letter-j">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-j">Й</label>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="k" id="letter-k">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-k">К</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Кабо-Верде</li>
+                          <li class="block-filter__country-item">Казахстан</li>
+                          <li class="block-filter__country-item">Камбоджа</li>
+                          <li class="block-filter__country-item">Камерун</li>
+                          <li class="block-filter__country-item">Канада</li>
+                          <li class="block-filter__country-item">Катар</li>
+                          <li class="block-filter__country-item">Кения</li>
+                          <li class="block-filter__country-item">Кипр</li>
+                          <li class="block-filter__country-item">Киргизия</li>
+                          <li class="block-filter__country-item">Кирибати</li>
+                          <li class="block-filter__country-item">Китай</li>
+                          <li class="block-filter__country-item">Колумбия</li>
+                          <li class="block-filter__country-item">Коморы</li>
+                          <li class="block-filter__country-item">Конго</li>
+                          <li class="block-filter__country-item">КНДР</li>
+                          <li class="block-filter__country-item">Республика Корея</li>
+                          <li class="block-filter__country-item">Коста-Рика</li>
+                          <li class="block-filter__country-item">Кот-д'Ивуар</li>
+                          <li class="block-filter__country-item">Куба</li>
+                          <li class="block-filter__country-item">Кувейт</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="l" id="letter-l">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-l">Л</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Лаос</li>
+                          <li class="block-filter__country-item">Латвия</li>
+                          <li class="block-filter__country-item">Лесото</li>
+                          <li class="block-filter__country-item">Либерия</li>
+                          <li class="block-filter__country-item">Ливан</li>
+                          <li class="block-filter__country-item">Ливия</li>
+                          <li class="block-filter__country-item">Литва</li>
+                          <li class="block-filter__country-item">Лихтенштейн</li>
+                          <li class="block-filter__country-item">Люксембург</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="m" id="letter-m">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-m">М</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Маврикий</li>
+                          <li class="block-filter__country-item">Мавритания</li>
+                          <li class="block-filter__country-item">Мадагаскар</li>
+                          <li class="block-filter__country-item">Малави</li>
+                          <li class="block-filter__country-item">Малазия</li>
+                          <li class="block-filter__country-item">Мали</li>
+                          <li class="block-filter__country-item">Мальдивы</li>
+                          <li class="block-filter__country-item">Мальта</li>
+                          <li class="block-filter__country-item">Марокко</li>
+                          <li class="block-filter__country-item">Маршалловы Острова</li>
+                          <li class="block-filter__country-item">Мексика</li>
+                          <li class="block-filter__country-item">Мозамбик</li>
+                          <li class="block-filter__country-item">Молдавия</li>
+                          <li class="block-filter__country-item">Монако</li>
+                          <li class="block-filter__country-item">Монголия</li>
+                          <li class="block-filter__country-item">Мьянма</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="n" id="letter-n">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-n">Н</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Намибия</li>
+                          <li class="block-filter__country-item">Науру</li>
+                          <li class="block-filter__country-item">Непал</li>
+                          <li class="block-filter__country-item">Нигер</li>
+                          <li class="block-filter__country-item">Нигерия</li>
+                          <li class="block-filter__country-item">Нидерланды</li>
+                          <li class="block-filter__country-item">Никарагуа</li>
+                          <li class="block-filter__country-item">Новая Зеландия</li>
+                          <li class="block-filter__country-item">Норвегия</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="o" id="letter-o">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-o">О</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">ОАЭ</li>
+                          <li class="block-filter__country-item">Оман</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="p" id="letter-p">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-p">П</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Пакистан</li>
+                          <li class="block-filter__country-item">Палау</li>
+                          <li class="block-filter__country-item">Панама</li>
+                          <li class="block-filter__country-item">Папуа - Новая Гвинея</li>
+                          <li class="block-filter__country-item">Парагвай</li>
+                          <li class="block-filter__country-item">Перу</li>
+                          <li class="block-filter__country-item">Польша</li>
+                          <li class="block-filter__country-item">Португалия</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="r" id="letter-r">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-r">Р</label>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="s" id="letter-s">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-s">С</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Сальвадор</li>
+                          <li class="block-filter__country-item">Самоа</li>
+                          <li class="block-filter__country-item">Сан-Марино</li>
+                          <li class="block-filter__country-item">Сан-Томе и Принсипи</li>
+                          <li class="block-filter__country-item">Саудовская Аравия</li>
+                          <li class="block-filter__country-item">Северная Македония</li>
+                          <li class="block-filter__country-item">Сейшелы</li>
+                          <li class="block-filter__country-item">Сенегал</li>
+                          <li class="block-filter__country-item">Сент-Люсия</li>
+                          <li class="block-filter__country-item">Сербия</li>
+                          <li class="block-filter__country-item">Сингапур</li>
+                          <li class="block-filter__country-item">Сирия</li>
+                          <li class="block-filter__country-item">Словакия</li>
+                          <li class="block-filter__country-item">Словения</li>
+                          <li class="block-filter__country-item">США</li>
+                          <li class="block-filter__country-item">Сомали</li>
+                          <li class="block-filter__country-item">Судан</li>
+                          <li class="block-filter__country-item">Суринам</li>
+                          <li class="block-filter__country-item">Сьерра-Леоне</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="t" id="letter-t">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-t">Т</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Таджикистан</li>
+                          <li class="block-filter__country-item">Таиланд</li>
+                          <li class="block-filter__country-item">Таназия</li>
+                          <li class="block-filter__country-item">Того</li>
+                          <li class="block-filter__country-item">Тонга</li>
+                          <li class="block-filter__country-item">Тринидад и Тобаго</li>
+                          <li class="block-filter__country-item">Тувалу</li>
+                          <li class="block-filter__country-item">Тунис</li>
+                          <li class="block-filter__country-item">Туркмения</li>
+                          <li class="block-filter__country-item">Турция</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="y" id="letter-y">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-y">У</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Уганда</li>
+                          <li class="block-filter__country-item">Узбекистан</li>
+                          <li class="block-filter__country-item">Украина</li>
+                          <li class="block-filter__country-item">Уругвай</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="f" id="letter-f">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-f">Ф</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Фиджи</li>
+                          <li class="block-filter__country-item">Филиппины</li>
+                          <li class="block-filter__country-item">Финляндия</li>
+                          <li class="block-filter__country-item">Франция</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="h" id="letter-h">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-h">Х</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Хорватия</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="tc" id="letter-tc">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-tc">Ц</label>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="ch" id="letter-ch">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-ch">Ч</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Чад</li>
+                          <li class="block-filter__country-item">Черногория</li>
+                          <li class="block-filter__country-item">Чехия</li>
+                          <li class="block-filter__country-item">Чили</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="sh" id="letter-sh">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-sh">Ш</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Швецария</li>
+                          <li class="block-filter__country-item">Швеция</li>
+                          <li class="block-filter__country-item">Шри-Ланка</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="sch" id="letter-sch">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-sch">Щ</label>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="ie" id="letter-ie">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-ie">Э</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Эквадор</li>
+                          <li class="block-filter__country-item">Эритрея</li>
+                          <li class="block-filter__country-item">Эсватини</li>
+                          <li class="block-filter__country-item">Эстония</li>
+                          <li class="block-filter__country-item">Эфиопия</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="u" id="letter-u">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-u">Ю</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">ЮАР</li>
+                          <li class="block-filter__country-item">Южный Судан</li>
+                        </ul>
+                        <input class="block-filter__country-input alphabet-views__input visually-hidden" type="radio" name="letter" value="ia" id="letter-ia">
+                        <label class="block-filter__country-label block-filter__country-label--modal alphabet-views__label alphabet-views__label--modal" for="letter-ia">Я</label>
+                        <ul class="block-filter__country-list block-filter__country-list--modal alphabet-views__country-list alphabet-views__country-list--add">
+                          <li class="block-filter__country-item">Ямайка</li>
+                          <li class="block-filter__country-item">Япония</li>
+                        </ul>
+                      </div>
+                      <div class="todoadd-country__decor-narrow">
+                        <svg class="block-user__decor-narrow" width="5" height="10">
+                          <use xlink:href="#small-arrow"></use>
+                        </svg>
+                      </div>
+                      <button class="block-user__select-remove todoadd-country__remove" type="button">
+                        <svg class="block-user__todoadd-icon block-user__select-icon" width="10" height="10">
+                          <use xlink:href="#country-remove"></use>
+                        </svg>
+                        <span class="visually-hidden">Удалить</span>
+                      </button>
+                    </div>
+                    <button class="block-user__todoadd-countryadd todoadd-form__country-add" type="button">
+                      Добавить страну
+                      <svg class="block-user__countryadd-icon" width="14" height="14">
+                        <use xlink:href="#plus"></use>
+                      </svg>
+                    </button>
+                  </fieldset>
+                  <div class="todoadd__item-action">
+                    <a class="block-user__todoadd-link button button--yellow button--ellipse todoadd__item-next" href="#thirdstep">
+                      <span class="todoadd__next-text">Следующий шаг</span>
+                      <svg class="block__button-icon block-user__todoadd-next todoadd__next-icon" width="21" height="19">
+                        <use xlink:href="#triangle-right"></use>
+                      </svg>
+                    </a>
+                    <a class="block-user__todoadd-link button todoadd__item-prev" href="#firststep">
+                      <span class="todoadd__prev-text">На шаг назад</span>
+                      <svg class="block__button-icon block-user__todoadd-prev todoadd__prev-icon" width="21" height="19">
+                        <use xlink:href="#triangle-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="block-user__todoadd-item todoadd__item" id="thirdstep">
+                  <h3 class="block-user__todoadd-title todoadd__item-title">Шаг 3. <span class="block-user__todoadd-subtitle todoadd__title-name">Развлечения</span></h3>
+                  <p class="block-user__todoadd-desc todoadd__item-desc">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                  <fieldset class="block-user__todoadd-fieldset todoadd-form__leisure">
+                    <div class="todoadd-form__leisure-item leisure-item">
+                      <div class="leisure-item__head">
+                        <label class="block-user_leisure-country" for="leisure-bih">Босния и герцеговина</label>
+                        <svg class="leisure-item__flag" width="35" height="24">
+                          <use xlink:href="#flag-bih"></use>
+                        </svg>
+                      </div>
+                      <div class="leisure-item__textarea-wrapper">
+                        <textarea class="block-user__leisure-textarea leisure-item__textarea" name="leisure" id="leisure-bih" cols="30" rows="10" placeholder="План действий" required></textarea>
+                        <p class="block-user__leisure-invalid leisure-item__textarea-invalid">Это поле должно быть заполнено</p>
+                      </div>
+                    </div>
+                    <div class="todoadd-form__leisure-item leisure-item">
+                      <div class="leisure-item__head">
+                        <label class="block-user_leisure-country" for="leisure-chs">Чехословакия</label>
+                        <svg class="leisure-item__flag" width="35" height="24">
+                          <use xlink:href="#flag-cze"></use>
+                        </svg>
+                      </div>
+                      <div class="leisure-item__textarea-wrapper">
+                        <textarea class="block-user__leisure-textarea leisure-item__textarea" name="leisure" id="leisure-chs" cols="30" rows="10" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                        <p class="block-user__leisure-invalid leisure-item__textarea-invalid">Это поле должно быть заполнено</p>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="todoadd__item-action">
+                    <button class="block-user__todoadd-link button button--yellow button--ellipse todoadd__item-next todoadd__item-send" type="submit">
+                      <span class="todoadd__next-text">Отправить</span>
+                      <svg class="block__button-icon block-user__todoadd-next todoadd__next-icon" width="21" height="19">
+                        <use xlink:href="#triangle-right"></use>
+                      </svg>
+                    </button>
+                    <a class="block-user__todoadd-link button todoadd__item-prev" href="#secondstep">
+                      <span class="todoadd__prev-text">На шаг назад</span>
+                      <svg class="block__button-icon block-user__todoadd-prev todoadd__prev-icon" width="21" height="19">
+                        <use xlink:href="#triangle-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </section>
       </section>
     </main>
     <footer class="block-footer block block--top footer">
       <div class="page__wrapper footer__wrapper">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-          <img class="block-footer__logo-image footer__logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Вы на главной странице">
-        </picture>
+        <a class="block-footer__logo" href="index.html">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <img class="block-footer__logo-image footer__logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Вы на главной странице">
+          </picture>
+        </a>
         <div class="footer-social">
           <ul class="block-footer__list footer-social__list">
             <li class="footer-social__item">

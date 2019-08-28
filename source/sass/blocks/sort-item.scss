@@ -4,7 +4,11 @@
 }
 
 .sort-item__label {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+
+  &:last-of-type {
+    margin-bottom: 5px;
+  }
 }
 
 .sort-item__wrapper {
@@ -13,7 +17,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 13px 0;
+  margin: 11px 0;
 }
 
 .sort-item__legend {
@@ -29,9 +33,17 @@
 }
 
 @media (min-width: $tablet-width) {
+  .sort-item__wrapper {
+    margin: 10px 0;
+
+    &--level {
+      margin: 0 0 75px 0;
+    }
+  }
+
   .sort-item__label {
     width: 130px;
-    margin: 0 0 0 35px;
+    margin: 0 0 0 45px;
   }
 
   .sort-item__legend {
@@ -46,6 +58,7 @@
 @media (min-width: $desktop-width) {
   .sort-item__wrapper {
     justify-content: space-between;
+    margin: 8px 0;
   }
 
   .sort-item__label {

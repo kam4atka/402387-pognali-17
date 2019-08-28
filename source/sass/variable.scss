@@ -1,3 +1,26 @@
+/* background colors */
+$bg-blue-dark: rgba(25, 33, 68, 1);  //#192144
+$bg-light: rgba(237, 239, 246, 1);   //#edeff6
+$bg-blue-black: rgba(22, 28, 54, 1); //#161c36
+$bg-white: rgba(255, 255, 255, 1);   //#ffffff
+$bg-yellow: rgba(255, 215, 75, 1);   //#ffd74b
+
+/* font colors */
+$fnt-blue-dark: rgba(25, 33, 68, 1);      //#192144
+$fnt-blue-black: rgba(22, 28, 54, 1);     //#161c36
+$fnt-blue-dull: rgba(29, 46, 91, 1);      //#1d2e5b
+$fnt-blue-dull-60: rgba(29, 46, 91, 0.6);
+$fnt-blue-dull-40: rgba(29, 46, 91, 0.4);
+$fnt-blue-dull-20: rgba(29, 46, 91, 0.2);
+$fnt-white: rgba(255, 255, 255, 1);       //#ffffff
+$fnt-gray: rgba(68, 68, 68, 1);           //#444444
+$fnt-orange: rgba(255, 141, 48, 1);       //#ff8d30
+$fnt-orange-50: rgba(255, 141, 48, 0.5);
+$fnt-yellow: rgba(255, 215, 75, 1);       //#ffd74b
+$fnt-yellow-dark: rgba(255, 189, 47, 1);  //#ffbd2f
+$fnt-red: #ff0000;
+
+/* btn */
 $btn-yellow: #ffd64b;
 $btn-yellowdark: #ffbd2f;
 $btn-orange: #ff8c30;
@@ -5,8 +28,21 @@ $btn-orange-hover: #f26925;
 $btn-white: #ffffff;
 $btn-blue-light: #dfe3f0;
 $btn-trasparent: transparent;
+
+/* other colors*/
+$block-guide-one: #ff8d30;
+$block-guide-two: #ffa530;
+$block-guide-three: #ffbd30;
+$block-guide-four: #ffd74b;
+
+$status-offline: rgba(249, 118, 118, 1);
+$status-online: #80e31e;
+
+/* wrapper sizes */
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
+
+/* DPR */
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;

@@ -11,6 +11,19 @@
   fill: rgba(38, 46, 78, 1);
 }
 
+.block-footer__logo {
+  outline: none;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.7;
+  }
+
+  &[href]:active {
+    opacity: 0.5;
+  }
+}
+
 .block-footer__link {
   color: #192144;
   text-decoration: none;

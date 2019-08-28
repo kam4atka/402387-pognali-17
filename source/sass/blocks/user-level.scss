@@ -1,4 +1,5 @@
 .user-level {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,16 +14,29 @@
   margin-bottom: 5px;
 }
 
+.user-level__border-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -55%);
+}
+
 @media (min-width: $tablet-width) {
   .user-level {
     order: 1;
+    width: 95px;
+    height: 95px;
+    margin-right: 60px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .user-level {
     order: 0;
-    margin-left: auto;
     margin-top: 45px;
+    margin-left: auto;
+    margin-right: 40px;
   }
 }

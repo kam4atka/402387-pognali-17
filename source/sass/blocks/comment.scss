@@ -1,34 +1,38 @@
 .comment {
   width: 170px;
+  margin-left: 25px;
 }
 
 .comment__quote {
-  margin: 0;
-  margin-bottom: 25px;
+  margin: 0 0 20px 0;
   position: 0;
 }
 
 .comment__author {
-  margin: 0;
-  margin-bottom: 30px;
+  margin: 0 0 40px 0;
   padding: 0;
 }
 
 @media (min-width: $tablet-width) {
   .comment {
     width: 260px;
+    margin-left: 35px;
   }
 
   .comment__quote {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .comment__author {
-    margin-bottom: 215px;
+    margin-bottom: 85px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .comment {
+    margin: 15px 27px 0 0;
+  }
+
   .comment__author {
     margin-bottom: 50px;
   }
