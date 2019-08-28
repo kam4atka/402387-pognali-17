@@ -1,12 +1,22 @@
 .header {
   position: relative;
-  padding: 25px;
+  padding: 28px 25px;
+}
+
+.side .header {
+  padding: 20px 25px;
 }
 
 .header__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.header__logo {
+  &--hide {
+    display: none;
+  }
 }
 
 .header__logo-wrapper {
@@ -18,21 +28,30 @@
     padding: 40px 0;
   }
 
+  .side .header {
+    padding: 40px 25px;
+  }
+
   .header__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
   .header__logo {
-    margin: 0;
+    margin: 5px 0 0 0;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .header {
+    padding: 40px 0 0 0;
+  }
+
   .header__wrapper {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
+    padding-top: 5px;
   }
 
   .header__logo {

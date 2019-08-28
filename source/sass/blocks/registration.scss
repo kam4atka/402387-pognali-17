@@ -1,6 +1,5 @@
-.registration {
-  padding-top: 70px;
-  padding-bottom: 30px;
+.registration__container {
+  padding: 70px 0 27px 0;
 }
 
 .registration__wrapper {
@@ -71,13 +70,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .registration {
-    padding-top: 75px;
-    padding-bottom: 60px;
+  .registration__container {
+    padding: 75px 0 53px 0;
   }
 
   .registration__title {
-    margin-bottom: 60px;
+    margin-bottom: 57px;
   }
 
   .registration__desc {
@@ -94,21 +92,28 @@
     height: 68px;
   }
 
+  .registration__svg {
+    width: 35px;
+    height: 35px;
+  }
+
   .registration__contact-title {
     margin-bottom: 40px;
   }
 
   .registration__text {
-    margin-left: 20px;
+    margin-left: 15px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .registration {
-    padding: 105px 0;
+  .registration__container {
+    padding: 103px 0;
   }
 
   .registration__contact-title {
+    margin-bottom: 45px;
+
     &--tablet {
       display: none;
     }
@@ -129,11 +134,16 @@
     margin-left: 0;
 
     &:not(:first-of-type) {
-      margin-left: 230px;
+      margin-left: 130px;
     }
   }
 
   .registration__item:not(:last-of-type) {
     margin-bottom: 0;
+  }
+
+  .registration__icon {
+    width: 90px;
+    height: 90px;
   }
 }

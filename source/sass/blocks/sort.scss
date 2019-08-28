@@ -1,12 +1,12 @@
 .sort {
   box-sizing: border-box;
-  padding: 25px;
+  padding: 24px;
 }
 
 .sort__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -15,7 +15,7 @@
   }
 
   .sort__title {
-    margin-bottom: 45px;
+    margin-bottom: 60px;
   }
 }
 
@@ -26,6 +26,6 @@
   }
 
   .sort__title {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }

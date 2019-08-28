@@ -1,13 +1,13 @@
 .registration-form {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   align-self: stretch;
 }
 
 .registration-form__input {
   width: 100%;
   box-sizing: border-box;
-  padding: 23px 95px 23px 25px;
+  padding: 20px 95px 20px 20px;
   border-radius: 10px;
 }
 
@@ -15,8 +15,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 70px;
-  height: 70px;
+  width: 64px;
+  height: 64px;
   border: none;
   border-radius: 10px;
 }
@@ -50,7 +50,11 @@
 @media (min-width: $desktop-width) {
   .registration-form {
     width: 1178px;
-    margin-bottom: 70px;
+    margin-bottom: 68px;
+  }
+
+  .registration-form__input {
+    padding: 25px 95px 25px 30px;
   }
 
   .registration-form__send {
@@ -59,6 +63,7 @@
     justify-content: space-between;
     align-items: center;
     width: 325px;
+    height: 80px;
     padding: 0 40px;
   }
 

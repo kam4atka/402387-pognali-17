@@ -126,10 +126,13 @@
 }
 
 .block-filter__country-list {
-  border: 1px solid #cbced9;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
   list-style: none;
+
+  &--modal {
+    border: 1px solid #cbced9;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
 }
 
 .block-filter__country-link {
@@ -179,7 +182,10 @@
 
   .block-filter__country-list {
     border: none;
-    background-color: #ffffff;
+
+    &--modal {
+      background-color: #ffffff;
+    }
   }
 
   .block-filter__country-label {

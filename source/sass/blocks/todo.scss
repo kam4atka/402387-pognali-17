@@ -10,7 +10,7 @@
 }
 
 .todo__title {
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .todo__list {
@@ -21,7 +21,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 25px 0;
+  padding: 22px 0;
 }
 
 .todo__item::before {
@@ -37,25 +37,37 @@
 }
 
 .todo__item-text {
-  padding: 0 25px;
-}
-
-.todo__item-country,
-.todo__item-date {
-  margin-bottom: 25px;
+  padding: 0 60px 0 0;
 }
 
 .todo__item-country {
+  margin-bottom: 21px;
   padding-left: 43px;
+}
+
+.todo__item-count {
+  margin-bottom: 5px;
+  padding-left: 43px;
+}
+
+.todo__item-date {
+  margin-bottom: 23px;
+  padding-left: 43px;
+}
+
+.todo__item-count,
+.todo__item-date,
+.todo__item-edit {
+  padding-left: 25px;
 }
 
 @media (min-width: $tablet-width) {
   .todo {
-    padding: 55px;
+    padding: 50px 40px 70px 40px;
   }
 
   .todo__title {
-    margin-bottom: 55px;
+    margin-bottom: 40px;
     padding: 0 34px;
   }
 
@@ -66,14 +78,18 @@
   .todo__item {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 40px 0 0 0;
+    justify-content: flex-start;
+    padding: 27px 0 0 0;
   }
 
   .todo__item::before {
     left: auto;
     right: 37px;
     top: 50px;
+  }
+
+  .todo__item-text {
+    padding: 0;
   }
 
   .todo__item-country,
@@ -83,16 +99,24 @@
 
   .todo__item-country {
     width: 100%;
-    margin-bottom: 20px;
-    padding-bottom: 30px;
+    margin-bottom: 13px;
+    padding-bottom: 25px;
   }
 
   .todo__item-date {
-    margin-bottom: 20px;
+    margin: 0 0 20px 10px;
+  }
+
+  .todo__item-edit {
+    margin: 0 35px 0 auto;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .todo {
+    padding: 50px 40px 65px 40px;
+  }
+
   .todo__title,
   .todo__list {
     padding: 0 0 0 70px;
@@ -100,8 +124,13 @@
 
   .todo__item {
     flex-wrap: nowrap;
+    justify-content: flex-start;
     align-items: center;
-    padding: 30px 40px;
+    padding: 23px 40px;
+  }
+
+  .todo__item:not(:last-of-type) {
+    margin-bottom: 16px;
   }
 
   .todo__item::before {
@@ -115,13 +144,17 @@
   }
 
   .todo__item-country {
-    width: 530px;
-    margin: 0;
+    width: 485px;
+    margin: 0 45px 0 0;
     padding: 0 0 0 50px;
   }
 
   .todo__item-date {
-    margin: 0;
+    margin: 0 0 0 50px;
     padding: 0;
+  }
+
+  .todo__item-edit {
+    margin-left: auto;
   }
 }

@@ -1,7 +1,7 @@
 .user-tags {
   position: relative;
   width: 100%;
-  margin: 0 0 25px 0;
+  margin: 0 0 20px 0;
 }
 
 .user-tags__title,
@@ -13,12 +13,12 @@
 .user-tags__list {
   box-sizing: border-box;
   width: 100%;
-  padding: 25px;
+  padding: 22px 25px;
 }
 
 .user-tags__title {
   position: absolute;
-  top: -10px;
+  top: -6px;
   left: 50%;
   padding: 0 15px;
   transform: translateX(-50%);
@@ -27,16 +27,16 @@
 @media (min-width: $tablet-width) {
   .user-tags {
     order: 5;
-    margin: 0 0 60px 0;
+    margin: 0 0 50px 0;
   }
 
   .user-tags__list {
-    padding: 40px;
+    padding: 33px 40px 10px 40px;
   }
 
   .user-tags__title {
     top: auto;
-    bottom: -10px;
+    bottom: -5px;
   }
 }
 
@@ -45,7 +45,7 @@
     order: 0;
     width: 730px;
     box-sizing: border-box;
-    margin: 0 0 45px 0;
+    margin: 0 0 57px 0;
   }
 
   .user-tags__title {

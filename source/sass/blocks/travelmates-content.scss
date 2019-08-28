@@ -1,5 +1,5 @@
 .travelmates-content {
-  margin: 30px 0 25px 0;
+  margin: 25px 0;
 }
 
 .travelmates-content__title {
@@ -16,7 +16,7 @@
 @media (min-width: $desktop-width) {
   .travelmates-content {
     width: 950px;
-    margin: 0 0 75px 0;
+    margin: 0 0 65px 0;
     order: -1;
   }
 }

@@ -202,6 +202,12 @@
   .block-sort__item-label {
     font-size: 20px;
     line-height: 20px;
+
+    &::before {
+      left: -35px;
+      width: 25px;
+      height: 25px;
+    }
   }
 
   .block-sort__send {

@@ -1,3 +1,7 @@
+.level {
+  position: relative;
+}
+
 .level__title {
   position: relative;
   margin: 0 0 15px 0;
@@ -23,6 +27,15 @@
   display: none;
 }
 
+.level__border-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 45px;
+  height: 45px;
+  transform: translate(-60%, -55%);
+}
+
 @media (min-width: $tablet-width) {
   .level__title {
     display: none;
@@ -34,5 +47,11 @@
 
   .level__desc {
     display: block;
+  }
+
+  .level__border-wrapper {
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -55%);
   }
 }

@@ -1,6 +1,6 @@
 .todoadd-country {
   position: relative;
-  margin: 0 0 20px 0;
+  margin: 0 0 23px 0;
   padding: 0;
 }
 
@@ -11,7 +11,7 @@
 
 .todoadd-country__select {
   width: 165px;
-  padding: 14px 10px;
+  padding: 10px;
 
   &--add {
     width: 100%;
@@ -24,7 +24,7 @@
 }
 
 .todoadd-country__flag {
-  padding: 8px;
+  padding: 4px 8px;
 }
 
 .todoadd-country__remove {
@@ -42,10 +42,25 @@
   z-index: 1;
 }
 
+.todoadd-country__decor-narrow {
+  position: absolute;
+  bottom: -24px;
+  right: 52px;
+}
+
 @media (min-width: $tablet-width) {
+  .todoadd-country {
+    margin: 0 0 13px 0;
+  }
+
   .todoadd-country__select {
     width: 370px;
     margin-right: 25px;
+    padding: 0 19px;
+
+    &--add {
+      padding: 23px 19px;
+    }
   }
 
   .todoadd-country__picture {
@@ -54,7 +69,7 @@
   }
 
   .todoadd-country__flag {
-    padding: 0;
+    padding: 9px 19px;
   }
 
 
@@ -69,6 +84,10 @@
     width: 20px;
     height: 20px;
     transform: translateY(-50%);
+  }
+
+  .todoadd-country__decor-narrow {
+    display: none;
   }
 }
 

@@ -1,7 +1,7 @@
 .nations__title {
   position: relative;
   margin: 0 0 15px 0;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 26px;
 
   &::after,
   &::before {
@@ -15,17 +15,17 @@
 
   &::after {
     right: 0;
-    width: 55%;
+    width: 52%;
   }
 
   &::before {
     left: 0;
-    width: 5%;
+    width: 7%;
   }
 }
 
 .nations__list {
-  margin: 0 0 15px 0;
+  margin: 0 0 17px 0;
   padding: 0 0 0 25px;
 }
 
@@ -50,7 +50,7 @@
   }
 
   .nations__title {
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
     padding: 0 0 0 80px;
 
     &::after {
@@ -69,7 +69,7 @@
   }
 
   .nations__item:not(:last-of-type) {
-    margin-right: 30px;
+    margin: 0 22px 6px 0;
   }
 
   .nations__item-flag {
@@ -79,6 +79,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .nations {
+    margin-left: 40px;
+  }
+
   .nations__title {
     display: none;
 

@@ -53,6 +53,10 @@
   }
 }
 
+.nojs .main-nav__wrapper {
+  display: block;
+}
+
 .main-nav__wrapper {
   position: absolute;
   top: 60px;
@@ -77,7 +81,7 @@
   .main-nav {
     align-items: center;
     order: 1;
-    margin-top: -40px;
+    margin-top: -33px;
   }
 
   .main-nav__wrapper {
@@ -91,9 +95,21 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
+    position: relative;
     width: auto;
-    margin-top: 0;
+    margin: 0 0 0 108px;
     order: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -70px;
+      width: 60px;
+      height: 2px;
+      background-color: $fnt-white;
+      transform: translateY(-50%);
+    }
   }
 
   .main-nav__toggle {

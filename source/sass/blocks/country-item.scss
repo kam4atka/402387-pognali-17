@@ -18,8 +18,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: -15px;
-  padding: 23px;
+  margin-top: -19px;
+  padding: 28px 24px;
   border-radius: 10px;
 }
 
@@ -62,6 +62,10 @@
     flex-direction: row-reverse;
   }
 
+  .country-item:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+
   .country-item__photo {
     border-top-left-radius: 0;
     border-top-right-radius: 20px;
@@ -74,6 +78,7 @@
     flex-direction: column;
     width: 430px;
     margin-top: 0;
+    padding: 31px 0 20px 28px;
     border-top-left-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-left-radius: 20px;
@@ -89,7 +94,7 @@
   }
 
   .country-item__title {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 
   .country-item__motto {
