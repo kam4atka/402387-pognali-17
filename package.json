@@ -16,6 +16,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
+    "gulp-uglify": "^3.0.2",
     "posthtml-include": "^1.2.0",
     "stylelint": "10.1.x",
     "stylelint-config-htmlacademy": "0.1.x"
