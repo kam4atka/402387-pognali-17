@@ -20,7 +20,7 @@ gulp.task("clean", function() {
 
 gulp.task("copy", function() {
   return gulp.src([
-      "source/fonts/**/*.woff*",
+      "source/fonts/**/*.{woff2,woff}",
       "source/img/**",
       "source/*.ico"
     ], {
