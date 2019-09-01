@@ -1,6 +1,11 @@
 .block-header {
   color: #ffffff;
   background-color: #161c36;
+
+  &--blue {
+    color: #161c36;
+    background-color: #ffffff;
+  }
 }
 
 .nojs .block-header {
@@ -22,6 +27,20 @@
   &[href]:active {
     opacity: 0.5;
   }
+
+  &--blue {
+    display: none;
+  }
+}
+
+.nojs .block-header__logo {
+  &--white {
+    display: none;
+  }
+
+  &--blue {
+    display: block;
+  }
 }
 
 .block-header__toggle {
@@ -31,6 +50,7 @@
   color: #ffffff;
   background-color: transparent;
   border: none;
+  outline: none;
 }
 
 .block-header__list {
@@ -120,8 +140,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .main .block-header {
+  /* .main .block-header {
     background-color: #182044;
+  } */
+
+  .nojs .block-header {
+    background-color: #ffffff;
   }
 
   .block-header__link {
@@ -151,6 +175,16 @@
   .main .block-header,
   .nojs .block-header {
     background-color: #161c36;
+  }
+
+  .nojs .block-header__logo {
+    &--white {
+      display: block;
+    }
+
+    &--blue {
+      display: none;
+    }
   }
 
   .block-header__link {

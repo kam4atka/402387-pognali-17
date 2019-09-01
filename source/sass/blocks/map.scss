@@ -1,15 +1,32 @@
 .map {
-  background-color: #cccccc;
+  margin: -20px 0;
+}
+
+.map__wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+}
+
+.map__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  z-index: -1;
 }
 
 @media (min-width: $tablet-width) {
   .map {
-    height: 465px;
+    margin: -60px 0;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .map {
-    height: 395px;
+  .map__wrapper {
+    min-height: 565px;
+  }
+
+  .map__iframe {
+    height: 585px;
   }
 }

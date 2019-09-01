@@ -187,10 +187,17 @@
   .block-sort__title {
     font-size: 30px;
     line-height: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .block-sort__item {
     border-top: none;
+  }
+
+  .block-sort__item-wrapper {
+    &--level {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
   }
 
   .block-sort__item-title {
@@ -222,7 +229,17 @@
 
 @media (min-width: $desktop-width) {
   .block-sort__item {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+
+  .block-sort__item-wrapper {
+    &--level {
+      border: none;
+    }
+  }
+
+  .block-sort__title {
+    border: none;
   }
 
   .block-sort__item-toggle {

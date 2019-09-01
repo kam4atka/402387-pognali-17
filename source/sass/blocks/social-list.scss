@@ -24,6 +24,10 @@
     margin-bottom: 95px;
   }
 
+  .social-list__item:first-of-type {
+    padding: 0 0 0 60px;
+  }
+
   .social-list__link,
   .social-list__link-svg {
     width: 25px;
@@ -34,5 +38,9 @@
 @media (min-width: $desktop-width) {
   .social-list {
     display: none;
+  }
+
+  .social-list__item {
+    padding: 0;
   }
 }

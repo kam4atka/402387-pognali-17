@@ -67,12 +67,12 @@
     &:hover .block__filter-icon,
     &:hover .block__filter-text,
     &:focus .block__filter-icon,
-    &:focus .block__filter-text, {
+    &:focus .block__filter-text {
       opacity: 0.6;
     }
 
     &:active .block__filter-icon,
-    &:active .block__filter-text, {
+    &:active .block__filter-text {
       opacity: 0.3;
     }
   }
@@ -221,11 +221,5 @@
   .block-filter__country-link {
     font-size: 20px;
     line-height: 30px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .block-filter__toggle-text {
-    display: none;
   }
 }

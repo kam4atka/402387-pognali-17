@@ -37,6 +37,10 @@
   &--hide {
     display: none;
   }
+
+  .filter__close-text {
+    margin-left: 15px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -83,7 +87,7 @@
 
 @media (min-width: $desktop-width) {
   .filter {
-    padding: 55px 0 68px 0;
+    padding: 60px 0 55px 0;
   }
 
   .filter__wrapper {
@@ -92,7 +96,7 @@
 
   .filter__header {
     display: flex;
-    margin: 0 35px 60px 20px;
+    margin: 0 35px 0 20px;
   }
 
   .filter__toggle {
@@ -115,8 +119,10 @@
   }
 
   .filter__close {
+    display: flex;
+
     &--hide {
-      display: flex;
+      display: none;
     }
   }
 }

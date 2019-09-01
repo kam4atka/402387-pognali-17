@@ -27,8 +27,11 @@
   }
 
   &--closed .main-nav__toggle:active,
+  &--opened .main-nav__toggle:active,
   &--closed .main-nav__toggle:hover,
-  &--closed .main-nav__toggle:focus {
+  &--opened .main-nav__toggle:hover,
+  &--closed .main-nav__toggle:focus,
+  &--opened .main-nav__toggle:focus {
     outline: none;
     opacity: 0.5;
   }
@@ -53,13 +56,20 @@
   }
 }
 
+.nojs .main-nav {
+  &--opened .main-nav__toggle::before,
+  &--opened .main-nav__toggle::after {
+    content: none;
+  }
+}
+
 .nojs .main-nav__wrapper {
   display: block;
 }
 
 .main-nav__wrapper {
   position: absolute;
-  top: 60px;
+  top: 50px;
   right: 0;
   display: none;
   width: 100%;
