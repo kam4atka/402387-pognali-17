@@ -14,6 +14,10 @@
   }
 }
 
+.filter-continent__item {
+  max-width: 240px;
+}
+
 .filter-continent__item:not(:last-of-type) {
   margin-bottom: 15px;
 }
@@ -44,6 +48,10 @@
 
   .filter-continent__open {
     margin-left: auto;
+  }
+
+  .filter-continent__item {
+    max-width: 350px;
   }
 
   .filter-continent__item:not(:last-of-type) {

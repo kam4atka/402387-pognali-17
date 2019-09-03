@@ -20,6 +20,12 @@
   height: 45px;
 }
 
+.contact-list__item-text {
+  max-width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media (min-width: $tablet-width) {
   .contact-list {
     margin-bottom: 150px;
@@ -44,6 +50,10 @@
       width: 35px;
       height: 25px;
     }
+  }
+
+  .contact-list__item-text {
+    max-width: 480px;
   }
 }
 

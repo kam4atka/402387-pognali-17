@@ -15,7 +15,7 @@
     <link rel="preload" href="fonts/bloggersans.woff2" as="font">
   </head>
   <body class="main page">
-    <header class="block-header header">
+    <header class="block-header block-header--main header">
       <div class="page__wrapper header__wrapper">
         <a class="block-header__logo block-header__logo--white header__logo">
           <picture class="header__logo-wrapper">
@@ -41,7 +41,7 @@
           <button class="block-header__toggle main-nav__toggle">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <div class="block-header__wrapper main-nav__wrapper main-nav__wrapper--hide">
+          <div class="block-header__wrapper main-nav__wrapper">
             <ul class="block-header__list main-nav__list site-list">
               <li class="site-list__item">
                 <a class="block-header__link block-header__link--bold" href="#">О сервисе</a>
@@ -66,7 +66,7 @@
                       <use xlink:href="#phone"></use>
                     </svg>
                   </div>
-                  <span>8 800 555-86-28</span>
+                  <span class="contact-list__item-text">8 800 555-86-28</span>
                 </a>
               </li>
               <li class="contact-list__item">
@@ -76,7 +76,7 @@
                       <use xlink:href="#mail"></use>
                     </svg>
                   </div>
-                  <span>mail@htmlacademy.ru</span>
+                  <span class="contact-list__item-text">mail@htmlacademy.ru</span>
                 </a>
               </li>
             </ul>
@@ -127,7 +127,7 @@
               </a>
             </li>
             <li class="sub-nav__item">
-              <a class="block-header__btn button button--yellow button--ellipse" href="#">Авторизация</a>
+              <a class="block-header__btn button button--yellow button--ellipse sub-nav__btn" href="#">Авторизация</a>
             </li>
           </ul>
         </div>
@@ -138,7 +138,7 @@
         <div class="page__wrapper intro__wrapper">
           <h1 class="block__intro intro__title">В путешествие с крутыми попутчиками!</h1>
           <div class="block-header sub-nav sub-nav--intro">
-            <ul class="block-header__list sub-nav__list">
+            <ul class="block-header__list sub-nav__list sub-nav__list--intro">
               <li class="sub-nav__item">
                 <a class="block-header__sub-link sub-nav__link button button--orange button--round" href="tel:88005558628">
                   <svg class="block-header__sub-svg" width="30" height="20">
@@ -156,7 +156,7 @@
                 </a>
               </li>
               <li class="sub-nav__item">
-                <a class="block-header__btn button button--yellow button--ellipse" href="#">Авторизация</a>
+                <a class="block-header__btn button button--yellow button--ellipse sub-nav__btn" href="#">Авторизация</a>
               </li>
             </ul>
           </div>
@@ -169,19 +169,19 @@
             <ol class="guide-list">
               <li class="block__guide-item block__guide-item--one guide-list__item">
                 <span class="block__guide-text guide-list__text">Выберите <br> направление</span>
-                <span class="block__guide-count">1</span>
+                <span class="block__guide-count guide-list__count">1</span>
               </li>
               <li class="block__guide-item block__guide-item--two guide-list__item">
                 <span class="block__guide-text guide-list__text">Изучите идеи <br> путешественников</span>
-                <span class="block__guide-count">2</span>
+                <span class="block__guide-count guide-list__count">2</span>
               </li>
               <li class="block__guide-item block__guide-item--three guide-list__item">
                 <span class="block__guide-text guide-list__text">Находите тех, <br> кто похож на вас</span>
-                <span class="block__guide-count">3</span>
+                <span class="block__guide-count guide-list__count">3</span>
               </li>
               <li class="block__guide-item block__guide-item--four guide-list__item">
                 <span class="block__guide-text guide-list__text">Путешествуйте <br> вместе!</span>
-                <span class="block__guide-count">4</span>
+                <span class="block__guide-count guide-list__count">4</span>
               </li>
             </ol>
           </div>
@@ -195,7 +195,7 @@
               <p class="block__desc about__desc">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
               <p class="block__desc block__desc--bold about__desc about__desc--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
               <a class="block__link about__link button button--yellow button--square" href="#">
-                <span class="block__link-text">Подробнее</span>
+                <span class="block__link-text button__text">Подробнее</span>
                 <svg class="block__link-svg" width="21" height="19">
                   <use xlink:href="#triangle-right"></use>
                 </svg>
@@ -263,7 +263,7 @@
                 <p class="block__desc country__desc">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
               </div>
               <a class="block__link country__link button button--yellow button--square" href="form.html">
-                <span class="block__link-text">Показать все</span>
+                <span class="block__link-text button__text">Показать все</span>
                 <svg class="block__link-svg" width="21" height="19">
                   <use xlink:href="#triangle-right"></use>
                 </svg>
@@ -404,7 +404,7 @@
                 <p class="block__desc block__desc--bold companion__desc companion__desc--bold">Теперь можно легко найти единомышленников!</p>
               </div>
               <a class="block__link companion__link button button--yellow button--square" href="catalog.html">
-                <span class="block__link-text">Показать всех</span>
+                <span class="block__link-text  button__text">Показать всех</span>
                 <svg class="block__link-svg" width="21" height="19">
                   <use xlink:href="#triangle-right"></use>
                 </svg>
@@ -527,8 +527,8 @@
             </div>
             <p class="block__address-text address__item-text">ул. Большая Конюшенная, 19/8</p>
           </div>
-          <a class="block__link block__address block__address--link address__link button button--square button--transparent button--border" href="#">
-            <span class="block__link block__address-text">Проложить маршрут</span>
+          <a class="block__link block__address block__address--link address__link button button--square button--transparent button--border" href="https://goo.gl/maps/HCaLptDsWciKYUm37" target="_blank">
+            <span class="block__link block__address-text button__text">Проложить маршрут</span>
             <svg class="block__address-svg" width="21" height="19">
               <use xlink:href="#triangle-right"></use>
             </svg>

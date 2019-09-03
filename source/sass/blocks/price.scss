@@ -25,6 +25,12 @@
   margin-bottom: 55px;
 }
 
+.price__link {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 240px;
+}
+
 @media (min-width: $tablet-width) {
   .price__container {
     padding: 47px 0 45px 0;
@@ -46,6 +52,7 @@
 
   .price__link {
     position: relative;
+    max-width: 350px;
     margin-left: 65px;
   }
 
@@ -81,6 +88,7 @@
   }
 
   .price__link {
+    max-width: 450px;
     margin-left: 140px;
   }
 }

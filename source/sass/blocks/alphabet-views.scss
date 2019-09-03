@@ -29,6 +29,12 @@
   }
 }
 
+.alphabet-views__country-link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+}
+
 @media (min-width: $tablet-width) {
   .alphabet-views {
     &--modal {

@@ -11,6 +11,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 220px;
+  max-height: 40px;
   margin-top: -10px;
   padding: 20px 25px;
   border-top-left-radius: 10px;
@@ -21,8 +22,18 @@
   padding: 22px 25px 32px 25px;
 }
 
-.guide-list__item:last-of-type {
+.guide-list__item:nth-of-type(4n) {
   border-radius: 10px;
+}
+
+.guide-list__text {
+  max-width: 160px;
+  height: 48px;
+}
+
+.guide-list__count {
+  max-width: 20px;
+  max-height: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -36,6 +47,7 @@
     flex-direction: column;
     box-sizing: border-box;
     width: 350px;
+    max-height: 130px;
     margin-top: 0;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -58,25 +70,31 @@
     border-radius: 20px;
   }
 
-  .guide-list__item:nth-of-type(3) {
+  .guide-list__item:nth-of-type(3),
+  .guide-list__item:nth-of-type(3n+4) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 20px;
   }
 
-  .guide-list__item:nth-of-type(4) {
+  .guide-list__item:nth-of-type(4n) {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
 
   .guide-list__text {
+    max-width: 280px;
     margin-bottom: 10px;
+  }
+
+  .guide-list__count {
+    max-width: 25px;
+    max-height: 25px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .guide-list {
     flex-direction: row;
-    flex-wrap: nowrap;
   }
 
   .guide-list__item {
@@ -87,6 +105,7 @@
   }
 
   .guide-list__text {
+    max-width: 200px;
     margin: 0;
   }
 
@@ -101,7 +120,7 @@
     border-bottom-right-radius: 0;
   }
 
-  .guide-list__item:last-of-type {
+  .guide-list__item:nth-of-type(4n) {
     padding: 27px 33px 33px 44px;
     border-radius: 20px;
   }

@@ -4,6 +4,8 @@
 
 .site-list__item {
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (min-width: $tablet-width) {
@@ -21,6 +23,7 @@
   .site-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-bottom: 0;
   }
 

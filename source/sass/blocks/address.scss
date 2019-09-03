@@ -10,6 +10,7 @@
 .address__item {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   margin: 0 0 17px 0;
@@ -72,19 +73,21 @@
   }
 
   .address__item {
+    width: 45%;
     margin: 0 145px 0 0;
 
     &-text {
-      width: 90%;
+      width: 80%;
     }
   }
 
   .address__item-icon {
-    width: 100px;
+    width: 89px;
     height: 90px;
   }
 
   .address__link {
+    box-sizing: border-box;
     width: 325px;
     margin: 0 75px 0 0;
   }

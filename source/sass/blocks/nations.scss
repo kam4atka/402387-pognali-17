@@ -24,6 +24,13 @@
   }
 }
 
+.nations__title-inner {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100px;
+  max-height: 20px;
+}
+
 .nations__list {
   margin: 0 0 17px 0;
   padding: 0 0 0 25px;
@@ -42,6 +49,10 @@
 
 .nations__item-flag {
   margin-right: 15px;
+}
+
+.nations__item-text {
+  max-width: 160px;
 }
 
 @media (min-width: $tablet-width) {
@@ -65,7 +76,8 @@
   .nations__list {
     display: flex;
     flex-direction: row;
-    padding: 0 0 0 40px;
+    flex-wrap: wrap;
+    padding: 0 40px;
   }
 
   .nations__item:not(:last-of-type) {
@@ -95,5 +107,15 @@
   .nations__list {
     padding-left: 0;
     flex-direction: column;
+    max-height: 100px;
+  }
+
+  .nations__item:nth-of-type(n) {
+    width: 100%;
+    margin: 0 45px 6px 0;
+  }
+
+  .nations__item-text {
+    width: 140px;
   }
 }

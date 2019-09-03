@@ -40,6 +40,8 @@
   font-weight: 700;
   line-height: 40px;
   color: $fnt-white;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .block__header-link {
@@ -49,6 +51,8 @@
   color: $fnt-white;
   text-transform: uppercase;
   text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &--home {
     outline: none;
@@ -68,6 +72,8 @@
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .block__about-container {
@@ -93,13 +99,13 @@
   }
 }
 
-/* !!! */
-
 .block__title {
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
   color: $fnt-orange;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &--tariff {
     text-align: center;
@@ -108,6 +114,8 @@
 
 .block__desc {
   font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &--bold {
     font-weight: 700;
@@ -130,6 +138,8 @@
 }
 
 .block__guide-item {
+  overflow: hidden;
+
   &--one {
     background-color: $block-guide-one;
   }
@@ -152,6 +162,8 @@
   font-weight: 700;
   line-height: 18px;
   color: $fnt-blue-black;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .block__guide-count {
@@ -159,6 +171,7 @@
   font-weight: 700;
   line-height: 18px;
   color: $fnt-white;
+  overflow: hidden;
 }
 
 .block__list {
@@ -192,13 +205,18 @@
   font-size: 24px;
   line-height: 24px;
   color: $fnt-white;
+  overflow: hidden;
 
   &--value {
+    width: 39px;
+    height: 20px;
     font-weight: 700;
     border-bottom: 1px solid #ffffff;
   }
 
   &--title {
+    width: 25px;
+    height: 15px;
     font-size: 14px;
     line-height: 14px;
   }
@@ -235,6 +253,8 @@
   font-size: 21px;
   font-weight: 700;
   line-height: 19px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .block__card-title {
@@ -245,13 +265,16 @@
   position: relative;
   color: $fnt-blue-dull;
   text-decoration: none;
+  text-align: left;
   outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &::before {
     content: "";
     position: absolute;
     top: 50%;
-    left: -15px;
+    left: 0;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -273,11 +296,13 @@
   font-size: 16px;
   font-weight: 400;
   color: $fnt-gray;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .block__card-motto {
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   opacity: 0.3;
 }
 
@@ -292,6 +317,8 @@
   color: $fnt-gray;
   text-transform: uppercase;
   opacity: 0.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .block__card-item {
@@ -316,6 +343,8 @@
   color: $fnt-blue-dull;
   text-decoration: none;
   outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &:active &-text,
   &:active &-svg {
@@ -351,6 +380,11 @@
       opacity: 0.5;
     }
   }
+}
+
+.block__link-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .block__link-svg {
@@ -452,6 +486,8 @@
   text-transform: uppercase;
   text-decoration: none;
   outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &:hover .block__contact-text,
   &:focus .block__contact-text {
@@ -478,6 +514,11 @@
   fill: $fnt-yellow;
 }
 
+.block__address-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .block__pages-link {
   font-size: 17px;
   line-height: 30px;
@@ -486,6 +527,7 @@
   text-transform: uppercase;
   text-decoration: none;
   outline: none;
+  overflow: hidden;
 
   &:hover,
   &:focus {
@@ -599,7 +641,7 @@
 
   .block__card-motto {
     font-size: 20px;
-    line-height: 17.68px;
+    line-height: 20px;
   }
 
   .block__card-tags {

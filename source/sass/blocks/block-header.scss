@@ -117,6 +117,8 @@
   color: rgba(23, 29, 54, 1);
   text-transform: uppercase;
   text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &:hover,
   &:focus {
@@ -140,9 +142,16 @@
 }
 
 @media (min-width: $tablet-width) {
-  /* .main .block-header {
-    background-color: #182044;
-  } */
+  .block-header {
+    &--main {
+      background-color: #182044;
+    }
+
+    &--blue {
+      color: #161c36;
+      background-color: #ffffff;
+    }
+  }
 
   .nojs .block-header {
     background-color: #ffffff;
@@ -167,7 +176,7 @@
 
   .block-header__btn {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 35px;
   }
 }
 

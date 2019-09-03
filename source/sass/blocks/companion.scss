@@ -82,8 +82,9 @@
 
   .companion__list {
     order: 2;
-    margin-bottom: 0;
     float: right;
+    margin-bottom: 0;
+    width: 60%;
   }
 
   .companion__list-item:nth-of-type(odd) {

@@ -64,7 +64,7 @@
   }
 
   &--ellipse {
-    padding: 5px 40px;
+    padding: 5px 39px;
     border-radius: 25px;
   }
 
@@ -77,6 +77,12 @@
   &--round {
     border-radius: 50%;
   }
+}
+
+.button__text {
+  max-width: 180px;
+  text-align: left;
+  overflow: hidden;
 }
 
 @media (min-width: $tablet-width) {
@@ -95,5 +101,9 @@
         height: 15px;
       }
     }
+  }
+
+  .button__text {
+    max-width: 450px;
   }
 }

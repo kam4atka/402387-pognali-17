@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-left: 27px;
-  margin-top: 13px;
+  margin: 13px 0 0 0 ;
 
   &--transport {
     flex-direction: row;
+    flex-wrap: wrap;
     margin-left: 0;
     margin-bottom: 8px;
   }
@@ -48,6 +48,7 @@
 @media (min-width: $tablet-width) {
   .sort-parameters {
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0;
     width: 500px;
 
@@ -72,7 +73,7 @@
   .sort-parameters {
     flex-direction: column;
     width: 100%;
-    margin: 18px 0 0 29px;
+    margin: 18px 0 0 0;
 
     &--transport {
       flex-direction: row;

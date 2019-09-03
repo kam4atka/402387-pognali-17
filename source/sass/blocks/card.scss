@@ -51,6 +51,34 @@
   }
 }
 
+.card__desc {
+  position: relative;
+}
+
+.card .card__desc {
+  &::before {
+   content: "";
+   position: absolute;
+   top: 8px;
+   right: 23px;
+   width: 6px;
+   height: 6px;
+   border-radius: 50%;
+  }
+}
+
+.card--online .card__desc {
+  &::before {
+    background-color: $status-online;
+  }
+}
+
+.card--offline .card__desc {
+  &::before {
+    background-color: $status-offline;
+  }
+}
+
 .card__name {
   font-size: 20px;
   font-weight: 700;
@@ -59,6 +87,8 @@
   text-decoration: none;
   text-align: left;
   outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &:hover,
   &:focus {
@@ -70,9 +100,10 @@
   }
 }
 
-.card__desc {
+.card__level-desc {
   font-size: 14px;
   line-height: 14px;
+  overflow: hidden;
 }
 
 .card__count {
@@ -82,6 +113,8 @@
   color: #161c35;
   text-transform: uppercase;
   text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card__tags {
@@ -89,35 +122,45 @@
   line-height: 18px;
   color: #444444;
   text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.card__title {
+.card__title,
+.card__title-inner {
   font-size: 15px;
   line-height: 18px;
   color: #444444;
   text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card__level {
   font-size: 24px;
   font-weight: 700;
-  line-height: 18px;
+  line-height: 24px;
   color: #1d2e5b;
+  overflow: hidden;
 }
 
 .card__list {
   list-style: none;
+  overflow: hidden;
 }
 
 .card__item {
   font-size: 15px;
   line-height: 18px;
+}
 
-  &--nations {
-    font-weight: 500;
-    color: #1d2e5b;
-    text-transform: uppercase;
-  }
+.card__item-nations {
+  font-weight: 500;
+  color: #1d2e5b;
+  text-align: left;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card__method-icon {
@@ -140,11 +183,13 @@
 .card__link {
   font-size: 17px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 35px;
   color: #161c35;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (min-width: $tablet-width) {
@@ -154,17 +199,47 @@
     border-radius: 15px;
   }
 
+  .card .card__desc {
+    &::before {
+      content: none;
+    }
+  }
+
   .card__name {
     font-size: 30px;
     line-height: 30px;
   }
 
-  .card__tags {
-    font-size: 20px;
-    line-height: 24px;
+  .card__name-text {
+    position: relative;
   }
 
-  .card__level {
+  .card .card__name-text {
+    &::before {
+     content: "";
+     position: absolute;
+     top: 12px;
+     right: -25px;
+     width: 6px;
+     height: 6px;
+     border-radius: 50%;
+    }
+  }
+
+  .card--online .card__name-text {
+    &::before {
+      background-color: $status-online;
+    }
+  }
+
+  .card--offline .card__name-text {
+    &::before {
+      background-color: $status-offline;
+    }
+  }
+
+  .card__tags {
+    font-size: 20px;
     line-height: 24px;
   }
 
@@ -175,7 +250,7 @@
 
   .card__count {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 35px;
   }
 
   .card__method-item {
@@ -188,7 +263,17 @@
     height: 20px;
   }
 
+  .card__level {
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+  }
+
   .card__link {
     font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card__photo-image {
+    object-fit: cover;
   }
 }
