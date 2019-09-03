@@ -57,13 +57,13 @@
 
 .card .card__desc {
   &::before {
-   content: "";
-   position: absolute;
-   top: 8px;
-   right: 23px;
-   width: 6px;
-   height: 6px;
-   border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 23px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
   }
 }
 
@@ -216,13 +216,13 @@
 
   .card .card__name-text {
     &::before {
-     content: "";
-     position: absolute;
-     top: 12px;
-     right: -25px;
-     width: 6px;
-     height: 6px;
-     border-radius: 50%;
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: -25px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
     }
   }
 
@@ -264,7 +264,7 @@
   }
 
   .card__level {
-    border-bottom: 1px solid rgba(0,0,0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .card__link {
