@@ -19,8 +19,25 @@
   transform: translateY(-50%);
 }
 
+.level__title-inner {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 45px;
+  max-height: 20px;
+}
+
 .level__wrapper {
-  padding: 0 20px 0 10px;
+  position: relative;
+  width: 45px;
+  height: 45px;
+  padding: 3px 20px 0 10px;
+}
+
+.level__value {
+  display: block;
+  width: 38px;
+  max-height: 25px;
+  margin: 0 auto;
 }
 
 .level__desc {
@@ -33,10 +50,14 @@
   left: 50%;
   width: 45px;
   height: 45px;
-  transform: translate(-60%, -55%);
+  transform: translate(-60%, -75%);
 }
 
 @media (min-width: $tablet-width) {
+  .level {
+    padding: 0 0 15px 0;
+  }
+
   .level__title {
     display: none;
   }
@@ -47,11 +68,24 @@
 
   .level__desc {
     display: block;
+    max-width: 25px;
+    max-height: 15px;
+    margin: 0 auto;
+  }
+
+  .level__value {
+    padding: 2px 0 0 0;
   }
 
   .level__border-wrapper {
     width: 60px;
     height: 60px;
     transform: translate(-50%, -55%);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .level {
+    padding: 0;
   }
 }

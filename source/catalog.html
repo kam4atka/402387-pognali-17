@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="nojs">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Попутчики</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-bolditalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-italic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-lightitalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-mediumitalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font">
   </head>
   <body class="side page page__catalog">
-    <div style="display: none">
-      <include src="build/img/sprite.svg"></include>
-    </div>
     <header class="block-header header">
       <div class="page__wrapper header__wrapper">
-        <a class="block-header__logo header__logo" href="index.html">
+        <a class="block-header__logo block-header__logo--white header__logo" href="index.html">
           <picture class="header__logo-wrapper">
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
@@ -22,7 +27,7 @@
             <img class="block-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Вы на главной странице">
           </picture>
         </a>
-        <a class="block-header__logo header__logo header__logo--hide">
+        <a class="block-header__logo block-header__logo--blue header__logo">
           <picture class="header__logo-wrapper">
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
@@ -32,7 +37,7 @@
             <img class="block-header__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Вы на главной странице">
           </picture>
         </a>
-        <nav class="block-header__nav main-nav main-nav--closed">
+        <nav class="block-header__nav main-nav main-nav--opened">
           <button class="block-header__toggle main-nav__toggle">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -61,7 +66,7 @@
                       <use xlink:href="#phone"></use>
                     </svg>
                   </div>
-                  <span>8 800 555-86-28</span>
+                  <span class="contact-list__item-text">8 800 555-86-28</span>
                 </a>
               </li>
               <li class="contact-list__item">
@@ -71,7 +76,7 @@
                       <use xlink:href="#mail"></use>
                     </svg>
                   </div>
-                  <span>mail@htmlacademy.ru</span>
+                  <span class="contact-list__item-text">mail@htmlacademy.ru</span>
                 </a>
               </li>
             </ul>
@@ -122,7 +127,7 @@
               </a>
             </li>
             <li class="sub-nav__item">
-              <a class="block-header__btn button button--yellow button--ellipse" href="#">Авторизация</a>
+              <a class="block-header__btn button button--yellow button--ellipse sub-nav__btn" href="#">Авторизация</a>
             </li>
           </ul>
         </div>
@@ -152,9 +157,9 @@
                     <use xlink:href="#filter-icon"></use>
                   </svg>
                   <h2 class="block-filter__header-title filter__title">Фильтрация по странам</h2>
-                  <button class="block-filter__header-toggle filter__toggle">
+                  <button class="block-filter__header-toggle filter__toggle" type="button">
                     <span class="block-filter__toggle-text">Показать все</span>
-                    <svg class="block-filter__toggle-icon filter__toggle-icon" width="15" height="10"> <!-- назначить свойства -->
+                    <svg class="block-filter__toggle-icon filter__toggle-icon" width="15" height="10">
                       <use xlink:href="#filter-dots"></use>
                     </svg>
                   </button>
@@ -162,22 +167,24 @@
                 <fieldset class="travelmates-filter__continent filter-continent">
                   <legend class="filter-continent__title visually-hidden">Континенты</legend>
                   <div class="filter-parameters">
-                    <input class="block-filter__continent-input visually-hidden" type="radio" name="continent" id="continent--europe" value="europe" checked>
-                    <label class="block-filter__continent-label filter-continent__item" for="continent--europe">Европа</label>
-                    <input class="block-filter__continent-input visually-hidden" type="radio" name="continent" id="continent--asia" value="asia">
-                    <label class="block-filter__continent-label filter-continent__item" for="continent--asia">Азия</label>
-                    <input class="block-filter__continent-input visually-hidden" type="radio" name="continent" id="continent--usa" value="ameriсa">
-                    <label class="block-filter__continent-label filter-continent__item" for="continent--usa">Америка</label>
-                    <input class="block-filter__continent-input visually-hidden" type="radio" name="continent" id="continent--islands" value="islands">
-                    <label class="block-filter__continent-label filter-continent__item" for="continent--islands">Острова</label>
-                    <button class="block-filter__close block-filter__close--tablet filter-continent__close filter-continent__close">
+                    <div class="filter-parameters__wrapper">
+                      <input class="block-filter__continent-input visually-hidden" type="radio" name="continent" id="continent--europe" value="europe" checked>
+                      <label class="block-filter__continent-label filter-continent__item" for="continent--europe">Европа</label>
+                      <input class="block-filter__continent-input visually-hidden" type="radio" name="continent" id="continent--asia" value="asia">
+                      <label class="block-filter__continent-label filter-continent__item" for="continent--asia">Азия</label>
+                      <input class="block-filter__continent-input visually-hidden" type="radio" name="continent" id="continent--usa" value="ameriсa">
+                      <label class="block-filter__continent-label filter-continent__item" for="continent--usa">Америка</label>
+                      <input class="block-filter__continent-input visually-hidden" type="radio" name="continent" id="continent--islands" value="islands">
+                      <label class="block-filter__continent-label filter-continent__item" for="continent--islands">Острова</label>
+                    </div>
+                    <button class="block-filter__close block-filter__close--tablet filter-continent__close" type="button">
                       <span class="block__filter-text filter-continent__close-text">Свернуть</span>
                       <svg class="block__filter-icon" width="12" height="12">
                         <use xlink:href="#filter-dropdown"></use>
                       </svg>
                     </button>
-                    <button class="block-filter__header-toggle filter__toggle filter-continent__open" type="button">
-                      <span class="block-filter__toggle-text">Показать все</span>
+                    <button class="block-filter__header-toggle filter-continent__open filter-continent__open--hide" type="button">
+                      <span class="block-filter__toggle-text filter__toggle-text">Показать все</span>
                       <svg class="block-filter__toggle-icon filter__toggle-icon" width="15" height="10"> <!-- назначить свойства -->
                         <use xlink:href="#filter-dots"></use>
                       </svg>
@@ -478,11 +485,11 @@
                   </div>
                 </fieldset>
               </form>
-              <button class="block-filter__close filter__close filter__close--hide button button--ellipse" type="button">
-                <svg class="block__filter-icon filter__close-icon" width="12" height="12">
+              <button class="block-filter__close filter__close button button--ellipse" type="button">
+                <svg class="block__filter-icon filter__close-icon" width="15" height="15">
                   <use xlink:href="#filter-dropdown"></use>
                 </svg>
-                <span class="block__filter-text">Свернуть</span>
+                <span class="block__filter-text filter__close-text">Свернуть</span>
               </button>
             </div>
           </div>
@@ -492,10 +499,11 @@
             <h2 class="block-sort__title sort__title">Подберите идеального попутчика</h2>
             <form class="sort-list" action="https://echo.htmlacademy.ru" method="post">
               <fieldset class="block-sort__item sort-item">
+                <legend class="visually-hidden">Хобби:</legend>
                 <div class="sort-item__wrapper">
-                  <legend class="block-sort__item-title sort-item__legend">Хобби:</legend>
+                  <span class="block-sort__item-title sort-item__legend">Хобби:</span>
                   <button class="block-sort__item-toggle sort-item__toggle" type="button">
-                    <span class="block-sort__item-title">Хобби</span>
+                    <span class="block-sort__item-title sort-item__toggle-title">Хобби</span>
                     <span class="visually-hidden">Закрыть</span>
                     <svg class="block__sort-icon block__sort-icon--close block-sort__icon-dropdown" width="8" height="4">
                       <use xlink:href="#sort-dropdown"></use>
@@ -512,10 +520,11 @@
                 </div>
               </fieldset>
               <fieldset class="block-sort__item sort-item">
+                <legend class="visually-hidden">Музыка:</legend>
                 <div class="sort-item__wrapper">
-                  <legend class="block-sort__item-title sort-item__legend">Музыка:</legend>
+                  <span class="block-sort__item-title sort-item__legend">Музыка:</span>
                   <button class="block-sort__item-toggle sort-item__toggle" type="button">
-                    <span class="block-sort__item-title">Музыка</span>
+                    <span class="block-sort__item-title sort-item__toggle-title">Музыка</span>
                     <span class="visually-hidden">Закрыть</span>
                     <svg class="block__sort-icon block__sort-icon--close block-sort__icon-dropdown" width="8" height="4">
                       <use xlink:href="#sort-dropdown"></use>
@@ -532,10 +541,11 @@
                 </div>
               </fieldset>
               <fieldset class="block-sort__item sort-item">
+                <legend class="visually-hidden">Еда:</legend>
                 <div class="sort-item__wrapper">
-                  <legend class="block-sort__item-title sort-item__legend">Еда:</legend>
+                  <span class="block-sort__item-title sort-item__legend">Еда:</span>
                   <button class="block-sort__item-toggle sort-item__toggle" type="button">
-                    <span class="block-sort__item-title">Еда</span>
+                    <span class="block-sort__item-title sort-item__toggle-title">Еда</span>
                     <span class="visually-hidden">Закрыть</span>
                     <svg class="block__sort-icon block__sort-icon--close block-sort__icon-dropdown" width="8" height="4">
                       <use xlink:href="#sort-dropdown"></use>
@@ -552,10 +562,11 @@
                 </div>
               </fieldset>
               <fieldset class="block-sort__item sort-item">
+                <legend class="visually-hidden">Транспорт:</legend>
                 <div class="sort-item__wrapper">
-                  <legend class="block-sort__item-title sort-item__legend">Транспорт:</legend>
+                  <span class="block-sort__item-title sort-item__legend">Транспорт:</span>
                   <button class="block-sort__item-toggle sort-item__toggle" type="button">
-                    <span class="block-sort__item-title">Транспорт</span>
+                    <span class="block-sort__item-title sort-item__toggle-title">Транспорт</span>
                     <span class="visually-hidden">Закрыть</span>
                     <svg class="block__sort-icon block__sort-icon--close block-sort__icon-dropdown" width="8" height="4">
                       <use xlink:href="#sort-dropdown"></use>
@@ -595,10 +606,11 @@
               </fieldset>
               <div class="sort-block">
                 <fieldset class="block-sort__item sort-item">
-                  <div class="sort-item__wrapper sort-item__wrapper--level">
-                    <legend class="block-sort__item-title sort-item__legend">Левел:</legend>
+                  <legend class="visually-hidden">Левел:</legend>
+                  <div class="block-sort__item-wrapper block-sort__item-wrapper--level sort-item__wrapper sort-item__wrapper--level">
+                    <span class="block-sort__item-title sort-item__legend">Левел:</span>
                     <button class="block-sort__item-toggle sort-item__toggle" type="button">
-                      <span class="block-sort__item-title">Левел</span>
+                      <span class="block-sort__item-title sort-item__toggle-title">Левел</span>
                       <span class="visually-hidden">Закрыть</span>
                       <svg class="block__sort-icon block__sort-icon--close block-sort__icon-dropdown" width="8" height="4">
                         <use xlink:href="#sort-dropdown"></use>
@@ -627,7 +639,7 @@
           <div class="travelmates-content">
             <h2 class="travelmates-content__title visually-hidden">Список попутчиков:</h2>
             <ul class="block__list travelmates-list">
-              <li class="block__card-companion travelmates-list__item card travelmate">
+              <li class="block__card-companion travelmates-list__item card card--offline travelmate">
                 <div class="travelmate__photo">
                   <a href="#">
                     <picture>
@@ -645,8 +657,10 @@
                     </svg>
                   </a>
                 </div>
-                <div class="travelmate__desc">
-                  <a class="card__name travelmate__name" href="#">Таня Фирсова</a>
+                <div class="card__desc travelmate__desc">
+                  <a class="card__name travelmate__name" href="#">
+                    <span class="card__name-text">Таня Фирсова</span>
+                  </a>
                   <span class="card__count travelmate__count">1.5 m</span>
                   <p class="card__tags travelmate__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                   <div class="travelmate__action travelmate__action--tablet">
@@ -660,31 +674,35 @@
                   </div>
                 </div>
                 <div class="travelmate__country nations">
-                  <p class="card__title nations__title">хочет посетить:</p>
+                  <p class="card__title nations__title">
+                    <span class="card__title-inner nations__title-inner">хочет посетить:</span>
+                  </p>
                   <ul class="card__list nations__list">
-                    <li class="card__item card__item--nations nations__item">
+                    <li class="nations__item">
                       <svg class="nations__item-flag" width="26" height="18">
                         <use xlink:href="#flag-lka"></use>
                       </svg>
-                      <span class="nations__item-text">Шри Ланка</span>
+                      <span class="card__item-nations nations__item-text">Шри Ланка</span>
                     </li>
-                    <li class="card__item card__item--nations nations__item">
+                    <li class="nations__item">
                       <svg class="nations__item-flag" width="26" height="18">
                         <use xlink:href="#flag-tha"></use>
                       </svg>
-                      <span class="nations__item-text">Тайланд</span>
+                      <span class="card__item-nations nations__item-text">Тайланд</span>
                     </li>
-                    <li class="card__item card__item--nations nations__item">
+                    <li class="nations__item">
                       <svg class="nations__item-flag" width="26" height="18">
                         <use xlink:href="#flag-syc"></use>
                       </svg>
-                      <span class="nations__item-text">Сейшелы</span>
+                      <span class="card__item-nations nations__item-text">Сейшелы</span>
                     </li>
                   </ul>
                 </div>
                 <div class="travelmate__parameters">
                   <div class="method">
-                    <p class="card__title method__title">транспорт:</p>
+                    <p class="card__title method__title">
+                      <span class="card__title-inner method__title-inner">транспорт:</span>
+                    </p>
                     <ul class="card__list method__list">
                       <li class="card__method-item method__item">
                         <span class="visually-hidden">Авиаперелет</span>
@@ -713,17 +731,17 @@
                     </ul>
                   </div>
                   <div class="level">
-                    <p class="card__title level__title">левел:</p>
+                    <p class="card__title level__title">
+                      <span class="card__title-inner level__title-inner">левел:</span>
+                    </p>
                     <div class="level__wrapper">
                       <span class="card__level level__value">99</span>
-                      <span class="card__desc level__desc">level</span>
-
+                      <span class="card__level-desc level__desc">level</span>
                       <div class="level__border-wrapper">
                         <svg class="block__level-border block__level-border--tablet block__level-border--99" width="45" height="45">
                           <use xlink:href="#circle"></use>
                         </svg>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -737,7 +755,7 @@
                   <span class="card__count travelmate__action-count">1.5 m</span>
                 </div>
               </li>
-              <li class="block__card-companion travelmates-list__item card travelmate">
+              <li class="block__card-companion travelmates-list__item card card--offline travelmate">
                 <div class="travelmate__photo">
                   <a href="#">
                     <picture>
@@ -755,8 +773,10 @@
                     </svg>
                   </a>
                 </div>
-                <div class="travelmate__desc">
-                  <a class="card__name travelmate__name" href="#">Петя Демин</a>
+                <div class="card__desc travelmate__desc">
+                  <a class="card__name travelmate__name" href="#">
+                    <span class="card__name-text">Петя Демин</span>
+                  </a>
                   <span class="card__count travelmate__count">150</span>
                   <p class="card__tags travelmate__tags">#бургер #бар #футбол #концерт #крафт</p>
                   <div class="travelmate__action travelmate__action--tablet">
@@ -770,25 +790,29 @@
                   </div>
                 </div>
                 <div class="travelmate__country nations">
-                  <p class="card__title nations__title">хочет посетить:</p>
+                  <p class="card__title nations__title">
+                    <span class="card__title-inner nations__title-inner">хочет посетить:</span>
+                  </p>
                   <ul class="card__list nations__list">
-                    <li class="card__item card__item--nations nations__item">
+                    <li class="nations__item">
                       <svg class="nations__item-flag" width="26" height="18">
                         <use xlink:href="#flag-bel"></use>
                       </svg>
-                      <span>Бельгия</span>
+                      <span class="card__item-nations nations__item-text">Бельгия</span>
                     </li>
-                    <li class="card__item card__item--nations nations__item">
+                    <li class="nations__item">
                       <svg class="nations__item-flag" width="26" height="18">
                         <use xlink:href="#flag-cze"></use>
                       </svg>
-                      <span>Чехия</span>
+                      <span class="card__item-nations nations__item-text">Чехия</span>
                     </li>
                   </ul>
                 </div>
                 <div class="travelmate__parameters">
                   <div class="method">
-                    <p class="card__title method__title">транспорт:</p>
+                    <p class="card__title method__title">
+                      <span class="card__title-inner method__title-inner">транспорт:</span>
+                    </p>
                     <ul class="card__list method__list">
                       <li class="card__method-item method__item">
                         <span class="visually-hidden">Авиаперелет</span>
@@ -817,10 +841,12 @@
                     </ul>
                   </div>
                   <div class="level">
-                    <p class="card__title level__title">левел:</p>
+                    <p class="card__title level__title">
+                      <span class="card__title-inner level__title-inner">левел:</span>
+                    </p>
                     <div class="level__wrapper">
                       <span class="card__level level__value">80</span>
-                      <span class="card__desc level__desc">level</span>
+                      <span class="card__level-desc level__desc">level</span>
                       <div class="level__border-wrapper">
                         <svg class="block__level-border  block__level-border--tablet block__level-border--80" width="45" height="45">
                           <use xlink:href="#circle"></use>
@@ -839,7 +865,7 @@
                   <span class="card__count travelmate__action-count">150</span>
                 </div>
               </li>
-              <li class="block__card-companion travelmates-list__item card travelmate">
+              <li class="block__card-companion travelmates-list__item card card--offline travelmate">
                 <div class="travelmate__photo">
                   <a href="#">
                     <picture>
@@ -857,8 +883,10 @@
                     </svg>
                   </a>
                 </div>
-                <div class="travelmate__desc">
-                  <a class="card__name travelmate__name" href="#">Марк Смолов</a>
+                <div class="card__desc travelmate__desc">
+                  <a class="card__name travelmate__name" href="#">
+                    <span class="card__name-text">Марк Смолов</span>
+                  </a>
                   <span class="card__count travelmate__count">1700</span>
                   <p class="card__tags travelmate__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
                   <div class="travelmate__action travelmate__action--tablet">
@@ -872,31 +900,35 @@
                   </div>
                 </div>
                 <div class="travelmate__country nations">
-                  <p class="card__title nations__title">хочет посетить:</p>
+                  <p class="card__title nations__title">
+                    <span class="card__title-inner nations__title-inner">хочет посетить:</span>
+                  </p>
                   <ul class="card__list nations__list">
-                    <li class="card__item card__item--nations nations__item">
+                    <li class="nations__item">
                       <svg class="nations__item-flag" width="26" height="18">
                         <use xlink:href="#flag-usa"></use>
                       </svg>
-                      <span>США</span>
+                      <span class="card__item-nations nations__item-text">США</span>
                     </li>
-                    <li class="card__item card__item--nations nations__item">
+                    <li class="nations__item">
                       <svg class="nations__item-flag" width="26" height="18">
                         <use xlink:href="#flag-aus"></use>
                       </svg>
-                      <span>Австралия</span>
+                      <span class="card__item-nations nations__item-text">Австралия</span>
                     </li>
-                    <li class="card__item card__item--nations nations__item">
+                    <li class="nations__item">
                       <svg class="nations__item-flag" width="26" height="18">
                         <use xlink:href="#flag-dma"></use>
                       </svg>
-                      <span>Доминикана</span>
+                      <span class="card__item-nations nations__item-text">Доминикана</span>
                     </li>
                   </ul>
                 </div>
                 <div class="travelmate__parameters">
                   <div class="method">
-                    <p class="card__title method__title">транспорт:</p>
+                    <p class="card__title method__title">
+                      <span class="card__title-inner method__title-inner">транспорт:</span>
+                    </p>
                     <ul class="card__list method__list">
                       <li class="card__method-item method__item">
                         <span class="visually-hidden">Авиаперелет</span>
@@ -925,10 +957,12 @@
                     </ul>
                   </div>
                   <div class="level">
-                    <p class="card__title level__title">левел:</p>
+                    <p class="card__title level__title">
+                      <span class="card__title-inner level__title-inner">левел:</span>
+                    </p>
                     <div class="level__wrapper">
                       <span class="card__level level__value">25</span>
-                      <span class="card__desc level__desc">level</span>
+                      <span class="card__level-desc level__desc">level</span>
                       <div class="level__border-wrapper">
                         <svg class="block__level-border  block__level-border--tablet block__level-border--25" width="45" height="45">
                           <use xlink:href="#circle"></use>
@@ -947,7 +981,7 @@
                   <span class="card__count travelmate__action-count">170</span>
                 </div>
               </li>
-              <li class="block__card-companion travelmates-list__item card travelmate">
+              <li class="block__card-companion travelmates-list__item card card--online travelmate">
                 <div class="travelmate__photo">
                   <a href="#">
                     <picture>
@@ -965,8 +999,10 @@
                     </svg>
                   </a>
                 </div>
-                <div class="travelmate__desc">
-                  <a class="card__name travelmate__name" href="#">Лариса Роговая</a>
+                <div class="card__desc travelmate__desc">
+                  <a class="card__name travelmate__name" href="#">
+                    <span class="card__name-text">Лариса Роговая</span>
+                  </a>
                   <span class="card__count travelmate__count">23</span>
                   <p class="card__tags travelmate__tags">#образование #карьера #учеба #линкедин #смузи</p>
                   <div class="travelmate__action travelmate__action--tablet">
@@ -980,25 +1016,29 @@
                   </div>
                 </div>
                 <div class="travelmate__country nations">
-                  <p class="card__title nations__title">хочет посетить:</p>
+                  <p class="card__title nations__title">
+                    <span class="card__title-inner nations__title-inner">хочет посетить:</span>
+                  </p>
                   <ul class="card__list nations__list">
-                    <li class="card__item card__item--nations nations__item">
+                    <li class="nations__item">
                       <svg class="nations__item-flag" width="26" height="18">
                         <use xlink:href="#flag-gbr"></use>
                       </svg>
-                      <span>Великбритания</span>
+                      <span class="card__item-nations nations__item-text">Великбритания</span>
                     </li>
-                    <li class="card__item card__item--nations nations__item">
+                    <li class="nations__item">
                       <svg class="nations__item-flag" width="26" height="18">
                         <use xlink:href="#flag-bel"></use>
                       </svg>
-                      <span>Германия</span>
+                      <span class="card__item-nations nations__item-text">Германия</span>
                     </li>
                   </ul>
                 </div>
                 <div class="travelmate__parameters">
                   <div class="method">
-                    <p class="card__title method__title">транспорт:</p>
+                    <p class="card__title method__title">
+                      <span class="card__title-inner method__title-inner">транспорт:</span>
+                    </p>
                     <ul class="card__list method__list">
                       <li class="card__method-item method__item">
                         <span class="visually-hidden">Авиаперелет</span>
@@ -1027,10 +1067,12 @@
                     </ul>
                   </div>
                   <div class="level">
-                    <p class="card__title level__title">левел:</p>
+                    <p class="card__title level__title">
+                      <span class="card__title-inner level__title-inner">левел:</span>
+                    </p>
                     <div class="level__wrapper">
                       <span class="card__level level__value">50</span>
-                      <span class="card__desc level__desc">level</span>
+                      <span class="card__level-desc level__desc">level</span>
                       <div class="level__border-wrapper">
                         <svg class="block__level-border  block__level-border--tablet block__level-border--50" width="45" height="45">
                           <use xlink:href="#circle"></use>
@@ -1144,5 +1186,9 @@
         </div>
       </div>
     </footer>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

@@ -29,10 +29,9 @@
 
 .sort-level__line-roller {
   position: absolute;
-  top: 50%;
+  top: -4px;
   width: 10px;
   height: 10px;
-  transform: translateY(-50%);
 
   &--min {
     right: 145px;
@@ -45,8 +44,7 @@
   &:hover,
   &:focus,
   &:active {
-    width: 20px;
-    height: 20px;
+    transform: scale(1.5);
   }
 }
 

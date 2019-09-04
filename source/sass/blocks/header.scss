@@ -14,9 +14,7 @@
 }
 
 .header__logo {
-  &--hide {
-    display: none;
-  }
+  width: 50%;
 }
 
 .header__logo-wrapper {
@@ -38,6 +36,7 @@
   }
 
   .header__logo {
+    width: auto;
     margin: 5px 0 0 0;
   }
 }

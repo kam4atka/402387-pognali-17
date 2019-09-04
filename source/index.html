@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="nojs">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-bolditalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-italic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-lightitalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-mediumitalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font">
   </head>
   <body class="main page">
-    <div style="display: none">
-      <include src="build/img/sprite.svg"></include>
-    </div>
-    <header class="block-header header">
+    <header class="block-header block-header--main header">
       <div class="page__wrapper header__wrapper">
-        <a class="block-header__logo header__logo header__logo">
+        <a class="block-header__logo block-header__logo--white header__logo">
           <picture class="header__logo-wrapper">
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
@@ -22,7 +27,7 @@
             <img class="block-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Вы на главной странице">
           </picture>
         </a>
-        <a class="block-header__logo header__logo header__logo--hide">
+        <a class="block-header__logo block-header__logo--blue header__logo">
           <picture class="header__logo-wrapper">
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
@@ -32,7 +37,7 @@
             <img class="block-header__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Вы на главной странице">
           </picture>
         </a>
-        <nav class="block-header__nav main-nav main-nav--closed">
+        <nav class="block-header__nav main-nav main-nav--opened">
           <button class="block-header__toggle main-nav__toggle">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -61,7 +66,7 @@
                       <use xlink:href="#phone"></use>
                     </svg>
                   </div>
-                  <span>8 800 555-86-28</span>
+                  <span class="contact-list__item-text">8 800 555-86-28</span>
                 </a>
               </li>
               <li class="contact-list__item">
@@ -71,7 +76,7 @@
                       <use xlink:href="#mail"></use>
                     </svg>
                   </div>
-                  <span>mail@htmlacademy.ru</span>
+                  <span class="contact-list__item-text">mail@htmlacademy.ru</span>
                 </a>
               </li>
             </ul>
@@ -122,7 +127,7 @@
               </a>
             </li>
             <li class="sub-nav__item">
-              <a class="block-header__btn button button--yellow button--ellipse" href="#">Авторизация</a>
+              <a class="block-header__btn button button--yellow button--ellipse sub-nav__btn" href="#">Авторизация</a>
             </li>
           </ul>
         </div>
@@ -133,7 +138,7 @@
         <div class="page__wrapper intro__wrapper">
           <h1 class="block__intro intro__title">В путешествие с крутыми попутчиками!</h1>
           <div class="block-header sub-nav sub-nav--intro">
-            <ul class="block-header__list sub-nav__list">
+            <ul class="block-header__list sub-nav__list sub-nav__list--intro">
               <li class="sub-nav__item">
                 <a class="block-header__sub-link sub-nav__link button button--orange button--round" href="tel:88005558628">
                   <svg class="block-header__sub-svg" width="30" height="20">
@@ -151,7 +156,7 @@
                 </a>
               </li>
               <li class="sub-nav__item">
-                <a class="block-header__btn button button--yellow button--ellipse" href="#">Авторизация</a>
+                <a class="block-header__btn button button--yellow button--ellipse sub-nav__btn" href="#">Авторизация</a>
               </li>
             </ul>
           </div>
@@ -164,19 +169,19 @@
             <ol class="guide-list">
               <li class="block__guide-item block__guide-item--one guide-list__item">
                 <span class="block__guide-text guide-list__text">Выберите <br> направление</span>
-                <span class="block__guide-count">1</span>
+                <span class="block__guide-count guide-list__count">1</span>
               </li>
               <li class="block__guide-item block__guide-item--two guide-list__item">
                 <span class="block__guide-text guide-list__text">Изучите идеи <br> путешественников</span>
-                <span class="block__guide-count">2</span>
+                <span class="block__guide-count guide-list__count">2</span>
               </li>
               <li class="block__guide-item block__guide-item--three guide-list__item">
                 <span class="block__guide-text guide-list__text">Находите тех, <br> кто похож на вас</span>
-                <span class="block__guide-count">3</span>
+                <span class="block__guide-count guide-list__count">3</span>
               </li>
               <li class="block__guide-item block__guide-item--four guide-list__item">
                 <span class="block__guide-text guide-list__text">Путешествуйте <br> вместе!</span>
-                <span class="block__guide-count">4</span>
+                <span class="block__guide-count guide-list__count">4</span>
               </li>
             </ol>
           </div>
@@ -190,7 +195,7 @@
               <p class="block__desc about__desc">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
               <p class="block__desc block__desc--bold about__desc about__desc--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
               <a class="block__link about__link button button--yellow button--square" href="#">
-                <span class="block__link-text">Подробнее</span>
+                <span class="block__link-text button__text">Подробнее</span>
                 <svg class="block__link-svg" width="21" height="19">
                   <use xlink:href="#triangle-right"></use>
                 </svg>
@@ -258,7 +263,7 @@
                 <p class="block__desc country__desc">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
               </div>
               <a class="block__link country__link button button--yellow button--square" href="form.html">
-                <span class="block__link-text">Показать все</span>
+                <span class="block__link-text button__text">Показать все</span>
                 <svg class="block__link-svg" width="21" height="19">
                   <use xlink:href="#triangle-right"></use>
                 </svg>
@@ -399,7 +404,7 @@
                 <p class="block__desc block__desc--bold companion__desc companion__desc--bold">Теперь можно легко найти единомышленников!</p>
               </div>
               <a class="block__link companion__link button button--yellow button--square" href="catalog.html">
-                <span class="block__link-text">Показать всех</span>
+                <span class="block__link-text  button__text">Показать всех</span>
                 <svg class="block__link-svg" width="21" height="19">
                   <use xlink:href="#triangle-right"></use>
                 </svg>
@@ -522,8 +527,8 @@
             </div>
             <p class="block__address-text address__item-text">ул. Большая Конюшенная, 19/8</p>
           </div>
-          <a class="block__link block__address block__address--link address__link button button--square button--transparent button--border" href="#">
-            <span class="block__link block__address-text">Проложить маршрут</span>
+          <a class="block__link block__address block__address--link address__link button button--square button--transparent button--border" href="https://goo.gl/maps/HCaLptDsWciKYUm37" target="_blank">
+            <span class="block__link block__address-text button__text">Проложить маршрут</span>
             <svg class="block__address-svg" width="21" height="19">
               <use xlink:href="#triangle-right"></use>
             </svg>
@@ -531,9 +536,9 @@
         </div>
       </address>
       <section class="block map">
-        <div class="page__wrapper">
-          <h2 class="block__title map__title visually-hidden">Карта</h2>
-          <img class="map__item" src="https://placehold.it/320x320" alt="Карта">
+        <h2 class="block__title map__title visually-hidden">Карта</h2>
+        <div class="map__wrapper">
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840.3111245226193!2d30.32292873687511!3d59.938647641214175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1567347500655!5m2!1sru!2sru" width="100%" height="325" style="border:0;"></iframe>
         </div>
       </section>
     </main>
@@ -587,5 +592,9 @@
         </div>
       </div>
     </footer>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

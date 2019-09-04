@@ -20,9 +20,19 @@
   height: 45px;
 }
 
+.contact-list__item-text {
+  max-width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media (min-width: $tablet-width) {
   .contact-list {
     margin-bottom: 150px;
+  }
+
+  .contact-list__item {
+    padding: 0 60px;
   }
 
   .contact-list__link-wrapper {
@@ -41,10 +51,18 @@
       height: 25px;
     }
   }
+
+  .contact-list__item-text {
+    max-width: 480px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .contact-list {
     display: none;
+  }
+
+  .contact-list__item {
+    padding: 0;
   }
 }

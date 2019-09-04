@@ -8,6 +8,8 @@
   font-weight: 700;
   line-height: 22.49px;
   color: #1d2e5b;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .block-sort__send {
@@ -17,6 +19,8 @@
   color: #161c35;
   text-transform: uppercase;
   outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &:hover,
   &:focus {
@@ -39,7 +43,10 @@
   line-height: 18px;
   color: #1d2e5b;
   text-transform: uppercase;
+  text-align: left;
   outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .block-sort__item-toggle {
@@ -75,12 +82,14 @@
   font-size: 15px;
   line-height: 15px;
   color: #444444;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &::before {
     content: "";
     position: absolute;
     top: -3px;
-    left: -27px;
+    left: 0;
     width: 18px;
     height: 18px;
     background-color: #ffffff;
@@ -187,10 +196,17 @@
   .block-sort__title {
     font-size: 30px;
     line-height: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .block-sort__item {
     border-top: none;
+  }
+
+  .block-sort__item-wrapper {
+    &--level {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
   }
 
   .block-sort__item-title {
@@ -204,7 +220,7 @@
     line-height: 20px;
 
     &::before {
-      left: -35px;
+      left: 0;
       width: 25px;
       height: 25px;
     }
@@ -222,7 +238,17 @@
 
 @media (min-width: $desktop-width) {
   .block-sort__item {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+
+  .block-sort__item-wrapper {
+    &--level {
+      border: none;
+    }
+  }
+
+  .block-sort__title {
+    border: none;
   }
 
   .block-sort__item-toggle {

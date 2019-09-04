@@ -11,8 +11,11 @@
 }
 
 .footer-copyright__text {
+  width: 100px;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (min-width: $tablet-width) {

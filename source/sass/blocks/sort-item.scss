@@ -4,7 +4,9 @@
 }
 
 .sort-item__label {
+  max-width: 200px;
   margin-bottom: 16px;
+  padding-left: 27px;
 
   &:last-of-type {
     margin-bottom: 5px;
@@ -32,22 +34,28 @@
   width: 100%;
 }
 
+.sort-item__toggle-title {
+  max-width: 190px;
+}
+
 @media (min-width: $tablet-width) {
   .sort-item__wrapper {
     margin: 10px 0;
 
     &--level {
-      margin: 0 0 75px 0;
+      padding: 0 0 50px 0;
+      margin: 0 0 25px 0;
     }
   }
 
   .sort-item__label {
-    width: 130px;
-    margin: 0 0 0 45px;
+    width: 120px;
+    padding-left: 45px;
   }
 
   .sort-item__legend {
     display: block;
+    max-width: 110px;
   }
 
   .sort-item__toggle {
@@ -59,10 +67,14 @@
   .sort-item__wrapper {
     justify-content: space-between;
     margin: 8px 0;
+
+    &--level {
+      padding: 0;
+    }
   }
 
   .sort-item__label {
-    width: auto;
+    width: 180px;
     margin: 0 0 20px 0;
   }
 }

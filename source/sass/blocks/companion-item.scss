@@ -37,6 +37,7 @@
 .companion-item__transport-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -59,11 +60,14 @@
     display: block;
     top: 100%;
     left: 50%;
+    max-width: 150px;
     padding: 20px;
     background-color: #0f1d41;
     color: #ffffff;
     border-radius: 5px;
     transform: translateX(-50%);
+    overflow: hidden;
+    text-overflow: ellipsis;
     z-index: 1;
   }
 }
@@ -74,6 +78,7 @@
 
 .companion-item__transport-list {
   margin-bottom: 15px;
+  padding: 0 20px;
 }
 
 .companion-item__transport-item {
@@ -89,11 +94,14 @@
     display: block;
     top: 100%;
     left: 50%;
+    max-width: 100px;
     padding: 20px;
     background-color: #0f1d41;
     color: #ffffff;
     border-radius: 5px;
     transform: translateX(-50%);
+    overflow: hidden;
+    text-overflow: ellipsis;
     z-index: 1;
   }
 }
@@ -105,9 +113,12 @@
 .companion-item__name,
 .companion-item__tags {
   display: inline-block;
-  margin: 0 0 20px 0;
   padding: 0;
-  text-align: center;
+}
+
+.companion-item__name {
+  max-width: 180px;
+  padding: 0 0 0 20px;
 }
 
 .companion-item__tags {

@@ -1,4 +1,5 @@
-.filter-parameters {
+.filter-parameters,
+.filter-parameters__wrapper {
   display: flex;
   flex-direction: column;
 }
@@ -6,11 +7,26 @@
 @media (min-width: $tablet-width) {
   .filter-parameters {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
 
     &--country {
       flex-direction: column;
     }
+  }
+
+  .filter-parameters__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 68%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-parameters__wrapper {
+    max-width: 700px;
   }
 }
